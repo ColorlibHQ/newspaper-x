@@ -1,0 +1,50 @@
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+table:not(#wp-calendar) {
+  border        : 1px solid #e1e1e1;
+  max-width     : 100%;
+  margin-bottom : 20px;
+  width         : 100%;
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding        : 15px;
+        vertical-align : top;
+        border         : 1px solid #e1e1e1;
+      }
+    }
+  }
+
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width : 2px;
+    }
+  }
+
+  > thead > tr > th {
+    vertical-align : bottom;
+    border-bottom  : 2px solid #e1e1e1;
+  }
+
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top : 0;
+      }
+    }
+  }
+
+  > tbody + tbody {
+    border-top : 2px solid #e1e1e1;
+  }
+}

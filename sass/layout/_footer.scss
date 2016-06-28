@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+/* Footer */
+#colophon {
+  background-color : #2f2f2f;
+}
+
+.site-info {
+  background-color : #242424;
+  padding          : 15px 0;
+  *, a {
+    font-size   : 15px;
+    color       : #fff;
+    line-height : 25px;
+    font-family : $font__alternate;
+  }
+}
+
+.back-to-top-area {
+  padding : 15px 0;
+  a {
+    font-size   : 15px;
+    color       : #FFF;
+    line-height : 25px;
+    font-family : $font__alternate;
+  }
+  i {
+    padding-left : 7px;
+  }
+}
+
+.site-footer {
+  > .widgets-area {
+    padding : 40px 0 0 0;
+  }
+}

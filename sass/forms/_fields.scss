@@ -1,0 +1,121 @@
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color         : $color__text-input;
+  border        : 1px solid $color__border-input;
+  border-radius : 3px;
+  font-size     : 15px;
+  &:focus {
+    color : $color__text-input-focus;
+  }
+}
+
+select {
+  border : 1px solid $color__border-input;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+  padding : 10px;
+}
+
+textarea {
+  padding-left : 3px;
+  width        : 100%;
+}
+
+#searchform {
+  > label {
+    margin-bottom : 0;
+    top           : 5px;
+    position      : relative;
+    border        : 3px solid #000;
+    padding       : 3px;
+    border-radius : 0;
+    > input[type="search"] {
+      width         : 230px;
+      bottom        : 5px;
+      position      : relative;
+      font-weight   : 400;
+      border        : 1px solid #000;
+      top           : 0;
+      border-radius : 0;
+      @media (max-width : 1199px) {
+        width : 238px;
+      }
+    }
+  }
+}
+
+#searchform_topbar {
+  label {
+    margin-bottom : 0;
+  }
+  #search-field-top-bar {
+    background         : transparent;
+    border-top         : none;
+    border-left        : none;
+    border-right       : none;
+    border-bottom      : 1px solid transparentize(#FFF, .8);
+    padding-left       : 0;
+    padding-right      : 0;
+    padding-bottom     : 5px;
+    border-radius      : 0;
+    color              : #FFF;
+    width              : 0;
+    -moz-transition    : all 0.3s;
+    -webkit-transition : all 0.3s;
+    transition         : all 0.3s;
+    float              : right;
+    font-weight        : 400;
+    &.opened {
+      -moz-transition    : all 0.3s;
+      -webkit-transition : all 0.3s;
+      transition         : all 0.3s;
+      width              : 100%;
+      padding-left       : 10px;
+    }
+  }
+  .search-top-bar-submit {
+    background : transparent;
+    color      : #FFF;
+    font-size  : 14px;
+    border     : none;
+    outline    : none;
+    box-shadow : none;
+    bottom     : 9px;
+    position   : relative;
+  }
+}
+
+#cat {
+  padding       : 10px;
+  border-radius : 3px;
+
+}

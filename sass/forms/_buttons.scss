@@ -1,0 +1,63 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border        : 1px solid;
+  border-color  : $color__border-button;
+  border-radius : 3px;
+  background    : $color__background-button;
+  color         : rgba(0, 0, 0, .8);
+  @include font-size(0.75);
+  line-height   : 1;
+  &:hover {
+    border-color : $color__border-button-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color : $color__border-button-focus;
+  }
+}
+
+button {
+  &.search-submit {
+    font-size        : 0;
+    background-color : #000;
+    color            : #FFF;
+    width            : 56px;
+    height           : 56px;
+    position         : relative;
+    top              : 3px;
+    border           : none;
+    margin-left      : 4px;
+    &:hover {
+      border-color     : transparent;
+      background-color : $color_brand-bugle;
+    }
+    &:after {
+      content     : '\f002';
+      font-family : 'FontAwesome';
+      line-height : 55px;
+      font-size   : 15px;
+    }
+  }
+}
+
+.form-submit {
+  .submit {
+    font-family      : $font__main;
+    font-size        : 15px;
+    font-weight      : 500;
+    text-transform   : uppercase;
+    padding          : 20px 25px;
+    // Different bg color
+    background-color : $color_brand-bugle;
+    color            : #FFF;
+    border           : none;
+    border-radius    : 30px;
+    &:hover {
+      background-color : $color_brand-bugle-darken;
+    }
+  }
+}
+

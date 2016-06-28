@@ -1,0 +1,280 @@
+{
+  "default-widget-area": {
+    "search-2": {
+      "title": ""
+    },
+    "recent-posts-2": {
+      "title": "",
+      "number": 5
+    },
+    "recent-comments-2": {
+      "title": "",
+      "number": 5
+    },
+    "archives-2": {
+      "title": "",
+      "count": 0,
+      "dropdown": 0
+    },
+    "categories-2": {
+      "title": "",
+      "count": 0,
+      "hierarchical": 0,
+      "dropdown": 0
+    },
+    "meta-2": {
+      "title": ""
+    }
+  },
+  "before-content-area": {
+    "bugle_banner-1": {
+      "title": "Bugle Banners",
+      "show_title": [
+        "no"
+      ],
+      "image": "",
+      "image_url": "https:\/\/machothemes.com",
+      "banner_type": [
+        "image"
+      ],
+      "adsense_code": "\t\t\t"
+    }
+  },
+  "content-area": {
+    "bugle_posts-1": {
+      "title": "Recent Posts",
+      "show_title": [
+        "yes"
+      ],
+      "limit": 4,
+      "offset": 0,
+      "order": "ASC",
+      "orderby": "date",
+      "cats": [
+        ""
+      ],
+      "layout": [
+        "layout-a"
+      ],
+      "posts_per_row": 2
+    },
+    "bugle_banner-2": {
+      "title": "Bugle Banners",
+      "show_title": [
+        "no"
+      ],
+      "image": "",
+      "image_url": "https:\/\/machothemes.com",
+      "banner_type": [
+        "image"
+      ],
+      "adsense_code": "\t\t\t"
+    },
+    "bugle_posts-3": {
+      "title": "Featured Posts",
+      "show_title": [
+        "yes"
+      ],
+      "limit": 2,
+      "offset": 0,
+      "order": "ASC",
+      "orderby": "date",
+      "cats": [
+        "3"
+      ],
+      "layout": [
+        "layout-a"
+      ],
+      "posts_per_row": 2
+    },
+    "bugle_posts-10": {
+      "title": "Recent Posts",
+      "show_title": [
+        "no"
+      ],
+      "limit": 4,
+      "offset": 2,
+      "order": "DESC",
+      "orderby": "date",
+      "cats": [
+        "3"
+      ],
+      "layout": [
+        "layout-b"
+      ],
+      "posts_per_row": 2
+    },
+    "bugle_banner-3": {
+      "title": "Bugle Banners",
+      "show_title": [
+        "no"
+      ],
+      "image": "",
+      "image_url": "https:\/\/machothemes.com",
+      "banner_type": [
+        "image"
+      ],
+      "adsense_code": "\t\t\t"
+    },
+    "bugle_posts-4": {
+      "title": "Editorial",
+      "show_title": [
+        "yes"
+      ],
+      "limit": 6,
+      "offset": 0,
+      "order": "ASC",
+      "orderby": "date",
+      "cats": [
+        "6"
+      ],
+      "layout": [
+        "layout-c"
+      ],
+      "posts_per_row": 3
+    }
+  },
+  "blog-sidebar": {
+    "search-3": [],
+    "categories-3": {
+      "title": "",
+      "count": 1,
+      "hierarchical": 0,
+      "dropdown": 0
+    },
+    "bugle_banner-4": {
+      "title": "Bugle Banners",
+      "show_title": [
+        "no"
+      ],
+      "image": "",
+      "image_url": "https:\/\/machothemes.com",
+      "banner_type": [
+        "image"
+      ],
+      "adsense_code": "\t\t\t"
+    },
+    "bugle_recent-1": {
+      "title": "Recent Posts",
+      "show_title": [
+        "yes"
+      ],
+      "limit": 3,
+      "offset": 0
+    },
+    "bugle_banner-5": {
+      "title": "Bugle Banners",
+      "show_title": [
+        "no"
+      ],
+      "image": "",
+      "image_url": "https:\/\/machothemes.com",
+      "banner_type": [
+        "image"
+      ],
+      "adsense_code": "\t\t\t"
+    },
+    "calendar-1": [],
+    "bugle_banner-6": {
+      "title": "Bugle Banners",
+      "show_title": [
+        "no"
+      ],
+      "image": "",
+      "image_url": "https:\/\/machothemes.com",
+      "banner_type": [
+        "image"
+      ],
+      "adsense_code": "\t\t\t"
+    },
+    "text-1": {
+      "title": "",
+      "text": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/VQ5wDbaVJ3A\" frameborder=\"0\" allowfullscreen><\/iframe>",
+      "filter": false
+    }
+  },
+  "after-content-sidebar": {
+    "bugle_posts-6": {
+      "title": "Lifestyle",
+      "show_title": [
+        "yes"
+      ],
+      "limit": 3,
+      "offset": 0,
+      "order": "ASC",
+      "orderby": "date",
+      "cats": [
+        "5"
+      ],
+      "layout": [
+        "layout-a"
+      ],
+      "posts_per_row": 3
+    }
+  },
+  "before-footer-sidebar-a": {
+    "bugle_posts-7": {
+      "title": "Lifestyle",
+      "show_title": [
+        "no"
+      ],
+      "limit": 2,
+      "offset": 3,
+      "order": "ASC",
+      "orderby": "date",
+      "cats": [
+        "5"
+      ],
+      "layout": [
+        "layout-b"
+      ],
+      "posts_per_row": 1
+    }
+  },
+  "before-footer-sidebar-b": {
+    "bugle_posts-8": {
+      "title": "Recent Posts",
+      "show_title": [
+        "no"
+      ],
+      "limit": 2,
+      "offset": 1,
+      "order": "ASC",
+      "orderby": "date",
+      "cats": [
+        "5"
+      ],
+      "layout": [
+        "layout-b"
+      ],
+      "posts_per_row": 1
+    }
+  },
+  "footer-sidebar-1": {
+    "text-2": {
+      "title": "About Bugle",
+      "text": "Maecenas finibus pretium congue. Quisque sed sem itum turpis. Mauris ut quam vitae urna dignissim. Curabitur pharetra mauris id urna vestibulum, nec pharetra elit commodo. Nunc rutrum mi lectus, quis posuere ex rhoncus non. Sed nec ultrices ligula. ",
+      "filter": true
+    }
+  },
+  "footer-sidebar-2": {
+    "categories-4": {
+      "title": "Categories",
+      "count": 1,
+      "hierarchical": 0,
+      "dropdown": 0
+    }
+  },
+  "footer-sidebar-3": {
+    "bugle_contact-2": {
+      "about_title": "About Bugle",
+      "contact_title": "Contact",
+      "about": "Maecenas finibus pretium congue. Quisque sed sem itum turpis. Mauris ut quam vitae urna dignissim.",
+      "logo": "http:\/\/localhost\/bugle\/wp-content\/plugins\/bugle-plugin\/assets\/images\/logo.png",
+      "logo_url": "",
+      "phone": "+40 764123986",
+      "email": "ensign@contact.com",
+      "address": "Northon Street, 2015 NYC"
+    }
+  }
+}
