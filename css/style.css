@@ -1729,10 +1729,6 @@ a {
   margin-top: 13px;
   position: relative;
   background-color: #000; }
-  @media (max-width: 767px) {
-    .bugle-news-ticker {
-      text-align: center;
-      margin-top: 40px; } }
   .bugle-news-ticker .owl-carousel {
     display: block;
     position: absolute;
@@ -1780,6 +1776,22 @@ a {
       font-family: 'Hind';
       font-weight: 400;
       color: #FFF; }
+  @media (max-width: 767px) {
+    .bugle-news-ticker {
+      text-align: center;
+      margin-top: 40px; }
+      .bugle-news-ticker .owl-carousel {
+        top: 60px;
+        width: 90%;
+        left: 18px; }
+      .bugle-news-ticker .bugle-news-ticker {
+        min-height: 120px; }
+      .bugle-news-ticker .bugle-module-title:after {
+        right: 43%;
+        top: initial;
+        bottom: -9px;
+        border-width: 11px 8.5px 0 8.5px;
+        border-color: #2d2d2d transparent transparent transparent; } }
 
 .bugle-breadcrumbs {
   margin-top: 30px;

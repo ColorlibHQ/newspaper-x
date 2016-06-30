@@ -2,10 +2,7 @@
   margin-top       : 13px;
   position         : relative;
   background-color : #000;
-  @media (max-width : 767px) {
-    text-align : center;
-    margin-top : 40px;
-  }
+
   .owl-carousel {
     display  : block;
     position : absolute;
@@ -63,5 +60,26 @@
       }
     }
   }
+  @media (max-width : 767px) {
+    text-align : center;
+    margin-top : 40px;
+    .owl-carousel {
+      top   : 60px;
+      width : 90%;
+      left  : 18px;
+    }
+    .bugle-news-ticker {
+      min-height : 120px;
+    }
+    .bugle-module-title {
+      &:after {
+        right        : 43%;
+        top          : initial;
+        bottom       : -9px;
+        border-width : 11px 8.5px 0 8.5px;
+        border-color : #2d2d2d transparent transparent transparent;
 
+      }
+    }
+  }
 }
