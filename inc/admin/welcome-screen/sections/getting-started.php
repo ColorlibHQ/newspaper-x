@@ -8,9 +8,9 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 <div id="getting_started" class="newspaperx-tab-pane active">
 
-	<div class="pixova-tab-pane-center">
+	<div class="newspaperx-tab-pane-center">
 
-		<h1 class="newspaperx-welcome-title">Welcome to Newspaper X! <?php if( !empty($pixova_lite['Version']) ): ?> <sup id="newspaperx-theme-version"><?php echo esc_attr( $pixova_lite['Version'] ); ?> </sup><?php endif; ?></h1>
+		<h1 class="newspaperx-welcome-title">Welcome to Newspaper X! <?php if( !empty($newspaperx_lite['Version']) ): ?> <sup id="newspaperx-theme-version"><?php echo esc_attr( $newspaperx_lite['Version'] ); ?> </sup><?php endif; ?></h1>
 
 		<p><?php esc_html_e( 'Our most popular free one page WordPress theme, Newspaper X!','newspaper-x'); ?></p>
 		<p><?php esc_html_e( 'We want to make sure you have the best experience using Newspaper X and that is why we gathered here all the necessary informations for you. We hope you will enjoy using Newspaper X, as much as we enjoy creating great products.', 'newspaper-x' ); ?>
@@ -19,7 +19,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	<hr />
 
-	<div class="pixova-tab-pane-center">
+	<div class="newspaperx-tab-pane-center">
 
 		<h1><?php esc_html_e( 'Getting started', 'newspaper-x' ); ?></h1>
 
@@ -31,13 +31,13 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	<hr />
 
-	<div class="pixova-tab-pane-center">
+	<div class="newspaperx-tab-pane-center">
 
 		<h1><?php esc_html_e( 'FAQ', 'newspaper-x' ); ?></h1>
 
 	</div>
 
-	<div class="pixova-tab-pane-half pixova-tab-pane-first-half">
+	<div class="newspaperx-tab-pane-half newspaperx-tab-pane-first-half">
 
 		<h4><?php esc_html_e( 'Create a child theme', 'newspaper-x' ); ?></h4>
 		<p><?php esc_html_e( 'If you want to make changes to the theme\'s files, those changes are likely to be overwritten when you next update the theme. In order to prevent that from happening, you need to create a child theme. For this, please follow the documentation below.', 'newspaper-x' ); ?></p>
@@ -54,27 +54,27 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 		<h4><?php esc_html_e( 'Translate Newspaper X', 'newspaper-x' ); ?></h4>
 		<p><?php esc_html_e( 'In the below documentation you will find an easy way to translate Newspaper X into your native language or any other language you need for you site.', 'newspaper-x' ); ?></p>
-		<p><a target="_blank" href="<?php echo esc_url( 'http://docs.themeisle.com/article/80-how-to-translate-pixova' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
+		<p><a target="_blank" href="<?php echo esc_url( 'http://docs.themeisle.com/article/80-how-to-translate-newspaperx' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
 
 
 
     <?php /* ?>
 		<h4><?php esc_html_e( 'Change dimensions for footer social icons', 'newspaper-x' ); ?></h4>
 		<p><?php esc_html_e( 'In the below documentation you will find an easy way to change the default dimensions for you social icons.', 'newspaper-x' ); ?></p>
-		<p><a href="<?php echo esc_url( 'http://docs.themeisle.com/article/249-how-to-increase-the-size-of-social-icons-in-pixova' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
+		<p><a href="<?php echo esc_url( 'http://docs.themeisle.com/article/249-how-to-increase-the-size-of-social-icons-in-newspaperx' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
 
 		<hr />
 
 
 		<h4><?php esc_html_e( 'Turn off the animations', 'newspaper-x' ); ?></h4>
 		<p><?php esc_html_e( 'You can turn off the animation effects you see when Newspaper X loads a section in an easy way with just few changes. Check the documentation below.', 'newspaper-x' ); ?></p>
-		<p><a href="<?php echo esc_url( 'http://docs.themeisle.com/article/15-turn-off-loading-animations-in-pixova/' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
+		<p><a href="<?php echo esc_url( 'http://docs.themeisle.com/article/15-turn-off-loading-animations-in-newspaperx/' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
 
 		<hr />
 
 		<h4><?php esc_html_e( 'Add a search bar in the top menu', 'newspaper-x' ); ?></h4>
 		<p><?php esc_html_e( 'Find out how to add a search bar in the top menu bar, in an easy way be following the link below.', 'newspaper-x' ); ?></p>
-		<p><a href="<?php echo esc_url( 'http://docs.themeisle.com/article/78-pixova-adding-a-search-bar-in-the-top-menu' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
+		<p><a href="<?php echo esc_url( 'http://docs.themeisle.com/article/78-newspaperx-adding-a-search-bar-in-the-top-menu' ); ?>" class="button"><?php esc_html_e( 'View how to do this', 'newspaper-x' ); ?></a></p>
 
 		<hr />
 
@@ -86,7 +86,7 @@ $customizer_url = admin_url() . 'customize.php' ;
 
 	</div>
 
-	<div class="pixova-tab-pane-half">
+	<div class="newspaperx-tab-pane-half">
 
 		<?php /* ?>
 		<h4><?php esc_html_e( 'Speed up your site', 'newspaper-x' ); ?></h4>

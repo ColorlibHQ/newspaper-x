@@ -98,8 +98,8 @@ if ( ! function_exists( 'newspaperx_setup' ) ) :
 		 * Add support for the custom logo functionality
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'     => 45,
-			'width'      => 285,
+			'height'     => 75,
+			'width'      => 300,
 			'flex-width' => true,
 		) );
 
