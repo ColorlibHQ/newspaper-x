@@ -19,11 +19,11 @@
 			<div class="row">
 
 				<?php if ( is_active_sidebar( 'before-footer-sidebar-a' ) ) { ?>
-				<div class="col-xs-12 col-sm-6 col-md-6 newspaperx-before-footer-sidebar-a">
-					<?php
+					<div class="col-xs-12 col-sm-6 col-md-6 newspaperx-before-footer-sidebar-a">
+						<?php
 						dynamic_sidebar( 'before-footer-sidebar-a' );
-					?>
-				</div>
+						?>
+					</div>
 				<?php } ?>
 
 				<?php if ( is_active_sidebar( 'before-footer-sidebar-b' ) ) { ?>
@@ -33,7 +33,7 @@
 						?>
 					</div>
 				<?php } ?>
-				
+
 			</div>
 		</div><!--/.row-->
 	</section>
@@ -63,7 +63,7 @@
 				<div class="row text-center">
 					<div class="col-md-12">
 						<?php
-						echo get_theme_mod( 'newspaperx_copyright_contents', '&copy; ' . date( "Y" ) . ' <a href="https://machothemes.com/">Newspaper X. All rights reserved.</a>' );
+						echo get_theme_mod( 'newspaperx_copyright_contents', sprintf('&copy; ' . date( "Y" ) . ' <a href="%s">Newspaper X. All rights reserved.</a>', 'http://machothemes.com'));
 						?>
 					</div>
 				</div>
