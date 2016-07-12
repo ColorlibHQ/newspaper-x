@@ -12,13 +12,13 @@ foreach ( $categories as $category ) {
 }
 
 $wp_customize->add_control(
-	new Bugle_Control_Checkbox_Multiple(
+	new NewspaperX_Control_Checkbox_Multiple(
 		$wp_customize,
-		'bugle_recent_posts_category',
+		'newspaperx_recent_posts_category',
 		array(
 			'choices' => $options,
-			'label'   => esc_html__( 'Categories', 'bugle' ),
-			'section' => 'bugle_recent_post_module',
+			'label'   => esc_html__( 'Categories', 'newspaper-x' ),
+			'section' => 'newspaperx_recent_post_module',
 		)
 	)
 );
@@ -27,31 +27,31 @@ $wp_customize->add_control(
  * Ordering
  */
 $wp_customize->add_control(
-	'bugle_recent_posts_ordering',
+	'newspaperx_recent_posts_ordering',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
-			'ASC'  => esc_html__( 'Ascending', 'bugle' ),
-			'DESC' => esc_html__( 'Descending', 'bugle' ),
+			'ASC'  => esc_html__( 'Ascending', 'newspaper-x' ),
+			'DESC' => esc_html__( 'Descending', 'newspaper-x' ),
 		),
-		'label'   => esc_html__( 'Ordering', 'bugle' ),
-		'section' => 'bugle_recent_post_module',
+		'label'   => esc_html__( 'Ordering', 'newspaper-x' ),
+		'section' => 'newspaperx_recent_post_module',
 	)
 );
 /**
  * Order by control
  */
 $wp_customize->add_control(
-	'bugle_recent_posts_order_by',
+	'newspaperx_recent_posts_order_by',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
-			'date'          => esc_html__( 'By Date', 'bugle' ),
-			'title'         => esc_html__( 'By Title', 'bugle' ),
-			'comment_count' => esc_html__( 'By Comment Count', 'bugle' ),
-			'rand'          => esc_html__( 'Random', 'bugle' )
+			'date'          => esc_html__( 'By Date', 'newspaper-x' ),
+			'title'         => esc_html__( 'By Title', 'newspaper-x' ),
+			'comment_count' => esc_html__( 'By Comment Count', 'newspaper-x' ),
+			'rand'          => esc_html__( 'Random', 'newspaper-x' )
 		),
-		'label'   => esc_html__( 'Order By', 'bugle' ),
-		'section' => 'bugle_recent_post_module',
+		'label'   => esc_html__( 'Order By', 'newspaper-x' ),
+		'section' => 'newspaperx_recent_post_module',
 	)
 );

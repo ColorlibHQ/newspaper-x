@@ -1,11 +1,11 @@
-.bugle-recent-post-widget {
+.newspaperx-recent-post-widget {
   display : inline-block;
   margin  : 0 18px 18px 18px;
   &:last-of-type {
     margin-bottom : 25px;
   }
   @media (max-width : 994px) {
-    .bugle-title {
+    .newspaperx-title {
       h3 {
         margin-bottom : 5px;
       }
@@ -19,7 +19,7 @@
   @media (min-width : 1199px) {
     height : 80px;
   }
-  .bugle-image {
+  .newspaperx-image {
     float        : left;
     display      : inline-block;
     margin-right : 10px;
@@ -28,7 +28,7 @@
       width     : 100%;
     }
   }
-  .bugle-post-content {
+  .newspaperx-post-content {
     display : inline-block;
     float   : left;
     width   : 138px;
@@ -36,7 +36,7 @@
       width : 126px;
     }
   }
-  .bugle-title {
+  .newspaperx-title {
     h3 {
       font-size      : 16px;
       font-family    : $font__main;
@@ -53,7 +53,7 @@
       }
     }
   }
-  .bugle-post-meta {
+  .newspaperx-post-meta {
     float   : left;
     display : inline-block;
     > ul {
@@ -65,15 +65,15 @@
   }
 }
 
-.bugle-blog-sidebar, .bugle-sidebar {
+.newspaperx-blog-sidebar, .newspaperx-sidebar {
   margin-top : 10px;
-  .widget_bugle_recent {
+  .widget_newspaperx_recent {
     @extend .widget-bordered;
     > h3 {
       @extend .widget-title-styled;
     }
 
-    .bugle-recent-post-widget {
+    .newspaperx-recent-post-widget {
       border-bottom : 1px dashed #e1e1e1;
       &:last-of-type {
         border : none;

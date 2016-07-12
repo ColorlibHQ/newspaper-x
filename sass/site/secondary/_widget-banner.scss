@@ -1,4 +1,4 @@
-.bugle-image-banner {
+.newspaperx-image-banner {
   text-align : center;
   a {
     display : inline-block;
@@ -15,13 +15,13 @@
 }
 
 @media (max-width : 767px) {
-  .bugle-content {
-    .bugle-image-banner {
+  .newspaperx-content {
+    .newspaperx-image-banner {
       display : none;
     }
   }
   .before-content-area {
-    .bugle-image-banner {
+    .newspaperx-image-banner {
       display : none;
     }
   }

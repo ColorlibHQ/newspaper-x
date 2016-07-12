@@ -26,14 +26,14 @@
 >
 
 <channel>
-	<title>Bugle Demo</title>
-	<link>https://colorlib.com/bugle</link>
+	<title>Newspaper X Demo</title>
+	<link>https://colorlib.com/newspaperx</link>
 	<description>Just another colorlib.com site</description>
 	<pubDate>Fri, 03 Jun 2016 14:23:36 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://colorlib.com/</wp:base_site_url>
-	<wp:base_blog_url>https://colorlib.com/bugle</wp:base_blog_url>
+	<wp:base_blog_url>https://colorlib.com/newspaperx</wp:base_blog_url>
 
 	<wp:author><wp:author_id>697</wp:author_id><wp:author_login><![CDATA[aigars]]></wp:author_login><wp:author_email><![CDATA[aigars.silkalns@gmail.com]]></wp:author_email><wp:author_display_name><![CDATA[aigars]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
@@ -62,10 +62,10 @@
 
 	<item>
 		<title>Blog</title>
-		<link>https://colorlib.com/bugle/blog/</link>
+		<link>https://colorlib.com/newspaperx/blog/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:39 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/blog/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/blog/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -117,10 +117,10 @@
 	</item>
 	<item>
 		<title>Forums</title>
-		<link>https://colorlib.com/bugle/forums/</link>
+		<link>https://colorlib.com/newspaperx/forums/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/forums/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/forums/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -172,10 +172,10 @@
 	</item>
 	<item>
 		<title>Contact</title>
-		<link>https://colorlib.com/bugle/contact/</link>
+		<link>https://colorlib.com/newspaperx/contact/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/contact/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/contact/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -227,10 +227,10 @@
 	</item>
 	<item>
 		<title>Login</title>
-		<link>https://colorlib.com/bugle/login/</link>
+		<link>https://colorlib.com/newspaperx/login/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:41 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/login/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/login/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -282,10 +282,10 @@
 	</item>
 	<item>
 		<title>Facebook</title>
-		<link>https://colorlib.com/bugle/facebook/</link>
+		<link>https://colorlib.com/newspaperx/facebook/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:41 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/facebook/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/facebook/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -337,10 +337,10 @@
 	</item>
 	<item>
 		<title>Twitter</title>
-		<link>https://colorlib.com/bugle/twitter/</link>
+		<link>https://colorlib.com/newspaperx/twitter/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:41 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/twitter/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/twitter/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -392,10 +392,10 @@
 	</item>
 	<item>
 		<title>Tumblr</title>
-		<link>https://colorlib.com/bugle/tumblr/</link>
+		<link>https://colorlib.com/newspaperx/tumblr/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:42 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/tumblr/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/tumblr/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -447,10 +447,10 @@
 	</item>
 	<item>
 		<title>Youtube</title>
-		<link>https://colorlib.com/bugle/youtube/</link>
+		<link>https://colorlib.com/newspaperx/youtube/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:42 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/youtube/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/youtube/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -502,10 +502,10 @@
 	</item>
 	<item>
 		<title>Google Plus</title>
-		<link>https://colorlib.com/bugle/google-plus/</link>
+		<link>https://colorlib.com/newspaperx/google-plus/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:42 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/google-plus/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/google-plus/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -557,10 +557,10 @@
 	</item>
 	<item>
 		<title>Categories</title>
-		<link>https://colorlib.com/bugle/categories/</link>
+		<link>https://colorlib.com/newspaperx/categories/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:43 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/categories/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/categories/</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -612,10 +612,10 @@
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/14/</link>
+		<link>https://colorlib.com/newspaperx/14/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:43 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -667,10 +667,10 @@
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/15/</link>
+		<link>https://colorlib.com/newspaperx/15/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:43 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -722,10 +722,10 @@
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/16/</link>
+		<link>https://colorlib.com/newspaperx/16/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:44 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -777,10 +777,10 @@
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/17/</link>
+		<link>https://colorlib.com/newspaperx/17/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:44 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -832,10 +832,10 @@
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/18/</link>
+		<link>https://colorlib.com/newspaperx/18/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:44 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -887,10 +887,10 @@
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/19/</link>
+		<link>https://colorlib.com/newspaperx/19/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:44 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -942,10 +942,10 @@
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/20/</link>
+		<link>https://colorlib.com/newspaperx/20/</link>
 		<pubDate>Mon, 06 Jun 2016 16:05:45 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -997,16 +997,16 @@
 	</item>
 	<item>
 		<title>Home</title>
-		<link>https://colorlib.com/bugle/</link>
+		<link>https://colorlib.com/newspaperx/</link>
 		<pubDate>Tue, 31 May 2016 06:25:35 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?page_id=2</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?page_id=2</guid>
 		<description></description>
 		<content:encoded><![CDATA[This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:
 <blockquote>Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like piña coladas. (And gettin' caught in the rain.)</blockquote>
 ...or something like this:
 <blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>
-As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!]]></content:encoded>
+As a new WordPress user, you should go to <a href="https://colorlib.com/newspaperx/wp-admin/">your dashboard</a> to delete this page and create new pages for your content. Have fun!]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>118</wp:post_id>
 		<wp:post_date><![CDATA[2016-05-31 06:25:35]]></wp:post_date>
@@ -1022,15 +1022,15 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 		<wp:is_sticky>0</wp:is_sticky>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page-templates/widget-template.php]]></wp:meta_value>
+			<wp:meta_value><![CDATA[page-templates/frontpage-template.php]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>In ut urna maximus, consectetur.</title>
-		<link>https://colorlib.com/bugle/in-ut-urna-maximus-consectetur/</link>
+		<link>https://colorlib.com/newspaperx/in-ut-urna-maximus-consectetur/</link>
 		<pubDate>Tue, 31 May 2016 08:42:48 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=57</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=57</guid>
 		<description></description>
 		<content:encoded><![CDATA[Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1050,10 +1050,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title></title>
-		<link>https://colorlib.com/bugle/132/</link>
+		<link>https://colorlib.com/newspaperx/132/</link>
 		<pubDate>Mon, 06 Jun 2016 16:07:16 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/2016/06/06/132/</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/2016/06/06/132/</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1105,10 +1105,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Nulla mollis ante vitae dolor blandit mollis eget a lacus.</title>
-		<link>https://colorlib.com/bugle/nulla-mollis-ante-vitae-dolor-blandit-mollis-eget-a-lacus/</link>
+		<link>https://colorlib.com/newspaperx/nulla-mollis-ante-vitae-dolor-blandit-mollis-eget-a-lacus/</link>
 		<pubDate>Tue, 31 May 2016 09:04:25 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=71</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=71</guid>
 		<description></description>
 		<content:encoded><![CDATA[Nulla mollis ante vitae dolor blandit mollis eget a Nulla mollis ante vitae dolor blandit mo vitae dolor blandit mollis eget a lacus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1128,10 +1128,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>In ut urna maximus, consectetur.</title>
-		<link>https://colorlib.com/bugle/in-ut-urna-maximus-consectetur-2/</link>
+		<link>https://colorlib.com/newspaperx/in-ut-urna-maximus-consectetur-2/</link>
 		<pubDate>Tue, 31 May 2016 09:06:41 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=73</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=73</guid>
 		<description></description>
 		<content:encoded><![CDATA[Semper leo. Fusce lectus justo, porta quis felis at, imperdiet elementum libero. Duis nec dignissim lectus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1151,10 +1151,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Suspendisse sit amet risus sapien.</title>
-		<link>https://colorlib.com/bugle/suspendisse-sit-amet-risus-sapien-2/</link>
+		<link>https://colorlib.com/newspaperx/suspendisse-sit-amet-risus-sapien-2/</link>
 		<pubDate>Tue, 31 May 2016 09:07:09 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=75</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=75</guid>
 		<description></description>
 		<content:encoded><![CDATA[Sed purus velit, finibus non semper non, finibus ut velit. Integer e lectus. Vivamus ut dui varius, scele, vulputate nisi.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1174,10 +1174,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Fusce a ex vel diam mattis rhoncu.</title>
-		<link>https://colorlib.com/bugle/fusce-a-ex-vel-diam-mattis-rhoncu/</link>
+		<link>https://colorlib.com/newspaperx/fusce-a-ex-vel-diam-mattis-rhoncu/</link>
 		<pubDate>Tue, 31 May 2016 09:07:36 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=78</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=78</guid>
 		<description></description>
 		<content:encoded><![CDATA[Mauris ut quam vitae urna dignissim vehicula. Ut tincidunt dui at sapien ornare suscipit. Nulla  na. Etiam lacus nulla, elementum vitae vulputate et.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1197,10 +1197,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Suspendisse sit amet risus abulus.</title>
-		<link>https://colorlib.com/bugle/suspendisse-sit-amet-risus-abulus/</link>
+		<link>https://colorlib.com/newspaperx/suspendisse-sit-amet-risus-abulus/</link>
 		<pubDate>Tue, 31 May 2016 09:08:28 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=80</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=80</guid>
 		<description></description>
 		<content:encoded><![CDATA[Morbi quis odio blandit, bibendum erat sit amet, commodo ante. In egestas dignissim rhoncus. Aliquam sed massa finibus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1220,10 +1220,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>In nInterdum et males uada am ectum.</title>
-		<link>https://colorlib.com/bugle/in-ninterdum-et-males-uada-am-ectum/</link>
+		<link>https://colorlib.com/newspaperx/in-ninterdum-et-males-uada-am-ectum/</link>
 		<pubDate>Tue, 31 May 2016 09:11:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=82</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=82</guid>
 		<description></description>
 		<content:encoded><![CDATA[In nInterdum et males uada am eIn m et males uada am ectu In nInterdum et males uada am ectum.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1243,10 +1243,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Maecenas finibus pre tium congue.</title>
-		<link>https://colorlib.com/bugle/maecenas-finibus-pre-tium-congue/</link>
+		<link>https://colorlib.com/newspaperx/maecenas-finibus-pre-tium-congue/</link>
 		<pubDate>Tue, 31 May 2016 09:13:02 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=84</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=84</guid>
 		<description></description>
 		<content:encoded><![CDATA[Maecenas finibus pre tium cenas finibus pre tium congu finibus pre tium cenas finibus pre tium congue.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1266,10 +1266,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Fusce efficitur massa magna, ac pretium.</title>
-		<link>https://colorlib.com/bugle/fusce-efficitur-massa-magna-ac-pretium/</link>
+		<link>https://colorlib.com/newspaperx/fusce-efficitur-massa-magna-ac-pretium/</link>
 		<pubDate>Tue, 31 May 2016 09:13:30 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=86</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=86</guid>
 		<description></description>
 		<content:encoded><![CDATA[Maecenas finibus pre tium cenas finibus pre tium congu finibus pre tium cenas finibus pre tium congue.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1289,10 +1289,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Nulla mollis ante vitae dolor blandit mollis.</title>
-		<link>https://colorlib.com/bugle/nulla-mollis-ante-vitae-dolor-blandit-mollis/</link>
+		<link>https://colorlib.com/newspaperx/nulla-mollis-ante-vitae-dolor-blandit-mollis/</link>
 		<pubDate>Tue, 31 May 2016 09:13:52 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=88</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=88</guid>
 		<description></description>
 		<content:encoded><![CDATA[Nulla mollis ante vitae dolor blandit  mollis ante vitae dolor blandit mollis lor blandit  mollis ante vitae dolor bland.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1312,10 +1312,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Um sociis natoque penati bus et magnis</title>
-		<link>https://colorlib.com/bugle/um-sociis-natoque-penati-bus-et-magnis/</link>
+		<link>https://colorlib.com/newspaperx/um-sociis-natoque-penati-bus-et-magnis/</link>
 		<pubDate>Tue, 31 May 2016 09:16:30 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=90</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=90</guid>
 		<description></description>
 		<content:encoded><![CDATA[Um sociis natoque penati bus et magnis penati bus et magnis  penati bus et magnis  penati bus et magnis]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1335,10 +1335,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Mauris ut quam vitae urna dignissim vehic.</title>
-		<link>https://colorlib.com/bugle/mauris-ut-quam-vitae-urna-dignissim-vehic/</link>
+		<link>https://colorlib.com/newspaperx/mauris-ut-quam-vitae-urna-dignissim-vehic/</link>
 		<pubDate>Tue, 31 May 2016 09:16:54 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=92</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=92</guid>
 		<description></description>
 		<content:encoded><![CDATA[Mauris ut quam vitae urna dignissim sauris ut quam vitae urna dignissim veauris ut quam vitae urna dignissim vehic.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1358,10 +1358,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Donec aliquam au gue quis ultricies orn.</title>
-		<link>https://colorlib.com/bugle/donec-aliquam-au-gue-quis-ultricies-orn/</link>
+		<link>https://colorlib.com/newspaperx/donec-aliquam-au-gue-quis-ultricies-orn/</link>
 		<pubDate>Tue, 31 May 2016 09:17:23 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=94</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=94</guid>
 		<description></description>
 		<content:encoded><![CDATA[Donec aliquam au gue quis ultricies osonec aliquam au gue quis ultricies Donec aliquam au gue quis ultricies orn.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1381,10 +1381,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Morbi quis odio bla ndit, bibendum erat.</title>
-		<link>https://colorlib.com/bugle/morbi-quis-odio-bla-ndit-bibendum-erat/</link>
+		<link>https://colorlib.com/newspaperx/morbi-quis-odio-bla-ndit-bibendum-erat/</link>
 		<pubDate>Tue, 31 May 2016 09:17:45 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=96</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=96</guid>
 		<description></description>
 		<content:encoded><![CDATA[Morbi quis odio bla ndit, bibendum srbi quis odio bla ndit, bibendum era i quis odio bla ndit, bibendum erat.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1404,10 +1404,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Fusce a ex vel diam mattis rhoncu.</title>
-		<link>https://colorlib.com/bugle/fusce-a-ex-vel-diam-mattis-rhoncu-2/</link>
+		<link>https://colorlib.com/newspaperx/fusce-a-ex-vel-diam-mattis-rhoncu-2/</link>
 		<pubDate>Tue, 31 May 2016 10:41:46 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=99</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=99</guid>
 		<description></description>
 		<content:encoded><![CDATA[Mauris ut quam vitae urna dignissim vehicula. Ut tincidunt dui at sapien ornare suscipit. Nulla  na. Etiam lacus nulla, elementum vitae vulputate et.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1427,10 +1427,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Suspendisse sit amet risus sapien.</title>
-		<link>https://colorlib.com/bugle/suspendisse-sit-amet-risus-sapien/</link>
+		<link>https://colorlib.com/newspaperx/suspendisse-sit-amet-risus-sapien/</link>
 		<pubDate>Tue, 31 May 2016 08:43:11 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=59</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=59</guid>
 		<description></description>
 		<content:encoded><![CDATA[Sed purus velit, finibus non semper non, finibus ut velit. Integer e lectus. Vivamus ut dui varius, scele, vulputate nisi.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1450,10 +1450,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Fusce a ex vel diam mattis rhoncus vel quis auguet.</title>
-		<link>https://colorlib.com/bugle/fusce-a-ex-vel-diam-mattis-rhoncus-vel-quis-auguet/</link>
+		<link>https://colorlib.com/newspaperx/fusce-a-ex-vel-diam-mattis-rhoncus-vel-quis-auguet/</link>
 		<pubDate>Tue, 31 May 2016 08:43:42 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=61</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=61</guid>
 		<description></description>
 		<content:encoded><![CDATA[Fusce a ex vel diam mattis rhoncus vel quis auguet Fusce a ex vel diam mattis rhoncus vel quis auguet Fusce a ex vel diam mattis rhoncus vel quis auguet.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1473,10 +1473,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Um sociis natoque penati bus et magnis dis partuient.</title>
-		<link>https://colorlib.com/bugle/um-sociis-natoque-penati-bus-et-magnis-dis-partuient/</link>
+		<link>https://colorlib.com/newspaperx/um-sociis-natoque-penati-bus-et-magnis-dis-partuient/</link>
 		<pubDate>Tue, 31 May 2016 08:59:16 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=63</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=63</guid>
 		<description></description>
 		<content:encoded><![CDATA[Um sociis natoque penati bus et magnis dis partuient Um sociis natoque penati bus et magnis dis partuient Um sociis natoque penati bus et magnis dis partuient.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1496,10 +1496,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Morbi quis odio blandit, bibendum erat sit amet, commodo ante.</title>
-		<link>https://colorlib.com/bugle/morbi-quis-odio-blandit-bibendum-erat-sit-amet-commodo-ante/</link>
+		<link>https://colorlib.com/newspaperx/morbi-quis-odio-blandit-bibendum-erat-sit-amet-commodo-ante/</link>
 		<pubDate>Tue, 31 May 2016 09:00:35 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=65</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=65</guid>
 		<description></description>
 		<content:encoded><![CDATA[Morbi quis odio blandit, bibendum erat sit amet, commodo ante sorbi quis odio blandit, bibendum erat sit amet, commodo ante.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1519,10 +1519,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Donec accumsan mauris in ipsum dictum rutrum ent.</title>
-		<link>https://colorlib.com/bugle/donec-accumsan-mauris-in-ipsum-dictum-rutrum-ent/</link>
+		<link>https://colorlib.com/newspaperx/donec-accumsan-mauris-in-ipsum-dictum-rutrum-ent/</link>
 		<pubDate>Tue, 31 May 2016 09:01:07 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=67</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=67</guid>
 		<description></description>
 		<content:encoded><![CDATA[Donec accumsan mauris in ipsum dictum rutrum ent snec accumsan mauris in ipsum dictum rutru accumsan mauris in ipsum dictum rutrum ent.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1542,10 +1542,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Um sociis natoque penati bus et magnis dis partuient.</title>
-		<link>https://colorlib.com/bugle/um-sociis-natoque-penati-bus-et-magnis-dis-partuient-2/</link>
+		<link>https://colorlib.com/newspaperx/um-sociis-natoque-penati-bus-et-magnis-dis-partuient-2/</link>
 		<pubDate>Tue, 31 May 2016 09:01:42 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=69</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=69</guid>
 		<description></description>
 		<content:encoded><![CDATA[Um sociis natoque penati bus et magnis dis qm sociis natoque penati bus et magnis dis partuien oque penati bus et magnis dis partuient.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1565,10 +1565,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Suspendisse sit amet risus abulus.</title>
-		<link>https://colorlib.com/bugle/suspendisse-sit-amet-risus-abulus-2/</link>
+		<link>https://colorlib.com/newspaperx/suspendisse-sit-amet-risus-abulus-2/</link>
 		<pubDate>Tue, 31 May 2016 10:42:16 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=102</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=102</guid>
 		<description></description>
 		<content:encoded><![CDATA[Morbi quis odio blandit, bibendum erat sit amet, commodo ante. In egestas dignissim rhoncus. Aliquam sed massa finibus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1588,10 +1588,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>amet risus abu ad utam lus.</title>
-		<link>https://colorlib.com/bugle/amet-risus-abu-ad-utam-lus/</link>
+		<link>https://colorlib.com/newspaperx/amet-risus-abu-ad-utam-lus/</link>
 		<pubDate>Tue, 31 May 2016 10:42:49 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=104</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=104</guid>
 		<description></description>
 		<content:encoded><![CDATA[Etuis quis odio blandit, bibendum erat sit amet, commodo ante. In egestas dignissim rhoncus. Aliquam sed massa finibus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1611,10 +1611,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Fusce a ex vel diam mattis rhoncus vel quis augue. Pelle ntesque sit ameta. urna auctor convallis.</title>
-		<link>https://colorlib.com/bugle/fusce-a-ex-vel-diam-mattis-rhoncus-vel-quis-augue-pelle-ntesque-sit-ameta-urna-auctor-convallis/</link>
+		<link>https://colorlib.com/newspaperx/fusce-a-ex-vel-diam-mattis-rhoncus-vel-quis-augue-pelle-ntesque-sit-ameta-urna-auctor-convallis/</link>
 		<pubDate>Tue, 31 May 2016 10:43:13 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=106</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=106</guid>
 		<description></description>
 		<content:encoded><![CDATA[Fusce a ex vel diam mattis rhoncus vel quis augue. Pelle ntesque sit ameta. urna aucto Fusce a ex vel diam mattis rhoncus vel quis augue. Pelle ntesque sit ameta. urna auctor convallis.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1634,10 +1634,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Interdum et malesuada fam es ac ante ipsum primis in faucibus.</title>
-		<link>https://colorlib.com/bugle/interdum-et-malesuada-fam-es-ac-ante-ipsum-primis-in-faucibus/</link>
+		<link>https://colorlib.com/newspaperx/interdum-et-malesuada-fam-es-ac-ante-ipsum-primis-in-faucibus/</link>
 		<pubDate>Tue, 31 May 2016 10:43:36 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=108</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=108</guid>
 		<description></description>
 		<content:encoded><![CDATA[Interdum et malesuada fam es ac ante ipsum primis in Interdum et malesuada fam Interdum et malesuada fam es ac ante ipsum primis in faucibusn faucibus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1657,10 +1657,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Um sociis natoque penati bus et magnis dis partuient Ad usum ec norrus.</title>
-		<link>https://colorlib.com/bugle/um-sociis-natoque-penati-bus-et-magnis-dis-partuient-ad-usum-ec-norrus/</link>
+		<link>https://colorlib.com/newspaperx/um-sociis-natoque-penati-bus-et-magnis-dis-partuient-ad-usum-ec-norrus/</link>
 		<pubDate>Tue, 31 May 2016 10:44:13 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=110</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=110</guid>
 		<description></description>
 		<content:encoded><![CDATA[Um sociis natoque penati bus et magnis dis partuient Um sociis natoque penati bus et magnis dis partuient Ad usum ec norrus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1680,10 +1680,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Fusce a ex vel diam mattis rhoncu.</title>
-		<link>https://colorlib.com/bugle/fusce-a-ex-vel-diam-mattis-rhoncu-3/</link>
+		<link>https://colorlib.com/newspaperx/fusce-a-ex-vel-diam-mattis-rhoncu-3/</link>
 		<pubDate>Tue, 31 May 2016 10:44:34 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=112</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=112</guid>
 		<description></description>
 		<content:encoded><![CDATA[Mauris ut quam vitae urna dignissim vehicula. Ut tincidunt dui at sapien ornare suscipit.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1703,10 +1703,10 @@ As a new WordPress user, you should go to <a href="https://colorlib.com/bugle/wp
 	</item>
 	<item>
 		<title>Hello world!</title>
-		<link>https://colorlib.com/bugle/hello-world__trashed/</link>
+		<link>https://colorlib.com/newspaperx/hello-world__trashed/</link>
 		<pubDate>Tue, 31 May 2016 06:25:35 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=1</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=1</guid>
 		<description></description>
 		<content:encoded><![CDATA[Welcome to WordPress. This is your first post. Edit or delete it, then start writing!]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1757,10 +1757,10 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 	</item>
 	<item>
 		<title>Vivamus ut dui varius, scelerisque enim ac, vulputate nisi.</title>
-		<link>https://colorlib.com/bugle/vivamus-ut-dui-varius-scelerisque-enim-ac-vulputate-nisi/</link>
+		<link>https://colorlib.com/newspaperx/vivamus-ut-dui-varius-scelerisque-enim-ac-vulputate-nisi/</link>
 		<pubDate>Tue, 31 May 2016 17:12:15 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=118</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=118</guid>
 		<description></description>
 		<content:encoded><![CDATA[Vivamus ut dui varius, scelerisque enim ac, vulputate nis us ut dui varius, scelerisque enim ac, vulputate nimus ut dui varius, scelerisque enim ac, vulputate nisi.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1780,10 +1780,10 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 	</item>
 	<item>
 		<title>Sed purus velit, finibus non semper non, finibus ut velit.</title>
-		<link>https://colorlib.com/bugle/sed-purus-velit-finibus-non-semper-non-finibus-ut-velit/</link>
+		<link>https://colorlib.com/newspaperx/sed-purus-velit-finibus-non-semper-non-finibus-ut-velit/</link>
 		<pubDate>Tue, 31 May 2016 17:13:56 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=120</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=120</guid>
 		<description></description>
 		<content:encoded><![CDATA[Sed purus velit, finibus non semper non, finibus ut purus velit, finibus non semper non, finibus purus velit, finibus non semper non, finibus ut velit.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1803,10 +1803,10 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 	</item>
 	<item>
 		<title>Cum sociis natoque penabus.</title>
-		<link>https://colorlib.com/bugle/cum-sociis-natoque-penabus/</link>
+		<link>https://colorlib.com/newspaperx/cum-sociis-natoque-penabus/</link>
 		<pubDate>Tue, 31 May 2016 17:15:11 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=122</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=122</guid>
 		<description></description>
 		<content:encoded><![CDATA[Cum sociis natoque penabs ciis natoques um sociis natoque penab am sociis natoque penabus.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1826,10 +1826,10 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 	</item>
 	<item>
 		<title>lorem nec sollicitudin.</title>
-		<link>https://colorlib.com/bugle/lorem-nec-sollicitudin/</link>
+		<link>https://colorlib.com/newspaperx/lorem-nec-sollicitudin/</link>
 		<pubDate>Tue, 31 May 2016 17:19:15 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=124</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=124</guid>
 		<description></description>
 		<content:encoded><![CDATA[lorem nec sollic lorem nec sollici lorem nec sollicitudin.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1850,10 +1850,10 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 	</item>
 	<item>
 		<title>Nam aliquet, lorem.</title>
-		<link>https://colorlib.com/bugle/nam-aliquet-lorem/</link>
+		<link>https://colorlib.com/newspaperx/nam-aliquet-lorem/</link>
 		<pubDate>Tue, 31 May 2016 17:19:52 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://colorlib.com/bugle/?p=126</guid>
+		<guid isPermaLink="false">https://colorlib.com/newspaperx/?p=126</guid>
 		<description></description>
 		<content:encoded><![CDATA[Nam aliquet, lor Nam aliquet, lorem em aliquet, lor Nam aliquet, lor]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>

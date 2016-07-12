@@ -4,10 +4,10 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
-$cats = get_theme_mod( 'bugle_recent_posts_category', array( '1' ) );
+$cats = get_theme_mod( 'newspaperx_recent_posts_category', array( '1' ) );
 $args = array(
 	'numberposts' => 10,
 	'orderby'     => 'date',
@@ -23,9 +23,9 @@ if ( ! $recent_posts ) {
 }
 ?>
 <!-- News Ticker Module -->
-<div class="bugle-news-ticker">
-	<span class="bugle-module-title"><?php echo __( 'Latest News', 'bugle' ) ?></span>
-	<ul class="bugle-news-carousel owl-carousel owl-theme">
+<div class="newspaperx-news-ticker">
+	<span class="newspaperx-module-title"><?php echo __( 'Latest News', 'newspaper-x' ) ?></span>
+	<ul class="newspaperx-news-carousel owl-carousel owl-theme">
 		<?php foreach ( $recent_posts as $post ) { ?>
 			<li class="item">
 				<a href="<?php echo get_permalink( $post->ID ) ?>"><?php echo $post->post_title ?></a>

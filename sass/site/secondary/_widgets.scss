@@ -1,4 +1,4 @@
-.bugle-blog-sidebar {
+.newspaperx-blog-sidebar {
   /**
   * Search Widget is a little different, does not have border
   */
@@ -9,13 +9,13 @@
     margin-bottom : 30px;
   }
   // Add margin bottom
-  .widget_bugle_banner, .widget_text {
+  .widget_newspaperx_banner, .widget_text {
     margin-bottom : 30px;
   }
   /**
   * Select all widgets except for the search box
   */
-  .widget:not(.widget_search):not(.widget_bugle_banner):not(.widget_text) {
+  .widget:not(.widget_search):not(.widget_newspaperx_banner):not(.widget_text) {
     /**
     * add the border + paddings
     */
@@ -104,11 +104,11 @@
             &:hover,
             &:focus {
               text-decoration : none;
-              color           : $color_brand-bugle;
+              color           : $color_brand-newspaperx;
             }
           }
 
-          .bugle-cat-count {
+          .newspaperx-cat-count {
             float       : right;
             color       : $color__text-title;
             font-family : $font__alternate;
@@ -154,12 +154,12 @@
           margin-bottom  : 20px;
         }
         thead {
-          color : $color_brand-bugle;
+          color : $color_brand-newspaperx;
         }
         td, th {
           padding : 6px 7px;
           a {
-            color           : $color_brand-bugle;
+            color           : $color_brand-newspaperx;
             text-decoration : none;
             &:hover, &:focus {
               text-decoration : none;
@@ -220,7 +220,7 @@
   }
 }
 
-.bugle-content, .bugle-after-content-sidebar {
+.newspaperx-content, .newspaperx-after-content-sidebar {
   .widget-title {
     @extend .section-title;
   }
@@ -260,14 +260,14 @@
     color       : #FFF;
     font-family : $font__alternate;
   }
-  .bugle-contact-p {
+  .newspaperx-contact-p {
     strong {
       color : $color__text-title;
     }
     margin-bottom : 0;
   }
 
-  .bugle-contact-logo {
+  .newspaperx-contact-logo {
     margin-top : 20px;
   }
 
@@ -300,17 +300,17 @@
       color          : #FFF;
     }
 
-    &.widget_bugle_recent {
-      .bugle-recent-post-widget {
+    &.widget_newspaperx_recent {
+      .newspaperx-recent-post-widget {
         height       : 65px;
         margin-left  : 0;
         margin-right : 0;
-        .bugle-title {
+        .newspaperx-title {
           h3 {
             margin-bottom : 15px;
           }
         }
-        .bugle-post-content {
+        .newspaperx-post-content {
           width : 225px;
           @media (max-width : 1199px) {
             width : 187px;
@@ -341,11 +341,11 @@
             &:hover,
             &:focus {
               text-decoration : none;
-              color           : $color_brand-bugle;
+              color           : $color_brand-newspaperx;
             }
           }
 
-          .bugle-cat-count {
+          .newspaperx-cat-count {
             float       : right;
             color       : transparentize(#FFF, 0.5);
             font-family : $font__alternate;

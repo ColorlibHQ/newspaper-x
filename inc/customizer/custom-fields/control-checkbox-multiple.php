@@ -9,7 +9,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 *
 	 * @credit : http://justintadlock.com/archives/2015/05/26/multiple-checkbox-customizer-control
 	 */
-	class Bugle_Control_Checkbox_Multiple extends WP_Customize_Control {
+	class NewspaperX_Control_Checkbox_Multiple extends WP_Customize_Control {
 
 		/**
 		 * The type of customize control being rendered.
@@ -28,7 +28,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * @return void
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'bugle-customize-controls', trailingslashit( get_template_directory_uri() ) . 'js/checkbox-multiple.js', array( 'jquery' ) );
+			wp_enqueue_script( 'newspaperx-customize-controls', trailingslashit( get_template_directory_uri() ) . 'js/checkbox-multiple.js', array( 'jquery' ) );
 		}
 
 		/**
@@ -60,7 +60,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 					<li>
 						<label>
 							<input type="checkbox"
-							       class="bugle-control-multiple"
+							       class="newspaperx-control-multiple"
 							       value="<?php echo esc_attr( $value ); ?>" <?php checked( in_array( $value, $multi_values ) ); ?> />
 							<?php echo esc_html( $label ); ?>
 						</label>

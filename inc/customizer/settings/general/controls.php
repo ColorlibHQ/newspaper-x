@@ -5,16 +5,16 @@ global $wp_customize;
  * Enable top bar
  */
 $wp_customize->add_control(
-	'bugle_enable_top_bar',
+	'newspaperx_enable_top_bar',
 	array(
 		'type'        => 'radio',
 		'choices'     => array(
-			'enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'disabled' => esc_html__( 'Disabled', 'bugle' )
+			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'disabled' => esc_html__( 'Disabled', 'newspaper-x' )
 		),
-		'label'       => esc_html__( 'Enable or disable the top bar', 'bugle' ),
-		'description' => esc_html__( 'This will disable the topbar', 'bugle' ),
-		'section'     => 'bugle_general_section',
+		'label'       => esc_html__( 'Enable or disable the top bar', 'newspaper-x' ),
+		'description' => esc_html__( 'This will disable the topbar', 'newspaper-x' ),
+		'section'     => 'newspaperx_general_section',
 	)
 );
 
@@ -22,16 +22,16 @@ $wp_customize->add_control(
  * Enable top bar search
  */
 $wp_customize->add_control(
-	'bugle_enable_top_bar_search',
+	'newspaperx_enable_top_bar_search',
 	array(
 		'type'        => 'radio',
 		'choices'     => array(
-			'enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'disabled' => esc_html__( 'Disabled', 'bugle' )
+			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'disabled' => esc_html__( 'Disabled', 'newspaper-x' )
 		),
-		'label'       => esc_html__( 'Enable or disable the search from the top bar', 'bugle' ),
-		'description' => esc_html__( 'Enable or disable the search from the top bar', 'bugle' ),
-		'section'     => 'bugle_general_section',
+		'label'       => esc_html__( 'Enable or disable the search from the top bar', 'newspaper-x' ),
+		'description' => esc_html__( 'Enable or disable the search from the top bar', 'newspaper-x' ),
+		'section'     => 'newspaperx_general_section',
 	)
 );
 
@@ -39,15 +39,15 @@ $wp_customize->add_control(
  * Enable the news ticker
  */
 $wp_customize->add_control(
-	'bugle_enable_news_ticker',
+	'newspaperx_enable_news_ticker',
 	array(
-		'type'        => 'radio',
-		'choices'     => array(
-			'enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'disabled' => esc_html__( 'Disabled', 'bugle' )
+		'type'    => 'radio',
+		'choices' => array(
+			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'disabled' => esc_html__( 'Disabled', 'newspaper-x' )
 		),
-		'label'       => esc_html__( 'Enable or disable the news ticker', 'bugle' ),
-		'section'     => 'bugle_general_section',
+		'label'   => esc_html__( 'Enable or disable the news ticker', 'newspaper-x' ),
+		'section' => 'newspaperx_general_section',
 	)
 );
 
@@ -55,16 +55,16 @@ $wp_customize->add_control(
  * Enable breadcrumbs on single posts
  */
 $wp_customize->add_control(
-	'bugle_enable_post_breadcrumbs',
+	'newspaperx_enable_post_breadcrumbs',
 	array(
 		'type'        => 'radio',
 		'choices'     => array(
-			'breadcrumbs_enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'breadcrumbs_disabled' => esc_html__( 'Disabled', 'bugle' )
+			'breadcrumbs_enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'breadcrumbs_disabled' => esc_html__( 'Disabled', 'newspaper-x' )
 		),
-		'label'       => esc_html__( 'Breadcrumbs on single blog posts', 'bugle' ),
-		'description' => esc_html__( 'This will disable the breadcrumbs', 'bugle' ),
-		'section'     => 'bugle_general_section',
+		'label'       => esc_html__( 'Breadcrumbs on single blog posts', 'newspaper-x' ),
+		'description' => esc_html__( 'This will disable the breadcrumbs', 'newspaper-x' ),
+		'section'     => 'newspaperx_general_section',
 	)
 );
 
@@ -72,18 +72,19 @@ $wp_customize->add_control(
  *  Breadcrumbs separator
  */
 $wp_customize->add_control(
-	'bugle_blog_breadcrumb_menu_separator',
+	'newspaperx_blog_breadcrumb_menu_separator',
 	array(
-		'type'    => 'select',
-		'choices' => array(
+		'type'            => 'select',
+		'choices'         => array(
 			'/'         => esc_html( '/' ),
 			'rarr'      => esc_html( '&rarr;' ),
 			'middot'    => esc_html( '&middot;' ),
 			'diez'      => esc_html( '&#35;' ),
 			'ampersand' => esc_html( '&#38;' ),
 		),
-		'label'   => esc_html__( 'Separator to be used between breadcrumb items', 'bugle' ),
-		'section' => 'bugle_general_section',
+		'label'           => esc_html__( 'Separator to be used between breadcrumb items', 'newspaper-x' ),
+		'section'         => 'newspaperx_general_section',
+		'active_callback' => 'breadcrumbs_enabled_callback',
 	)
 );
 
@@ -92,12 +93,13 @@ $wp_customize->add_control(
  */
 
 $wp_customize->add_control(
-	'bugle_blog_breadcrumb_menu_post_category',
+	'newspaperx_blog_breadcrumb_menu_post_category',
 	array(
-		'type'        => 'checkbox',
-		'label'       => esc_html__( 'Show post category ?', 'bugle' ),
-		'description' => esc_html__( 'Show the post category in the breadcrumb ?', 'bugle' ),
-		'section'     => 'bugle_general_section',
+		'type'            => 'checkbox',
+		'label'           => esc_html__( 'Show post category ?', 'newspaper-x' ),
+		'description'     => esc_html__( 'Show the post category in the breadcrumb ?', 'newspaper-x' ),
+		'section'         => 'newspaperx_general_section',
+		'active_callback' => 'breadcrumbs_enabled_callback',
 	)
 );
 
@@ -105,58 +107,58 @@ $wp_customize->add_control(
  * Footer Column Count
  */
 $wp_customize->add_control(
-	'bugle_footer_columns',
+	'newspaperx_footer_columns',
 	array(
 		'type'        => 'radio',
 		'choices'     => array(
-			1 => esc_html__( 'One Column', 'bugle' ),
-			2 => esc_html__( 'Two Columns', 'bugle' ),
-			3 => esc_html__( 'Three Columns', 'bugle' ),
-			4 => esc_html__( 'Four Columns', 'bugle' )
+			1 => esc_html__( 'One Column', 'newspaper-x' ),
+			2 => esc_html__( 'Two Columns', 'newspaper-x' ),
+			3 => esc_html__( 'Three Columns', 'newspaper-x' ),
+			4 => esc_html__( 'Four Columns', 'newspaper-x' )
 		),
-		'label'       => esc_html__( 'Footer Columns', 'bugle' ),
-		'description' => esc_html__( 'Select how many columns should the footer display.', 'bugle' ),
-		'section'     => 'bugle_footer_section',
+		'label'       => esc_html__( 'Footer Columns', 'newspaper-x' ),
+		'description' => esc_html__( 'Select how many columns should the footer display.', 'newspaper-x' ),
+		'section'     => 'newspaperx_footer_section',
 	)
 );
 /**
  * Copyright enable/disable
  */
 $wp_customize->add_control(
-	'bugle_enable_copyright',
+	'newspaperx_enable_copyright',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
-			'enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'disabled' => esc_html__( 'Disabled', 'bugle' ),
+			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'disabled' => esc_html__( 'Disabled', 'newspaper-x' ),
 		),
-		'label'   => esc_html__( 'Enable copyright?', 'bugle' ),
-		'section' => 'bugle_footer_section',
+		'label'   => esc_html__( 'Enable copyright footer bar?', 'newspaper-x' ),
+		'section' => 'newspaperx_footer_section',
 	)
 );
 /**
  * Copyright content
  */
 $wp_customize->add_control(
-	'bugle_copyright_contents',
+	'newspaperx_copyright_contents',
 	array(
-		'label'   => esc_html__( 'Copyright Text', 'bugle' ),
-		'section' => 'bugle_footer_section',
+		'label'   => esc_html__( 'Copyright Text', 'newspaper-x' ),
+		'section' => 'newspaperx_footer_section',
 	)
 );
 /**
  * Enable / Disable Go top
  */
 $wp_customize->add_control(
-	'bugle_enable_go_top',
+	'newspaperx_enable_go_top',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
-			'enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'disabled' => esc_html__( 'Disabled', 'bugle' ),
+			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'disabled' => esc_html__( 'Disabled', 'newspaper-x' ),
 		),
-		'label'   => esc_html__( 'Go Top Button', 'bugle' ),
-		'section' => 'bugle_footer_section',
+		'label'   => esc_html__( 'Go Top Button', 'newspaper-x' ),
+		'section' => 'newspaperx_footer_section',
 	)
 );
 
@@ -166,15 +168,15 @@ $wp_customize->add_control(
  * Author box
  */
 $wp_customize->add_control(
-	'bugle_enable_author_box',
+	'newspaperx_enable_author_box',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
-			'enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'disabled' => esc_html__( 'Disabled', 'bugle' ),
+			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'disabled' => esc_html__( 'Disabled', 'newspaper-x' ),
 		),
-		'label'   => esc_html__( 'Show author box below posts?', 'bugle' ),
-		'section' => 'bugle_blog_section',
+		'label'   => esc_html__( 'Show author box below posts?', 'newspaper-x' ),
+		'section' => 'newspaperx_blog_section',
 	)
 );
 
@@ -182,15 +184,15 @@ $wp_customize->add_control(
  * Related Post Section
  */
 $wp_customize->add_control(
-	'bugle_related_posts_enabled',
+	'newspaperx_related_posts_enabled',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
-			'enabled'  => esc_html__( 'Enabled', 'bugle' ),
-			'disabled' => esc_html__( 'Disabled', 'bugle' ),
+			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
+			'disabled' => esc_html__( 'Disabled', 'newspaper-x' ),
 		),
-		'label'   => esc_html__( 'Enable Related Posts Section', 'bugle' ),
-		'section' => 'bugle_blog_section',
+		'label'   => esc_html__( 'Enable Related Posts Section', 'newspaper-x' ),
+		'section' => 'newspaperx_blog_section',
 	)
 );
 
@@ -198,29 +200,29 @@ $wp_customize->add_control(
  * Autoplay carousel
  */
 $wp_customize->add_control(
-	'bugle_autoplay_blog_posts',
+	'newspaperx_autoplay_blog_posts',
 	array(
 		'type'    => 'checkbox',
-		'label'   => esc_html__( 'Autoplay related carousel?', 'bugle' ),
-		'section' => 'bugle_blog_section',
+		'label'   => esc_html__( 'Autoplay related carousel?', 'newspaper-x' ),
+		'section' => 'newspaperx_blog_section',
 	)
 );
 
 /**
  * Blog Post number
  */
-$wp_customize->add_control( new Bugle_Controls_Slider_Control(
+$wp_customize->add_control( new NewspaperX_Controls_Slider_Control(
 	                            $wp_customize,
-	                            'bugle_howmany_blog_posts',
+	                            'newspaperx_howmany_blog_posts',
 	                            array(
-		                            'label'       => esc_html__( 'How many blog posts to display in the carousel at once?', 'bugle' ),
-		                            'description' => esc_html__( 'No more than 4 posts at once;', 'bugle' ),
+		                            'label'       => esc_html__( 'How many blog posts to display in the carousel at once?', 'newspaper-x' ),
+		                            'description' => esc_html__( 'No more than 4 posts at once;', 'newspaper-x' ),
 		                            'choices'     => array(
 			                            'min'  => 1,
 			                            'max'  => 4,
 			                            'step' => 1,
 		                            ),
-		                            'section'     => 'bugle_blog_section',
+		                            'section'     => 'newspaperx_blog_section',
 		                            'default'     => 4
 	                            )
                             )
@@ -231,11 +233,11 @@ $wp_customize->add_control( new Bugle_Controls_Slider_Control(
  */
 
 $wp_customize->add_control(
-	'bugle_enable_related_title_blog_posts',
+	'newspaperx_enable_related_title_blog_posts',
 	array(
 		'type'    => 'checkbox',
-		'label'   => esc_html__( 'Posts title in the carousel ?', 'bugle' ),
-		'section' => 'bugle_blog_section',
+		'label'   => esc_html__( 'Posts title in the carousel ?', 'newspaper-x' ),
+		'section' => 'newspaperx_blog_section',
 	)
 );
 
@@ -243,10 +245,22 @@ $wp_customize->add_control(
  * Show date
  */
 $wp_customize->add_control(
-	'bugle_enable_related_date_blog_posts',
+	'newspaperx_enable_related_date_blog_posts',
 	array(
 		'type'    => 'checkbox',
-		'label'   => esc_html__( 'Carousel related posts date?', 'bugle' ),
-		'section' => 'bugle_blog_section',
+		'label'   => esc_html__( 'Carousel related posts date?', 'newspaper-x' ),
+		'section' => 'newspaperx_blog_section',
 	)
 );
+
+/**
+ * Active Callback for breadcrumb
+ */
+function breadcrumbs_enabled_callback( $control ) {
+	if ( $control->manager->get_setting( 'newspaperx_enable_post_breadcrumbs' )->value() == 'breadcrumbs_enabled' ) {
+		return true;
+	}
+
+	return false;
+
+}

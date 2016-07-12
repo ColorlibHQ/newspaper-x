@@ -4,12 +4,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area col-md-8 col-sm-8 col-xs-12 bugle-sidebar">
+	<div id="primary" class="content-area col-md-8 col-sm-8 col-xs-12 newspaperx-sidebar">
 		<main id="main" class="site-main" role="main">
 
 		<?php

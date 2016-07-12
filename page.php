@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 get_header(); ?>

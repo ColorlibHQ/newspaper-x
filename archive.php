@@ -4,7 +4,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 get_header(); ?>
@@ -12,10 +12,10 @@ get_header(); ?>
 /**
  * Enable breadcrumbs
  */
-$breadcrumbs_enabled = get_theme_mod( 'bugle_enable_post_breadcrumbs', 'breadcrumbs_enabled' );
+$breadcrumbs_enabled = get_theme_mod( 'newspaperx_enable_post_breadcrumbs', 'breadcrumbs_enabled' );
 if ( $breadcrumbs_enabled == 'breadcrumbs_enabled' ) { ?>
 	<div class="col-xs-12">
-		<?php bugle_breadcrumbs(); ?>
+		<?php newspaperx_breadcrumbs(); ?>
 	</div>
 <?php } ?>
 
@@ -23,10 +23,10 @@ if ( $breadcrumbs_enabled == 'breadcrumbs_enabled' ) { ?>
 /**
  * Banner Settings;
  */
-$banner_count = get_theme_mod( 'bugle_show_banner_after', 6 );
+$banner_count = get_theme_mod( 'newspaperx_show_banner_after', 6 );
 
-$archive     = bugle_check_archive();
-$first_posts = bugle_get_first_posts( $archive );
+$archive     = newspaperx_check_archive();
+$first_posts = newspaperx_get_first_posts( $archive );
 global $wp_query;
 
 if ( $first_posts->have_posts() ):
@@ -38,7 +38,7 @@ if ( $first_posts->have_posts() ):
 		?>
 	</header><!-- .page-header -->
 
-	<div class="col-xs-12 bugle-archive-first-posts">
+	<div class="col-xs-12 newspaperx-archive-first-posts">
 		<div class="row">
 			<?php while ( $first_posts->have_posts() ) : $first_posts->the_post(); ?>
 
@@ -53,14 +53,14 @@ if ( $first_posts->have_posts() ):
 	</div>
 <?php endif; ?>
 
-		<div id="primary" class="bugle-content bugle-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
+		<div id="primary" class="newspaperx-content newspaperx-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
 			<main id="main" class="site-main" role="main">
 				<?php
 				/**
 				 * Render the first banner
 				 */
-				if ( get_theme_mod( 'bugle_show_banner_on_archive_pages', 'enabled' ) === 'enabled' ) {
-					echo bugle_render_banner();
+				if ( get_theme_mod( 'newspaperx_show_banner_on_archive_pages', 'enabled' ) === 'enabled' ) {
+					echo newspaperx_render_banner();
 				}
 
 				?>
@@ -80,7 +80,7 @@ if ( $first_posts->have_posts() ):
 							}
 
 							if ( fmod( $banner_count_index, $banner_count ) == 0 && $banner_count_index != 0 ) {
-								echo bugle_render_banner();
+								echo newspaperx_render_banner();
 							}
 							$banner_count_index ++;
 							/*
@@ -104,7 +104,7 @@ if ( $first_posts->have_posts() ):
 						?>
 				</div>
 				<?php
-					bugle_numeric_posts_nav();
+					newspaperx_numeric_posts_nav();
 					else :
 						echo '<div class="row">';
 						get_template_part( 'template-parts/content', 'none' );

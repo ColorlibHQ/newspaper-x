@@ -4,7 +4,7 @@
  *
  * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 get_header(); ?>
@@ -12,34 +12,34 @@ get_header(); ?>
 /**
  * Enable breadcrumbs
  */
-$breadcrumbs_enabled = get_theme_mod( 'bugle_enable_post_breadcrumbs', 'breadcrumbs_enabled' );
+$breadcrumbs_enabled = get_theme_mod( 'newspaperx_enable_post_breadcrumbs', 'breadcrumbs_enabled' );
 if ( $breadcrumbs_enabled == 'breadcrumbs_enabled' ) { ?>
 	<div class="col-xs-12">
-		<?php bugle_breadcrumbs(); ?>
+		<?php newspaperx_breadcrumbs(); ?>
 	</div>
 <?php }
 
 /**
  * Banner Settings;
  */
-$banner_count = get_theme_mod( 'bugle_show_banner_after' );
+$banner_count = get_theme_mod( 'newspaperx_show_banner_after' );
 global $wp_query;
 ?>
 	<header class="col-xs-12">
 		<h3 class="page-title">
-			<span><?php printf( esc_html__( 'Search Results for: %s', 'bugle' ), '<span>' . get_search_query() . '</span>' ); ?></span>
+			<span><?php printf( esc_html__( 'Search Results for: %s', 'newspaper-x' ), '<span>' . get_search_query() . '</span>' ); ?></span>
 		</h3>
 	</header><!-- .page-header -->
 
 
-	<div id="primary" class="bugle-content bugle-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	<div id="primary" class="newspaperx-content newspaperx-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
 		<main id="main" class="site-main" role="main">
 			<?php
 			/**
 			 * Render the first banner
 			 */
-			if ( get_theme_mod( 'bugle_show_banner_on_archive_pages', 'enabled' ) === 'enabled' ) {
-				echo bugle_render_banner();
+			if ( get_theme_mod( 'newspaperx_show_banner_on_archive_pages', 'enabled' ) === 'enabled' ) {
+				echo newspaperx_render_banner();
 			}
 			?>
 
@@ -57,7 +57,7 @@ global $wp_query;
 					}
 
 					if ( fmod( $banner_count_index, $banner_count ) == 0 && $banner_count_index != 0 ) {
-						echo bugle_render_banner();
+						echo newspaperx_render_banner();
 					}
 
 					$banner_count_index ++;
@@ -82,7 +82,7 @@ global $wp_query;
 				?>
 			</div>
 		<?php
-		bugle_numeric_posts_nav();
+		newspaperx_numeric_posts_nav();
 		else :
 			echo '<div class="row">';
 			get_template_part( 'template-parts/content', 'none' );

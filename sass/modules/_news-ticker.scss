@@ -1,4 +1,4 @@
-.bugle-news-ticker {
+.newspaperx-news-ticker {
   margin-top       : 13px;
   position         : relative;
   background-color : #000;
@@ -10,7 +10,7 @@
     width    : 100%;
   }
 
-  .bugle-module-title {
+  .newspaperx-module-title {
     color       : #FFF;
     padding     : 12px 30px;
     font-weight : 600;
@@ -22,7 +22,7 @@
       margin-bottom : 20px;
     }
     icon.fa {
-      color        : $color_brand-bugle;
+      color        : $color_brand-newspaperx;
       margin-right : 10px;
     }
     &:after {
@@ -68,10 +68,10 @@
       width : 90%;
       left  : 18px;
     }
-    .bugle-news-ticker {
+    .newspaperx-news-ticker {
       min-height : 120px;
     }
-    .bugle-module-title {
+    .newspaperx-module-title {
       &:after {
         right        : 43%;
         top          : initial;

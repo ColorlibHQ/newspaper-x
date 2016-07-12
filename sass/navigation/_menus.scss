@@ -184,7 +184,7 @@
   }
 }
 
-/* Bugle Menu Customization starts here */
+/* Newspaper X Menu Customization starts here */
 #site-navigation {
   a {
     font-size      : 18px;
@@ -218,7 +218,7 @@
       &.active,
       &:hover {
         > a {
-          color : $color_brand-bugle;
+          color : $color_brand-newspaperx;
         }
       }
       > a {
@@ -250,7 +250,7 @@
           li {
             &:hover {
               color            : #FFF;
-              background-color : $color_brand-bugle;
+              background-color : $color_brand-newspaperx;
               > a, &:after {
                 color : #FFF;
               }

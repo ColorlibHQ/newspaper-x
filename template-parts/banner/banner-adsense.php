@@ -1,6 +1,6 @@
 <?php
 
-$code = get_theme_mod( 'bugle_banner_adsense_code', '' );
+$code = get_theme_mod( 'newspaperx_banner_adsense_code', '' );
 
 /**
  * In case we don't have an image, we terminate here

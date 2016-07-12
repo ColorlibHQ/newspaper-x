@@ -2,12 +2,12 @@
 /**
  * Import Demo
  */
-$button_text = __( 'Import Demo Data', 'bugle' );
+$button_text = __( 'Import Demo Data', 'newspaper-x' );
 ?>
 
-<div id="import_demo" class="bugle-tab-pane">
+<div id="import_demo" class="newspaperx-tab-pane">
 
-	<h1><?php esc_html_e( 'Demo Import.', 'bugle' ); ?></h1>
+	<h1><?php esc_html_e( 'Demo Import.', 'newspaper-x' ); ?></h1>
 
 	<!-- NEWS -->
 

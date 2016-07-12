@@ -4,7 +4,7 @@
 /**
 * Override bootstrap paddings to match PSD layout
 */
-.col-lg-4.bugle-sidebar {
+.col-lg-4.newspaperx-sidebar {
   @media (min-width : 1200px) {
     padding-left : 70px;
   }
@@ -19,13 +19,13 @@
   }
 }
 
-.bugle-before-footer-area {
+.newspaperx-before-footer-area {
   margin-top     : 40px;
   padding-top    : 60px;
   padding-bottom : 20px;
   background     : #f5f5f5;
-  .widget_bugle_posts {
-    .bugle-layout-b-row {
+  .widget_newspaperx_posts {
+    .newspaperx-layout-b-row {
       .col-xs-6 {
         width : 100%;
       }

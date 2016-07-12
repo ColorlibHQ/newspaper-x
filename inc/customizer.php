@@ -1,8 +1,8 @@
 <?php
 /**
- * Bugle Theme Customizer.
+ * Newspaper X Theme Customizer.
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function bugle_customize_register( $wp_customize ) {
+function newspaperx_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -33,17 +33,17 @@ function bugle_customize_register( $wp_customize ) {
 	/**
 	 * Initiate the setting helper
 	 */
-	$bugle_customizer = new Bugle_Customizer_Helper();
-	$bugle_customizer->add_theme_options();
+	$newspaperx_customizer = new NewspaperX_Customizer_Helper();
+	$newspaperx_customizer->add_theme_options();
 }
 
-add_action( 'customize_register', 'bugle_customize_register' );
+add_action( 'customize_register', 'newspaperx_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function bugle_customize_preview_js() {
-	wp_enqueue_script( 'bugle_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function newspaperx_customize_preview_js() {
+	wp_enqueue_script( 'newspaperx_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 
-add_action( 'customize_preview_init', 'bugle_customize_preview_js' );
+add_action( 'customize_preview_init', 'newspaperx_customize_preview_js' );

@@ -1,6 +1,6 @@
 jQuery(window).load(function () {
 	/* === Checkbox Multiple Control === */
-	jQuery('.bugle-control-multiple').on(
+	jQuery('.newspaperx-control-multiple').on(
 			'change',
 			function () {
 				checkbox_values = jQuery(this).parents('.customize-control').find('input[type="checkbox"]:checked').map(

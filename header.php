@@ -6,7 +6,7 @@
  *
  * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 ?><!DOCTYPE html>
@@ -27,7 +27,7 @@
 	/**
 	 * Enable / Disable the top bar
 	 */
-	if ( get_theme_mod( 'bugle_enable_top_bar', 'enabled' ) !== 'disabled' ) :
+	if ( get_theme_mod( 'newspaperx_enable_top_bar', 'enabled' ) !== 'disabled' ) :
 		get_template_part( 'template-parts/top-header' );
 	endif;
 
@@ -42,8 +42,7 @@
 						the_custom_logo();
 						if ( ! get_theme_mod( 'custom_logo' ) ) {
 							?>
-							<a class="custom-logo-link" href="<?php echo get_home_url() ?>"> <img class="custom-logo"
-							                                                                      src="<?php echo get_template_directory_uri() . '/images/logo.png' ?>"/></a>
+							<a class="custom-logo-link" href="<?php echo get_home_url() ?>"> <?php echo get_option('blogname') ?></a>
 							<?php
 						}
 					}
@@ -54,10 +53,10 @@
 					endif; ?>
 				</div>
 
-				<?php if ( get_theme_mod( 'bugle_show_banner_on_homepage', 'enabled' ) === 'enabled' ): ?>
+				<?php if ( get_theme_mod( 'newspaperx_show_banner_on_homepage', 'enabled' ) === 'enabled' ): ?>
 					<div class="col-md-8 header-banner">
 						<?php
-						$banner = get_theme_mod( 'bugle_banner_type', 'image' );
+						$banner = get_theme_mod( 'newspaperx_banner_type', 'image' );
 						get_template_part( 'template-parts/banner/banner', $banner );
 						?>
 					</div>
@@ -81,9 +80,9 @@
 	<div id="content" class="site-content container">
 		<div class="row">
 
-			<?php if ( get_theme_mod( 'bugle_enable_news_ticker', 'enabled' ) === 'enabled' ) { ?>
+			<?php if ( get_theme_mod( 'newspaperx_enable_news_ticker', 'enabled' ) === 'enabled' ) { ?>
 			<div class="col-md-12">
-				<section class="bugle-news-ticker">
+				<section class="newspaperx-news-ticker">
 					<?php
 					get_template_part( 'template-parts/news-ticker' );
 					?>

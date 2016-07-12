@@ -4,7 +4,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 ?>
@@ -36,11 +36,11 @@
 					}
 					?>
 
-					<?php if ( get_theme_mod( 'bugle_enable_top_bar_search', 'enabled' ) === 'enabled'): ?>
+					<?php if ( get_theme_mod( 'newspaperx_enable_top_bar_search', 'enabled' ) === 'enabled'): ?>
 						<!-- Search Form -->
 						<form role="search" method="get" class="pull-right" id="searchform_topbar" action="<?php echo home_url( '/' ); ?>">
 							<label>
-								<span class="screen-reader-text"><?php __( 'Search for:', 'bugle' ) ?></span>
+								<span class="screen-reader-text"><?php __( 'Search for:', 'newspaper-x' ) ?></span>
 								<input class="search-field-top-bar" id="search-field-top-bar" placeholder="Search ..."
 								       value="" name="s"
 								       type="search">

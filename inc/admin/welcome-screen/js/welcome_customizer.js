@@ -1,10 +1,10 @@
 jQuery(document).ready(function () {
-    var bugle_aboutpage = ensignWelcomeScreenCustomizerObject.aboutpage;
-    var bugle_nr_actions_required = ensignWelcomeScreenCustomizerObject.nr_actions_required;
+    var newspaperx_aboutpage = newspaperxWelcomeScreenCustomizerObject.aboutpage;
+    var newspaperx_nr_actions_required = newspaperxWelcomeScreenCustomizerObject.nr_actions_required;
 
     /* Number of required actions */
-    if ((typeof bugle_aboutpage !== 'undefined') && (typeof bugle_nr_actions_required !== 'undefined') && (bugle_nr_actions_required != '0')) {
-        jQuery('#accordion-section-themes .accordion-section-title').append('<a href="' + bugle_aboutpage + '"><span class="bugle-actions-count">' + bugle_nr_actions_required + '</span></a>');
+    if ((typeof newspaperx_aboutpage !== 'undefined') && (typeof newspaperx_nr_actions_required !== 'undefined') && (newspaperx_nr_actions_required != '0')) {
+        jQuery('#accordion-section-themes .accordion-section-title').append('<a href="' + newspaperx_aboutpage + '"><span class="newspaperx-actions-count">' + newspaperx_nr_actions_required + '</span></a>');
     }
 
 

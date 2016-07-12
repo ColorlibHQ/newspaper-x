@@ -4,17 +4,17 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
-$cats = get_theme_mod( 'bugle_recent_posts_category', array( '1' ) );
+$cats = get_theme_mod( 'newspaperx_recent_posts_category', array( '1' ) );
 
 if ( ! $cats || ! is_array( $cats ) || ( is_array( $cats ) && empty( array_filter( $cats ) ) ) ) {
 	$cats = array( '1' );
 }
 
-$order    = get_theme_mod( 'bugle_recent_posts_ordering', 'DESC' );
-$order_by = get_theme_mod( 'bugle_recent_posts_order_by', 'date' );
+$order    = get_theme_mod( 'newspaperx_recent_posts_ordering', 'DESC' );
+$order_by = get_theme_mod( 'newspaperx_recent_posts_order_by', 'date' );
 $order    = is_array( $order ) ? $order[0] : $order;
 $order_by = is_array( $order_by ) ? $order_by[0] : $order_by;
 
@@ -33,7 +33,7 @@ if ( ! $recent_posts ) {
 	return false;
 }
 ?>
-<div class="bugle-recent-posts">
+<div class="newspaperx-recent-posts">
 	<ul>
 		<?php
 		$i = 0;
@@ -45,23 +45,23 @@ if ( ! $recent_posts ) {
 
 			if ( has_post_thumbnail() ) {
 				$src   = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
-				                                      'bugle-recent-post-big',
+				                                      'newspaperx-recent-post-big',
 				                                      false,
 				                                      '' );
 				$image = $src[0];
 			}
 			?>
 
-			<li class="lazy" id="bugle-recent-post-<?php echo $i; ?>" data-original="<?php echo esc_url( $image ) ?>"
+			<li class="lazy" id="newspaperx-recent-post-<?php echo $i; ?>" data-original="<?php echo esc_url( $image ) ?>"
 			    style="background-image:url('<?php echo
 				    get_template_directory_uri() . '/images/grey.gif' ?>')">
-				<div class="bugle-post-info">
+				<div class="newspaperx-post-info">
 					<h3>
 						<a href="<?php echo get_permalink( $post->ID ) ?>">
 							<?php echo wp_trim_words( $post->post_title, 4, $more = '...' ) ?>
 						</a>
 					</h3>
-					<span class="bugle-date"><?php echo get_the_date() ?></span> / <span class="bugle-category"><a
+					<span class="newspaperx-date"><?php echo get_the_date() ?></span> / <span class="newspaperx-category"><a
 							href="<?php echo $cat_link ?>"><?php echo $cat ?></a></span>
 				</div>
 			</li>

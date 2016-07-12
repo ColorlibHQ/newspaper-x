@@ -1,12 +1,12 @@
 <?php
 
-class Bugle_Customizer_Helper {
+class NewspaperX_Customizer_Helper {
 
 	/**
 	 * The basic constructor of the helper
 	 * It changes the default panels of the customizer
 	 *
-	 * Bugle_Customizer_Helper constructor.
+	 * NewspaperX_Customizer_Helper constructor.
 	 */
 	public function __construct() {
 		$this->change_default_panels();
@@ -37,20 +37,20 @@ class Bugle_Customizer_Helper {
 		global $wp_customize;
 		# Necessary since we can't debug on IIS servers
 		# Mac OS X rules for dev :)
-		if ( ! bugle_on_iis() ) {
+		if ( ! newspaperx_on_iis() ) {
 
 			// Change panel for Site Title & Tagline Section
 			$site_title        = $wp_customize->get_section( 'title_tagline' );
-			$site_title->panel = 'bugle_panel_general';
+			$site_title->panel = 'newspaperx_panel_general';
 
 			// Change panel for Static Front Page
 			$site_title3        = $wp_customize->get_section( 'static_front_page' );
-			$site_title3->panel = 'bugle_panel_general';
+			$site_title3->panel = 'newspaperx_panel_general';
 
 			// Change priority for Site Title
 			$site_title4              = $wp_customize->get_control( 'blogname' );
-			$site_title4->section     = 'bugle_general_section';
-			$site_title4->description = esc_html__( 'Company name in text format below', 'bugle' );
+			$site_title4->section     = 'newspaperx_general_section';
+			$site_title4->description = esc_html__( 'Company name in text format below', 'newspaper-x' );
 			$site_title4->priority    = 1;
 
 			// Change priority for Site Tagline
@@ -66,7 +66,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return string
 	 */
-	public static function bugle_sanitize_textarea_nl2br( $input ) {
+	public static function newspaperx_sanitize_textarea_nl2br( $input ) {
 		return nl2br( $input );
 	}
 
@@ -77,7 +77,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return string
 	 */
-	public static function bugle_sanitize_radio_buttons( $input, $setting ) {
+	public static function newspaperx_sanitize_radio_buttons( $input, $setting ) {
 
 		global $wp_customize;
 
@@ -95,7 +95,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return string
 	 */
-	public static function bugle_sanitize_number( $input ) {
+	public static function newspaperx_sanitize_number( $input ) {
 		return force_balance_tags( $input );
 	}
 
@@ -104,7 +104,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return string
 	 */
-	public static function bugle_sanitize_file_url( $url ) {
+	public static function newspaperx_sanitize_file_url( $url ) {
 
 		$output = '';
 
@@ -121,7 +121,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return null|string
 	 */
-	public static function bugle_sanitize_hex_color( $color ) {
+	public static function newspaperx_sanitize_hex_color( $color ) {
 		if ( '' === $color ) {
 			return '';
 		}
@@ -139,7 +139,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return int
 	 */
-	public static function bugle_sanitize_checkbox( $value ) {
+	public static function newspaperx_sanitize_checkbox( $value ) {
 		if ( $value == 1 ) {
 			return 1;
 		} else {
@@ -152,7 +152,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return string
 	 */
-	public static function bugle_sanitize_allowed_html( $value ) {
+	public static function newspaperx_sanitize_allowed_html( $value ) {
 
 		return wp_kses(
 			$value,
@@ -181,7 +181,7 @@ class Bugle_Customizer_Helper {
 	 *
 	 * @return array
 	 */
-	public static function bugle_sanitize_multiple_checkbox( $values ) {
+	public static function newspaperx_sanitize_multiple_checkbox( $values ) {
 
 		$multi_values = ! is_array( $values ) ? explode( ',', $values ) : $values;
 

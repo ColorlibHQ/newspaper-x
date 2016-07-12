@@ -1,13 +1,13 @@
 jQuery(document).ready(function ($) {
-	Bugle.initOwlCarousel($);
-	Bugle.initNewsTicker($('.bugle-news-carousel'));
-	Bugle.initGoToTop($);
-	Bugle.initLazyLoad($);
-	Bugle.initSearchForm($);
+	NewspaperX.initOwlCarousel($);
+	NewspaperX.initNewsTicker($('.newspaperx-news-carousel'));
+	NewspaperX.initGoToTop($);
+	NewspaperX.initLazyLoad($);
+	NewspaperX.initSearchForm($);
 });
 
 
-var Bugle = {
+var NewspaperX = {
 	initSearchForm : function ($) {
 		$('#search-top-bar-submit').on('click', function (e) {
 			e.preventDefault();
@@ -69,11 +69,11 @@ var Bugle = {
 					sliderAutoPlay = true;
 				}
 				// Custom Navigation events outside of the owlCarousel mark-up
-				$(".bugle-owl-next").on('click', function (event) {
+				$(".newspaperx-owl-next").on('click', function (event) {
 					event.preventDefault();
 					$(sliderSelector).trigger('next.owl.carousel');
 				});
-				$(".bugle-owl-prev").on('click', function (event) {
+				$(".newspaperx-owl-prev").on('click', function (event) {
 					event.preventDefault();
 					$(sliderSelector).trigger('prev.owl.carousel');
 				});

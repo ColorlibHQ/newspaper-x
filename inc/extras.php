@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 /**
@@ -14,7 +14,7 @@
  *
  * @return array
  */
-function bugle_body_classes( $classes ) {
+function newspaperx_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -28,14 +28,14 @@ function bugle_body_classes( $classes ) {
 	return $classes;
 }
 
-add_filter( 'body_class', 'bugle_body_classes' );
+add_filter( 'body_class', 'newspaperx_body_classes' );
 
 # Check if it's an IIS powered server
-if ( ! function_exists( 'bugle_on_iis' ) ) {
+if ( ! function_exists( 'newspaperx_on_iis' ) ) {
 	/**
 	 * @return bool
 	 */
-	function bugle_on_iis() {
+	function newspaperx_on_iis() {
 		$sSoftware = strtolower( $_SERVER["SERVER_SOFTWARE"] );
 		if ( strpos( $sSoftware, "microsoft-iis" ) !== false ) {
 			return true;
@@ -48,14 +48,14 @@ if ( ! function_exists( 'bugle_on_iis' ) ) {
 /**
  * Render breadcrumbs
  */
-if ( ! function_exists( 'bugle_breadcrumbs' ) ) {
+if ( ! function_exists( 'newspaperx_breadcrumbs' ) ) {
 	/**
 	 * Render the breadcrumbs with help of class-breadcrumbs.php
 	 *
 	 * @return void
 	 */
-	function bugle_breadcrumbs() {
-		$breadcrumbs = new Bugle_Breadcrumbs();
+	function newspaperx_breadcrumbs() {
+		$breadcrumbs = new NewspaperX_Breadcrumbs();
 		$breadcrumbs->get_breadcrumbs();
 	}
 }
@@ -67,7 +67,7 @@ if ( ! function_exists( 'bugle_breadcrumbs' ) ) {
  *
  * @return int Attachment ID on success, 0 on failure
  */
-function bugle_get_attachment_id( $url ) {
+function newspaperx_get_attachment_id( $url ) {
 	$attachment_id = 0;
 	$dir           = wp_upload_dir();
 	if ( false !== strpos( $url, $dir['baseurl'] . '/' ) ) { // Is URL in uploads directory?
@@ -108,14 +108,14 @@ function bugle_get_attachment_id( $url ) {
  *
  * @return array
  */
-function bugle_comment_placeholders( $fields ) {
+function newspaperx_comment_placeholders( $fields ) {
 	$fields['author'] = str_replace(
 		'<input',
 		'<input placeholder="'
 		. _x(
 			'Name *',
 			'comment form placeholder',
-			'bugle'
+			'newspaper-x'
 		)
 		. '"',
 		$fields['author']
@@ -134,24 +134,24 @@ function bugle_comment_placeholders( $fields ) {
 	return $fields;
 }
 
-add_filter( 'comment_form_default_fields', 'bugle_comment_placeholders' );
+add_filter( 'comment_form_default_fields', 'newspaperx_comment_placeholders' );
 
 
 /*
 /* Add responsive container to embeds
 */
-function bugle_fix_responsive_videos( $html ) {
-	return '<div class="bugle-video-container">' . $html . '</div>';
+function newspaperx_fix_responsive_videos( $html ) {
+	return '<div class="newspaperx-video-container">' . $html . '</div>';
 }
 
-add_filter( 'embed_oembed_html', 'bugle_fix_responsive_videos', 10, 3 );
-add_filter( 'video_embed_html', 'bugle_fix_responsive_videos' ); // Jetpack
+add_filter( 'embed_oembed_html', 'newspaperx_fix_responsive_videos', 10, 3 );
+add_filter( 'video_embed_html', 'newspaperx_fix_responsive_videos' ); // Jetpack
 
 
 /**
  * Helper function to determine what kind of archive page we are viewing and return an array
  */
-function bugle_check_archive() {
+function newspaperx_check_archive() {
 
 	$return = array(
 		'type' => NULL,
@@ -198,7 +198,7 @@ function bugle_check_archive() {
  *
  * @return WP_Query
  */
-function bugle_get_first_posts( $array ) {
+function newspaperx_get_first_posts( $array ) {
 	$atts = array(
 		'posts_per_page' => 2,
 		'order'          => 'DESC',
@@ -243,22 +243,22 @@ function bugle_get_first_posts( $array ) {
 
 }
 
-function bugle_render_banner() {
-	$banner_type = get_theme_mod( 'bugle_banner_type', 'image' );
+function newspaperx_render_banner() {
+	$banner_type = get_theme_mod( 'newspaperx_banner_type', 'image' );
 
 	$html = '';
 	$html .= '<div class="row">';
 
 	if ( $banner_type === 'image' ) {
-		$image = get_theme_mod( 'bugle_banner_image', get_template_directory_uri() . '/images/banner.jpg' );
+		$image = get_theme_mod( 'newspaperx_banner_image', get_template_directory_uri() . '/images/banner.jpg' );
 
 		if ( $image !== get_template_directory_uri() . '/images/banner.jpg' ) {
 
 		}
 
-		$html .= '<div class="col-xs-12 bugle-image-banner">';
-		$html .= '<a href="' . get_theme_mod( 'bugle_banner_link', 'https://colorlib.com/wp/themes/ensign/' ) . '">';
-		$html .= '<img src="' . get_theme_mod( 'bugle_banner_image', get_template_directory_uri() . '/images/banner.jpg' ) . '"/>';
+		$html .= '<div class="col-xs-12 newspaperx-image-banner">';
+		$html .= '<a href="' . get_theme_mod( 'newspaperx_banner_link', 'https://colorlib.com/wp/themes/newspaperx/' ) . '">';
+		$html .= '<img src="' . get_theme_mod( 'newspaperx_banner_image', get_template_directory_uri() . '/images/banner.jpg' ) . '"/>';
 		$html .= '</a>';
 		$html .= '</div>';
 	}

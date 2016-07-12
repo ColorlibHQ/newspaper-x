@@ -27,8 +27,8 @@
     }
   },
   "before-content-area": {
-    "bugle_banner-1": {
-      "title": "Bugle Banners",
+    "newspaperx_banner-1": {
+      "title": "Newspaper X Banners",
       "show_title": [
         "no"
       ],
@@ -41,7 +41,7 @@
     }
   },
   "content-area": {
-    "bugle_posts-1": {
+    "newspaperx_posts-1": {
       "title": "Recent Posts",
       "show_title": [
         "yes"
@@ -58,8 +58,8 @@
       ],
       "posts_per_row": 2
     },
-    "bugle_banner-2": {
-      "title": "Bugle Banners",
+    "newspaperx_banner-2": {
+      "title": "Newspaper X Banners",
       "show_title": [
         "no"
       ],
@@ -70,7 +70,7 @@
       ],
       "adsense_code": "\t\t\t"
     },
-    "bugle_posts-3": {
+    "newspaperx_posts-3": {
       "title": "Featured Posts",
       "show_title": [
         "yes"
@@ -87,7 +87,7 @@
       ],
       "posts_per_row": 2
     },
-    "bugle_posts-10": {
+    "newspaperx_posts-10": {
       "title": "Recent Posts",
       "show_title": [
         "no"
@@ -104,8 +104,8 @@
       ],
       "posts_per_row": 2
     },
-    "bugle_banner-3": {
-      "title": "Bugle Banners",
+    "newspaperx_banner-3": {
+      "title": "Newspaper X Banners",
       "show_title": [
         "no"
       ],
@@ -116,7 +116,7 @@
       ],
       "adsense_code": "\t\t\t"
     },
-    "bugle_posts-4": {
+    "newspaperx_posts-4": {
       "title": "Editorial",
       "show_title": [
         "yes"
@@ -142,8 +142,8 @@
       "hierarchical": 0,
       "dropdown": 0
     },
-    "bugle_banner-4": {
-      "title": "Bugle Banners",
+    "newspaperx_banner-4": {
+      "title": "Newspaper X Banners",
       "show_title": [
         "no"
       ],
@@ -154,7 +154,7 @@
       ],
       "adsense_code": "\t\t\t"
     },
-    "bugle_recent-1": {
+    "newspaperx_recent-1": {
       "title": "Recent Posts",
       "show_title": [
         "yes"
@@ -162,8 +162,8 @@
       "limit": 3,
       "offset": 0
     },
-    "bugle_banner-5": {
-      "title": "Bugle Banners",
+    "newspaperx_banner-5": {
+      "title": "Newspaper X Banners",
       "show_title": [
         "no"
       ],
@@ -175,8 +175,8 @@
       "adsense_code": "\t\t\t"
     },
     "calendar-1": [],
-    "bugle_banner-6": {
-      "title": "Bugle Banners",
+    "newspaperx_banner-6": {
+      "title": "Newspaper X Banners",
       "show_title": [
         "no"
       ],
@@ -194,7 +194,7 @@
     }
   },
   "after-content-sidebar": {
-    "bugle_posts-6": {
+    "newspaperx_posts-6": {
       "title": "Lifestyle",
       "show_title": [
         "yes"
@@ -213,7 +213,7 @@
     }
   },
   "before-footer-sidebar-a": {
-    "bugle_posts-7": {
+    "newspaperx_posts-7": {
       "title": "Lifestyle",
       "show_title": [
         "no"
@@ -232,7 +232,7 @@
     }
   },
   "before-footer-sidebar-b": {
-    "bugle_posts-8": {
+    "newspaperx_posts-8": {
       "title": "Recent Posts",
       "show_title": [
         "no"
@@ -252,7 +252,7 @@
   },
   "footer-sidebar-1": {
     "text-2": {
-      "title": "About Bugle",
+      "title": "About Newspaper X",
       "text": "Maecenas finibus pretium congue. Quisque sed sem itum turpis. Mauris ut quam vitae urna dignissim. Curabitur pharetra mauris id urna vestibulum, nec pharetra elit commodo. Nunc rutrum mi lectus, quis posuere ex rhoncus non. Sed nec ultrices ligula. ",
       "filter": true
     }
@@ -266,14 +266,14 @@
     }
   },
   "footer-sidebar-3": {
-    "bugle_contact-2": {
-      "about_title": "About Bugle",
+    "newspaperx_contact-2": {
+      "about_title": "About Newspaper X",
       "contact_title": "Contact",
       "about": "Maecenas finibus pretium congue. Quisque sed sem itum turpis. Mauris ut quam vitae urna dignissim.",
-      "logo": "http:\/\/localhost\/bugle\/wp-content\/plugins\/bugle-plugin\/assets\/images\/logo.png",
+      "logo": "http:\/\/localhost\/newspaperx\/wp-content\/plugins\/newspaperx-plugin\/assets\/images\/logo.png",
       "logo_url": "",
       "phone": "+40 764123986",
-      "email": "ensign@contact.com",
+      "email": "newspaperx@contact.com",
       "address": "Northon Street, 2015 NYC"
     }
   }

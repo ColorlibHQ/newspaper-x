@@ -32,7 +32,7 @@ button {
     margin-left      : 4px;
     &:hover {
       border-color     : transparent;
-      background-color : $color_brand-bugle;
+      background-color : $color_brand-newspaperx;
     }
     &:after {
       content     : '\f002';
@@ -51,12 +51,12 @@ button {
     text-transform   : uppercase;
     padding          : 20px 25px;
     // Different bg color
-    background-color : $color_brand-bugle;
+    background-color : $color_brand-newspaperx;
     color            : #FFF;
     border           : none;
     border-radius    : 30px;
     &:hover {
-      background-color : $color_brand-bugle-darken;
+      background-color : $color_brand-newspaperx-darken;
     }
   }
 }

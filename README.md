@@ -1,6 +1,6 @@
 = License =
-Bugle WordPress theme, Copyright (C) 2015 MachoThemes.com
-Bugle WordPress theme is licensed under the GPL3.
+Newspaper X WordPress theme, Copyright (C) 2015 MachoThemes.com
+Newspaper X WordPress theme is licensed under the GPL3.
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
 The exceptions to this license are as follows:

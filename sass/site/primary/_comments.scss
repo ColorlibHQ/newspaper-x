@@ -60,7 +60,7 @@
     position     : relative;
     bottom       : 18px;
     > a {
-      color       : $color_brand-bugle;
+      color       : $color_brand-newspaperx;
       font-family : $font__main;
       font-size   : 15px;
     }
@@ -73,7 +73,7 @@
   .reply {
     @extend .comment-content;
     > a {
-      color       : $color_brand-bugle;
+      color       : $color_brand-newspaperx;
       font-family : $font__main;
       font-size   : 15px;
       font-weight : 700;

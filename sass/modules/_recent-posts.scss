@@ -1,4 +1,4 @@
-.bugle-recent-posts {
+.newspaperx-recent-posts {
   margin-bottom : 15px;
   > ul {
     padding         : 0;
@@ -8,16 +8,16 @@
     margin          : 0 0 10px;
     > li {
       @media (min-width : 768px) {
-        &#bugle-recent-post-0 {
+        &#newspaperx-recent-post-0 {
           width         : 65%;
           height        : 480px;
           margin-bottom : 8px;
         }
-        &#bugle-recent-post-1, &#bugle-recent-post-2 {
+        &#newspaperx-recent-post-1, &#newspaperx-recent-post-2 {
           width  : 35%;
           height : 240px;
         }
-        &#bugle-recent-post-2 {
+        &#newspaperx-recent-post-2 {
           margin-bottom : 8px;
         }
         width  : 25%;
@@ -52,7 +52,7 @@
         @include linearGradient(transparentize(#000, 1), transparentize(#000, 0.1));
         content  : '';
       }
-      &#bugle-recent-post-6, &#bugle-recent-post-5, &#bugle-recent-post-4, &#bugle-recent-post-3 {
+      &#newspaperx-recent-post-6, &#newspaperx-recent-post-5, &#newspaperx-recent-post-4, &#newspaperx-recent-post-3 {
         h3 {
           a {
             font-size : 17px;
@@ -62,7 +62,7 @@
       > img {
         width : 100%;
       }
-      .bugle-post-info {
+      .newspaperx-post-info {
         position    : absolute;
         bottom      : 25px;
         left        : 35px;

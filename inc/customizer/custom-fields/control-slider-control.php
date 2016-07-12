@@ -8,7 +8,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 	 * @access public
 	 *
 	 */
-	class Bugle_Controls_Slider_Control extends WP_Customize_Control {
+	class NewspaperX_Controls_Slider_Control extends WP_Customize_Control {
 		/**
 		 * The type of customize control being rendered.
 		 *

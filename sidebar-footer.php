@@ -4,7 +4,7 @@
  *
  * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Bugle
+ * @package Newspaper X
  */
 
 /**
@@ -37,7 +37,7 @@ if ( empty( $sidebars ) ) {
 /**
  * Handle the sizing of the footer columns based on the user selection
  */
-$count = (int) get_theme_mod( 'bugle_footer_columns', 3 );
+$count = (int) get_theme_mod( 'newspaperx_footer_columns', 3 );
 /**
  * Size can be set dynamically as well by counting the array elements
  * $size = 12 / count($sidebars);
