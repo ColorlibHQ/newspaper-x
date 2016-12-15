@@ -14,7 +14,7 @@
  *
  * @return array
  */
-function newspaperx_body_classes( $classes ) {
+function newspaper_x_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -28,14 +28,14 @@ function newspaperx_body_classes( $classes ) {
 	return $classes;
 }
 
-add_filter( 'body_class', 'newspaperx_body_classes' );
+add_filter( 'body_class', 'newspaper_x_body_classes' );
 
 # Check if it's an IIS powered server
-if ( ! function_exists( 'newspaperx_on_iis' ) ) {
+if ( ! function_exists( 'newspaper_x_on_iis' ) ) {
 	/**
 	 * @return bool
 	 */
-	function newspaperx_on_iis() {
+	function newspaper_x_on_iis() {
 		$sSoftware = strtolower( $_SERVER["SERVER_SOFTWARE"] );
 		if ( strpos( $sSoftware, "microsoft-iis" ) !== false ) {
 			return true;
@@ -48,14 +48,14 @@ if ( ! function_exists( 'newspaperx_on_iis' ) ) {
 /**
  * Render breadcrumbs
  */
-if ( ! function_exists( 'newspaperx_breadcrumbs' ) ) {
+if ( ! function_exists( 'newspaper_x_breadcrumbs' ) ) {
 	/**
 	 * Render the breadcrumbs with help of class-breadcrumbs.php
 	 *
 	 * @return void
 	 */
-	function newspaperx_breadcrumbs() {
-		$breadcrumbs = new NewspaperX_Breadcrumbs();
+	function newspaper_x_breadcrumbs() {
+		$breadcrumbs = new Newspaper_X_Breadcrumbs();
 		$breadcrumbs->get_breadcrumbs();
 	}
 }
@@ -67,7 +67,7 @@ if ( ! function_exists( 'newspaperx_breadcrumbs' ) ) {
  *
  * @return int Attachment ID on success, 0 on failure
  */
-function newspaperx_get_attachment_id( $url ) {
+function newspaper_x_get_attachment_id( $url ) {
 	$attachment_id = 0;
 	$dir           = wp_upload_dir();
 	if ( false !== strpos( $url, $dir['baseurl'] . '/' ) ) { // Is URL in uploads directory?
@@ -98,60 +98,24 @@ function newspaperx_get_attachment_id( $url ) {
 		}
 	}
 
-	return $attachment_id;
+	return (int) $attachment_id;
 }
-
-/**
- * Change default fields, add placeholder and change type attributes.
- *
- * @param  array $fields
- *
- * @return array
- */
-function newspaperx_comment_placeholders( $fields ) {
-	$fields['author'] = str_replace(
-		'<input',
-		'<input placeholder="'
-		. _x(
-			'Name *',
-			'comment form placeholder',
-			'newspaper-x'
-		)
-		. '"',
-		$fields['author']
-	);
-	$fields['email']  = str_replace(
-		'<input id="email" name="email"',
-		'<input placeholder="Email *"  id="email" name="email"',
-		$fields['email']
-	);
-	$fields['url']    = str_replace(
-		'<input id="url" name="url"',
-		'<input placeholder="Website" id="url" name="url"',
-		$fields['url']
-	);
-
-	return $fields;
-}
-
-add_filter( 'comment_form_default_fields', 'newspaperx_comment_placeholders' );
-
 
 /*
 /* Add responsive container to embeds
 */
-function newspaperx_fix_responsive_videos( $html ) {
-	return '<div class="newspaperx-video-container">' . $html . '</div>';
+function newspaper_x_fix_responsive_videos( $html ) {
+	return '<div class="newspaper-x-video-container">' . $html . '</div>';
 }
 
-add_filter( 'embed_oembed_html', 'newspaperx_fix_responsive_videos', 10, 3 );
-add_filter( 'video_embed_html', 'newspaperx_fix_responsive_videos' ); // Jetpack
+add_filter( 'embed_oembed_html', 'newspaper_x_fix_responsive_videos', 10, 3 );
+add_filter( 'video_embed_html', 'newspaper_x_fix_responsive_videos' ); // Jetpack
 
 
 /**
  * Helper function to determine what kind of archive page we are viewing and return an array
  */
-function newspaperx_check_archive() {
+function newspaper_x_check_archive() {
 
 	$return = array(
 		'type' => NULL,
@@ -198,7 +162,7 @@ function newspaperx_check_archive() {
  *
  * @return WP_Query
  */
-function newspaperx_get_first_posts( $array ) {
+function newspaper_x_get_first_posts( $array ) {
 	$atts = array(
 		'posts_per_page' => 2,
 		'order'          => 'DESC',
@@ -243,22 +207,21 @@ function newspaperx_get_first_posts( $array ) {
 
 }
 
-function newspaperx_render_banner() {
-	$banner_type = get_theme_mod( 'newspaperx_banner_type', 'image' );
+/**
+ * Render the banner in the frontend (Header)
+ *
+ * @return string
+ */
+function newspaper_x_render_banner() {
+	$banner_type = get_theme_mod( 'newspaper_x_banner_type', 'image' );
 
 	$html = '';
 	$html .= '<div class="row">';
 
 	if ( $banner_type === 'image' ) {
-		$image = get_theme_mod( 'newspaperx_banner_image', get_template_directory_uri() . '/images/banner.jpg' );
-
-		if ( $image !== get_template_directory_uri() . '/images/banner.jpg' ) {
-
-		}
-
-		$html .= '<div class="col-xs-12 newspaperx-image-banner">';
-		$html .= '<a href="' . get_theme_mod( 'newspaperx_banner_link', 'https://colorlib.com/wp/themes/newspaperx/' ) . '">';
-		$html .= '<img src="' . get_theme_mod( 'newspaperx_banner_image', get_template_directory_uri() . '/images/banner.jpg' ) . '"/>';
+		$html .= '<div class="col-xs-12 newspaper-x-image-banner">';
+		$html .= '<a href="' . esc_url( get_theme_mod( 'newspaper_x_banner_link', 'https://machothemes.com/' ) ) . '">';
+		$html .= '<img src="' . esc_url( get_theme_mod( 'newspaper_x_banner_image', get_template_directory_uri() . '/assets/images/banner.jpg' ) ) . '"/>';
 		$html .= '</a>';
 		$html .= '</div>';
 	}
@@ -266,4 +229,46 @@ function newspaperx_render_banner() {
 	$html .= '</div>';
 
 	return $html;
+}
+
+/**
+ * @param string $format
+ *
+ * @return bool|mixed
+ */
+function newspaper_x_format_icon( $format = 'standard' ) {
+	if ( $format === 'standard' ) {
+		return false;
+	}
+
+	$icons = array(
+		'aside'   => 'fa fa-hashtag',
+		'image'   => 'fa fa-picture-o',
+		'quote'   => 'fa fa-quote-left',
+		'link'    => 'fa fa-link',
+		'gallery' => 'fa fa-th-large',
+		'video'   => 'fa fa-video-camera',
+		'status'  => 'fa fa-heartbeat',
+		'audio'   => 'fa fa-headphones',
+		'chat'    => 'fa fa-comment-o'
+	);
+
+	return $icons[ $format ];
+}
+
+add_action( 'wp_ajax_newspaper_x_get_attachment_image', 'newspaper_x_get_attachment_image' );
+add_action( 'wp_ajax_nopriv_newspaper_x_get_attachment_image', 'newspaper_x_get_attachment_image' );
+
+function newspaper_x_get_attachment_image() {
+	$id  = intval( $_POST['attachment_id'] );
+	$src = wp_get_attachment_image( $id, false );
+
+	echo esc_js( $src );
+	die();
+}
+
+add_filter( 'comment_form_defaults', 'newspaper_x_comment_form_defaults' );
+function newspaper_x_comment_form_defaults( $defaults ) {
+	$defaults['title_reply'] = __( '<span>Leave Comment</span>', 'newspaper-x' );
+	return $defaults;
 }

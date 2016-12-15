@@ -1,0 +1,368 @@
+.newspaper-x-blog-sidebar {
+  /**
+  * Search Widget is a little different, does not have border
+  */
+  .widget_search {
+    .widget-title {
+      display: none;
+    }
+    margin-bottom: 30px;
+  }
+  // Add margin bottom
+  .widget_newspaper_x_banner, .widget_text {
+    margin-bottom: 30px;
+  }
+  /**
+  * Select all widgets except for the search box
+  */
+  .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) {
+    /**
+    * add the border + paddings
+    */
+    @extend .widget-bordered;
+    margin: 0 0 30px;
+    /**
+    * Style the header by adding background
+    */
+    > h3 {
+      @extend .widget-title-styled;
+    }
+    /**
+    * Reset the margins for UL / OL
+    */
+    > ul, > ol {
+      margin: 0;
+      padding: 0 18px 30px 18px;
+      list-style-type: none;
+    }
+    /* Make sure select elements fit in widgets. */
+    select {
+      max-width: 100%;
+      option {
+        max-width: 233px;
+      }
+    }
+    &.widget_nav_menu {
+      > div {
+        > ul {
+          margin: 0;
+          padding: 0 18px 30px 18px;
+          li > ul {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    /**
+    * Style the tag cloud
+    */
+    &.widget_tag_cloud {
+      .tagcloud {
+        padding: 0 18px 30px 18px;
+        a {
+          border: 1px solid #e1e1e1;
+          padding: 10px 15px;
+          display: inline-block;
+          text-transform: uppercase;
+          margin: 0 10px 10px 0;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+    /**
+    * Style the categories and archive widgets
+    */
+    &.widget_categories, &.widget_archive {
+      /**
+      * Dropdown categories/archives
+      */
+      > select {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+
+      > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 18px 0 18px;
+        font-size: 15px;
+        color: $color__text-main;
+        > li {
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px dashed #e1e1e1;
+          &:last-of-type {
+            border-bottom: none;
+            margin-bottom: 20px;
+          }
+          a {
+            color: $color__text-main;
+            font-family: $font__main;
+            &:hover,
+            &:focus {
+              text-decoration: none;
+              color: $color_brand-newspaper-x;
+            }
+          }
+
+          .newspaper-x-cat-count {
+            float: right;
+            color: $color__text-title;
+            font-family: $font__alternate;
+            font-size: 15px;
+          }
+        }
+      }
+      .children {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 25px;
+        > li {
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px dashed #e1e1e1;
+        }
+      }
+    }
+
+    /**
+    * Calendar restyling. The title will always be hidden.
+    */
+    &.widget_calendar {
+      border: 3px solid #000;
+      padding: 0 30px;
+      position: relative;
+      .widget-title {
+        display: none;
+      }
+      #wp-calendar {
+        font-size: 12px;
+        color: $font__main;
+        > caption {
+          color: $color__text-title;
+          font-famiy: $font__alternate;
+          text-align: center;
+          font-size: 17px;
+          font-weight: 700;
+          padding-bottom: 16px;
+          padding-top: 16px;
+          min-height: 55px;
+          position: relative;
+          margin-bottom: 20px;
+        }
+        thead {
+          color: $color_brand-newspaper-x;
+        }
+        td, th {
+          padding: 6px 7px;
+          a {
+            color: $color_brand-newspaper-x;
+            text-decoration: none;
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+        #prev {
+          position: absolute;
+          top: -2px;
+          left: 25%;
+          width: 35px;
+          height: 55px;
+          background-color: transparent;
+          color: #FFF;
+          &:before {
+            content: '\f104';
+            display: block;
+            font-size: 24px;
+            line-height: 44px;
+            text-align: center;
+            position: relative;
+            color: $color__text-title;
+            font-family: 'FontAwesome';
+          }
+          > a {
+            top: 20px;
+            position: absolute;
+            color: transparent;
+          }
+        }
+        #next {
+          position: absolute;
+          top: -2px;
+          right: 25%;
+          width: 35px;
+          height: 55px;
+          background-color: transparent;
+          color: #FFF;
+          &:before {
+            content: '\f105';
+            display: block;
+            font-size: 24px;
+            line-height: 44px;
+            text-align: center;
+            position: relative;
+            color: $color__text-title;
+            font-family: 'FontAwesome';
+          }
+          > a {
+            top: 20px;
+            position: absolute;
+            color: transparent;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.newspaper-x-content, .newspaper-x-after-content-sidebar {
+  .widget-title {
+    @extend .section-title;
+  }
+}
+
+.widget-bordered {
+  border: 3px solid #000;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    border: 1px solid #000;
+    z-index: -1;
+  }
+  position: relative;
+}
+
+.widget-title-styled {
+  color: $color__text-title;
+  padding: 18px;
+  display: block;
+  text-transform: uppercase;
+  font-famiy: $font__main;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.site-footer {
+  p {
+    color: #FFF;
+    font-family: $font__alternate;
+  }
+  .newspaper-x-contact-p {
+    strong {
+      color: $color__text-title;
+    }
+    margin-bottom: 0;
+  }
+
+  .newspaper-x-contact-logo {
+    margin-top: 20px;
+  }
+
+  .widget {
+    font-size: 15px;
+    font-family: $font__alternate;
+    margin-bottom: 40px;
+    position: relative;
+    border: 3px solid #FFF;
+    padding: 15px;
+    z-index: 1;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 3px;
+      bottom: 3px;
+      left: 3px;
+      right: 3px;
+      border: 1px solid #FFF;
+      z-index: -1;
+    }
+
+    h3 {
+      font-family: $font__main;
+      font-size: 17px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #FFF;
+    }
+
+    &.widget_newspaper_x_recent {
+      .newspaper-x-recent-post-widget {
+        height: 65px;
+        margin-left: 0;
+        margin-right: 0;
+        .newspaper-x-title {
+          h3 {
+            margin-bottom: 15px;
+          }
+        }
+        .newspaper-x-post-content {
+          width: 225px;
+          @media (max-width: 1199px) {
+            width: 187px;
+          }
+        }
+      }
+    }
+
+    &.widget_categories {
+      position: relative;
+      > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        color: $color__text-title;
+        > li {
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px dashed transparentize(#e1e1e1, 0.9);
+          &:last-of-type {
+            border-bottom: none;
+          }
+          a {
+            color: #fff;
+            font-family: $font__main;
+            font-weight: 400;
+            &:hover,
+            &:focus {
+              text-decoration: none;
+              color: $color_brand-newspaper-x;
+            }
+          }
+
+          .newspaper-x-cat-count {
+            float: right;
+            color: transparentize(#FFF, 0.5);
+            font-family: $font__alternate;
+            font-size: 15px;
+          }
+        }
+      }
+      .children {
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 25px;
+        > li {
+          margin-top: 10px;
+          padding-top: 10px;
+          border-top: 1px dashed #e1e1e1;
+        }
+      }
+    }
+  }
+}

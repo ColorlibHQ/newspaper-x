@@ -1,7 +1,7 @@
 /*
 Theme Name: Newspaper X
-Theme URI: http://machothemes.com/newspaperx
-Author: Underscores.me
+Theme URI: http://machothemes.com/newspaper-x
+Author: MachoThemes
 Author URI: http://machothemes.com
 Description: When it comes to WordPress themes for magazines, users have certain expectations. The perfect theme should be fast, easy to customize, secure, and eye-grabbing. Clean but dazzling, Newspaper X meets even the highest demands. If you were looking for a news theme to help you create a unique and recognizable brand image, look no more.
 
@@ -15,5 +15,5 @@ Text Domain: newspaper-x
 Tags: two-columns, right-sidebar, custom-background, custom-colors, custom-menu, featured-images, sticky-post, threaded-comments, translation-ready
 */
 
-@import 'css/style.css';
+@import 'assets/css/style.css';
 

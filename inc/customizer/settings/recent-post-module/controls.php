@@ -12,13 +12,13 @@ foreach ( $categories as $category ) {
 }
 
 $wp_customize->add_control(
-	new NewspaperX_Control_Checkbox_Multiple(
+	new Epsilon_Control_Checkbox_Multiple(
 		$wp_customize,
-		'newspaperx_recent_posts_category',
+		'newspaper_x_recent_posts_category',
 		array(
 			'choices' => $options,
 			'label'   => esc_html__( 'Categories', 'newspaper-x' ),
-			'section' => 'newspaperx_recent_post_module',
+			'section' => 'newspaper_x_recent_post_module',
 		)
 	)
 );
@@ -27,7 +27,7 @@ $wp_customize->add_control(
  * Ordering
  */
 $wp_customize->add_control(
-	'newspaperx_recent_posts_ordering',
+	'newspaper_x_recent_posts_ordering',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
@@ -35,14 +35,14 @@ $wp_customize->add_control(
 			'DESC' => esc_html__( 'Descending', 'newspaper-x' ),
 		),
 		'label'   => esc_html__( 'Ordering', 'newspaper-x' ),
-		'section' => 'newspaperx_recent_post_module',
+		'section' => 'newspaper_x_recent_post_module',
 	)
 );
 /**
  * Order by control
  */
 $wp_customize->add_control(
-	'newspaperx_recent_posts_order_by',
+	'newspaper_x_recent_posts_order_by',
 	array(
 		'type'    => 'radio',
 		'choices' => array(
@@ -52,6 +52,6 @@ $wp_customize->add_control(
 			'rand'          => esc_html__( 'Random', 'newspaper-x' )
 		),
 		'label'   => esc_html__( 'Order By', 'newspaper-x' ),
-		'section' => 'newspaperx_recent_post_module',
+		'section' => 'newspaper_x_recent_post_module',
 	)
 );

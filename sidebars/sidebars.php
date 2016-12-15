@@ -2,16 +2,12 @@
 
 
 if ( function_exists( 'register_sidebar' ) ) {
-	if ( ! function_exists( 'newspaperx_register_sidebars' ) ) {
-		function newspaperx_register_sidebars() {
-
-			#
-			#    Register sidebars
-			#
+	if ( ! function_exists( 'newspaper_x_register_sidebars' ) ) {
+		function newspaper_x_register_sidebars() {
 			register_sidebar( array(
-				                  'id'            => 'default-widget-area',
-				                  'name'          => __( 'Default Widget Area', 'newspaper-x' ),
-				                  'description'   => __( 'Only seen on the normal post query', 'newspaper-x' ),
+				                  'id'            => 'sidebar',
+				                  'name'          => __( 'Content Sidebar', 'newspaper-x' ),
+				                  'description'   => __( 'In blog archive, right side', 'newspaper-x' ),
 				                  'before_title'  => '<h3 class="widget-title"><span>',
 				                  'after_title'   => '</span></h3>',
 				                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -19,16 +15,6 @@ if ( function_exists( 'register_sidebar' ) ) {
 			                  )
 			);
 
-			register_sidebar( array(
-				                  'id'            => 'before-content-area',
-				                  'name'          => __( 'Before Content Widget Area', 'newspaper-x' ),
-				                  'description'   => __( 'Actual page template content', 'newspaper-x' ),
-				                  'before_title'  => '<h3 class="widget-title"><span>',
-				                  'after_title'   => '</span></h3>',
-				                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				                  'after_widget'  => '</div>'
-			                  )
-			);
 			register_sidebar( array(
 				                  'id'            => 'content-area',
 				                  'name'          => __( 'Content Widget Area', 'newspaper-x' ),
@@ -41,41 +27,8 @@ if ( function_exists( 'register_sidebar' ) ) {
 			);
 
 			register_sidebar( array(
-				                  'id'            => 'blog-sidebar',
-				                  'name'          => __( 'Content Sidebar', 'newspaper-x' ),
-				                  'description'   => __( 'In blog archive, right side', 'newspaper-x' ),
-				                  'before_title'  => '<h3 class="widget-title"><span>',
-				                  'after_title'   => '</span></h3>',
-				                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				                  'after_widget'  => '</div>'
-			                  )
-			);
-
-			register_sidebar( array(
 				                  'id'            => 'after-content-sidebar',
 				                  'name'          => __( 'Widget area before the footer', 'newspaper-x' ),
-				                  'description'   => __( 'Full width area ( spans across the container )', 'newspaper-x' ),
-				                  'before_title'  => '<h3 class="widget-title"><span>',
-				                  'after_title'   => '</span></h3>',
-				                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				                  'after_widget'  => '</div>'
-			                  )
-			);
-
-			register_sidebar( array(
-				                  'id'            => 'before-footer-sidebar-a',
-				                  'name'          => __( 'Before Footer A', 'newspaper-x' ),
-				                  'description'   => __( 'Full width area ( spans across the container )', 'newspaper-x' ),
-				                  'before_title'  => '<h3 class="widget-title"><span>',
-				                  'after_title'   => '</span></h3>',
-				                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				                  'after_widget'  => '</div>'
-			                  )
-			);
-
-			register_sidebar( array(
-				                  'id'            => 'before-footer-sidebar-b',
-				                  'name'          => __( 'Before Footer B', 'newspaper-x' ),
 				                  'description'   => __( 'Full width area ( spans across the container )', 'newspaper-x' ),
 				                  'before_title'  => '<h3 class="widget-title"><span>',
 				                  'after_title'   => '</span></h3>',
@@ -128,9 +81,9 @@ if ( function_exists( 'register_sidebar' ) ) {
 			                  )
 			);
 
-		} // function newspaperx_register_sidebars end
+		} // function newspaper_x_register_sidebars end
 
-		add_action( 'widgets_init', 'newspaperx_register_sidebars' );
+		add_action( 'widgets_init', 'newspaper_x_register_sidebars' );
 
-	} // function exists (newspaperx_register_sidebars) check
+	} // function exists (newspaper_x_register_sidebars) check
 } // function exists (register_sidebar) check

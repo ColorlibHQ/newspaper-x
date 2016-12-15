@@ -1,0 +1,83 @@
+.newspaper-x-recent-post-widget {
+  display: inline-block;
+  margin: 0 18px 18px 18px;
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
+  @media (max-width: 994px) {
+    .newspaper-x-title {
+      h3 {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  @media (min-width: 995px) {
+    height: 100px;
+  }
+
+  @media (min-width: 1199px) {
+    height: 80px;
+  }
+  .newspaper-x-image {
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+    img {
+      max-width: 93px;
+      width: 100%;
+    }
+  }
+  .newspaper-x-post-content {
+    display: inline-block;
+    float: left;
+    width: 138px;
+    @media (max-width: 1199px) {
+      width: 126px;
+    }
+  }
+  .newspaper-x-title {
+    h3 {
+      font-size: 16px;
+      font-family: $font__main;
+      margin-top: 0;
+      text-transform: initial;
+      color: $color__text-title;
+      > a {
+        color: inherit;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+  .newspaper-x-post-meta {
+    float: left;
+    display: inline-block;
+    > ul {
+      margin: 0;
+    }
+    .post-comments {
+      display: none;
+    }
+  }
+}
+
+.newspaper-x-blog-sidebar, .newspaper-x-sidebar {
+  margin-top: 10px;
+  .widget_newspaper_x_recent {
+    @extend .widget-bordered;
+    > h3 {
+      @extend .widget-title-styled;
+    }
+
+    .newspaper-x-recent-post-widget {
+      border-bottom: 1px dashed #e1e1e1;
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+}

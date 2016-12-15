@@ -32,7 +32,7 @@ foreach ( $social_media as $social_link ) {
 // Grab the current author
 $curauth = get_userdata( $post->post_author );
 
-if ( is_single() && ! empty( $curauth->description ) && get_theme_mod( 'newspaperx_enable_author_box', 'enabled' ) === 'enabled' ) { ?>
+if ( is_single() && ! empty( $curauth->description ) && get_theme_mod( 'newspaper_x_enable_author_box', 'enabled' ) === 'enabled' ) { ?>
 	<!-- Author description -->
 	<div class="row author-description">
 		<!-- Avatar -->

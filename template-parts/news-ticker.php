@@ -7,7 +7,7 @@
  * @package Newspaper X
  */
 
-$cats = get_theme_mod( 'newspaperx_recent_posts_category', array( '1' ) );
+$cats = get_theme_mod( 'newspaper_x_recent_posts_category', array( '1' ) );
 $args = array(
 	'numberposts' => 10,
 	'orderby'     => 'date',
@@ -23,9 +23,9 @@ if ( ! $recent_posts ) {
 }
 ?>
 <!-- News Ticker Module -->
-<div class="newspaperx-news-ticker">
-	<span class="newspaperx-module-title"><?php echo __( 'Latest News', 'newspaper-x' ) ?></span>
-	<ul class="newspaperx-news-carousel owl-carousel owl-theme">
+<div class="newspaper-x-news-ticker">
+	<span class="newspaper-x-module-title"><?php echo __( 'Latest News', 'newspaper-x' ) ?></span>
+	<ul class="newspaper-x-news-carousel owl-carousel owl-theme">
 		<?php foreach ( $recent_posts as $post ) { ?>
 			<li class="item">
 				<a href="<?php echo get_permalink( $post->ID ) ?>"><?php echo $post->post_title ?></a>
