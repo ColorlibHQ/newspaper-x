@@ -10,7 +10,7 @@ function newspaper_x_scripts() {
 	 * Load Google Fonts
 	 */
 	wp_enqueue_style( 'newspaper-x-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,700|Oswald:400,700|Source+Sans+Pro:400,700', array(), $newspaper_x['Version'], 'all' );
-	wp_enqueue_style( 'font-awesome-style', get_template_directory_uri() . '/assets/vendors/fontawesome//font-awesome.min.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/vendors/fontawesome//font-awesome.min.css' );
 
 	/**
 	 * Load the bootstrap framework
@@ -18,17 +18,7 @@ function newspaper_x_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap-theme.min.css' );
 	wp_enqueue_script( 'newspaper-x-bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.js', array( 'jquery' ), $newspaper_x['Version'], true );
-
-	/**
-	 * Load offscreen helper
-	 */
-	wp_enqueue_script( 'newspaper-x-offscreen', get_template_directory_uri() . '/assets/vendors/offscreen/offscreen.min.js', array( 'jquery' ), $newspaper_x['Version'], true );
-
-	/**
-	 * Load the Sticky library
-	 */
-	wp_enqueue_script( 'newspaper-x-sticky', get_template_directory_uri() . '/assets/vendors/sticky/jquery.sticky.js', array( 'jquery' ), $newspaper_x['Version'], true );
-
+	
 	/**
 	 * Theme styling
 	 */
