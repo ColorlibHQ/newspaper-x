@@ -51,6 +51,9 @@ if ( $posts->have_posts() ): ?>
 									<?php echo Newspaper_X_Helper::get_post_meta( get_the_ID() ) ?>
 								</div>
 							<?php endif; ?>
+							<div class="newspaper-x-content">
+								<?php echo wp_trim_words( wp_kses_post( get_the_content() ), 30, ' <a href="' . esc_url( get_the_permalink() ) . '">...</a>' ) ?>
+							</div>
 						</div>
 					</div>
 				</div>

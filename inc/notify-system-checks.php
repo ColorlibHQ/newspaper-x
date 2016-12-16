@@ -11,9 +11,9 @@ if ( ! class_exists( 'MT_Notify_System' ) ) {
 		 * @return mixed
 		 */
 		public static function version_check( $ver ) {
-			$newsmag = wp_get_theme();
+			$newspaper_x = wp_get_theme();
 
-			return version_compare( $newsmag['Version'], $ver, '>=' );
+			return version_compare( $newspaper_x['Version'], $ver, '>=' );
 		}
 
 		/**

@@ -145,7 +145,7 @@ class Newspaper_X_Welcome {
 		wp_enqueue_style( 'newspaper-x-welcome-screen-css', get_template_directory_uri() . '/inc/admin/welcome-screen/css/welcome.css' );
 		wp_enqueue_script( 'newspaper-x-welcome-screen-js', get_template_directory_uri() . '/inc/admin/welcome-screen/js/welcome.js', array( 'jquery' ) );
 
-		wp_localize_script( 'newspaper-x-welcome-screen-js', 'newsmagWelcomeScreenObject', array(
+		wp_localize_script( 'newspaper-x-welcome-screen-js', 'newspaperXWelcomeScreenObject', array(
 			'nr_actions_required'      => $this->count_actions(),
 			'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
 			'template_directory'       => get_template_directory_uri(),
@@ -164,7 +164,7 @@ class Newspaper_X_Welcome {
 		wp_enqueue_style( 'newspaper-x-welcome-screen-customizer-css', get_template_directory_uri() . '/inc/admin/welcome-screen/css/welcome_customizer.css' );
 		wp_enqueue_script( 'newspaper-x-welcome-screen-customizer-js', get_template_directory_uri() . '/inc/admin/welcome-screen/js/welcome_customizer.js', array( 'jquery' ), '20120206', true );
 
-		wp_localize_script( 'newspaper-x-welcome-screen-customizer-js', 'newsmagWelcomeScreenCustomizerObject', array(
+		wp_localize_script( 'newspaper-x-welcome-screen-customizer-js', 'newspaperXWelcomeScreenCustomizerObject', array(
 			'nr_actions_required' => $this->count_actions(),
 			'aboutpage'           => esc_url( admin_url( 'themes.php?page=newspaper-x-welcome&tab=recommended_actions' ) ),
 			'customizerpage'      => esc_url( admin_url( 'customize.php#recommended_actions' ) ),
@@ -183,7 +183,7 @@ class Newspaper_X_Welcome {
 
 		$action_id = ( isset( $_GET['id'] ) ) ? $_GET['id'] : 0;
 
-		echo $action_id; /* this is needed and it's the id of the dismissable required action */
+		echo esc_html( $action_id ); /* this is needed and it's the id of the dismissable required action */
 
 		if ( ! empty( $action_id ) ):
 
@@ -365,7 +365,7 @@ class Newspaper_X_Welcome {
 		require_once( ABSPATH . 'wp-admin/admin.php' );
 		require_once( ABSPATH . 'wp-admin/admin-header.php' );
 
-		$newsmag      = wp_get_theme();
+		$newspaper_x      = wp_get_theme();
 		$active_tab   = isset( $_GET['tab'] ) ? $_GET['tab'] : 'getting_started';
 		$action_count = $this->count_actions();
 
@@ -373,7 +373,7 @@ class Newspaper_X_Welcome {
 
 		<div class="wrap about-wrap epsilon-wrap">
 
-			<h1><?php echo __( 'Welcome to Newspaper X! - Version ', 'newspaper-x' ) . $newsmag['Version']; ?></h1>
+			<h1><?php echo __( 'Welcome to Newspaper X! - Version ', 'newspaper-x' ) . $newspaper_x['Version']; ?></h1>
 
 			<div
 				class="about-text"><?php echo esc_html__( 'Newspaper X is now installed and ready to use! Get ready to build something beautiful. We hope you enjoy it! We want to make sure you have the best experience using Newspaper X and that is why we gathered here all the necessary information for you. We hope you will enjoy using Newspaper X, as much as we enjoy creating great products.', 'newspaper-x' ); ?></div>

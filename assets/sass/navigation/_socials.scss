@@ -11,6 +11,9 @@
 
 /* The social links are actually a menu */
 #menu-social {
+  &.search-enabled {
+    margin-right: 30px;
+  }
   ul {
     list-style: none;
     margin: 0;

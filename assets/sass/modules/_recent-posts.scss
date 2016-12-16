@@ -6,6 +6,7 @@
     display: inline-block;
     width: 100%;
     margin: 0 0 10px;
+    overflow: hidden;
     > li {
       @media (min-width: 768px) {
         &#newspaper-x-recent-post-0 {
@@ -73,6 +74,13 @@
         font-size: 14px;
         a {
           color: #FFF;
+          &:hover,
+          &:focus,
+          &:active {
+            text-decoration: none;
+            outline: none;
+            color: $color_brand-newspaper-x;
+          }
         }
       }
       h3 {
@@ -85,8 +93,12 @@
         > a {
           color: #FFF;
           font-weight: 700;
-          &:hover {
+          &:hover,
+          &:focus,
+          &:active {
             text-decoration: none;
+            outline: none;
+            color: $color_brand-newspaper-x;
           }
         }
       }

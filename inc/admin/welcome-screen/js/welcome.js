@@ -1,7 +1,6 @@
 jQuery(document).ready(function () {
 
-	/* If there are required actions, add an icon with the number of required actions in the About newsmag page -> Actions required tab */
-	var newspaper_x_nr_actions_required = newsmagWelcomeScreenObject.nr_actions_required;
+	var newspaper_x_nr_actions_required = newspaperXWelcomeScreenObject.nr_actions_required;
 
 	if ( (typeof newspaper_x_nr_actions_required !== 'undefined') && (newspaper_x_nr_actions_required != '0') ) {
 		jQuery('li.newspaper-x-w-red-tab a').append('<span class="newspaper-x-actions-count">' + newspaper_x_nr_actions_required + '</span>');
@@ -16,9 +15,9 @@ jQuery(document).ready(function () {
 			type      : "GET",
 			data      : { action: 'newspaper_x_dismiss_required_action', id: id, todo: action },
 			dataType  : "html",
-			url       : newsmagWelcomeScreenObject.ajaxurl,
+			url       : newspaperXWelcomeScreenObject.ajaxurl,
 			beforeSend: function (data, settings) {
-				jQuery('.newspaper-x-tab-pane#actions_required h1').append('<div id="temp_load" style="text-align:center"><img src="' + newsmagWelcomeScreenObject.template_directory + '/inc/admin/welcome-screen/img/ajax-loader.gif" /></div>');
+				jQuery('.newspaper-x-tab-pane#actions_required h1').append('<div id="temp_load" style="text-align:center"><img src="' + newspaperXWelcomeScreenObject.template_directory + '/inc/admin/welcome-screen/img/ajax-loader.gif" /></div>');
 			},
 			success   : function (data) {
 				location.reload();

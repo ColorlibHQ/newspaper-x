@@ -93,7 +93,7 @@
     border-radius: 10px;
     z-index: 26;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: -3px;
 }
 
 .wp-submenu .badge-action-count {

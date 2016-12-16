@@ -15,7 +15,7 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 		$cat       = get_the_category();
 		$comments  = wp_count_comments( get_the_ID() );
 		$date      = get_the_date();
-		$tags_list = get_the_tag_list( '', esc_html__( ' ', 'newspaper-x' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'newspaper-x' ) );
 
 		$html = '<ul>';
 		if ( ! empty( $cat ) ) {
@@ -24,7 +24,7 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 		$html .= '<li class="post-comments"><icon class="fa fa-comments"></icon> ' . esc_html( $comments->approved ) . ' </li>';
 		$html .= '<li class="post-date">' . $date . ' </li>';
 		if ( $tags_list ) {
-			$html .= '<li class="post-tags"><icon class="fa fa-tags"></icon> ' . esc_html( $tags_list ) . '</li>';
+			$html .= '<li class="post-tags"><icon class="fa fa-tags"></icon> ' . wp_kses_post( $tags_list ) . '</li>';
 		}
 		$html .= '</ul>';
 
@@ -33,7 +33,7 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 				echo '<a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . get_the_category_by_ID( $cat[0]->term_id ) . '</a>';
 				break;
 			case 'comments':
-				echo '<a class="newspaper-x-comments-link" href="' . get_the_permalink( get_the_ID() ) . '/#comments"><span class=" fa fa-comment-o"></span> ' . esc_html( $comments->approved ) . '</a>';
+				echo '<a class="newspaper-x-comments-link" href="' . esc_url( get_the_permalink( get_the_ID() ) ) . '/#comments"><span class=" fa fa-comment-o"></span> ' . esc_html( $comments->approved ) . '</a>';
 				break;
 			case 'date':
 				echo '<div class="newspaper-x-date">' . esc_html( $date ) . '</div>';
@@ -91,11 +91,6 @@ function newspaper_x_category_transient_flusher() {
 
 add_action( 'edit_category', 'newspaper_x_category_transient_flusher' );
 add_action( 'save_post', 'newspaper_x_category_transient_flusher' );
-
-
-function newspaper_x_the_posts_navigation( $args = array() ) {
-	echo get_the_posts_navigation( $args );
-}
 
 function newspaper_x_remove_from_archive_title( $title ) {
 	if ( is_category() ) {

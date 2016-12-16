@@ -27,11 +27,6 @@ if ( ! function_exists( 'newspaper_x_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
-		/*
-		 * Enable support for Post Formats.
-		 * See https://developer.wordpress.org/themes/functionality/post-formats/
-		 */
-		add_theme_support( 'post-formats', array() );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -65,26 +60,6 @@ if ( ! function_exists( 'newspaper_x_setup' ) ) :
 		add_image_size( 'newspaper-x-single-post', 760, 490, true );
 		add_image_size( 'newspaper-x-recent-post-big', 550, 360, true );
 		add_image_size( 'newspaper-x-recent-post-list-image', 95, 65, true );
-
-		/**
-		 * Banners
-		 */
-		add_image_size( 'newspaper-x-wide-banner', 728, 90, true );
-		add_image_size( 'newspaper-x-square-banner', 300, 250, true );
-		add_image_size( 'newspaper-x-skyscraper-banner', 300, 600, true );
-
-		add_filter( 'image_size_names_choose', 'newspaper_x_image_sizes' );
-		function newspaper_x_image_sizes( $sizes ) {
-			$addsizes = array(
-				'newspaper-x-single-post' => __( 'Single Post Size', 'newspaper-x' ),
-				'newspaper-x-wide-banner'       => __( 'Wide Banner', 'newspaper-x' ),
-				'newspaper-x-square-banner'     => __( 'Square Banner', 'newspaper-x' ),
-				'newspaper-x-skyscraper-banner' => __( 'Sky scraper Banner', 'newspaper-x' )
-			);
-			$newsizes = array_merge( $sizes, $addsizes );
-
-			return $newsizes;
-		}
 
 		/**
 		 * Add support for the custom logo functionality
@@ -150,15 +125,15 @@ if ( ! function_exists( 'newspaper_x_setup' ) ) :
 				array(
 					"id"    => 'newspaper-x-req-ac-install-data',
 					"title" => esc_html__( 'Import Sample Data', 'newspaper-x' ),
-					"help"  => '<a class="button button-primary" target="_blank"  href="' . self_admin_url( 'admin.php?import=wordpress' ) . '">' . __( 'Import Posts', 'newspaper-x' ) . '</a> 
-									   <a class="button button-primary" target="_blank"  href="' . self_admin_url( 'tools.php?page=widget-importer-exporter' ) . '">' . __( 'Import Widgets', 'newspaper-x' ) . '</a>',
+					"help"  => '<a class="button button-primary" target="_blank"  href="' . esc_url( self_admin_url( 'admin.php?import=wordpress' ) ) . '">' . __( 'Import Posts', 'newspaper-x' ) . '</a> 
+									   <a class="button button-primary" target="_blank"  href="' . esc_url( self_admin_url( 'tools.php?page=widget-importer-exporter' ) ) . '">' . __( 'Import Widgets', 'newspaper-x' ) . '</a>',
 					"check" => MT_Notify_System::has_import_plugins(),
 				),
 				array(
 					"id"          => 'newspaper-x-req-ac-static-latest-news',
 					"title"       => esc_html__( 'Set front page to static', 'newspaper-x' ),
 					"description" => esc_html__( 'If you just installed Newspaper X, and are not able to see the front-page demo, you need to go to Settings -> Reading , Front page displays and select "Static Page".', 'newspaper-x' ),
-					"help"        => 'If you need more help understanding how this works, check out the following <a target="_blank"  href="https://codex.wordpress.org/Creating_a_Static_Front_Page#WordPress_Static_Front_Page_Process">link</a>. <br/> <br/><a class="button button-secondary" target="_blank"  href="' . self_admin_url( 'options-reading.php' ) . '">' . __( 'Set manually', 'newspaper-x' ) . '</a> <a class="button button-primary"  href="' . wp_nonce_url( self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=recommended_actions&action=set_page_automatic' ), 'set_page_automatic' ) . '">' . __( 'Set automatically', 'newspaper-x' ) . '</a>',
+					"help"        => 'If you need more help understanding how this works, check out the following <a target="_blank"  href="https://codex.wordpress.org/Creating_a_Static_Front_Page#WordPress_Static_Front_Page_Process">link</a>. <br/> <br/><a class="button button-secondary" target="_blank"  href="' . esc_url( self_admin_url( 'options-reading.php' ) ) . '">' . __( 'Set manually', 'newspaper-x' ) . '</a> <a class="button button-primary"  href="' . wp_nonce_url( esc_url( self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=recommended_actions&action=set_page_automatic' ) ), 'set_page_automatic' ) . '">' . __( 'Set automatically', 'newspaper-x' ) . '</a>',
 					"check"       => MT_Notify_System::is_not_static_page()
 				)
 			);
@@ -168,3 +143,15 @@ if ( ! function_exists( 'newspaper_x_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'newspaper_x_setup' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function newspaper_x_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'newspaperx_content_width', 750 );
+}
+add_action( 'after_setup_theme', 'newspaper_x_content_width', 0 );

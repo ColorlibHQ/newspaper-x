@@ -23,7 +23,7 @@ if ( ! $recent_posts ) {
 }
 ?>
 <!-- News Ticker Module -->
-<div class="newspaper-x-news-ticker">
+
 	<span class="newspaper-x-module-title"><?php echo __( 'Latest News', 'newspaper-x' ) ?></span>
 	<ul class="newspaper-x-news-carousel owl-carousel owl-theme">
 		<?php foreach ( $recent_posts as $post ) { ?>
@@ -32,5 +32,4 @@ if ( ! $recent_posts ) {
 			</li>
 		<?php } ?>
 	</ul>
-</div>
 

@@ -18,6 +18,7 @@ get_header();
  * Banner Settings;
  */
 $banner_count = get_theme_mod( 'newspaper_x_show_banner_after', 6 );
+$banner = get_theme_mod( 'newspaper_x_banner_type', 'image' );
 
 if ( is_home() && ! is_front_page() ) : ?>
 	<header class="col-xs-12">
@@ -36,7 +37,7 @@ if ( is_home() && ! is_front_page() ) : ?>
 						while ( have_posts() ) : the_post();
 
 							if ( fmod( $banner_count_index, $banner_count ) == 0 && $banner_count_index != 0 ) {
-								echo newspaper_x_render_banner();
+								get_template_part( 'template-parts/banner/banner', $banner );
 							}
 
 							$banner_count_index ++;
@@ -61,7 +62,7 @@ if ( is_home() && ! is_front_page() ) : ?>
 						?>
 					</div>
 					<?php
-					newspaper_x_numeric_posts_nav();
+					the_posts_navigation();
 				else :
 					echo '<div class="row">';
 					get_template_part( 'template-parts/content', 'none' );

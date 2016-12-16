@@ -3,7 +3,7 @@
  * Changelog
  */
 
-$newsmag = wp_get_theme( 'newspaper-x' );
+$newspaper_x = wp_get_theme( 'newspaper-x' );
 
 ?>
 <div class="featured-section changelog">

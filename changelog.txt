@@ -1,0 +1,6 @@
+### V1.1.0
+	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:9
+	- Theme structure re-done
+
+### V1.0.0
+	- Initial release

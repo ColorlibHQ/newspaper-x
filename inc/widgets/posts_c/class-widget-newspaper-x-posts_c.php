@@ -244,7 +244,7 @@ class Widget_Newspaper_X_Posts_C extends WP_Widget {
 		echo $before_widget;
 
 		$filepath = get_template_directory() . '/inc/widgets/posts_c/layouts/default.php';
-
+		
 		$posts = $this->get_posts( $instance );
 
 		if ( file_exists( $filepath ) ) {

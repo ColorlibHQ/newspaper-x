@@ -23,7 +23,7 @@
   margin: 0 0 1.5em;
 }
 
-.single-post {
+.single-post, .page {
   .entry-header {
     margin-top: 30px;
     img {
@@ -36,7 +36,7 @@
     font-size: 24px;
     font-weight: bold;
     margin-top: 30px;
-    font-family: 'Poppins';
+    font-family: $font__main;
     color: #333333;
   }
 }

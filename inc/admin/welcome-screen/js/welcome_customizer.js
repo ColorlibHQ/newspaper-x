@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
-    var newspaper_x_aboutpage = newsmagWelcomeScreenCustomizerObject.aboutpage;
-    var newspaper_x_nr_actions_required = newsmagWelcomeScreenCustomizerObject.nr_actions_required;
+    var newspaper_x_aboutpage = newspaperXWelcomeScreenCustomizerObject.aboutpage;
+    var newspaper_x_nr_actions_required = newspaperXWelcomeScreenCustomizerObject.nr_actions_required;
 
     /* Number of required actions */
     if ((typeof newspaper_x_aboutpage !== 'undefined') && (typeof newspaper_x_nr_actions_required !== 'undefined') && (newspaper_x_nr_actions_required != '0')) {

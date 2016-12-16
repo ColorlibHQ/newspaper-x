@@ -4,13 +4,13 @@ input,
 select,
 textarea {
   color: $color__text-main;
-  font-family: $font__main;
+  font-family: $font__alternate;
   line-height: $font__line-height-body;
 }
 
 p {
   font-size: 15px;
-  font-family: $font__main;
+  font-family: $font__alternate;
   color: $color__text-main;
   line-height: 1.8em;
   margin-bottom: 1.5em;

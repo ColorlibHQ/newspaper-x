@@ -33,9 +33,9 @@ class Newspaper_X_Lazy_Load_Images {
 			), $content['image'] );
 		}
 		// Perform a search for all images
-		return preg_replace_callback( '/(<\s*img[^>]+)(srcset\s*=\s*"[^"]+")([^>]+>)/i', array(
+		return preg_replace_callback( '/(<\s*img[^>]+)(src\s*=\s*"[^"]+")([^>]+>)/i', array(
 			$this,
-			'preg_replace_callback'
+			'preg_replace_callback_src'
 		), $content['image'] );
 	}
 

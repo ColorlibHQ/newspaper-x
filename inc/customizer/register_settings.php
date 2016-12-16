@@ -102,6 +102,15 @@ class Newspaper_X_Customizer_Helper {
 			},
 		) );
 
+
+		$wp_customize->selective_refresh->add_partial( 'newspaper_x_banner_type', array(
+			'selector'        => '.header-banner',
+			'render_callback' => function () {
+				$banner = get_theme_mod( 'newspaper_x_banner_type', 'image' );
+				get_template_part( 'template-parts/banner/banner', $banner );
+			},
+		) );
+
 	}
 
 	/**

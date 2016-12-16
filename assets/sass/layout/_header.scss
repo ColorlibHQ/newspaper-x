@@ -8,6 +8,24 @@
   @media (min-width: 768px) {
     padding: 25px 15px;
   }
+
+  .header-logo {
+    .site-title {
+      font-family: $font__main;
+      color: #000;
+      font-size: 45px;
+      line-height: 45px;
+      font-weight: bold;
+      &:hover, &:focus {
+        text-decoration: none;
+        color: $color_brand-newspaper-x;
+      }
+    }
+    .site-description {
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+  }
   @media (max-width: 767px) {
     .header-logo {
       text-align: center;
@@ -40,6 +58,7 @@
   width: 41px;
   height: 41px;
   margin-left: 4px;
+  text-align: right;
   &:hover {
     border-color: transparent;
     background-color: $color_brand-newspaper-x;
@@ -53,6 +72,7 @@
   &:hover, &:focus, &:active {
     background: transparent;
     border: none;
+    color: $color_brand-newspaper-x;
   }
 }
 
@@ -186,5 +206,66 @@
         }
       }
     }
+  }
+}
+
+.header-banner {
+  text-align: right;
+  .newspaper-x-adsense {
+    float: right;
+  }
+}
+
+.newspaper-x-image-banner {
+  margin-bottom: 15px;
+  .newspaper-x-adsense {
+    margin: 0 auto;
+  }
+}
+
+.newspaper-x-image-banner, .header-banner {
+
+  .newspaper-x-adsense {
+    width: 728px;
+    height: 90px;
+    display: block;
+  }
+  .newspaper-x-adsense:before {
+    display: none !important;
+  }
+  .newspaper-x-adsense ins {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent;
+  }
+
+  @media screen and (max-width: 991px) {
+    .newspaper-x-adsense {
+      width: 720px;
+      height: 90px;
+    }
+    .newspaper-x-adsense:before {
+      content: '991';
+    }
+  }
+
+  .adsense__loading {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .9);
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .adsense--loaded .adsense__loading {
+    display: none;
+  }
+
+  .adsense__loading span {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
   }
 }

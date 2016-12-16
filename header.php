@@ -48,7 +48,7 @@
 							if ( $header_textcolor !== 'blank' ):
 								?>
 								<a class="site-title"
-								   href="<?php echo esc_url_raw( get_home_url() ) ?>"> <?php echo esc_html( get_option( 'blogname', 'newsmag-pro' ) ) ?></a>
+								   href="<?php echo esc_url( get_home_url() ) ?>"> <?php echo esc_html( get_option( 'blogname', 'newspaper-x' ) ) ?></a>
 							<?php endif; ?>
 							<?php
 							$description = get_bloginfo( 'description', 'display' );
@@ -81,10 +81,23 @@
 					<div class="col-md-12">
 						<button class="menu-toggle" aria-controls="primary-menu"
 						        aria-expanded="false"><span class="fa fa-bars"></span></button>
-						<?php wp_nav_menu( array(
-							                   'theme_location' => 'primary',
-							                   'menu_class'     => 'menu-main-menu-container'
-						                   ) ); ?>
+						<?php
+						if ( has_nav_menu( 'primary' ) ) {
+							wp_nav_menu( array(
+								             'theme_location' => 'primary',
+								             'menu_id'        => 'primary-menu'
+							             ) );
+						} else {
+							?>
+							<div class="menu-all-pages-container">
+								<ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
+									<li>
+										<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"><?php echo __( 'Add a menu', 'newspaper-x' ); ?></a>
+									</li>
+								</ul>
+							</div>
+							<?php
+						} ?>
 					</div>
 				</div>
 			</div>

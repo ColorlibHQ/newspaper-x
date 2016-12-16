@@ -59,3 +59,12 @@ img {
     transition: all .2s linear;
   }
 }
+
+li.blazy{
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+}
+
+.entry-content p {
+  overflow: hidden;
+}

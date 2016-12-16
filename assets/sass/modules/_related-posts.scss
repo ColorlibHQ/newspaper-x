@@ -28,7 +28,7 @@
       display: inline-block;
       margin-right: 3px;
       &:last-of-type {
-        margin-right: none;
+        margin-right: 0;
       }
       &:hover {
         border-color: $color_brand-newspaper-x;
@@ -42,6 +42,7 @@
         &:active {
           text-decoration: none;
           outline: none;
+          color:$color_brand-newspaper-x;
         }
       }
     }
@@ -56,6 +57,13 @@
       text-transform: uppercase;
       font-family: $font__alternate;
       color: $color__text-title;
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+        outline: none;
+        color:$color_brand-newspaper-x;
+      }
     }
   }
 }

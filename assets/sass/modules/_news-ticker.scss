@@ -2,7 +2,8 @@
   margin-top: 13px;
   position: relative;
   background-color: #000;
-
+  overflow: hidden;
+  max-height: 45px;
   .owl-carousel {
     display: block;
     position: absolute;
@@ -52,11 +53,10 @@
     bottom: 22px;
     li {
       a {
-        color: $font__main;
+        color: #fff;
         font-size: 14px;
-        font-family: 'Hind';
+        font-family: $font__alternate;
         font-weight: 400;
-        color: #FFF;
       }
     }
   }

@@ -88,6 +88,10 @@
       }
     }
 
+    .newspaper-x-content {
+      display: none;
+    }
+
     .newspaper-x-title {
       h3 {
         font-size: 15px;
@@ -108,6 +112,7 @@
     .newspaper-x-post-meta {
       float: left;
       display: inline-block;
+      width: 100%;
       > ul {
         margin-top: 10px;
         .post-comments {
@@ -131,6 +136,7 @@
   }
 
   .newspaper-x-blog-post-layout-c {
+    margin-bottom: 30px;
     @media (max-width: 767px) {
       margin-bottom: 10px;
     }
@@ -229,6 +235,11 @@
       display: block;
       font-family: $font__alternate;
       color: #333333;
+    }
+  }
+  .newspaper-x-blog-post-layout-b {
+    .newspaper-x-content {
+      display: block;
     }
   }
 }

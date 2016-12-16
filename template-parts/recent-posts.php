@@ -38,22 +38,30 @@ if ( ! $recent_posts ) {
 		<?php
 		$i = 0;
 		foreach ( $recent_posts as $post ) {
-			$cat      = get_the_category( $post->ID );
-			$cat_link = get_category_link( $cat[0]->term_id );
-			$cat      = $cat[0]->name;
-			$image    = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
+			$cat         = get_the_category( $post->ID );
+			$cat_link    = get_category_link( $cat[0]->term_id );
+			$cat         = $cat[0]->name;
+			$image       = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
+			$placeholder = $image;
 
 			if ( has_post_thumbnail() ) {
-				$src   = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
-				                                      'newspaper-x-recent-post-big',
-				                                      false,
-				                                      '' );
-				$image = $src[0];
+				$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
+				                                    'newspaper-x-recent-post-big',
+				                                    false,
+				                                    '' );
+
+				$srcsmall = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
+				                                         'newspaper-x-recent-post-list-image',
+				                                         false,
+				                                         '' );
+
+				$image       = $src[0];
+				$placeholder = $srcsmall[0];
 			}
 			?>
 
-			<li id="newspaper-x-recent-post-<?php echo $i; ?>" data-original="<?php echo esc_url( $image ) ?>"
-			    style="background-image:url('<?php echo esc_url( $image ) ?>')">
+			<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
+			    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
 				<div class="newspaper-x-post-info">
 					<h3>
 						<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">

@@ -164,9 +164,10 @@ function newspaper_x_check_archive() {
  */
 function newspaper_x_get_first_posts( $array ) {
 	$atts = array(
-		'posts_per_page' => 2,
-		'order'          => 'DESC',
-		'orderby'        => 'date'
+		'posts_per_page'      => 2,
+		'order'               => 'DESC',
+		'orderby'             => 'date',
+		'ignore_sticky_posts' => true,
 	);
 
 	switch ( $array['type'] ) {
@@ -177,6 +178,12 @@ function newspaper_x_get_first_posts( $array ) {
 			$atts['tag_id'] = $array['id'];
 			break;
 		case 'day':
+			$permalink = get_option( 'permalink_structure' );
+			if ( empty( $permalink ) ) {
+				$query       = get_query_var( 'm' );
+				$array['id'] = substr( $query, 6, 2 );
+			}
+
 			$atts['date_query'] = array(
 				array(
 					'day' => $array['id'],
@@ -184,6 +191,13 @@ function newspaper_x_get_first_posts( $array ) {
 			);
 			break;
 		case 'month':
+			$permalink = get_option( 'permalink_structure' );
+			if ( empty( $permalink ) ) {
+				$query       = get_query_var( 'm' );
+				$month       = substr( $query, 4, 2 );
+				$array['id'] = $month;
+			}
+
 			$atts['date_query'] = array(
 				array(
 					'month' => $array['id'],
@@ -191,6 +205,12 @@ function newspaper_x_get_first_posts( $array ) {
 			);
 			break;
 		case 'year':
+			$permalink = get_option( 'permalink_structure' );
+			if ( empty( $permalink ) ) {
+				$query       = get_query_var( 'm' );
+				$array['id'] = substr( $query, 0, 4 );
+			}
+
 			$atts['date_query'] = array(
 				array(
 					'year' => $array['id'],
@@ -205,30 +225,6 @@ function newspaper_x_get_first_posts( $array ) {
 
 	return $posts;
 
-}
-
-/**
- * Render the banner in the frontend (Header)
- *
- * @return string
- */
-function newspaper_x_render_banner() {
-	$banner_type = get_theme_mod( 'newspaper_x_banner_type', 'image' );
-
-	$html = '';
-	$html .= '<div class="row">';
-
-	if ( $banner_type === 'image' ) {
-		$html .= '<div class="col-xs-12 newspaper-x-image-banner">';
-		$html .= '<a href="' . esc_url( get_theme_mod( 'newspaper_x_banner_link', 'https://machothemes.com/' ) ) . '">';
-		$html .= '<img src="' . esc_url( get_theme_mod( 'newspaper_x_banner_image', get_template_directory_uri() . '/assets/images/banner.jpg' ) ) . '"/>';
-		$html .= '</a>';
-		$html .= '</div>';
-	}
-
-	$html .= '</div>';
-
-	return $html;
 }
 
 /**
@@ -270,5 +266,6 @@ function newspaper_x_get_attachment_image() {
 add_filter( 'comment_form_defaults', 'newspaper_x_comment_form_defaults' );
 function newspaper_x_comment_form_defaults( $defaults ) {
 	$defaults['title_reply'] = __( '<span>Leave Comment</span>', 'newspaper-x' );
+
 	return $defaults;
 }
