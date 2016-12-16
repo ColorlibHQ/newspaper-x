@@ -18,7 +18,7 @@ function newspaper_x_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.css' );
 	wp_enqueue_style( 'bootstrap-theme', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap-theme.min.css' );
 	wp_enqueue_script( 'newspaper-x-bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.js', array( 'jquery' ), $newspaper_x['Version'], true );
-	
+
 	/**
 	 * Theme styling
 	 */
@@ -41,9 +41,9 @@ function newspaper_x_scripts() {
 	wp_enqueue_script( 'machothemes-object', get_template_directory_uri() . '/assets/vendors/machothemes/machothemes.min.js', array(), $newspaper_x['Version'], true );
 	wp_enqueue_script( 'newspaper-x-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery' ), $newspaper_x['Version'], true );
 	wp_localize_script( 'newspaper-x-functions', 'WPUrls', array(
-		'siteurl' => esc_js( get_option( 'siteurl' ) ),
-		'theme'   => esc_js( get_template_directory_uri() ),
-		'ajaxurl' => esc_js( admin_url( 'admin-ajax.php' ) )
+		'siteurl' => esc_url( get_option( 'siteurl' ) ),
+		'theme'   => esc_url( get_template_directory_uri() ),
+		'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) )
 	) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

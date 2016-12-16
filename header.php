@@ -22,7 +22,6 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
 	<?php
 	/**
 	 * Enable / Disable the top bar

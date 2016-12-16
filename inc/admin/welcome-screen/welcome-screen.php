@@ -146,10 +146,10 @@ class Newspaper_X_Welcome {
 		wp_enqueue_script( 'newspaper-x-welcome-screen-js', get_template_directory_uri() . '/inc/admin/welcome-screen/js/welcome.js', array( 'jquery' ) );
 
 		wp_localize_script( 'newspaper-x-welcome-screen-js', 'newspaperXWelcomeScreenObject', array(
-			'nr_actions_required'      => $this->count_actions(),
-			'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
-			'template_directory'       => get_template_directory_uri(),
-			'no_required_actions_text' => __( 'Hooray! There are no required actions for you right now.', 'newspaper-x' )
+			'nr_actions_required'      => absint( $this->count_actions() ),
+			'ajaxurl'                  => esc_url( admin_url( 'admin-ajax.php' ) ),
+			'template_directory'       => esc_url( get_template_directory_uri() ),
+			'no_required_actions_text' => esc_html__( 'Hooray! There are no required actions for you right now.', 'newspaper-x' )
 		) );
 
 	}
@@ -165,10 +165,10 @@ class Newspaper_X_Welcome {
 		wp_enqueue_script( 'newspaper-x-welcome-screen-customizer-js', get_template_directory_uri() . '/inc/admin/welcome-screen/js/welcome_customizer.js', array( 'jquery' ), '20120206', true );
 
 		wp_localize_script( 'newspaper-x-welcome-screen-customizer-js', 'newspaperXWelcomeScreenCustomizerObject', array(
-			'nr_actions_required' => $this->count_actions(),
+			'nr_actions_required' => absint( $this->count_actions() ),
 			'aboutpage'           => esc_url( admin_url( 'themes.php?page=newspaper-x-welcome&tab=recommended_actions' ) ),
 			'customizerpage'      => esc_url( admin_url( 'customize.php#recommended_actions' ) ),
-			'themeinfo'           => __( 'View Theme Info', 'newspaper-x' ),
+			'themeinfo'           => esc_html__( 'View Theme Info', 'newspaper-x' ),
 		) );
 	}
 
@@ -365,7 +365,7 @@ class Newspaper_X_Welcome {
 		require_once( ABSPATH . 'wp-admin/admin.php' );
 		require_once( ABSPATH . 'wp-admin/admin-header.php' );
 
-		$newspaper_x      = wp_get_theme();
+		$newspaper_x  = wp_get_theme();
 		$active_tab   = isset( $_GET['tab'] ) ? $_GET['tab'] : 'getting_started';
 		$action_count = $this->count_actions();
 

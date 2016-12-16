@@ -101,39 +101,9 @@ if ( ! function_exists( 'newspaper_x_setup' ) ) :
 			 */
 			$newspaper_x_required_actions = array(
 				array(
-					"id"          => 'newspaper-x-req-ac-install-wp-import-plugin',
-					"title"       => MT_Notify_System::wordpress_importer_title(),
-					"description" => MT_Notify_System::wordpress_importer_description(),
-					"check"       => MT_Notify_System::has_import_plugin( 'wordpress-importer' ),
-					"plugin_slug" => 'wordpress-importer'
-				),
-				array(
-					"id"          => 'newspaper-x-req-ac-install-wp-import-widget-plugin',
-					"title"       => MT_Notify_System::widget_importer_exporter_title(),
-					'description' => MT_Notify_System::widget_importer_exporter_description(),
-					"check"       => MT_Notify_System::has_import_plugin( 'widget-importer-exporter' ),
-					"plugin_slug" => 'widget-importer-exporter'
-				),
-				array(
-					"id"          => 'newspaper-x-req-ac-download-data',
-					"title"       => esc_html__( 'Download theme sample data', 'newspaper-x' ),
-					"description" => esc_html__( 'Head over to our website and download the sample content data.', 'newspaper-x' ),
-					"help"        => '<a target="_blank"  href="https://www.machothemes.com/sample-data/newspaper-x-pro-posts.xml">' . __( 'Posts', 'newspaper-x' ) . '</a>, 
-									   <a target="_blank"  href="https://www.machothemes.com/sample-data/newspaper-x-pro-widgets.wie">' . __( 'Widgets', 'newspaper-x' ) . '</a>',
-					"check"       => MT_Notify_System::has_content(),
-				),
-				array(
-					"id"    => 'newspaper-x-req-ac-install-data',
-					"title" => esc_html__( 'Import Sample Data', 'newspaper-x' ),
-					"help"  => '<a class="button button-primary" target="_blank"  href="' . esc_url( self_admin_url( 'admin.php?import=wordpress' ) ) . '">' . __( 'Import Posts', 'newspaper-x' ) . '</a> 
-									   <a class="button button-primary" target="_blank"  href="' . esc_url( self_admin_url( 'tools.php?page=widget-importer-exporter' ) ) . '">' . __( 'Import Widgets', 'newspaper-x' ) . '</a>',
-					"check" => MT_Notify_System::has_import_plugins(),
-				),
-				array(
 					"id"          => 'newspaper-x-req-ac-static-latest-news',
 					"title"       => esc_html__( 'Set front page to static', 'newspaper-x' ),
-					"description" => esc_html__( 'If you just installed Newspaper X, and are not able to see the front-page demo, you need to go to Settings -> Reading , Front page displays and select "Static Page".', 'newspaper-x' ),
-					"help"        => 'If you need more help understanding how this works, check out the following <a target="_blank"  href="https://codex.wordpress.org/Creating_a_Static_Front_Page#WordPress_Static_Front_Page_Process">link</a>. <br/> <br/><a class="button button-secondary" target="_blank"  href="' . esc_url( self_admin_url( 'options-reading.php' ) ) . '">' . __( 'Set manually', 'newspaper-x' ) . '</a> <a class="button button-primary"  href="' . wp_nonce_url( esc_url( self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=recommended_actions&action=set_page_automatic' ) ), 'set_page_automatic' ) . '">' . __( 'Set automatically', 'newspaper-x' ) . '</a>',
+					"description" => esc_html__( 'If you just installed Newspaper X, head over to Settings -> Reading , Front page displays and select "Static Page". You can start building your homepage by adding theme\'s built-in widgets in the Content Area sidebars.', 'newspaper-x' ),
 					"check"       => MT_Notify_System::is_not_static_page()
 				)
 			);
@@ -152,6 +122,6 @@ add_action( 'after_setup_theme', 'newspaper_x_setup' );
  * @global int $content_width
  */
 function newspaper_x_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'newspaperx_content_width', 750 );
+	$GLOBALS['content_width'] = apply_filters( 'newspaper_x_content_width', 750 );
 }
 add_action( 'after_setup_theme', 'newspaper_x_content_width', 0 );
