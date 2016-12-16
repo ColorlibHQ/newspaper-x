@@ -1,6 +1,6 @@
 <?php
 global $wp_customize;
-$wp_customize->add_panel( 'newspaperx_panel_general',
+$wp_customize->add_panel( 'newspaper_x_panel_general',
                           array(
 	                          'priority'       => 24,
 	                          'capability'     => 'edit_theme_options',

@@ -10,45 +10,20 @@
  */
 
 ?>
-</div>   <!-- .row -->
 </div><!-- #content -->
 
-<?php if ( is_active_sidebar( 'before-footer-sidebar-a' ) || is_active_sidebar( 'before-footer-sidebar-b' ) ): ?>
-	<section class="newspaperx-before-footer-area">
-		<div class="container">
-			<div class="row">
-
-				<?php if ( is_active_sidebar( 'before-footer-sidebar-a' ) ) { ?>
-					<div class="col-xs-12 col-sm-6 col-md-6 newspaperx-before-footer-sidebar-a">
-						<?php
-						dynamic_sidebar( 'before-footer-sidebar-a' );
-						?>
-					</div>
-				<?php } ?>
-
-				<?php if ( is_active_sidebar( 'before-footer-sidebar-b' ) ) { ?>
-					<div class="col-xs-12 col-sm-6 col-md-6 newspaperx-before-footer-sidebar-b">
-						<?php
-						dynamic_sidebar( 'before-footer-sidebar-b' );
-						?>
-					</div>
-				<?php } ?>
-
-			</div>
-		</div><!--/.row-->
-	</section>
-<?php endif; ?>
 <footer id="colophon" class="site-footer" role="contentinfo">
 
 	<?php get_sidebar( 'footer' ) ?>
 
-	<?php if ( get_theme_mod( 'newspaperx_enable_go_top', 'enabled' ) !== 'disabled' ): ?>
+	<?php $go_top = get_theme_mod( 'newspaper_x_enable_go_top', true ); ?>
+	<?php if ( $go_top ): ?>
 		<div class="back-to-top-area">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<a href="javascript:void(0)" id="back-to-top">
-							<?php echo esc_html__( 'BACK TO TOP', 'newspaper-x' ) ?>
+							<?php echo esc_html__( 'Go Up', 'newspaper-x' ) ?>
 							<i class="fa fa-angle-up" aria-hidden="true"></i>
 						</a>
 					</div>
@@ -57,13 +32,16 @@
 		</div>
 	<?php endif; ?>
 
-	<?php if ( get_theme_mod( 'newspaperx_enable_copyright', 'enabled' ) !== 'disabled' ): ?>
+	<?php $go_top = get_theme_mod( 'newspaper_x_enable_copyright', true ); ?>
+	<?php if ( $go_top ): ?>
 		<div class="site-info ">
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-md-12">
 						<?php
-						echo get_theme_mod( 'newspaperx_copyright_contents', sprintf('&copy; ' . date( "Y" ) . ' <a href="%s">Newspaper X. All rights reserved.</a>', 'http://machothemes.com'));
+						$default   = sprintf( '&copy; ' . date( "Y" ) . ' <a href="%s">Newspaper X. All rights reserved.</a>', 'http://machothemes.com' );
+						$copyright = get_theme_mod( 'newspaper_x_copyright_contents' );
+						echo empty( $copyright ) ? wp_kses_post( $default ) : wp_kses_post( $copyright );
 						?>
 					</div>
 				</div>

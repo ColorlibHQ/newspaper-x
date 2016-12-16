@@ -1,5 +1,6 @@
-node_modules/*
-.idea
-.jscsrc
-.jshintignore
-.gitignore
+*.log
+
+/css/style.css.map
+/node_modules/
+.idea/
+/.standard.json

@@ -1,0 +1,39 @@
+/* Top header */
+.top-header {
+  background: #202020;
+  color: #fff;
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    li {
+      display: inline-block;
+      a {
+        font-family: $font__main;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 10px 30px 10px 0;
+        display: block;
+        color: #ffffff;
+        &:hover, &:focus {
+          text-decoration: none;
+          color: $color_brand-newspaper-x;
+        }
+      }
+      &:last-of-type {
+        a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    ul {
+      text-align: center;
+    }
+    #top-header-navigation, .top-header-icons {
+      float: none !important;
+    }
+  }
+}

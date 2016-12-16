@@ -12,9 +12,9 @@ if ( is_single() ) {
 	/**
 	 * Enable breadcrumbs
 	 */
-	$breadcrumbs_enabled = get_theme_mod( 'newspaperx_enable_post_breadcrumbs', 'breadcrumbs_enabled' );
-	if ( $breadcrumbs_enabled == 'breadcrumbs_enabled' ) {
-		newspaperx_breadcrumbs();
+	$breadcrumbs_enabled = get_theme_mod( 'newspaper_x_enable_post_breadcrumbs', true );
+	if ( $breadcrumbs_enabled  ) {
+		newspaper_x_breadcrumbs();
 	}
 }
 ?>
@@ -25,27 +25,45 @@ if ( is_single() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		}
 		?>
-		<div class="newspaperx-image">
+		<div class="newspaper-x-image">
 			<?php
+			$image = '<img class="wp-post-image" alt="" src="' . get_template_directory_uri() . '/assets/images/picture_placeholder.jpg" />';
 			if ( has_post_thumbnail() ) {
-				echo ! is_single() ? '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' : '';
-
-				is_single() ? the_post_thumbnail( 'newspaperx-single-post' ) : the_post_thumbnail( 'newspaperx-recent-post-big' );
-
-				echo ! is_single() ? '</a>' : '';
-			} else {
-				echo ! is_single() ? '<img src=' . get_template_directory_uri() . '/images/picture_placeholder.jpg' .
-				                     " />" : '';
+				$image = is_single() ? get_the_post_thumbnail( get_the_ID(), 'newspaper-x-single-post' ) : get_the_post_thumbnail( get_the_ID(), 'newspaper-x-recent-post-big' );
 			}
+
+			$image_obj    = array( 'id' => get_the_ID(), 'image' => $image );
+			$new_image    = apply_filters( 'newspaper_x_widget_image', $image_obj );
+
+			$allowed_tags = array(
+				'img'      => array(
+					'data-srcset' => true,
+					'data-src'    => true,
+					'srcset'      => true,
+					'sizes'       => true,
+					'src'         => true,
+					'class'       => true,
+					'alt'         => true,
+					'width'       => true,
+					'height'      => true
+				),
+				'noscript' => array()
+			);
+
+			echo ! is_single() ? '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' : '';
+
+			echo wp_kses( $new_image, $allowed_tags );
+
+			echo ! is_single() ? '</a>' : '';
 			?>
 		</div>
 		<?php
-		if ( !is_single() ) {
+		if ( ! is_single() ) {
 			echo '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . wp_trim_words( get_the_title(), 8 ) . '</a></h4>';
 		}
 		if ( 'post' === get_post_type() ) : ?>
-			<div class="newspaperx-post-meta">
-				<?php newspaperx_posted_on(); ?>
+			<div class="newspaper-x-post-meta">
+				<?php newspaper_x_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php
 		endif; ?>
@@ -57,21 +75,21 @@ if ( is_single() ) {
 			the_content();
 
 			wp_link_pages( array(
-				               'before' => '<ul class="newspaperx-pager">',
+				               'before' => '<ul class="newspaper-x-pager">',
 				               'after'  => '</ul>',
 			               ) );
 
 			$prev = get_previous_post_link();
-			$prev = str_replace('&laquo;', '<span class="fa fa-caret-left"></span>', $prev);
+			$prev = str_replace( '&laquo;', '<span class="fa fa-caret-left"></span>', $prev );
 			$next = get_next_post_link();
-			$next = str_replace('&raquo;', '<span class="fa fa-caret-right"></span>', $next);
+			$next = str_replace( '&raquo;', '<span class="fa fa-caret-right"></span>', $next );
 			?>
-			<div class="newspaperx-next-prev row">
+			<div class="newspaper-x-next-prev row">
 				<div class="col-md-6 text-left">
-				<?php echo $prev ?>
+					<?php echo $prev ?>
 				</div>
 				<div class="col-md-6 text-right">
-				<?php echo $next ?>
+					<?php echo $next ?>
 				</div>
 			</div>
 			<?php
@@ -88,7 +106,7 @@ if ( is_single() ) {
 			// Include author information
 			get_template_part( 'template-parts/author-info' );
 			// Include the related posts
-			do_action( 'newspaperx_single_after_article' );
+			do_action( 'newspaper_x_single_after_article' );
 		}
 		?>
 	</footer><!-- .entry-footer -->

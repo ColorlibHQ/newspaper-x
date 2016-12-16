@@ -1,0 +1,480 @@
+.customize-control-mte-slider input[type="text"] {
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin: 0;
+    font-size: 12px;
+    color: #333;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+    -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    width: 42px;
+    height: 22px;
+}
+
+.customize-control-mte-slider .ui-slider {
+    position: relative;
+    text-align: left;
+    height: 2px;
+    border-radius: 3px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 202px;
+    background: #d6d6d6;
+}
+
+.customize-control-mte-slider .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    border: solid 1px #d7d7d7;
+    transform: translateX(-50%);
+}
+
+.customize-control-mte-slider .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: 0.7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+    background: #E04D43;
+    top: 0;
+    bottom: 0;
+}
+
+.widget-content label.block {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.widget-content input.rl-slider {
+    border: none;
+    text-align: center;
+    padding: 2px;
+    margin: 0 0 15px;
+    font-size: 12px;
+    color: #333;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248);
+    -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+    width: 42px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.widget-content .ui-slider {
+    position: relative;
+    text-align: left;
+    height: 2px;
+    border-radius: 3px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 15px;
+    display: inline-block;
+    width: 175px;
+    float: right;
+    background: #d6d6d6;
+}
+
+.widget-content .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    border: solid 1px #d7d7d7;
+    transform: translateX(-50%);
+}
+
+.widget-content .ui-slider .ui-slider-range {
+    position: absolute;
+    z-index: 1;
+    font-size: 0.7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
+    background: #E04D43;
+    top: 0;
+    bottom: 0;
+}
+
+.macho-upsell {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.macho-upsell span.wp-ui-notification {
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.macho-upsell-options {
+
+}
+
+.macho-upsell-options li {
+    margin-bottom: 20px;
+    display: inline-block;
+
+}
+
+.macho-upsell .button {
+    display: block;
+    text-align: center;
+}
+
+ul.macho-upsell-requirements {
+    font-size: 12px;
+}
+
+.macho-upsell-requirements li {
+    line-height: 1.75;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+#available-widgets-list [class^='newspaper_x_'], #available-widgets-list [class*=' newspaper_x_'], #available-widgets-list [class^='newspaper-x-'], #available-widgets-list [class*=' newspaper-x-'] {
+    background: rgba(0, 115, 170, 0.05) !important;
+}
+
+.wp-admin .checkbox_switch {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.customize-control-title.onoffswitch_label {
+    width: 71%;
+}
+
+.onoffswitch_label {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 21px;
+    margin-top: -1px;
+}
+
+.onoffswitch {
+    position: relative;
+    width: 52px;
+    display: inline-block;
+    float: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none !important;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 22px;
+    padding: 0;
+    line-height: 19px;
+    transition: background-color 0.2s ease-in;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 30px;
+    background-color: #c4c4c4;
+    -webkit-box-shadow: inset 0 2px 1px rgba(0, 0, 0, .11);
+    -moz-box-shadow: inset 0 2px 1px rgba(0, 0, 0, .11);
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, .11);
+}
+
+.onoffswitch-label:before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    right: 32px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in 0s;
+}
+
+.onoffswitch-label:after {
+    content: "OFF";
+    display: block;
+    color: #FFF;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 6px;
+    font-size: 11px;
+    font-family: 'Arial';
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #3caf0e;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label,
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    border-color: #3caf0e;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 2px;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:after {
+    content: "ON";
+    display: block;
+    color: #FFF;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 27px;
+    font-size: 11px;
+    font-family: 'Arial';
+}
+
+.widget-content .customize-control-title {
+    font-weight: 400;
+}
+
+.widget-content .customize-control-title.onoffswitch_label {
+    width: 65%;
+    margin-right: 26px;
+}
+
+.mte-tooltip {
+    width: 150px;
+    position: absolute;
+    background: #55AAD3;
+    color: #EEE;
+    font-size: 12px;
+    min-height: 50px;
+    border-radius: 5px;
+    left: -75px; /* half of its width */
+    top: 25px;
+    z-index: 10;
+    display: none;
+    padding: 12px;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+}
+
+.dashicons.dashicons-editor-help {
+    cursor: pointer;
+    color: #55AAD3;
+}
+
+.dashicons.dashicons-editor-help:hover > .mte-tooltip {
+    display: block;
+}
+
+.mte-color-scheme-palette span {
+    height: 20px;
+    width: 25px;
+    float: left;
+}
+
+.mte-color-scheme-palette {
+    cursor: pointer;
+    padding: 2px;
+    display: inline-block;
+    border: 1px solid transparent;
+}
+
+.mte-color-scheme-palette:hover,
+.mte-color-scheme-palette:focus,
+.mte-color-option.selected > .mte-color-scheme-palette {
+    border: 1px solid #55AAD3;
+}
+
+.mte-color-scheme-name {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    min-width: 75px;
+}
+
+.mte-typography-font-size, .mte-typography-line-height {
+    width: 45%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.mte-typography-font-size .arrow-up, .mte-typography-line-height .arrow-up,
+.mte-typography-font-size .arrow-down, .mte-typography-line-height .arrow-down {
+    position: absolute;
+    bottom: 17px;
+    right: 0;
+    height: 17px;
+    width: 20px;
+    border-right: 1px solid #ddd;
+    background: #FFF;
+    color: #808080;
+}
+
+.mte-typography-font-size .dashicons, .mte-typography-line-height .dashicons {
+    width: 20px;
+    height: 17px;
+    font-size: 18px;
+    color: #808080;
+}
+
+.mte-typography-font-size .arrow-down, .mte-typography-line-height .arrow-down {
+    top: initial;
+    bottom: 1px;
+}
+
+.mte-number-field a:focus, .mte-number-field a:active, .mte-number-field a:hover {
+    outline: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.mte-number-field a:focus > .dashicons, .mte-number-field a:active > .dashicons, .mte-number-field a:hover > .dashicons {
+    color: #000;
+}
+
+.mte-number-field .unit {
+    position: absolute;
+    bottom: 9px;
+    left: 25px;
+}
+
+.mte-number-field .unit.go-right {
+    left: 35px;
+}
+
+textarea.mte-typography-input {
+    display: block;
+    width: 100%;
+}
+
+.customize-control .mte-typography-font-size input, .customize-control .mte-typography-line-height input {
+    width: 118%;
+    height: 36px;
+}
+
+.customize-control .mte-typography-font-size input:focus, .customize-control .mte-typography-line-height input:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #ddd;
+}
+
+.mte-typography-font-size {
+    margin-right: 10%;
+}
+
+.mte-typography-container > div {
+    margin-bottom: 15px;
+}
+
+.mte-typography-container > div > label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#accordion-section-newspaper_x_general_pro_version_section .accordion-section-title {
+    background: #DF4D44;
+    color: #FFF;
+}
+
+#accordion-section-newspaper_x_general_pro_version_section .accordion-section-title:after {
+    color: #FFF;
+}
+
+#customize-controls #accordion-section-newspaper_x_general_pro_version_section .accordion-section-title:hover,
+#customize-controls #accordion-section-newspaper_x_general_pro_version_section:hover > .accordion-section-title {
+    background: #DF4D21;
+    color: #FFF;
+}
+
+#customize-controls #accordion-section-newspaper_x_general_pro_version_section .accordion-section-title:hover:after,
+#customize-controls #accordion-section-newspaper_x_general_pro_version_section:hover > .accordion-section-title:after {
+    color: #FFF;
+}
+
+#accordion-section-newspaper_x_general_pro_version_section .accordion-section-content h3 {
+    background: #DF4D44;
+    color: #FFF;
+}
+
+#available-widgets [class^='newspaper_x_widget_posts_column-'] .widget-title::before,
+#available-widgets [class*=' newspaper_x_widget_posts_column-'] .widget-title::before {
+    content: url('../img/posts_column.png');
+    top: 2px;
+}
+
+#available-widgets [class^='newspaper_x_widget_posts_list_vertical-'] .widget-title::before,
+#available-widgets [class*=' newspaper_x_widget_posts_list_vertical-'] .widget-title::before {
+    content: url('../img/posts_vertical_list.png');
+    top: 2px;
+}
+
+#available-widgets [class^='newspaper_x_widget_posts_list_horizontal-'] .widget-title::before,
+#available-widgets [class*=' newspaper_x_widget_posts_list_horizontal-'] .widget-title::before {
+    content: url('../img/posts_horizontal.png');
+    top: 2px;
+}
+
+#available-widgets [class^='newspaper_x_widget_posts_grid-'] .widget-title::before,
+#available-widgets [class*=' newspaper_x_widget_posts_grid-'] .widget-title::before {
+    content: url('../img/posts_grid.png');
+    top: 0;
+}
+
+#available-widgets [class^='newspaper_x_slider_widget-'] .widget-title::before,
+#available-widgets [class*=' newspaper_x_slider_widget-'] .widget-title::before {
+    content: url('../img/posts_slider.png');
+    top: 0;
+}
+
+#available-widgets [class^='newspaper_x_widget_posts_carousel-'] .widget-title::before,
+#available-widgets [class*=' newspaper_x_widget_posts_carousel-'] .widget-title::before {
+    content: url('../img/posts_carousel.png');
+    top: 0;
+}

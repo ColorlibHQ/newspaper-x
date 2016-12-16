@@ -1,0 +1,44 @@
+body,
+button,
+input,
+select,
+textarea {
+  color: $color__text-main;
+  font-family: $font__alternate;
+  line-height: $font__line-height-body;
+}
+
+p {
+  font-size: 15px;
+  font-family: $font__alternate;
+  color: $color__text-main;
+  line-height: 1.8em;
+  margin-bottom: 1.5em;
+}
+
+article.post p {
+  font-family: $font__alternate;
+  color: $color__text-title;
+}
+
+.single-post {
+  div.entry-content p:first-child:first-letter {
+    float: left;
+    font-size: 75px;
+    text-align: left;
+    padding-right: 7px;
+  }
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  color: $color__text-main;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@import "headings";
+
+@import "copy";

@@ -1,0 +1,845 @@
+# Copyright (C) 2016 MachoThemes
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Newspaper X 1.1.0\n"
+"Report-Msgid-Bugs-To: https://www.machothemes.com/\n"
+"POT-Creation-Date: 2016-12-16 17:03:49+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Macho Themes <office@machothemes.com>\n"
+"Language-Team: Macho Themes <office@machothemes.com>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a better search?"
+msgstr ""
+
+#: comments.php:29 inc/class-newspaper-x-helper.php:76
+msgid "Comments"
+msgstr ""
+
+#: comments.php:35 comments.php:58
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:39 comments.php:62
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:63
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:76
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:26
+msgid "Go Up"
+msgstr ""
+
+#: header.php:95
+msgid "Add a menu"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/actions-required.php:54
+#: inc/admin/welcome-screen/sections/recommended-plugins.php:23
+msgid "Install"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/actions-required.php:58
+#: inc/admin/welcome-screen/sections/recommended-plugins.php:27
+msgid "Activate"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/actions-required.php:62
+#: inc/admin/welcome-screen/sections/recommended-plugins.php:31
+msgid "Deactivate"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/actions-required.php:82
+#: inc/admin/welcome-screen/welcome-screen.php:152
+msgid "Hooray! There are no required actions for you right now."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:11
+msgid "Step 1 - Implement recommended actions"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:12
+msgid ""
+"We've compiled a list of steps for you, to take make sure the experience "
+"you'll have using one of our products is very easy to follow."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:15
+msgid "No recommended actions left to perform"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:18
+msgid "Check recommended actions"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:24
+msgid "Step 2 - Check our documentation"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:25
+msgid ""
+"Even if you're a long-time WordPress user, we still believe you should give "
+"our documentation a very quick Read."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:28
+msgid "Full documentation"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:33
+msgid "Step 3 - Customize everything"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:34
+msgid ""
+"Using the WordPress Customizer you can easily customize every aspect of the "
+"theme."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/getting-started.php:36
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/recommended-plugins.php:38
+msgid "Recommended"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/recommended-plugins.php:42
+msgid "Version:"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:4
+#: inc/admin/welcome-screen/sections/support.php:9
+msgid "Contact Support"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:6
+msgid ""
+"We offer excellent support through our advanced ticketing system. Make sure "
+"to register your purchase before contacting support!"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:14
+msgid "Documentation"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:16
+msgid ""
+"This is the place to go to reference different aspects of the theme. Our "
+"online documentation is an incredible resource for learning the ins and "
+"outs of using Newspaper X."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:19
+msgid "See our full documentation"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:24
+#: inc/admin/welcome-screen/welcome-screen.php:395
+msgid "Changelog"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:26
+msgid ""
+"Want to get the gist on the latest theme changes? Just consult our "
+"changelog below to get a taste of the recent fixes and features implemented."
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/support.php:29
+msgid "See changelog"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:131
+msgid ""
+"Welcome! Thank you for choosing Newspaper X! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:133
+msgid "Get started with Newspaper X"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:171
+msgid "View Theme Info"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:376
+msgid "Welcome to Newspaper X! - Version "
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:379
+msgid ""
+"Newspaper X is now installed and ready to use! Get ready to build something "
+"beautiful. We hope you enjoy it! We want to make sure you have the best "
+"experience using Newspaper X and that is why we gathered here all the "
+"necessary information for you. We hope you will enjoy using Newspaper X, as "
+"much as we enjoy creating great products."
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:386
+msgid "Getting Started"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:388
+msgid "Recommended Actions"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:391
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/admin/welcome-screen/welcome-screen.php:393
+msgid "Support"
+msgstr ""
+
+#: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:78
+msgid "Home"
+msgstr ""
+
+#: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:79
+msgid "Tag:"
+msgstr ""
+
+#: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:80
+msgid "Search:"
+msgstr ""
+
+#: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:81
+msgid "404 - Page not Found"
+msgstr ""
+
+#: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:97
+msgid "Home "
+msgstr ""
+
+#: inc/components/related-posts/class-newspaper-x-related-posts.php:157
+msgid "Related posts "
+msgstr ""
+
+#: inc/customizer/epsilon-framework/control-epsilon-upsell.php:14
+msgid "Hello"
+msgstr ""
+
+#: inc/customizer/epsilon-framework/control-epsilon-upsell.php:15
+msgid "Pro"
+msgstr ""
+
+#: inc/customizer/register_settings.php:56
+msgid "Site Color Schemes"
+msgstr ""
+
+#: inc/customizer/register_settings.php:59
+msgid "Blog Archive Header Image"
+msgstr ""
+
+#: inc/customizer/register_settings.php:74
+msgid "Company name in text format below"
+msgstr ""
+
+#: inc/customizer/register_settings.php:79
+msgid ""
+"The image logo, if set, will override the text logo. You can not have both "
+"at the same time. A tagline can be displayed under the text logo."
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:12
+msgid "Image"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:13
+msgid "AdSense"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:15
+msgid "The type of the banner"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:16
+msgid "Select what type of banner you want to use: normal image or adsense script"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:30
+msgid "Banner after X posts?"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:31
+msgid "Show this banner after X number of posts."
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:51
+msgid "Enable banner on homepage"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:65
+msgid "Enable banner on archives"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:80
+msgid "Banner Image:"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:81
+msgid "Recommended size: 728 x 90"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:94
+msgid "Banner Link:"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:95
+msgid "Add the link for banner image."
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:108
+msgid "AdSense Code:"
+msgstr ""
+
+#: inc/customizer/settings/banners/controls.php:109
+msgid ""
+"Add the code you retrieved from your AdSense account. You only need to "
+"insert the <ins> tag."
+msgstr ""
+
+#: inc/customizer/settings/banners/sections.php:6
+msgid "Banner Settings"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:12
+msgid "Top Bar Section"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:27
+msgid "Search form"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:42
+msgid "News ticker"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:56
+msgid "Breadcrumbs"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:74
+msgid "Show post category in breadcrumbs"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:88
+msgid "One Column"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:89
+msgid "Two Columns"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:90
+msgid "Three Columns"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:91
+msgid "Four Columns"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:93
+msgid "Footer Columns"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:94
+msgid "Select how many columns should the footer display."
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:106
+msgid "Copyright footer bar"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:117
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:129
+msgid "Go Top Button"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:145
+msgid "Author info section"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:159
+msgid "Related Posts Section"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:173
+msgid "Autoplay related carousel"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:185
+msgid "How many blog posts to display in the carousel at once?"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:186
+msgid "No more than 4 posts at once;"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:207
+msgid "Posts title in the carousel"
+msgstr ""
+
+#: inc/customizer/settings/general/controls.php:221
+msgid "Posts date in the carousel"
+msgstr ""
+
+#: inc/customizer/settings/general/panels.php:8
+msgid "Theme options"
+msgstr ""
+
+#: inc/customizer/settings/general/sections.php:6
+msgid "General"
+msgstr ""
+
+#: inc/customizer/settings/general/sections.php:14
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/settings/general/sections.php:22
+msgid "Blog Settings"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:20
+msgid "Categories"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:34
+msgid "Ascending"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:35
+msgid "Descending"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:37
+msgid "Ordering"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:49
+msgid "By Date"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:50
+msgid "By Title"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:51
+msgid "By Comment Count"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:52
+msgid "Random"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/controls.php:54
+msgid "Order By"
+msgstr ""
+
+#: inc/customizer/settings/recent-post-module/sections.php:7
+msgid "Recent Post Module"
+msgstr ""
+
+#: inc/extras.php:268
+msgid "<span>Leave Comment</span>"
+msgstr ""
+
+#: inc/notify-system-checks.php:167 inc/notify-system-checks.php:175
+msgid "Install: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: inc/notify-system-checks.php:172
+msgid "Activate: Widget Importer Exporter Plugin"
+msgstr ""
+
+#: inc/notify-system-checks.php:181 inc/notify-system-checks.php:189
+msgid "Install: WordPress Importer"
+msgstr ""
+
+#: inc/notify-system-checks.php:186
+msgid "Activate: WordPress Importer"
+msgstr ""
+
+#: inc/notify-system-checks.php:199 inc/notify-system-checks.php:207
+msgid "Please install the WordPress Importer to create the demo content."
+msgstr ""
+
+#: inc/notify-system-checks.php:204
+msgid "Please activate the WordPress Importer to create the demo content."
+msgstr ""
+
+#: inc/notify-system-checks.php:213 inc/notify-system-checks.php:221
+msgid ""
+"Please install this plugin to regenerate your images using our custom image "
+"sizes."
+msgstr ""
+
+#: inc/notify-system-checks.php:218
+msgid ""
+"Please activate this plugin and regenerate your images using our custom "
+"image sizes."
+msgstr ""
+
+#: inc/notify-system-checks.php:228 inc/notify-system-checks.php:236
+msgid "Please install the WordPress widget importer to create the demo content"
+msgstr ""
+
+#: inc/notify-system-checks.php:233
+msgid "Please activate the WordPress Widget Importer to create the demo content."
+msgstr ""
+
+#: inc/sidebars.php:8
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/sidebars.php:9
+msgid ""
+"This is the blog sidebar. If you've set a posts page under Settings -> "
+"Reading, that's where your sidebar will be showing up"
+msgstr ""
+
+#: inc/sidebars.php:19
+msgid "Homepage - Content area"
+msgstr ""
+
+#: inc/sidebars.php:20
+msgid "The sidebar holds the entire homepage content."
+msgstr ""
+
+#: inc/sidebars.php:30
+msgid "Homepage - After Content area"
+msgstr ""
+
+#: inc/sidebars.php:31
+msgid "The sidebar holds homepage content."
+msgstr ""
+
+#: inc/sidebars.php:41
+msgid "Footer 1"
+msgstr ""
+
+#: inc/sidebars.php:42 inc/sidebars.php:52 inc/sidebars.php:62
+#: inc/sidebars.php:72
+msgid ""
+"This is your footer sidebar. By default, we've defined a maximum of 4 "
+"sidebars but if you want to use less make sure you change the settings in: "
+"Footer -> Footer columns."
+msgstr ""
+
+#: inc/sidebars.php:51
+msgid "Footer 2"
+msgstr ""
+
+#: inc/sidebars.php:61
+msgid "Footer 3"
+msgstr ""
+
+#: inc/sidebars.php:71
+msgid "Footer 4"
+msgstr ""
+
+#: inc/sidebars.php:81
+msgid "After Footer"
+msgstr ""
+
+#: inc/sidebars.php:82
+msgid "This is a footer sidebar."
+msgstr ""
+
+#: inc/template-tags.php:18
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:42
+msgid "TAGS: "
+msgstr ""
+
+#: inc/theme-setup.php:33
+msgid "Primary"
+msgstr ""
+
+#: inc/theme-setup.php:34
+msgid "Top Header"
+msgstr ""
+
+#: inc/theme-setup.php:35
+msgid "Top Social"
+msgstr ""
+
+#: inc/theme-setup.php:119
+msgid "Download theme sample data"
+msgstr ""
+
+#: inc/theme-setup.php:120
+msgid "Head over to our website and download the sample content data."
+msgstr ""
+
+#: inc/theme-setup.php:121
+msgid "Posts"
+msgstr ""
+
+#: inc/theme-setup.php:122
+msgid "Widgets"
+msgstr ""
+
+#: inc/theme-setup.php:127
+msgid "Import Sample Data"
+msgstr ""
+
+#: inc/theme-setup.php:128
+msgid "Import Posts"
+msgstr ""
+
+#: inc/theme-setup.php:129
+msgid "Import Widgets"
+msgstr ""
+
+#: inc/theme-setup.php:134
+msgid "Set front page to static"
+msgstr ""
+
+#: inc/theme-setup.php:135
+msgid ""
+"If you just installed Newspaper X, and are not able to see the front-page "
+"demo, you need to go to Settings -> Reading , Front page displays and "
+"select \"Static Page\"."
+msgstr ""
+
+#: inc/theme-setup.php:136
+msgid "Set manually"
+msgstr ""
+
+#: inc/theme-setup.php:136
+msgid "Set automatically"
+msgstr ""
+
+#: inc/widgets/banner/class-widget-newspaper-x-banner.php:10
+msgid "Newspaper X Banner"
+msgstr ""
+
+#: inc/widgets/banner/class-widget-newspaper-x-banner.php:12
+msgid "Newspaper X Banners"
+msgstr ""
+
+#: inc/widgets/banner/class-widget-newspaper-x-banner.php:81
+msgid "Banner Image"
+msgstr ""
+
+#: inc/widgets/banner/class-widget-newspaper-x-banner.php:94
+msgid "Choose Image"
+msgstr ""
+
+#: inc/widgets/banner/class-widget-newspaper-x-banner.php:99
+msgid "Banner URL:"
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:11
+msgid "Newspaper X - Posts Layout A"
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:13
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:13
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:13
+msgid ""
+"Layout consists of a featured post thumbnail, followed by a handful of "
+"posts that are smaller in size. Perfect for emphasising important news."
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:54
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:54
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:54
+msgid "Title"
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:61
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:61
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:61
+msgid "Category"
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:66
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:66
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:66
+msgid "&ndash; Select a category &ndash;"
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:79
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:79
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:79
+msgid "Posts to Show"
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:116
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:116
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:116
+msgid "Show Date and Comments"
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:253
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:253
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:253
+msgid "Please configure your widget"
+msgstr ""
+
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:11
+msgid "Newspaper X - Posts Layout B"
+msgstr ""
+
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:11
+msgid "Newspaper X - Posts Layout C"
+msgstr ""
+
+#: search.php:33
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:3 template-parts/top-header.php:58
+msgid "Search for:"
+msgstr ""
+
+#: sidebars/sidebars.php:9
+msgid "Content Sidebar"
+msgstr ""
+
+#: sidebars/sidebars.php:10
+msgid "In blog archive, right side"
+msgstr ""
+
+#: sidebars/sidebars.php:20
+msgid "Content Widget Area"
+msgstr ""
+
+#: sidebars/sidebars.php:21
+msgid "Actual page template content"
+msgstr ""
+
+#: sidebars/sidebars.php:31
+msgid "Widget area before the footer"
+msgstr ""
+
+#: sidebars/sidebars.php:32
+msgid "Full width area ( spans across the container )"
+msgstr ""
+
+#: sidebars/sidebars.php:42
+msgid "[Footer] Sidebar #1"
+msgstr ""
+
+#: sidebars/sidebars.php:43
+msgid "In the footer, first column"
+msgstr ""
+
+#: sidebars/sidebars.php:53
+msgid "[Footer] Sidebar #2"
+msgstr ""
+
+#: sidebars/sidebars.php:54
+msgid "In the footer, 2nd column"
+msgstr ""
+
+#: sidebars/sidebars.php:64
+msgid "[Footer] Sidebar #3"
+msgstr ""
+
+#: sidebars/sidebars.php:65
+msgid "In the footer, 3rd column"
+msgstr ""
+
+#: sidebars/sidebars.php:75
+msgid "[Footer] Sidebar #4"
+msgstr ""
+
+#: sidebars/sidebars.php:76
+msgid "In the footer, 4th column"
+msgstr ""
+
+#: template-parts/banner/banner-adsense.php:17
+msgid "Loading"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:92 template-parts/content.php:97
+msgid "Read More"
+msgstr ""
+
+#: template-parts/news-ticker.php:27
+msgid "Latest News"
+msgstr ""
+
+#: template-parts/top-header.php:62
+msgid "Type the search term"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Newspaper X"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://machothemes.com/newspaper-x"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"When it comes to WordPress themes for magazines, users have certain "
+"expectations. The perfect theme should be fast, easy to customize, secure, "
+"and eye-grabbing. Clean but dazzling, Newspaper X meets even the highest "
+"demands. If you were looking for a news theme to help you create a unique "
+"and recognizable brand image, look no more."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "MachoThemes"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://machothemes.com"
+msgstr ""

@@ -5,7 +5,7 @@ global $wp_customize;
  * Type of banners
  */
 $wp_customize->add_control(
-	'newspaperx_banner_type',
+	'newspaper_x_banner_type',
 	array(
 		'type'        => 'radio',
 		'choices'     => array(
@@ -15,7 +15,7 @@ $wp_customize->add_control(
 		'label'       => esc_html__( 'The type of the banner', 'newspaper-x' ),
 		'description' => esc_html__( 'Select what type of banner you want to use: normal image or adsense script',
 		                             'newspaper-x' ),
-		'section'     => 'newspaperx_general_banners_controls',
+		'section'     => 'newspaper_x_general_banners_controls',
 	)
 );
 
@@ -23,9 +23,9 @@ $wp_customize->add_control(
  * The banner shown after a certain number of posts
  */
 $wp_customize->add_control(
-	new NewspaperX_Controls_Slider_Control(
+	new Epsilon_Control_Slider(
 		$wp_customize,
-		'newspaperx_show_banner_after',
+		'newspaper_x_show_banner_after',
 		array(
 			'label'       => esc_html__( 'Banner after X posts?', 'newspaper-x' ),
 			'description' => esc_html__( 'Show this banner after X number of posts.', 'newspaper-x' ),
@@ -34,7 +34,7 @@ $wp_customize->add_control(
 				'max'  => 14,
 				'step' => 2,
 			),
-			'section'     => 'newspaperx_general_banners_controls',
+			'section'     => 'newspaper_x_general_banners_controls',
 			'default'     => 4
 		)
 	)
@@ -43,34 +43,31 @@ $wp_customize->add_control(
 /**
  * Display banner on homepage
  */
-$wp_customize->add_control(
-	'newspaperx_show_banner_on_homepage',
-	array(
-		'type'    => 'radio',
-		'choices' => array(
-			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
-			'disabled' => esc_html__( 'Disabled', 'newspaper-x' )
-		),
-		'label'   => esc_html__( 'Enable banner on homepage?', 'newspaper-x' ),
-		'section' => 'newspaperx_general_banners_controls',
-	)
+$wp_customize->add_control( new Epsilon_Control_Toggle(
+	                            $wp_customize,
+	                            'newspaper_x_show_banner_on_homepage',
+	                            array(
+		                            'type'        => 'mte-toggle',
+		                            'label'       => esc_html__( 'Enable banner on homepage', 'newspaper-x' ),
+		                            'section'     => 'newspaper_x_general_banners_controls',
+	                            )
+                            )
 );
 
 /**
  * Display banner on categories page
  */
-$wp_customize->add_control(
-	'newspaperx_show_banner_on_archive_pages',
-	array(
-		'type'    => 'radio',
-		'choices' => array(
-			'enabled'  => esc_html__( 'Enabled', 'newspaper-x' ),
-			'disabled' => esc_html__( 'Disabled', 'newspaper-x' )
-		),
-		'label'   => esc_html__( 'Enable banner on categories page?', 'newspaper-x' ),
-		'section' => 'newspaperx_general_banners_controls',
-	)
+$wp_customize->add_control( new Epsilon_Control_Toggle(
+	                            $wp_customize,
+	                            'newspaper_x_show_banner_on_archive_pages',
+	                            array(
+		                            'type'        => 'mte-toggle',
+		                            'label'       => esc_html__( 'Enable banner on archives', 'newspaper-x' ),
+		                            'section'     => 'newspaper_x_general_banners_controls',
+	                            )
+                            )
 );
+
 
 /**
  * Image upload field for the top-right banner
@@ -78,11 +75,11 @@ $wp_customize->add_control(
 $wp_customize->add_control(
 	new WP_Customize_Image_Control(
 		$wp_customize,
-		'newspaperx_banner_image',
+		'newspaper_x_banner_image',
 		array(
 			'label'           => esc_html__( 'Banner Image:', 'newspaper-x' ),
 			'description'     => esc_html__( 'Recommended size: 728 x 90', 'newspaper-x' ),
-			'section'         => 'newspaperx_general_banners_controls',
+			'section'         => 'newspaper_x_general_banners_controls',
 			'active_callback' => 'banners_type_callback',
 		)
 	)
@@ -92,12 +89,12 @@ $wp_customize->add_control(
  * Banner url
  */
 $wp_customize->add_control(
-	'newspaperx_banner_link',
+	'newspaper_x_banner_link',
 	array(
 		'label'           => esc_html__( 'Banner Link:', 'newspaper-x' ),
 		'description'     => esc_html__( 'Add the link for banner image.', 'newspaper-x' ),
-		'section'         => 'newspaperx_general_banners_controls',
-		'settings'        => 'newspaperx_banner_link',
+		'section'         => 'newspaper_x_general_banners_controls',
+		'settings'        => 'newspaper_x_banner_link',
 		'active_callback' => 'banners_type_callback',
 	)
 );
@@ -106,19 +103,18 @@ $wp_customize->add_control(
  * AdSense code
  */
 $wp_customize->add_control(
-	'newspaperx_banner_adsense_code',
+	'newspaper_x_banner_adsense_code',
 	array(
 		'label'           => esc_html__( 'AdSense Code:', 'newspaper-x' ),
-		'description'     => esc_html__( 'Add the code you retrieved from your AdSense account.', 'newspaper-x' ),
-		'section'         => 'newspaperx_general_banners_controls',
-		'settings'        => 'newspaperx_banner_adsense_code',
+		'description'     => esc_html__( 'Add the code you retrieved from your AdSense account. You only need to insert the <ins> tag.', 'newspaper-x' ),
+		'section'         => 'newspaper_x_general_banners_controls',
+		'settings'        => 'newspaper_x_banner_adsense_code',
 		'type'            => 'textarea',
 		'active_callback' => 'banners_type_false_callback',
 	)
 );
-
 function banners_type_callback( $control ) {
-	if ( $control->manager->get_setting( 'newspaperx_banner_type' )->value() == 'image' ) {
+	if ( $control->manager->get_setting( 'newspaper_x_banner_type' )->value() == 'image' ) {
 		return true;
 	}
 
@@ -126,7 +122,7 @@ function banners_type_callback( $control ) {
 }
 
 function banners_type_false_callback( $control ) {
-	if ( $control->manager->get_setting( 'newspaperx_banner_type' )->value() == 'image' ) {
+	if ( $control->manager->get_setting( 'newspaper_x_banner_type' )->value() == 'image' ) {
 		return false;
 	}
 

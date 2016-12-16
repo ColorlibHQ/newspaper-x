@@ -7,14 +7,14 @@
  * @package Newspaper X
  */
 
-$cats = get_theme_mod( 'newspaperx_recent_posts_category', array( '1' ) );
+$cats = get_theme_mod( 'newspaper_x_recent_posts_category', array( '1' ) );
 
 if ( ! $cats || ! is_array( $cats ) || ( is_array( $cats ) && empty( array_filter( $cats ) ) ) ) {
 	$cats = array( '1' );
 }
 
-$order    = get_theme_mod( 'newspaperx_recent_posts_ordering', 'DESC' );
-$order_by = get_theme_mod( 'newspaperx_recent_posts_order_by', 'date' );
+$order    = get_theme_mod( 'newspaper_x_recent_posts_ordering', 'DESC' );
+$order_by = get_theme_mod( 'newspaper_x_recent_posts_order_by', 'date' );
 $order    = is_array( $order ) ? $order[0] : $order;
 $order_by = is_array( $order_by ) ? $order_by[0] : $order_by;
 
@@ -33,36 +33,44 @@ if ( ! $recent_posts ) {
 	return false;
 }
 ?>
-<div class="newspaperx-recent-posts">
+<div class="newspaper-x-recent-posts">
 	<ul>
 		<?php
 		$i = 0;
 		foreach ( $recent_posts as $post ) {
-			$cat      = get_the_category( $post->ID );
-			$cat_link = get_category_link( $cat[0]->term_id );
-			$cat      = $cat[0]->name;
-			$image    = get_template_directory_uri() . '/images/picture_placeholder.jpg';
+			$cat         = get_the_category( $post->ID );
+			$cat_link    = get_category_link( $cat[0]->term_id );
+			$cat         = $cat[0]->name;
+			$image       = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
+			$placeholder = $image;
 
 			if ( has_post_thumbnail() ) {
-				$src   = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
-				                                      'newspaperx-recent-post-big',
-				                                      false,
-				                                      '' );
-				$image = $src[0];
+				$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
+				                                    'newspaper-x-recent-post-big',
+				                                    false,
+				                                    '' );
+
+				$srcsmall = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
+				                                         'newspaper-x-recent-post-list-image',
+				                                         false,
+				                                         '' );
+
+				$image       = $src[0];
+				$placeholder = $srcsmall[0];
 			}
 			?>
 
-			<li class="lazy" id="newspaperx-recent-post-<?php echo $i; ?>" data-original="<?php echo esc_url( $image ) ?>"
-			    style="background-image:url('<?php echo
-				    get_template_directory_uri() . '/images/grey.gif' ?>')">
-				<div class="newspaperx-post-info">
+			<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
+			    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
+				<div class="newspaper-x-post-info">
 					<h3>
-						<a href="<?php echo get_permalink( $post->ID ) ?>">
-							<?php echo wp_trim_words( $post->post_title, 4, $more = '...' ) ?>
+						<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
+							<?php echo wp_kses_post( wp_trim_words( $post->post_title, 4, $more = '...' ) ) ?>
 						</a>
 					</h3>
-					<span class="newspaperx-date"><?php echo get_the_date() ?></span> / <span class="newspaperx-category"><a
-							href="<?php echo $cat_link ?>"><?php echo $cat ?></a></span>
+					<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span> / <span
+						class="newspaper-x-category"><a
+							href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ) ?></a></span>
 				</div>
 			</li>
 			<?php $i ++;

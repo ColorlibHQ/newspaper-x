@@ -4,86 +4,74 @@ global $wp_customize;
 /**
  * Show / Hide the top bar
  */
-$wp_customize->add_setting( 'newspaperx_enable_top_bar',
+$wp_customize->add_setting( 'newspaper_x_enable_top_bar',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'enabled'
+	                            'default'           => true
                             )
 );
 
 /**
  * Show / Hide the search icon from the top bar
  */
-$wp_customize->add_setting( 'newspaperx_enable_top_bar_search',
+$wp_customize->add_setting( 'newspaper_x_enable_top_bar_search',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'enabled'
+	                            'default'           => true
                             )
 );
 
-$wp_customize->add_setting( 'newspaperx_enable_news_ticker',
+$wp_customize->add_setting( 'newspaper_x_enable_news_ticker',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'enabled'
+	                            'default'           => true
                             )
 );
 
 /**
  * Breadcrumbs on single blog posts
  */
-$wp_customize->add_setting( 'newspaperx_enable_post_breadcrumbs',
+$wp_customize->add_setting( 'newspaper_x_enable_post_breadcrumbs',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'breadcrumbs_enabled'
+	                            'default'           => true
                             )
 );
 
-/**
- * Breadcrumbs separator
- */
-$wp_customize->add_setting( 'newspaperx_blog_breadcrumb_menu_separator',
-                            array(
-	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
-	                            ),
-	                            'default'           => 'rarr'
-                            )
-);
 
 /**
  * Breadcrumb post category
  */
-$wp_customize->add_setting( 'newspaperx_blog_breadcrumb_menu_post_category',
+$wp_customize->add_setting( 'newspaper_x_blog_breadcrumb_menu_post_category',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_checkbox'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 1
+	                            'default'           => true
                             )
 );
 
 /**
  * Footer Options
  */
-$wp_customize->add_setting( 'newspaperx_footer_columns',
+$wp_customize->add_setting( 'newspaper_x_footer_columns',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_radio_buttons'
 	                            ),
 	                            'default'           => 3
                             )
@@ -93,54 +81,54 @@ $wp_customize->add_setting( 'newspaperx_footer_columns',
  * Copyright Options
  * enable the copyright text
  */
-$wp_customize->add_setting( 'newspaperx_enable_copyright',
+$wp_customize->add_setting( 'newspaper_x_enable_copyright',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'enabled'
+	                            'default'           => true
                             )
 );
 /**
  * Copyright text
  */
-$wp_customize->add_setting( 'newspaperx_copyright_contents',
+$wp_customize->add_setting( 'newspaper_x_copyright_contents',
                             array(
-	                            'sanitize_callback' => 'esc_html',
-	                            'default'           => date( "Y" ) . ' Newspaper X. All rights reserved.',
+	                            'sanitize_callback' => 'sanitize_text_field',
+	                            'default'           => false,
                             )
 );
 /**
  * Enable the go top button
  */
-$wp_customize->add_setting( 'newspaperx_enable_go_top',
+$wp_customize->add_setting( 'newspaper_x_enable_go_top',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'enabled'
+	                            'default'           => true
                             )
 );
 
 /**
  * Blog Settings
  */
-$wp_customize->add_setting( 'newspaperx_related_posts_enabled',
+$wp_customize->add_setting( 'newspaper_x_related_posts_enabled',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'enabled'
+	                            'default'           => true
                             )
 );
 
 /**
  * Blog posts to display
  */
-$wp_customize->add_setting( 'newspaperx_howmany_blog_posts',
+$wp_customize->add_setting( 'newspaper_x_howmany_blog_posts',
                             array(
 	                            'sanitize_callback' => 'absint',
 	                            'default'           => 4
@@ -150,51 +138,51 @@ $wp_customize->add_setting( 'newspaperx_howmany_blog_posts',
 /*
 * Auto play carousel
 */
-$wp_customize->add_setting( 'newspaperx_autoplay_blog_posts',
+$wp_customize->add_setting( 'newspaper_x_autoplay_blog_posts',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_checkbox'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 1,
+	                            'default'           => true
                             )
 );
 
 /**
  * Show Title
  */
-$wp_customize->add_setting( 'newspaperx_enable_related_title_blog_posts',
+$wp_customize->add_setting( 'newspaper_x_enable_related_title_blog_posts',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_checkbox'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 1
+	                            'default'           => true
                             )
 );
 
 /**
  * Show Date
  */
-$wp_customize->add_setting( 'newspaperx_enable_related_date_blog_posts',
+$wp_customize->add_setting( 'newspaper_x_enable_related_date_blog_posts',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_checkbox'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 0
+	                            'default'           => false
                             )
 );
 
 /**
  * Author box
  */
-$wp_customize->add_setting( 'newspaperx_enable_author_box',
+$wp_customize->add_setting( 'newspaper_x_enable_author_box',
                             array(
 	                            'sanitize_callback' => array(
-		                            'NewspaperX_Customizer_Helper',
-		                            'newspaperx_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer_Helper',
+		                            'newspaper_x_sanitize_checkbox'
 	                            ),
-	                            'default'           => 'enabled'
+	                            'default'           => true
                             )
 );
