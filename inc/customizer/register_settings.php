@@ -54,9 +54,6 @@ class Newspaper_X_Customizer_Helper {
 		$wp_customize->get_setting( 'custom_logo' )->transport     = 'refresh';
 		$wp_customize->get_section( 'colors' )->panel              = 'newspaper_x_panel_colors';
 		$wp_customize->get_section( 'colors' )->title              = __( 'Site Color Schemes', 'newspaper-x' );
-		$wp_customize->get_section( 'header_image' )->panel        = 'newspaper_x_panel_blog';
-		$wp_customize->get_section( 'header_image' )->priority     = 4;
-		$wp_customize->get_section( 'header_image' )->title        = __( 'Blog Archive Header Image', 'newspaper-x' );
 		$wp_customize->get_section( 'background_image' )->panel    = 'newspaper_x_panel_general';
 
 		if ( ! newspaper_x_on_iis() ) {

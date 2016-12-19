@@ -90,7 +90,7 @@ else:
 		<?php } ?>
 
 		<?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
-			<div class="col-md-4 hidden-xs newspaper-x-blog-sidebar">
+			<div class="col-md-4 newspaper-x-blog-sidebar">
 				<?php dynamic_sidebar( 'sidebar' ); ?>
 			</div>
 		<?php } ?>

@@ -210,7 +210,6 @@ if ( ! class_exists( 'Newspaper_X_Related_Posts_Output' ) ) {
 			echo '</div><!--/.owlCarousel-->';
 			echo '</div><!--/.mt-related-posts-->';
 
-			wp_reset_query();
 			wp_reset_postdata();
 		}
 	}

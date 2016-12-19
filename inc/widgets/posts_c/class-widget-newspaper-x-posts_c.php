@@ -253,7 +253,7 @@ class Widget_Newspaper_X_Posts_C extends WP_Widget {
 			echo _e( 'Please configure your widget', 'newspaper-x' );
 		}
 
-		wp_reset_query();
+		wp_reset_postdata();
 		echo $after_widget;
 
 	}

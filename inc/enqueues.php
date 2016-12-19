@@ -53,9 +53,9 @@ function newspaper_x_scripts() {
 	/**
 	 * OwlCarousel Library
 	 */
-	wp_enqueue_script( 'owlCarousel-js', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.js', array( 'jquery' ), $newspaper_x['Version'], true );
-	wp_enqueue_style( 'owlCarousel-main-css', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.css' );
-	wp_enqueue_style( 'owlCarousel-theme-css', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.theme.default.css' );
+	wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.js', array( 'jquery' ), $newspaper_x['Version'], true );
+	wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.css' );
+	wp_enqueue_style( 'owl.carousel-theme', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.theme.default.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'newspaper_x_scripts' );

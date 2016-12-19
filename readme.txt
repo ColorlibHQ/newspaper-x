@@ -4,8 +4,8 @@ Contributors: automattic
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 1.0.0
+Tested up to: 4.7
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,14 +23,18 @@ Hi. I'm a starter theme called Newspaper X, or underscores, if you like. I'm a t
 
 == Frequently Asked Questions ==
 
-= Does this theme support any plugins? =
-
-Newspaper X includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
-* Initial release
+### V1.1.1
+	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:15
+
+### V1.1.0
+	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:9
+	- Theme structure re-done
+
+### V1.0.0
+	- Initial release
 
 == Credits ==
 
