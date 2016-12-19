@@ -83,11 +83,8 @@ if ( ! function_exists( 'newspaper_x_setup' ) ) :
 			global $newspaper_x_required_actions, $newspaper_x_recommended_plugins;
 
 			$newspaper_x_recommended_plugins = array(
-				'kiwi-social-share'           => array( 'recommended' => false ),
-				'force-regenerate-thumbnails' => array( 'recommended' => true ),
-				'wp-product-review'           => array( 'recommended' => false ),
-				'pirate-forms'                => array( 'recommended' => false ),
-				'visualizer'                  => array( 'recommended' => false )
+				'kiwi-social-share'      => array( 'recommended' => false ),
+				'fancybox-for-wordpress' => array( 'recommended' => false )
 			);
 
 			/*
@@ -123,4 +120,5 @@ add_action( 'after_setup_theme', 'newspaper_x_setup' );
 function newspaper_x_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'newspaper_x_content_width', 750 );
 }
+
 add_action( 'after_setup_theme', 'newspaper_x_content_width', 0 );
