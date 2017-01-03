@@ -13,7 +13,6 @@ The exceptions to this license are as follows:
 
 - Banner placeholders created by MachoThemes
 
-
 === Vendors ===
     
 - Bootstrap v3.3.4 (http://getbootstrap.com)
@@ -33,8 +32,16 @@ The exceptions to this license are as follows:
     -- License: MIT License (http://opensource.org/licenses/mit-license.html)
 - Adsense loader
     -- By Osvaldas Valutis, www.osvaldas.info
-    -- vailable for use under the MIT License
-
+    -- available for use under the MIT License
+- MachoThemes
+    -- MachoThemes https://machothemes.com
+    -- available for use under the MIT License
+- Selectize
+    -- Copyright (c) 2013 Brian Reavis & contributors
+    -- Licensed under the Apache License, Version 2.0 (the "License");
+- Epsilon
+    -- MachoThemes https://machothemes.com
+    -- available for use under the MIT License
 
 === Fonts ===
 

@@ -19,10 +19,10 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 
 		$html = '<ul>';
 		if ( ! empty( $cat ) ) {
-			$html .= '<li class="post-category"><icon class="fa fa-folder"></icon> <a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . get_the_category_by_ID( $cat[0]->term_id ) . '</a></li>';
+			$html .= '<li class="post-category"><icon class="fa fa-folder"></icon> <a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . esc_html( get_the_category_by_ID( $cat[0]->term_id ) ) . '</a></li>';
 		}
 		$html .= '<li class="post-comments"><icon class="fa fa-comments"></icon> ' . esc_html( $comments->approved ) . ' </li>';
-		$html .= '<li class="post-date">' . $date . ' </li>';
+		$html .= '<li class="post-date">' . esc_html( $date ) . ' </li>';
 		if ( $tags_list ) {
 			$html .= '<li class="post-tags"><icon class="fa fa-tags"></icon> ' . wp_kses_post( $tags_list ) . '</li>';
 		}
@@ -30,7 +30,7 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 
 		switch ( $element ) {
 			case 'category':
-				echo '<a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . get_the_category_by_ID( $cat[0]->term_id ) . '</a>';
+				echo '<a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . esc_html( get_the_category_by_ID( $cat[0]->term_id ) ) . '</a>';
 				break;
 			case 'comments':
 				echo '<a class="newspaper-x-comments-link" href="' . esc_url( get_the_permalink( get_the_ID() ) ) . '/#comments"><span class=" fa fa-comment-o"></span> ' . esc_html( $comments->approved ) . '</a>';
@@ -39,7 +39,7 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 				echo '<div class="newspaper-x-date">' . esc_html( $date ) . '</div>';
 				break;
 			case 'tags':
-				echo ! empty( $tags_list ) ? '<div class="newspaper-x-tags"><strong>' . __( 'TAGS: ', 'newspaper-x' ) . '</strong>' . $tags_list . '</div>' : '';
+				echo ! empty( $tags_list ) ? '<div class="newspaper-x-tags"><strong>' . __( 'TAGS: ', 'newspaper-x' ) . '</strong>' . wp_kses_post( $tags_list ) . '</div>' : '';
 				break;
 			default:
 				echo $html;

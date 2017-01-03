@@ -24,12 +24,12 @@ if ( ! $recent_posts ) {
 ?>
 <!-- News Ticker Module -->
 
-	<span class="newspaper-x-module-title"><?php echo __( 'Latest News', 'newspaper-x' ) ?></span>
-	<ul class="newspaper-x-news-carousel owl-carousel owl-theme">
-		<?php foreach ( $recent_posts as $post ) { ?>
-			<li class="item">
-				<a href="<?php echo get_permalink( $post->ID ) ?>"><?php echo $post->post_title ?></a>
-			</li>
-		<?php } ?>
-	</ul>
+<span class="newspaper-x-module-title"><?php echo __( 'Latest News', 'newspaper-x' ) ?></span>
+<ul class="newspaper-x-news-carousel owl-carousel owl-theme">
+	<?php foreach ( $recent_posts as $post ) { ?>
+		<li class="item">
+			<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>"><?php echo esc_html( $post->post_title ) ?></a>
+		</li>
+	<?php } ?>
+</ul>
 

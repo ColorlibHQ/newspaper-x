@@ -25,6 +25,13 @@ Hi. I'm a starter theme called Newspaper X, or underscores, if you like. I'm a t
 
 
 == Changelog ==
+### V1.1.2
+	 - Escaped where needed
+	 - Newspaper-x-bootstrap enqueue handler changed to bootstrap
+	 - Updated licenses
+	 - Removed banner widget
+	 - Posts widget merged
+	 - Footer credits are now translatable.
 
 ### V1.1.1
 	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:15
@@ -40,3 +47,56 @@ Hi. I'm a starter theme called Newspaper X, or underscores, if you like. I'm a t
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
+The exceptions to this license are as follows:
+
+=== Images ===
+
+- Images used in theme screenshot are taken from unsplash.com
+
+- Logo created by MachoThemes
+
+- Banner placeholders created by MachoThemes
+
+=== Vendors ===
+
+- Bootstrap v3.3.4 (http://getbootstrap.com)
+    -- Copyright 2011-2016 Twitter, Inc.
+    -- Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+- jQuery Owl Carousel
+    -- Copyright 2013-2016 David Deutsch
+    -- Licensed under the MIT license. (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
+- Font Awesome Code
+    -- Copyright Font Awesome by Dave Gandy - http://fontawesome.io
+    -- License: MIT License (http://opensource.org/licenses/mit-license.html)
+- BLazy
+    -- Copyright (c) 2007-2015 Mika Tuupola http://dinbror.dk/blazy/
+    -- License: MIT License (http://opensource.org/licenses/mit-license.html)
+- Sticky
+    -- Anthony Garand http://stickyjs.com/
+    -- License: MIT License (http://opensource.org/licenses/mit-license.html)
+- Adsense loader
+    -- By Osvaldas Valutis, www.osvaldas.info
+    -- available for use under the MIT License
+- MachoThemes
+    -- MachoThemes https://machothemes.com
+    -- available for use under the MIT License
+- Selectize
+    -- Copyright (c) 2013 Brian Reavis & contributors
+    -- Licensed under the Apache License, Version 2.0 (the "License");
+- Epsilon
+    -- MachoThemes https://machothemes.com
+    -- available for use under the MIT License
+
+=== Fonts ===
+
+- Font Awesome font licensing:
+    -- SIL OFL 1.1
+    -- URL: http://scripts.sil.org/OFL
+- Glyphicons
+    -- Released under the same license as Bootstrap ( http://glyphicons.com/license/ )
+    -- Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+- Google Fonts
+    -- License: SIL OFL 1.1
+    -- URL: http://scripts.sil.org/OFL

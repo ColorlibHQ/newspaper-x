@@ -442,39 +442,3 @@ textarea.mte-typography-input {
     background: #DF4D44;
     color: #FFF;
 }
-
-#available-widgets [class^='newspaper_x_widget_posts_column-'] .widget-title::before,
-#available-widgets [class*=' newspaper_x_widget_posts_column-'] .widget-title::before {
-    content: url('../img/posts_column.png');
-    top: 2px;
-}
-
-#available-widgets [class^='newspaper_x_widget_posts_list_vertical-'] .widget-title::before,
-#available-widgets [class*=' newspaper_x_widget_posts_list_vertical-'] .widget-title::before {
-    content: url('../img/posts_vertical_list.png');
-    top: 2px;
-}
-
-#available-widgets [class^='newspaper_x_widget_posts_list_horizontal-'] .widget-title::before,
-#available-widgets [class*=' newspaper_x_widget_posts_list_horizontal-'] .widget-title::before {
-    content: url('../img/posts_horizontal.png');
-    top: 2px;
-}
-
-#available-widgets [class^='newspaper_x_widget_posts_grid-'] .widget-title::before,
-#available-widgets [class*=' newspaper_x_widget_posts_grid-'] .widget-title::before {
-    content: url('../img/posts_grid.png');
-    top: 0;
-}
-
-#available-widgets [class^='newspaper_x_slider_widget-'] .widget-title::before,
-#available-widgets [class*=' newspaper_x_slider_widget-'] .widget-title::before {
-    content: url('../img/posts_slider.png');
-    top: 0;
-}
-
-#available-widgets [class^='newspaper_x_widget_posts_carousel-'] .widget-title::before,
-#available-widgets [class*=' newspaper_x_widget_posts_carousel-'] .widget-title::before {
-    content: url('../img/posts_carousel.png');
-    top: 0;
-}

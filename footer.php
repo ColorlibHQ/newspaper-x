@@ -39,7 +39,8 @@
 				<div class="row text-center">
 					<div class="col-md-12">
 						<?php
-						$default   = sprintf( '&copy; ' . date( "Y" ) . ' <a href="%s">Newspaper X. All rights reserved.</a>', 'http://machothemes.com' );
+						$default = sprintf( __( '&copy; %s <a href="%s">Newspaper X. All rights reserved.</a>', 'newspaper-x' ), date( "Y" ), 'http://machothemes.com' );
+
 						$copyright = get_theme_mod( 'newspaper_x_copyright_contents' );
 						echo empty( $copyright ) ? wp_kses_post( $default ) : wp_kses_post( $copyright );
 						?>

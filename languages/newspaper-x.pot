@@ -1,14 +1,14 @@
-# Copyright (C) 2016 MachoThemes
+# Copyright (C) 2017 MachoThemes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Newspaper X 1.1.0\n"
+"Project-Id-Version: Newspaper X 1.1.1\n"
 "Report-Msgid-Bugs-To: https://www.machothemes.com/\n"
-"POT-Creation-Date: 2016-12-16 17:03:49+00:00\n"
+"POT-Creation-Date: 2017-01-03 07:44:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Macho Themes <office@machothemes.com>\n"
 "Language-Team: Macho Themes <office@machothemes.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -56,7 +56,11 @@ msgstr ""
 msgid "Go Up"
 msgstr ""
 
-#: header.php:95
+#: footer.php:42
+msgid "&copy; %s <a href=\"%s\">Newspaper X. All rights reserved.</a>"
+msgstr ""
+
+#: header.php:94
 msgid "Add a menu"
 msgstr ""
 
@@ -254,15 +258,11 @@ msgstr ""
 msgid "Site Color Schemes"
 msgstr ""
 
-#: inc/customizer/register_settings.php:59
-msgid "Blog Archive Header Image"
-msgstr ""
-
-#: inc/customizer/register_settings.php:74
+#: inc/customizer/register_settings.php:71
 msgid "Company name in text format below"
 msgstr ""
 
-#: inc/customizer/register_settings.php:79
+#: inc/customizer/register_settings.php:76
 msgid ""
 "The image logo, if set, will override the text logo. You can not have both "
 "at the same time. A tagline can be displayed under the text logo."
@@ -596,127 +596,63 @@ msgstr ""
 msgid "Top Social"
 msgstr ""
 
-#: inc/theme-setup.php:119
-msgid "Download theme sample data"
-msgstr ""
-
-#: inc/theme-setup.php:120
-msgid "Head over to our website and download the sample content data."
-msgstr ""
-
-#: inc/theme-setup.php:121
-msgid "Posts"
-msgstr ""
-
-#: inc/theme-setup.php:122
-msgid "Widgets"
-msgstr ""
-
-#: inc/theme-setup.php:127
-msgid "Import Sample Data"
-msgstr ""
-
-#: inc/theme-setup.php:128
-msgid "Import Posts"
-msgstr ""
-
-#: inc/theme-setup.php:129
-msgid "Import Widgets"
-msgstr ""
-
-#: inc/theme-setup.php:134
+#: inc/theme-setup.php:101
 msgid "Set front page to static"
 msgstr ""
 
-#: inc/theme-setup.php:135
+#: inc/theme-setup.php:102
 msgid ""
-"If you just installed Newspaper X, and are not able to see the front-page "
-"demo, you need to go to Settings -> Reading , Front page displays and "
-"select \"Static Page\"."
+"If you just installed Newspaper X, head over to Settings -> Reading , Front "
+"page displays and select \"Static Page\". You can start building your "
+"homepage by adding theme's built-in widgets in the Content Area sidebars."
 msgstr ""
 
-#: inc/theme-setup.php:136
-msgid "Set manually"
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:11
+msgid "Newspaper X - Posts"
 msgstr ""
 
-#: inc/theme-setup.php:136
-msgid "Set automatically"
-msgstr ""
-
-#: inc/widgets/banner/class-widget-newspaper-x-banner.php:10
-msgid "Newspaper X Banner"
-msgstr ""
-
-#: inc/widgets/banner/class-widget-newspaper-x-banner.php:12
-msgid "Newspaper X Banners"
-msgstr ""
-
-#: inc/widgets/banner/class-widget-newspaper-x-banner.php:81
-msgid "Banner Image"
-msgstr ""
-
-#: inc/widgets/banner/class-widget-newspaper-x-banner.php:94
-msgid "Choose Image"
-msgstr ""
-
-#: inc/widgets/banner/class-widget-newspaper-x-banner.php:99
-msgid "Banner URL:"
-msgstr ""
-
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:11
-msgid "Newspaper X - Posts Layout A"
-msgstr ""
-
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:13
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:13
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:13
-msgid ""
-"Layout consists of a featured post thumbnail, followed by a handful of "
-"posts that are smaller in size. Perfect for emphasising important news."
-msgstr ""
-
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:54
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:54
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:54
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:51
 msgid "Title"
 msgstr ""
 
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:61
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:61
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:61
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:58
+msgid "Layout"
+msgstr ""
+
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:63
+msgid "&ndash; Select a layout for this widget &ndash;"
+msgstr ""
+
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:65
+msgid "Layout A"
+msgstr ""
+
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:67
+msgid "Layout B"
+msgstr ""
+
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:69
+msgid "Layout C"
+msgstr ""
+
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:74
 msgid "Category"
 msgstr ""
 
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:66
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:66
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:66
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:79
 msgid "&ndash; Select a category &ndash;"
 msgstr ""
 
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:79
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:79
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:79
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:91
 msgid "Posts to Show"
 msgstr ""
 
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:116
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:116
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:116
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:128
 msgid "Show Date and Comments"
 msgstr ""
 
-#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:253
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:253
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:253
+#: inc/widgets/posts/class-widget-newspaper-x-posts.php:263
 msgid "Please configure your widget"
-msgstr ""
-
-#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:11
-msgid "Newspaper X - Posts Layout B"
-msgstr ""
-
-#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:11
-msgid "Newspaper X - Posts Layout C"
 msgstr ""
 
 #: search.php:33

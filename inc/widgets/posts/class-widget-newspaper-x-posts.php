@@ -1,6 +1,6 @@
 <?php
 
-class Widget_Newspaper_X_Posts_B extends WP_Widget {
+class Widget_Newspaper_X_Posts extends WP_Widget {
 
 	function __construct() {
 
@@ -8,9 +8,8 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'customize_preview_init', array( $this, 'enqueue' ) );
 
-		parent::__construct( 'newspaper_x_widget_posts_b', __( 'Newspaper X - Posts Layout B', 'newspaper-x' ), array(
+		parent::__construct( 'newspaper_x_widget_posts', __( 'Newspaper X - Posts', 'newspaper-x' ), array(
 			'classname'                   => 'newspaper_x_widgets',
-			'description'                 => __( 'Layout consists of a featured post thumbnail, followed by a handful of posts that are smaller in size. Perfect for emphasising important news.', 'newspaper-x' ),
 			'customize_selective_refresh' => true
 		) );
 
@@ -31,21 +30,19 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 			$title = '';
 		}
 
-		if ( ! empty( $instance['newspaper_x_category'] ) ) {
-			$newspaper_x_category = $instance['newspaper_x_category'];
-		} else {
+		if ( empty( $instance['newspaper_x_layout'] ) ) {
+			$instance['newspaper_x_layout'] = 'layout_a';
+		}
+
+		if ( empty( $instance['newspaper_x_category'] ) ) {
 			$instance['newspaper_x_category'] = 'uncategorized';
 		}
 
-		if ( isset( $instance['show_post'] ) ) {
-			$show_post = $instance['show_post'];
-		} else {
+		if ( ! isset( $instance['show_post'] ) ) {
 			$instance['show_post'] = 4;
 		}
 
-		if ( isset( $instance['show_date'] ) ) {
-			$show_date = $instance['show_date'];
-		} else {
+		if ( ! isset( $instance['show_date'] ) ) {
 			$instance['show_date'] = 'on';
 		}
 
@@ -55,6 +52,22 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 			<input type="text" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			       id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
 			       value="<?php echo esc_attr( $title ); ?>">
+		</p>
+
+		<p>
+			<label><?php _e( 'Layout', 'newspaper-x' ); ?> :</label>
+			<select name="<?php echo esc_attr( $this->get_field_name( 'newspaper_x_layout' ) ); ?>"
+			        id="<?php echo esc_attr( $this->get_field_id( 'newspaper_x_layout' ) ); ?>">
+				<option value="" <?php if ( empty( $instance['newspaper_x_layout'] ) ) {
+					echo 'selected="selected"';
+				} ?>><?php _e( '&ndash; Select a layout for this widget &ndash;', 'newspaper-x' ) ?></option>
+				<option
+					value="layout_a" <?php selected( 'layout_a', $instance['newspaper_x_layout'] ); ?>><?php echo __( 'Layout A', 'newspaper-x' ); ?></option>
+				<option
+					value="layout_b" <?php selected( 'layout_b', $instance['newspaper_x_layout'] ); ?>><?php echo __( 'Layout B', 'newspaper-x' ); ?></option>
+				<option
+					value="layout_c" <?php selected( 'layout_c', $instance['newspaper_x_layout'] ); ?>><?php echo __( 'Layout C', 'newspaper-x' ); ?></option>
+			</select>
 		</p>
 
 		<p>
@@ -72,7 +85,6 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 				<?php } ?>
 			</select>
 		</p>
-
 
 		<label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>">
             <span class="customize-control-title">
@@ -133,7 +145,8 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 		$instance = array();
 
 		$instance['title']                = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-		$instance['newspaper_x_category'] = ( ! empty( $new_instance['newspaper_x_category'] ) ) ? $new_instance['newspaper_x_category'] : '';
+		$instance['newspaper_x_category'] = ( ! empty( $new_instance['newspaper_x_category'] ) ) ? strip_tags( $new_instance['newspaper_x_category'] ) : '';
+		$instance['newspaper_x_layout']   = ( ! empty( $new_instance['newspaper_x_layout'] ) ) ? strip_tags( $new_instance['newspaper_x_layout'] ) : '';
 		$instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? strip_tags( $new_instance['show_post'] ) : '';
 		$instance['show_date']            = ( ! empty( $new_instance['show_date'] ) ) ? strip_tags( $new_instance['show_date'] ) : '';
 
@@ -220,22 +233,19 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
+		if ( empty( $instance['newspaper_x_layout'] ) ) {
+			$instance['newspaper_x_layout'] = 'layout_a';
+		}
 
-		if ( ! empty( $instance['newspaper_x_category'] ) ) {
-			$newspaper_x_category = $instance['newspaper_x_category'];
-		} else {
+		if ( empty( $instance['newspaper_x_category'] ) ) {
 			$instance['newspaper_x_category'] = 'uncategorized';
 		}
 
-		if ( isset( $instance['show_post'] ) ) {
-			$show_post = $instance['show_post'];
-		} else {
+		if ( ! isset( $instance['show_post'] ) ) {
 			$instance['show_post'] = 4;
 		}
 
-		if ( isset( $instance['show_date'] ) ) {
-			$show_date = $instance['show_date'];
-		} else {
+		if ( ! isset( $instance['show_date'] ) ) {
 			$instance['show_date'] = 'on';
 		}
 
@@ -243,7 +253,7 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 
 		echo $before_widget;
 
-		$filepath = get_template_directory() . '/inc/widgets/posts_b/layouts/default.php';
+		$filepath = get_template_directory() . '/inc/widgets/posts/layouts/' . $instance['newspaper_x_layout'] . '.php';
 
 		$posts = $this->get_posts( $instance );
 

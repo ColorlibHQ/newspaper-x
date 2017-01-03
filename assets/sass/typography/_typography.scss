@@ -22,7 +22,7 @@ article.post p {
 }
 
 .single-post {
-  div.entry-content p:first-child:first-letter {
+  div.entry-content > p:first-child:first-letter {
     float: left;
     font-size: 75px;
     text-align: left;
