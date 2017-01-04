@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Newspaper X 1.1.1\n"
+"Project-Id-Version: Newspaper X 1.1.2\n"
 "Report-Msgid-Bugs-To: https://www.machothemes.com/\n"
-"POT-Creation-Date: 2017-01-03 07:44:27+00:00\n"
+"POT-Creation-Date: 2017-01-04 07:13:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -607,52 +607,60 @@ msgid ""
 "homepage by adding theme's built-in widgets in the Content Area sidebars."
 msgstr ""
 
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:11
-msgid "Newspaper X - Posts"
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:11
+msgid "Newspaper X - Posts Layout A"
 msgstr ""
 
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:51
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:13
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:13
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:13
+msgid ""
+"Layout consists of a featured post thumbnail, followed by a handful of "
+"posts that are smaller in size. Perfect for emphasising important news."
+msgstr ""
+
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:54
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:54
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:54
 msgid "Title"
 msgstr ""
 
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:58
-msgid "Layout"
-msgstr ""
-
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:63
-msgid "&ndash; Select a layout for this widget &ndash;"
-msgstr ""
-
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:65
-msgid "Layout A"
-msgstr ""
-
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:67
-msgid "Layout B"
-msgstr ""
-
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:69
-msgid "Layout C"
-msgstr ""
-
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:74
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:61
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:61
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:61
 msgid "Category"
 msgstr ""
 
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:79
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:66
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:66
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:66
 msgid "&ndash; Select a category &ndash;"
 msgstr ""
 
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:91
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:79
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:79
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:79
 msgid "Posts to Show"
 msgstr ""
 
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:128
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:116
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:116
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:116
 msgid "Show Date and Comments"
 msgstr ""
 
-#: inc/widgets/posts/class-widget-newspaper-x-posts.php:263
+#: inc/widgets/posts_a/class-widget-newspaper-x-posts_a.php:253
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:253
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:253
 msgid "Please configure your widget"
+msgstr ""
+
+#: inc/widgets/posts_b/class-widget-newspaper-x-posts_b.php:11
+msgid "Newspaper X - Posts Layout B"
+msgstr ""
+
+#: inc/widgets/posts_c/class-widget-newspaper-x-posts_c.php:11
+msgid "Newspaper X - Posts Layout C"
 msgstr ""
 
 #: search.php:33
