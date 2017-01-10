@@ -26,7 +26,7 @@ if ( post_password_required() ) {
 	if ( have_comments() ) : ?>
 		<h3 class="comments-title">
 			<span>
-				<?php echo __( 'Comments', 'newspaper-x' ) ?>
+				<?php echo esc_html__( 'Comments', 'newspaper-x' ) ?>
 			</span>
 		</h3>
 

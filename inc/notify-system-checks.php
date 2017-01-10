@@ -164,29 +164,29 @@ if ( ! class_exists( 'MT_Notify_System' ) ) {
 		public static function widget_importer_exporter_title() {
 			$installed = self::check_plugin_is_installed( 'widget-importer-exporter' );
 			if ( ! $installed ) {
-				return __( 'Install: Widget Importer Exporter Plugin', 'newspaper-x' );
+				return esc_html__( 'Install: Widget Importer Exporter Plugin', 'newspaper-x' );
 			}
 
 			$active = self::check_plugin_is_active( 'widget-importer-exporter' );
 			if ( $installed && ! $active ) {
-				return __( 'Activate: Widget Importer Exporter Plugin', 'newspaper-x' );
+				return esc_html__( 'Activate: Widget Importer Exporter Plugin', 'newspaper-x' );
 			}
 
-			return __( 'Install: Widget Importer Exporter Plugin', 'newspaper-x' );
+			return esc_html__( 'Install: Widget Importer Exporter Plugin', 'newspaper-x' );
 		}
 
 		public static function wordpress_importer_title() {
 			$installed = self::check_plugin_is_installed( 'wordpress-importer' );
 			if ( ! $installed ) {
-				return __( 'Install: WordPress Importer', 'newspaper-x' );
+				return esc_html__( 'Install: WordPress Importer', 'newspaper-x' );
 			}
 
 			$active = self::check_plugin_is_active( 'wordpress-importer' );
 			if ( $installed && ! $active ) {
-				return __( 'Activate: WordPress Importer', 'newspaper-x' );
+				return esc_html__( 'Activate: WordPress Importer', 'newspaper-x' );
 			}
 
-			return __( 'Install: WordPress Importer', 'newspaper-x' );
+			return esc_html__( 'Install: WordPress Importer', 'newspaper-x' );
 		}
 
 
@@ -196,44 +196,44 @@ if ( ! class_exists( 'MT_Notify_System' ) ) {
 		public static function wordpress_importer_description() {
 			$installed = self::check_plugin_is_installed( 'wordpress-importer' );
 			if ( ! $installed ) {
-				return __( 'Please install the WordPress Importer to create the demo content.', 'newspaper-x' );
+				return esc_html__( 'Please install the WordPress Importer to create the demo content.', 'newspaper-x' );
 			}
 
 			$active = self::check_plugin_is_active( 'wordpress-importer' );
 			if ( $installed && ! $active ) {
-				return __( 'Please activate the WordPress Importer to create the demo content.', 'newspaper-x' );
+				return esc_html__( 'Please activate the WordPress Importer to create the demo content.', 'newspaper-x' );
 			}
 
-			return __( 'Please install the WordPress Importer to create the demo content.', 'newspaper-x' );
+			return esc_html__( 'Please install the WordPress Importer to create the demo content.', 'newspaper-x' );
 		}
 
 		public static function force_regenerate_thumbnails_description() {
 			$installed = self::check_plugin_is_installed( 'force-regenerate-thumbnails' );
 			if ( ! $installed ) {
-				return __( 'Please install this plugin to regenerate your images using our custom image sizes.', 'newspaper-x' );
+				return esc_html__( 'Please install this plugin to regenerate your images using our custom image sizes.', 'newspaper-x' );
 			}
 
 			$active = self::check_plugin_is_active( 'force-regenerate-thumbnails' );
 			if ( $installed && ! $active ) {
-				return __( 'Please activate this plugin and regenerate your images using our custom image sizes.', 'newspaper-x' );
+				return esc_html__( 'Please activate this plugin and regenerate your images using our custom image sizes.', 'newspaper-x' );
 			}
 
-			return __( 'Please install this plugin to regenerate your images using our custom image sizes.', 'newspaper-x' );
+			return esc_html__( 'Please install this plugin to regenerate your images using our custom image sizes.', 'newspaper-x' );
 
 		}
 
 		public static function widget_importer_exporter_description() {
 			$installed = self::check_plugin_is_installed( 'widget-importer-exporter' );
 			if ( ! $installed ) {
-				return __( 'Please install the WordPress widget importer to create the demo content', 'newspaper-x' );
+				return esc_html__( 'Please install the WordPress widget importer to create the demo content', 'newspaper-x' );
 			}
 
 			$active = self::check_plugin_is_active( 'widget-importer-exporter' );
 			if ( $installed && ! $active ) {
-				return __( 'Please activate the WordPress Widget Importer to create the demo content.', 'newspaper-x' );
+				return esc_html__( 'Please activate the WordPress Widget Importer to create the demo content.', 'newspaper-x' );
 			}
 
-			return __( 'Please install the WordPress widget importer to create the demo content', 'newspaper-x' );
+			return esc_html__( 'Please install the WordPress widget importer to create the demo content', 'newspaper-x' );
 
 		}
 

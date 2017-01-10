@@ -24,6 +24,16 @@ function newspaper_x_scripts() {
 	 */
 	wp_enqueue_style( 'newspaper-x-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'newspaper-x-stylesheet', get_template_directory_uri() . '/assets/css/style.css', array(), $newspaper_x['Version'] );
+
+	$color = get_bloginfo( 'header_textcolor', 'display' );
+	if ( $color !== 'blank' ) {
+		$custom_css = "
+                .site-description{
+                    color: " . esc_html( $color ) . ";
+                }";
+
+		wp_add_inline_style( 'newspaper-x-style', $custom_css );
+	}
 	/**
 	 * Load menu script & skip-link-focus-fix
 	 */

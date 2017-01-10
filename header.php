@@ -15,7 +15,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php endif; ?>
 
 	<?php wp_head(); ?>
 </head>
@@ -52,7 +54,7 @@
 							<?php
 							$description = get_bloginfo( 'description', 'display' );
 							if ( $header_textcolor !== 'blank' && ! empty( $description ) ) : ?>
-								<p class="site-description" <?php echo ( ! empty( $header_textcolor ) ) ? 'style="color:#' . esc_attr( $header_textcolor ) . '"' : ''; ?>><?php echo wp_kses_post( $description ); /* WPCS: xss ok. */ ?></p>
+								<p class="site-description"><?php echo wp_kses_post( $description ); /* WPCS: xss ok. */ ?></p>
 								<?php
 							endif;
 						}
@@ -90,9 +92,15 @@
 							?>
 							<div class="menu-all-pages-container">
 								<ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
-									<li>
-										<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"><?php echo __( 'Add a menu', 'newspaper-x' ); ?></a>
-									</li>
+									<?php if ( current_user_can( 'administrator' ) ): ?>
+										<li>
+											<a href="<?php echo esc_url( admin_url( 'nav-menus.php' ) ); ?>"><?php echo esc_html__( 'Add a menu', 'newspaper-x' ); ?></a>
+										</li>
+									<?php else: ?>
+										<li>
+											<a href="<?php echo esc_url( get_home_url() ); ?>"><?php echo esc_html__( 'Home', 'newspaper-x' ); ?></a>
+										</li>
+									<?php endif; ?>
 								</ul>
 							</div>
 							<?php

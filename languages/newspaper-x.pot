@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Newspaper X 1.1.2\n"
 "Report-Msgid-Bugs-To: https://www.machothemes.com/\n"
-"POT-Creation-Date: 2017-01-04 07:13:08+00:00\n"
+"POT-Creation-Date: 2017-01-10 11:44:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,6 +30,14 @@ msgstr ""
 
 #: 404.php:22
 msgid "It looks like nothing was found at this location. Maybe try a better search?"
+msgstr ""
+
+#: archive.php:127
+msgid "prev"
+msgstr ""
+
+#: archive.php:128
+msgid "next"
 msgstr ""
 
 #: comments.php:29 inc/class-newspaper-x-helper.php:76
@@ -60,7 +68,7 @@ msgstr ""
 msgid "&copy; %s <a href=\"%s\">Newspaper X. All rights reserved.</a>"
 msgstr ""
 
-#: header.php:94
+#: header.php:96
 msgid "Add a menu"
 msgstr ""
 
@@ -254,15 +262,11 @@ msgstr ""
 msgid "Pro"
 msgstr ""
 
-#: inc/customizer/register_settings.php:56
-msgid "Site Color Schemes"
-msgstr ""
-
-#: inc/customizer/register_settings.php:71
+#: inc/customizer/register_settings.php:69
 msgid "Company name in text format below"
 msgstr ""
 
-#: inc/customizer/register_settings.php:76
+#: inc/customizer/register_settings.php:74
 msgid ""
 "The image logo, if set, will override the text logo. You can not have both "
 "at the same time. A tagline can be displayed under the text logo."
@@ -471,7 +475,7 @@ msgid "Recent Post Module"
 msgstr ""
 
 #: inc/extras.php:268
-msgid "<span>Leave Comment</span>"
+msgid "Leave Comment"
 msgstr ""
 
 #: inc/notify-system-checks.php:167 inc/notify-system-checks.php:175
@@ -669,62 +673,6 @@ msgstr ""
 
 #: searchform.php:3 template-parts/top-header.php:58
 msgid "Search for:"
-msgstr ""
-
-#: sidebars/sidebars.php:9
-msgid "Content Sidebar"
-msgstr ""
-
-#: sidebars/sidebars.php:10
-msgid "In blog archive, right side"
-msgstr ""
-
-#: sidebars/sidebars.php:20
-msgid "Content Widget Area"
-msgstr ""
-
-#: sidebars/sidebars.php:21
-msgid "Actual page template content"
-msgstr ""
-
-#: sidebars/sidebars.php:31
-msgid "Widget area before the footer"
-msgstr ""
-
-#: sidebars/sidebars.php:32
-msgid "Full width area ( spans across the container )"
-msgstr ""
-
-#: sidebars/sidebars.php:42
-msgid "[Footer] Sidebar #1"
-msgstr ""
-
-#: sidebars/sidebars.php:43
-msgid "In the footer, first column"
-msgstr ""
-
-#: sidebars/sidebars.php:53
-msgid "[Footer] Sidebar #2"
-msgstr ""
-
-#: sidebars/sidebars.php:54
-msgid "In the footer, 2nd column"
-msgstr ""
-
-#: sidebars/sidebars.php:64
-msgid "[Footer] Sidebar #3"
-msgstr ""
-
-#: sidebars/sidebars.php:65
-msgid "In the footer, 3rd column"
-msgstr ""
-
-#: sidebars/sidebars.php:75
-msgid "[Footer] Sidebar #4"
-msgstr ""
-
-#: sidebars/sidebars.php:76
-msgid "In the footer, 4th column"
 msgstr ""
 
 #: template-parts/banner/banner-adsense.php:17

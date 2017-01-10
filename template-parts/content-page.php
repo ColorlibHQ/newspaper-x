@@ -89,7 +89,7 @@ if ( $breadcrumbs_enabled ) {
 			</div>
 			<?php
 		} else {
-			echo '<p>' . wp_trim_words( get_the_content( __( 'Read More', 'newspaper-x' ) ), 35 ) . '</p>';
+			echo '<p>' . wp_trim_words( get_the_content( esc_html__( 'Read More', 'newspaper-x' ) ), 35 ) . '</p>';
 		}
 
 		?>

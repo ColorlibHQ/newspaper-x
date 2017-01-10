@@ -20,26 +20,26 @@ wp_enqueue_script( 'updates' );
 		switch ( $active['needs'] ) {
 			case 'install':
 				$class = 'install-now button';
-				$label = __( 'Install', 'newspaper-x' );
+				$label = esc_html__( 'Install', 'newspaper-x' );
 				break;
 			case 'activate':
 				$class = 'activate-now button button-primary';
-				$label = __( 'Activate', 'newspaper-x' );
+				$label = esc_html__( 'Activate', 'newspaper-x' );
 				break;
 			case 'deactivate':
 				$class = 'deactivate-now button';
-				$label = __( 'Deactivate', 'newspaper-x' );
+				$label = esc_html__( 'Deactivate', 'newspaper-x' );
 				break;
 		}
 
 		?>
 		<div class="col plugin_box">
 			<?php if ( $prop['recommended'] ): ?>
-				<span class="recommended"><?php _e( 'Recommended', 'newspaper-x' ); ?></span>
+				<span class="recommended"><?php esc_html__( 'Recommended', 'newspaper-x' ); ?></span>
 			<?php endif; ?>
 			<img src="<?php echo esc_attr( $icon ) ?>" alt="plugin box image">
 			<span class="version">
-				<?php echo __( 'Version:', 'newspaper-x' ); ?><?php echo esc_html( $info->version ) ?>
+				<?php echo esc_html__( 'Version:', 'newspaper-x' ); ?><?php echo esc_html( $info->version ) ?>
 			</span>
 			<span class="separator">|</span>
 				<?php echo wp_kses_post( $info->author ) ?>

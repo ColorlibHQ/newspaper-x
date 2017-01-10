@@ -8,9 +8,9 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'customize_preview_init', array( $this, 'enqueue' ) );
 
-		parent::__construct( 'newspaper_x_widget_posts_a', __( 'Newspaper X - Posts Layout A', 'newspaper-x' ), array(
+		parent::__construct( 'newspaper_x_widget_posts_a', esc_html__( 'Newspaper X - Posts Layout A', 'newspaper-x' ), array(
 			'classname'                   => 'newspaper_x_widgets',
-			'description'                 => __( 'Layout consists of a featured post thumbnail, followed by a handful of posts that are smaller in size. Perfect for emphasising important news.', 'newspaper-x' ),
+			'description'                 => esc_html__( 'Layout consists of a featured post thumbnail, followed by a handful of posts that are smaller in size. Perfect for emphasising important news.', 'newspaper-x' ),
 			'customize_selective_refresh' => true
 		) );
 
@@ -51,19 +51,19 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 
 		?>
 		<p>
-			<label><?php _e( 'Title', 'newspaper-x' ); ?> :</label>
+			<label><?php esc_html__( 'Title', 'newspaper-x' ); ?> :</label>
 			<input type="text" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			       id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
 			       value="<?php echo esc_attr( $title ); ?>">
 		</p>
 
 		<p>
-			<label><?php _e( 'Category', 'newspaper-x' ); ?> :</label>
+			<label><?php esc_html__( 'Category', 'newspaper-x' ); ?> :</label>
 			<select name="<?php echo esc_attr( $this->get_field_name( 'newspaper_x_category' ) ); ?>"
 			        id="<?php echo esc_attr( $this->get_field_id( 'newspaper_x_category' ) ); ?>">
 				<option value="" <?php if ( empty( $instance['newspaper_x_category'] ) ) {
 					echo 'selected="selected"';
-				} ?>><?php _e( '&ndash; Select a category &ndash;', 'newspaper-x' ) ?></option>
+				} ?>><?php esc_html__( '&ndash; Select a category &ndash;', 'newspaper-x' ) ?></option>
 				<?php
 				$categories = get_categories( 'hide_empty=0' );
 				foreach ( $categories as $category ) { ?>
@@ -76,7 +76,7 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 
 		<label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>">
             <span class="customize-control-title">
-               <?php _e( 'Posts to Show', 'newspaper-x' ); ?> :
+               <?php esc_html__( 'Posts to Show', 'newspaper-x' ); ?> :
             </span>
 		</label>
 
@@ -113,7 +113,7 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 
 		<div class="checkbox_switch">
 				<span class="customize-control-title onoffswitch_label">
-                    <?php _e( 'Show Date and Comments', 'newspaper-x' ); ?>
+                    <?php esc_html__( 'Show Date and Comments', 'newspaper-x' ); ?>
 				</span>
 			<div class="onoffswitch">
 				<input type="checkbox" id="<?php echo esc_attr( $this->get_field_name( 'show_date' ) ); ?>"
@@ -250,7 +250,7 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		if ( file_exists( $filepath ) ) {
 			include $filepath;
 		} else {
-			echo _e( 'Please configure your widget', 'newspaper-x' );
+			echo esc_html__( 'Please configure your widget', 'newspaper-x' );
 		}
 
 		wp_reset_postdata();

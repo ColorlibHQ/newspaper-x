@@ -65,7 +65,7 @@ if ( ! $recent_posts ) {
 				<div class="newspaper-x-post-info">
 					<h3>
 						<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
-							<?php echo wp_kses_post( wp_trim_words( $post->post_title, 4, $more = '...' ) ) ?>
+							<?php echo wp_kses_post( wp_trim_words( $post->post_title, 4, $more = '&hellip;' ) ) ?>
 						</a>
 					</h3>
 					<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span> / <span

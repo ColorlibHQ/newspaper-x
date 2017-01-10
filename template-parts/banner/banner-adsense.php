@@ -14,5 +14,5 @@ if ( empty( $code ) ) {
 	<?php
 	echo htmlspecialchars_decode( $code );
 	?>
-	<p class="adsense__loading"><span><?php echo __( 'Loading', 'newspaper-x' ); ?></span></p>
+	<p class="adsense__loading"><span><?php echo esc_html__( 'Loading', 'newspaper-x' ); ?></span></p>
 </div>

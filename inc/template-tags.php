@@ -39,7 +39,7 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 				echo '<div class="newspaper-x-date">' . esc_html( $date ) . '</div>';
 				break;
 			case 'tags':
-				echo ! empty( $tags_list ) ? '<div class="newspaper-x-tags"><strong>' . __( 'TAGS: ', 'newspaper-x' ) . '</strong>' . wp_kses_post( $tags_list ) . '</div>' : '';
+				echo ! empty( $tags_list ) ? '<div class="newspaper-x-tags"><strong>' . esc_html__( 'TAGS: ', 'newspaper-x' ) . '</strong>' . wp_kses_post( $tags_list ) . '</div>' : '';
 				break;
 			default:
 				echo $html;

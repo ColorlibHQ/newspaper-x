@@ -154,7 +154,7 @@ if ( ! class_exists( 'Newspaper_X_Related_Posts_Output' ) ) {
 			 * Heading
 			 */
 			echo '<div class="col-lg-11 col-sm-10 col-xs-12 newspaper-x-related-posts-title">';
-			echo '<h3><span>' . __( 'Related posts ', 'newspaper-x' ) . '</span></h3>';
+			echo '<h3><span>' . esc_html__( 'Related posts ', 'newspaper-x' ) . '</span></h3>';
 			echo '</div>';
 
 			/*

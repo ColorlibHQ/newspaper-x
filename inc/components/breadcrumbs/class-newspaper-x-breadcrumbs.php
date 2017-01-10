@@ -94,7 +94,7 @@ class Newspaper_X_Breadcrumbs {
 		$this->search_prefix          = $defaults['search_prefix'];
 		$this->error_prefix           = $defaults['error_prefix'];
 
-		$this->home_label = __( 'Home ', 'newspaper-x' );
+		$this->home_label = esc_html__( 'Home ', 'newspaper-x' );
 	}
 
 	/**

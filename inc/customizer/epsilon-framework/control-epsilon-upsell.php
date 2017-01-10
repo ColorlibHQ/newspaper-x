@@ -11,8 +11,8 @@ if ( ! class_exists( 'Epsilon_Control_Upsell' ) ):
 		public $pro_label;
 
 		public function __construct( WP_Customize_Manager $manager, $id, array $args ) {
-			$this->button_text = __( 'Hello', 'newspaper-x' );
-			$this->pro_label   = __( 'Pro', 'newspaper-x' );
+			$this->button_text = esc_html__( 'Hello', 'newspaper-x' );
+			$this->pro_label   = esc_html__( 'Pro', 'newspaper-x' );
 
 			$manager->register_control_type( 'Epsilon_Control_Upsell' );
 			parent::__construct( $manager, $id, $args );

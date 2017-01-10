@@ -73,7 +73,7 @@ class Newspaper_X_Helper {
 
 		$html = '<ul>';
 		$html .= '<li class="post-date">' . esc_html( $date ) . '</li>';
-		$html .= '<li class="post-comments">' . esc_html( $comments->approved ) . ' ' . __( 'Comments', 'newspaper-x' ) . '</li>';
+		$html .= '<li class="post-comments">' . esc_html( $comments->approved ) . ' ' . esc_html__( 'Comments', 'newspaper-x' ) . '</li>';
 		$html .= '<li class="post-category"><a href="' . esc_url( get_category_link( $cat[0] ) ) . '">' . esc_html( get_the_category_by_ID( $cat[0] ) ) . '</a></li>';
 		$html .= '</ul>';
 

@@ -55,11 +55,11 @@
 							<form role="search" method="get" id="searchform_topbar"
 							      action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
 								<label><span
-										class="screen-reader-text"><?php echo __( 'Search for:', 'newspaper-x' ) ?></span>
+										class="screen-reader-text"><?php echo esc_html__( 'Search for:', 'newspaper-x' ) ?></span>
 									<input
 										class="search-field-top-bar <?php echo $search_query === '' ? '' : 'opened'; ?>"
 										id="search-field-top-bar"
-										placeholder="<?php echo __( 'Type the search term', 'newspaper-x' ) ?>"
+										placeholder="<?php echo esc_html__( 'Type the search term', 'newspaper-x' ) ?>"
 										value="<?php echo esc_attr( $search_query ); ?>" name="s"
 										type="search">
 								</label>

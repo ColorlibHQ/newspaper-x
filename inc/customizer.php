@@ -52,7 +52,7 @@ function newspaper_x_customizer_enqueue_scripts() {
 		'theme'   => esc_url( get_template_directory_uri() ),
 		'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) )
 	) );
-	wp_enqueue_script( 'customizer-scripts', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/customizer.js', array( 'customize-controls' ) );
+	wp_enqueue_script( 'newspaper_x_customizer-scripts', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/customizer.js', array( 'customize-controls' ) );
 	wp_enqueue_style( 'epsilon-styles', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/css/style.css', array(), '2' );
 
 }

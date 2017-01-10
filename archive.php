@@ -123,7 +123,10 @@ if ( $first_posts->have_posts() ):
 					endwhile;
 					?>
 				</div>
-			<?php the_posts_pagination( array( 'prev_text' => 'prev', 'next_text' => 'next' ) ); ?>
+			<?php the_posts_pagination( array(
+				                            'prev_text' => esc_html__( 'prev', 'newspaper-x' ),
+				                            'next_text' => esc_html__( 'next', 'newspaper-x' )
+			                            ) ); ?>
 			<?php
 			else :
 				echo '<div class="row">';
