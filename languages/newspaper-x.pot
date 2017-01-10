@@ -1,16 +1,16 @@
-# Copyright (C) 2017 MachoThemes
+# Copyright (C) 2017 Colorlib
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Newspaper X 1.1.2\n"
-"Report-Msgid-Bugs-To: https://www.machothemes.com/\n"
-"POT-Creation-Date: 2017-01-10 11:44:42+00:00\n"
+"Project-Id-Version: Newspaper X 1.1.4\n"
+"Report-Msgid-Bugs-To: https://www.colorlib.com/\n"
+"POT-Creation-Date: 2017-01-10 13:26:34+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Macho Themes <office@machothemes.com>\n"
-"Language-Team: Macho Themes <office@machothemes.com>\n"
+"Last-Translator: Colorlib <office@colorlib.com>\n"
+"Language-Team: Colorlib <office@colorlib.com>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 "X-Poedit-KeywordsList: "
 "__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
@@ -68,8 +68,13 @@ msgstr ""
 msgid "&copy; %s <a href=\"%s\">Newspaper X. All rights reserved.</a>"
 msgstr ""
 
-#: header.php:96
+#: header.php:97
 msgid "Add a menu"
+msgstr ""
+
+#: header.php:101
+#: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:78
+msgid "Home"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/actions-required.php:54
@@ -228,10 +233,6 @@ msgstr ""
 
 #: inc/admin/welcome-screen/welcome-screen.php:393
 msgid "Support"
-msgstr ""
-
-#: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:78
-msgid "Home"
 msgstr ""
 
 #: inc/components/breadcrumbs/class-newspaper-x-breadcrumbs.php:79
@@ -675,6 +676,14 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
+#: searchform.php:4
+msgid "Search ..."
+msgstr ""
+
+#: searchform.php:7
+msgid "Search  "
+msgstr ""
+
 #: template-parts/banner/banner-adsense.php:17
 msgid "Loading"
 msgstr ""
@@ -716,7 +725,7 @@ msgid "Newspaper X"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://machothemes.com/newspaper-x"
+msgid "https://colorlib.com/wp/themes/newspaper-x/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -729,9 +738,9 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "MachoThemes"
+msgid "Colorlib"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://machothemes.com"
+msgid "https://colorlib.com"
 msgstr ""

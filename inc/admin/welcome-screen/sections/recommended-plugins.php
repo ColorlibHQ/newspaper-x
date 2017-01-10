@@ -35,7 +35,7 @@ wp_enqueue_script( 'updates' );
 		?>
 		<div class="col plugin_box">
 			<?php if ( $prop['recommended'] ): ?>
-				<span class="recommended"><?php esc_html__( 'Recommended', 'newspaper-x' ); ?></span>
+				<span class="recommended"><?php echo esc_html__( 'Recommended', 'newspaper-x' ); ?></span>
 			<?php endif; ?>
 			<img src="<?php echo esc_attr( $icon ) ?>" alt="plugin box image">
 			<span class="version">

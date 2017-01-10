@@ -4,7 +4,7 @@
  */
 $banner_image = get_theme_mod( 'newspaper_x_banner_image', get_template_directory_uri() . '/assets/images/banner.jpg' );
 $default      = get_template_directory_uri() . '/assets/images/banner.jpg';
-$link         = get_theme_mod( 'newspaper_x_banner_link', 'https://machothemes.com/' );
+$link         = get_theme_mod( 'newspaper_x_banner_link', 'https://colorlib.com/wp/forums/' );
 
 /**
  * In case the user did not select an image ( default ), we fallback to the placeholder banner

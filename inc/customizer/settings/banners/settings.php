@@ -66,7 +66,7 @@ $wp_customize->add_setting( 'newspaper_x_banner_image',
 $wp_customize->add_setting( 'newspaper_x_banner_link',
                             array(
 	                            'sanitize_callback' => 'esc_url_raw',
-	                            'default'           => esc_url( 'https://machothemes.com' ),
+	                            'default'           => esc_url( 'https://colorlib.com/wp/forums/' ),
                             )
 );
 

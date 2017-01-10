@@ -51,19 +51,19 @@ class Widget_Newspaper_X_Posts_C extends WP_Widget {
 
 		?>
 		<p>
-			<label><?php esc_html__( 'Title', 'newspaper-x' ); ?> :</label>
+			<label><?php echo esc_html__( 'Title', 'newspaper-x' ); ?> :</label>
 			<input type="text" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			       id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
 			       value="<?php echo esc_attr( $title ); ?>">
 		</p>
 
 		<p>
-			<label><?php esc_html__( 'Category', 'newspaper-x' ); ?> :</label>
+			<label><?php echo esc_html__( 'Category', 'newspaper-x' ); ?> :</label>
 			<select name="<?php echo esc_attr( $this->get_field_name( 'newspaper_x_category' ) ); ?>"
 			        id="<?php echo esc_attr( $this->get_field_id( 'newspaper_x_category' ) ); ?>">
 				<option value="" <?php if ( empty( $instance['newspaper_x_category'] ) ) {
 					echo 'selected="selected"';
-				} ?>><?php esc_html__( '&ndash; Select a category &ndash;', 'newspaper-x' ) ?></option>
+				} ?>><?php echo esc_html__( '&ndash; Select a category &ndash;', 'newspaper-x' ) ?></option>
 				<?php
 				$categories = get_categories( 'hide_empty=0' );
 				foreach ( $categories as $category ) { ?>
@@ -76,7 +76,7 @@ class Widget_Newspaper_X_Posts_C extends WP_Widget {
 
 		<label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>">
             <span class="customize-control-title">
-               <?php esc_html__( 'Posts to Show', 'newspaper-x' ); ?> :
+               <?php echo esc_html__( 'Posts to Show', 'newspaper-x' ); ?> :
             </span>
 		</label>
 
@@ -113,7 +113,7 @@ class Widget_Newspaper_X_Posts_C extends WP_Widget {
 
 		<div class="checkbox_switch">
 				<span class="customize-control-title onoffswitch_label">
-                    <?php esc_html__( 'Show Date and Comments', 'newspaper-x' ); ?>
+                    <?php echo esc_html__( 'Show Date and Comments', 'newspaper-x' ); ?>
 				</span>
 			<div class="onoffswitch">
 				<input type="checkbox" id="<?php echo esc_attr( $this->get_field_name( 'show_date' ) ); ?>"

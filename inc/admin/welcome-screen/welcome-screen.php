@@ -130,7 +130,7 @@ class Newspaper_X_Welcome {
 		<div class="updated notice is-dismissible">
 			<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing Newspaper X! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'newspaper-x' ), '<a href="' . esc_url( admin_url( 'themes.php?page=newspaper-x-welcome' ) ) . '">', '</a>' ); ?></p>
 			<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=newspaper-x-welcome' ) ); ?>" class="button"
-			      style="text-decoration: none;"><?php esc_html__( 'Get started with Newspaper X', 'newspaper-x' ); ?></a></p>
+			      style="text-decoration: none;"><?php echo esc_html__( 'Get started with Newspaper X', 'newspaper-x' ); ?></a></p>
 		</div>
 		<?php
 	}
