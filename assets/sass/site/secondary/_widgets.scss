@@ -279,12 +279,12 @@
 
 .site-footer {
   p {
-    color: #FFF;
-    font-family: $font__alternate;
+    color: #a9afb5;
+    font-family: $font__main;
   }
   .newspaper-x-contact-p {
     strong {
-      color: $color__text-title;
+      color: $font__main;
     }
     margin-bottom: 0;
   }
@@ -292,26 +292,26 @@
   .newspaper-x-contact-logo {
     margin-top: 20px;
   }
-
+  .widget_recent_entries{
+    ul{
+      margin: 0px;
+      padding: 0px;
+      li{
+        list-style:none;
+        a{
+          color: #a9afb5;
+        }
+      }
+    }
+  }
   .widget {
     font-size: 15px;
-    font-family: $font__alternate;
-    margin-bottom: 40px;
+    font-family: $font__main;
+    color: #a9afb5;
     position: relative;
-    border: 3px solid #FFF;
     padding: 15px;
     z-index: 1;
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 3px;
-      bottom: 3px;
-      left: 3px;
-      right: 3px;
-      border: 1px solid #FFF;
-      z-index: -1;
-    }
+
 
     h3 {
       font-family: $font__main;
@@ -332,6 +332,7 @@
             margin-bottom: 15px;
           }
         }
+
         .newspaper-x-post-content {
           width: 225px;
           @media (max-width: 1199px) {
@@ -340,7 +341,7 @@
         }
       }
     }
-
+    
     &.widget_categories {
       position: relative;
       > ul {
@@ -357,7 +358,7 @@
             border-bottom: none;
           }
           a {
-            color: #fff;
+            color: #a9afb5;
             font-family: $font__main;
             font-weight: 400;
             &:hover,
@@ -369,7 +370,7 @@
 
           .newspaper-x-cat-count {
             float: right;
-            color: transparentize(#FFF, 0.5);
+            color: #2c3745;
             font-family: $font__alternate;
             font-size: 15px;
           }

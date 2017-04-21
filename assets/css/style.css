@@ -41,16 +41,17 @@ button,
 input,
 select,
 textarea {
-  color: #7e7e7e;
+  color: #001936;
   font-family: "Source Sans Pro", "sans-serif";
   line-height: 21px; }
 
 p {
   font-size: 15px;
-  font-family: "Source Sans Pro", "sans-serif";
-  color: #7e7e7e;
-  line-height: 1.8em;
-  margin-bottom: 1.5em; }
+  font-family: "Nunito Sans", sans-serif;
+  color: #8c9597;
+  line-height: 25px;
+  margin-bottom: 1.5em;
+  font-weight: 400; }
 
 article.post p {
   font-family: "Source Sans Pro", "sans-serif";
@@ -63,11 +64,13 @@ article.post p {
   padding-right: 7px; }
 
 a {
-  font-weight: 500;
-  text-decoration: none;
-  color: #7e7e7e; }
+  color: #0e649b;
+  font-weight: 400;
+  line-height: 26px;
+  text-decoration: none; }
   a:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #0e649b; }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
@@ -80,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-title, .page-title, .newspaper-x-content .widget-title, .newspaper-x-after-content-sidebar .widget-title, #comments > h3:first-of-type, #reply-title, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3 {
   font-weight: 700;
-  font-family: "Oswald", "serif";
+  font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
   position: relative;
   text-transform: uppercase;
@@ -297,7 +300,7 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #0a396d;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
@@ -336,7 +339,7 @@ button.search-submit {
     font-size: 15px; }
 
 .form-submit .submit {
-  font-family: "Oswald", "serif";
+  font-family: "Nunito Sans", sans-serif;
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
@@ -461,7 +464,6 @@ textarea {
   border: none;
   outline: none;
   box-shadow: none;
-  bottom: 9px;
   position: relative; }
 
 #cat {
@@ -475,9 +477,9 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #7e7e7e; }
+  color: #0e649b; }
   a:visited {
-    color: #7e7e7e; }
+    color: #001936; }
   a:hover, a:focus, a:active {
     color: #15c8bd; }
   a:focus {
@@ -495,7 +497,8 @@ a {
   clear: both;
   display: block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  border-top: 1px solid #e1e1e1; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -532,8 +535,8 @@ a {
   display: block;
   width: 35px;
   height: 35px;
-  color: "Oswald", "serif";
-  border-color: "Oswald", "serif";
+  color: "Nunito Sans", sans-serif;
+  border-color: "Nunito Sans", sans-serif;
   background: transparent;
   margin: 0 auto;
   margin-bottom: 10px; }
@@ -550,7 +553,7 @@ a {
     #site-navigation.toggled ul > li.menu-item-has-children > ul li a {
       padding: 0 0 10px 0; }
     #site-navigation.toggled ul > li.menu-item-has-children > ul li:hover > a {
-      color: #7e7e7e; }
+      color: #001936; }
     #site-navigation.toggled ul > li.menu-item-has-children > ul li.menu-item-has-children:after {
       display: none; }
   #site-navigation.toggled ul li {
@@ -602,34 +605,27 @@ a {
 /* Newspaper X Menu Customization starts here */
 #site-navigation a {
   font-size: 18px;
-  font-family: "Oswald";
+  font-family: "Nunito Sans", sans-serif;
   line-height: 26px;
   padding-bottom: 10px;
   position: relative;
   color: #333;
   display: inline-block;
-  font-weight: 700; }
+  font-weight: 300; }
 #site-navigation .menu {
-  border-top: 4px solid #000;
-  padding-top: 20px;
   padding-bottom: 10px;
   position: relative; }
-  #site-navigation .menu:before {
-    width: 100%;
-    position: absolute;
-    content: '';
-    height: 1px;
-    background-color: #000;
-    display: block;
-    top: 2px; }
   #site-navigation .menu > li {
     display: inline-block;
-    padding-right: 40px;
-    position: relative; }
-    #site-navigation .menu > li.active > a, #site-navigation .menu > li:hover > a {
-      color: #15c8bd; }
+    margin-right: 37px;
+    position: relative;
+    line-height: 57px; }
+    #site-navigation .menu > li.active, #site-navigation .menu > li:hover {
+      border-top: 3px solid #0e649b;
+      bottom: 2px; }
     #site-navigation .menu > li > a {
-      position: relative; }
+      position: relative;
+      text-align: center; }
       #site-navigation .menu > li > a:after {
         position: absolute;
         bottom: -1px;
@@ -650,7 +646,7 @@ a {
       color: #333; }
     #site-navigation .menu > li.menu-item-has-children > ul li:hover {
       color: #FFF;
-      background-color: #15c8bd; }
+      background-color: #0e649b; }
       #site-navigation .menu > li.menu-item-has-children > ul li:hover > a, #site-navigation .menu > li.menu-item-has-children > ul li:hover:after {
         color: #FFF; }
     #site-navigation .menu > li.menu-item-has-children > ul li.menu-item-has-children {
@@ -661,22 +657,27 @@ a {
         font-size: 16px;
         display: inline-block;
         position: absolute;
-        right: 5px;
-        bottom: 12px;
+        right: 10px;
+        bottom: 1px;
         color: #333; }
       #site-navigation .menu > li.menu-item-has-children > ul li.menu-item-has-children:hover:after {
         color: #FFF; }
     #site-navigation .menu > li.menu-item-has-children > ul li a {
       padding: 10px 20px;
       font-size: 15px; }
+  #site-navigation .menu .current_page_item {
+    border-top: 3px solid #0e649b;
+    bottom: 2px; }
 
 /*--------------------------------------------------------------
 ## Top Header Menu
 --------------------------------------------------------------*/
 /* Top header */
 .top-header {
-  background: #202020;
+  background: #04132d;
   color: #fff; }
+  .top-header .fa-circle {
+    color: #04132d; }
   .top-header ul {
     list-style: none;
     padding-left: 0;
@@ -685,7 +686,7 @@ a {
     .top-header ul li {
       display: inline-block; }
       .top-header ul li a {
-        font-family: "Oswald", "serif";
+        font-family: "Nunito Sans", sans-serif;
         font-size: 16px;
         line-height: 26px;
         padding: 10px 30px 10px 0;
@@ -696,6 +697,20 @@ a {
           color: #15c8bd; }
       .top-header ul li:last-of-type a {
         padding-right: 0; }
+  .top-header #searchform_topbar {
+    float: left;
+    width: 175px;
+    border-bottom: 1px solid #202d44;
+    padding-top: 7px; }
+    .top-header #searchform_topbar label {
+      max-width: 140px; }
+    .top-header #searchform_topbar input[type="search"] {
+      padding: 3px;
+      background: #04132d;
+      border: none;
+      color: #fff;
+      font-family: "Nunito Sans", sans-serif;
+      font-weight: 400; }
   @media (max-width: 767px) {
     .top-header ul {
       text-align: center; }
@@ -722,7 +737,7 @@ a {
     display: inline-block;
     position: relative; }
     #menu-social ul li a, #menu-social-1 ul li a {
-      padding: 10px 5px;
+      padding: 8px 5px;
       color: #FFF;
       /* Add hover effects for the links, the brand colors */
       /* Add the social links depending on the link href */ }
@@ -731,7 +746,7 @@ a {
         display: inline-block;
         padding: 0 5px;
         font-family: 'FontAwesome';
-        font-size: 16px;
+        font-size: 13px;
         vertical-align: top;
         -webkit-font-smoothing: antialiased; }
       #menu-social ul li a:hover[href*="wordpress.org"]::before, #menu-social-1 ul li a:hover[href*="wordpress.org"]::before, #menu-social ul li a:hover[href*="wordpress.com"]::before, #menu-social-1 ul li a:hover[href*="wordpress.com"]::before {
@@ -962,7 +977,7 @@ a {
         margin: 0;
         padding: 0 18px 0 18px;
         font-size: 15px;
-        color: #7e7e7e; }
+        color: #001936; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul > li, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul > li {
           padding-bottom: 10px;
           margin-bottom: 10px;
@@ -971,8 +986,8 @@ a {
             border-bottom: none;
             margin-bottom: 20px; }
           .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul > li a, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul > li a {
-            color: #7e7e7e;
-            font-family: "Oswald", "serif"; }
+            color: #001936;
+            font-family: "Nunito Sans", sans-serif; }
             .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul > li a:hover, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul > li a:focus, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul > li a:hover, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul > li a:focus {
               text-decoration: none;
               color: #15c8bd; }
@@ -1003,7 +1018,7 @@ a {
         display: none; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar #wp-calendar {
         font-size: 12px;
-        color: "Oswald", "serif"; }
+        color: "Nunito Sans", sans-serif; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar #wp-calendar > caption {
           color: #333;
           font-famiy: "Source Sans Pro", "sans-serif";
@@ -1086,7 +1101,7 @@ a {
   padding: 18px;
   display: block;
   text-transform: uppercase;
-  font-famiy: "Oswald", "serif";
+  font-famiy: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   margin-top: 5px;
@@ -1094,34 +1109,30 @@ a {
   position: relative; }
 
 .site-footer p {
-  color: #FFF;
-  font-family: "Source Sans Pro", "sans-serif"; }
+  color: #a9afb5;
+  font-family: "Nunito Sans", sans-serif; }
 .site-footer .newspaper-x-contact-p {
   margin-bottom: 0; }
   .site-footer .newspaper-x-contact-p strong {
-    color: #333; }
+    color: "Nunito Sans", sans-serif; }
 .site-footer .newspaper-x-contact-logo {
   margin-top: 20px; }
+.site-footer .widget_recent_entries ul {
+  margin: 0px;
+  padding: 0px; }
+  .site-footer .widget_recent_entries ul li {
+    list-style: none; }
+    .site-footer .widget_recent_entries ul li a {
+      color: #a9afb5; }
 .site-footer .widget {
   font-size: 15px;
-  font-family: "Source Sans Pro", "sans-serif";
-  margin-bottom: 40px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #a9afb5;
   position: relative;
-  border: 3px solid #FFF;
   padding: 15px;
   z-index: 1; }
-  .site-footer .widget:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 3px;
-    bottom: 3px;
-    left: 3px;
-    right: 3px;
-    border: 1px solid #FFF;
-    z-index: -1; }
   .site-footer .widget h3 {
-    font-family: "Oswald", "serif";
+    font-family: "Nunito Sans", sans-serif;
     font-size: 17px;
     text-transform: uppercase;
     font-weight: 700;
@@ -1153,15 +1164,15 @@ a {
         .site-footer .widget.widget_categories > ul > li:last-of-type {
           border-bottom: none; }
         .site-footer .widget.widget_categories > ul > li a {
-          color: #fff;
-          font-family: "Oswald", "serif";
+          color: #a9afb5;
+          font-family: "Nunito Sans", sans-serif;
           font-weight: 400; }
           .site-footer .widget.widget_categories > ul > li a:hover, .site-footer .widget.widget_categories > ul > li a:focus {
             text-decoration: none;
             color: #15c8bd; }
         .site-footer .widget.widget_categories > ul > li .newspaper-x-cat-count {
           float: right;
-          color: rgba(255, 255, 255, 0.5);
+          color: #2c3745;
           font-family: "Source Sans Pro", "sans-serif";
           font-size: 15px; }
     .site-footer .widget.widget_categories .children {
@@ -1193,7 +1204,7 @@ a {
   font-size: 17px;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Oswald", "serif";
+  font-family: "Nunito Sans", sans-serif;
   margin-top: 23px;
   margin-bottom: 0; }
   .newspaper_x_widgets .newspaper-x-blog-post-layout-a .newspaper-x-title h3 > a {
@@ -1226,7 +1237,7 @@ a {
     display: none; }
   .newspaper_x_widgets .newspaper-x-blog-post-layout-b .newspaper-x-title h3 {
     font-size: 15px;
-    font-family: "Oswald", "serif";
+    font-family: "Nunito Sans", sans-serif;
     margin-top: 0; }
     .newspaper_x_widgets .newspaper-x-blog-post-layout-b .newspaper-x-title h3 > a {
       font-weight: bold;
@@ -1298,12 +1309,12 @@ a {
 
 .newspaper-x-after-content-sidebar .newspaper-x-title h3 {
   font-size: 15px;
-  font-family: "Oswald", "serif"; }
+  font-family: "Nunito Sans", sans-serif; }
 .newspaper-x-after-content-sidebar .newspaper-x-layout-c-row {
   margin-bottom: 30px; }
 .newspaper-x-after-content-sidebar .newspaper-x-blog-post-layout-c .newspaper-x-title h3 {
   font-size: 17px;
-  font-family: "Oswald", "serif";
+  font-family: "Nunito Sans", sans-serif;
   text-transform: uppercase; }
 .newspaper-x-after-content-sidebar .newspaper-x-blog-post-layout-c .newspaper-x-content {
   display: block;
@@ -1362,7 +1373,7 @@ a {
         width: 126px; } }
   .newspaper-x-recent-post-widget .newspaper-x-title h3 {
     font-size: 16px;
-    font-family: "Oswald", "serif";
+    font-family: "Nunito Sans", sans-serif;
     margin-top: 0;
     text-transform: initial;
     color: #333; }
@@ -1421,7 +1432,7 @@ a {
   font-size: 24px;
   font-weight: bold;
   margin-top: 30px;
-  font-family: "Oswald", "serif";
+  font-family: "Nunito Sans", sans-serif;
   color: #333333; }
 
 .archive .entry-title {
@@ -1467,7 +1478,7 @@ a {
       padding-right: 25px; }
       .author-description .social-links li > a {
         font-size: 20px;
-        color: #7e7e7e; }
+        color: #001936; }
         .author-description .social-links li > a:hover {
           color: #15c8bd; }
 
@@ -1583,13 +1594,13 @@ a {
     bottom: 18px; }
     .comment-list .comment-metadata > a {
       color: #15c8bd;
-      font-family: "Oswald", "serif";
+      font-family: "Nunito Sans", sans-serif;
       font-size: 15px; }
   .comment-list .comment-content, .comment-list .reply {
     padding-left: 97px; }
   .comment-list .reply > a {
     color: #15c8bd;
-    font-family: "Oswald", "serif";
+    font-family: "Nunito Sans", sans-serif;
     font-size: 15px;
     font-weight: 700; }
 
@@ -1627,9 +1638,9 @@ a {
   padding: 15px; }
   @media (min-width: 768px) {
     .site-branding {
-      padding: 25px 15px; } }
+      padding: 20px 15px; } }
   .site-branding .header-logo .site-title {
-    font-family: "Oswald", "serif";
+    font-family: "Nunito Sans", sans-serif;
     color: #000;
     font-size: 45px;
     line-height: 45px;
@@ -1651,8 +1662,6 @@ a {
   line-height: 90px; }
 
 .search-form-opener {
-  position: absolute;
-  right: 15px;
   top: 3px;
   border: none;
   padding-left: 2px;
@@ -1840,17 +1849,21 @@ a {
 
 /* Footer */
 #colophon {
-  background-color: #2f2f2f;
+  background-color: #001228;
   margin-top: 30px; }
 
 .site-info {
-  background-color: #242424;
+  background-color: #000f20;
   padding: 15px 0; }
   .site-info *, .site-info a {
     font-size: 15px;
     color: #fff;
-    line-height: 25px;
-    font-family: "Source Sans Pro", "sans-serif"; }
+    font-family: "Nunito Sans", sans-serif; }
+  .site-info #footer-navigation ul {
+    margin: 0px; }
+    .site-info #footer-navigation ul li {
+      display: inline;
+      margin-left: 30px; }
 
 .back-to-top-area {
   padding: 15px 0; }
@@ -1970,7 +1983,7 @@ a {
         font-weight: 700;
         text-transform: uppercase;
         display: block;
-        font-family: "Oswald", "serif"; }
+        font-family: "Nunito Sans", sans-serif; }
         .newspaper-x-recent-posts > ul > li h3 > a {
           color: #FFF;
           font-weight: 700; }
@@ -2003,7 +2016,7 @@ a {
       .newspaper-x-related-posts .newspaper-x-carousel-arrows > li:hover {
         border-color: #15c8bd; }
       .newspaper-x-related-posts .newspaper-x-carousel-arrows > li a {
-        color: "Oswald", "serif";
+        color: "Nunito Sans", sans-serif;
         display: block;
         line-height: 18px; }
         .newspaper-x-related-posts .newspaper-x-carousel-arrows > li a:hover, .newspaper-x-related-posts .newspaper-x-carousel-arrows > li a:focus, .newspaper-x-related-posts .newspaper-x-carousel-arrows > li a:active {
@@ -2024,41 +2037,41 @@ a {
       color: #15c8bd; }
 
 .newspaper-x-news-ticker {
-  margin-top: 13px;
   position: relative;
-  background-color: #000;
   overflow: hidden;
-  max-height: 45px; }
+  max-height: 42px; }
   .newspaper-x-news-ticker .owl-carousel {
     display: block;
     position: absolute;
-    top: 12px;
+    top: 0px;
     width: 100%; }
   .newspaper-x-news-ticker .newspaper-x-module-title {
     color: #FFF;
-    padding: 12px 30px;
+    padding: 0px 21px 0px 11px;
+    font-size: 15px;
+    font-family: "Nunito Sans", sans-serif;
     font-weight: bold;
-    background: #2d2d2d;
+    background: #0e649b;
     display: inline-block;
-    position: relative; }
+    position: relative;
+    line-height: 42px; }
+    .newspaper-x-news-ticker .newspaper-x-module-title .fa-stack-1x {
+      font-size: 13px;
+      left: 3px;
+      bottom: 1px; }
+    .newspaper-x-news-ticker .newspaper-x-module-title .fa-stack-2x {
+      font-size: 30px;
+      position: relative;
+      top: 3px;
+      left: 3px; }
     @media (max-width: 767px) {
       .newspaper-x-news-ticker .newspaper-x-module-title {
         display: inline-block;
         margin-bottom: 20px; } }
     .newspaper-x-news-ticker .newspaper-x-module-title icon.fa {
       color: #15c8bd;
-      margin-right: 10px; }
-    .newspaper-x-news-ticker .newspaper-x-module-title:after {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 8.5px 0 8.5px 11px;
-      border-color: transparent transparent transparent #2d2d2d;
-      content: '';
-      display: block;
-      position: absolute;
-      right: -11px;
-      top: 15px; }
+      margin-right: 10px;
+      font-size: 13px; }
   .newspaper-x-news-ticker ul {
     display: inline-block;
     vertical-align: middle;
@@ -2073,7 +2086,7 @@ a {
     .newspaper-x-news-ticker ul li a {
       color: #fff;
       font-size: 14px;
-      font-family: "Source Sans Pro", "sans-serif";
+      font-family: "Nunito Sans", sans-serif;
       font-weight: 400; }
   @media (max-width: 767px) {
     .newspaper-x-news-ticker {
@@ -2095,7 +2108,7 @@ a {
 .newspaper-x-breadcrumbs {
   margin-top: 30px;
   font-size: 14px;
-  font-family: "Oswald", "serif";
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400; }
   .newspaper-x-breadcrumbs .newspaper-x-breadcrumb-sep {
     margin: 0 10px; }

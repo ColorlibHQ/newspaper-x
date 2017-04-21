@@ -30,7 +30,7 @@ foreach ( $mysidebars as $column ) {
 /**
  * Handle the sizing of the footer columns based on the user selection
  */
-$count = (int) get_theme_mod( 'newspaper_x_footer_columns', 3 );
+$count = (int) get_theme_mod( 'newspaper_x_footer_columns', 4 );
 /**
  * Size can be set dynamically as well by counting the array elements
  * $size = 12 / count($sidebars);

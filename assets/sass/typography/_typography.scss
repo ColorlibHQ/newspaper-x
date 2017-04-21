@@ -10,10 +10,11 @@ textarea {
 
 p {
   font-size: 15px;
-  font-family: $font__alternate;
-  color: $color__text-main;
-  line-height: 1.8em;
+  font-family: $font__main;
+  color: #8c9597;
+  line-height: 25px;
   margin-bottom: 1.5em;
+  font-weight:400;
 }
 
 article.post p {
@@ -31,11 +32,13 @@ article.post p {
 }
 
 a {
-  font-weight: 500;
+  color: $color_main-accent;
+  font-weight: 400;
+  line-height: 26px;
   text-decoration: none;
-  color: $color__text-main;
   &:hover {
     text-decoration: none;
+    color: $color_contrast-hover;
   }
 }
 

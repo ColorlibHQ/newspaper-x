@@ -6,7 +6,7 @@
 .site-branding {
   padding: 15px;
   @media (min-width: 768px) {
-    padding: 25px 15px;
+    padding: 20px 15px;
   }
 
   .header-logo {
@@ -43,8 +43,6 @@
 }
 
 .search-form-opener {
-  position: absolute;
-  right: 15px;
   @media (max-width: 768px) {
     top: 0;
   }

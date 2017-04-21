@@ -113,15 +113,4 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content container">
-		<?php $news_ticker = get_theme_mod( 'newspaper_x_enable_news_ticker', true ); ?>
-		<?php if ( $news_ticker ) { ?>
-		<div class="row">
-			<div class="col-md-12">
-				<section class="newspaper-x-news-ticker">
-					<?php
-					get_template_part( 'template-parts/news-ticker' );
-					?>
-				</section>
-			</div>
-		</div>
-<?php }
+		
