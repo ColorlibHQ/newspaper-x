@@ -3,7 +3,39 @@ h1, h2, h3, h4, h5, h6 {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   color: $color__text-title;
+  font-family: $font__main;
+  font-weight: 700;
 }
+h1{
+  font-size: 33px;
+  line-height: 37px;
+}
+
+h2{
+  font-size: 28px;
+  line-height: 30px;
+}
+
+h3{
+  font-size: 24px;
+  line-height: 26px;
+}
+
+h4{
+  font-size: 22px;
+  line-height: 24px;
+}
+
+h5{
+  font-size: 20px;
+  line-height: 25px;
+}
+
+h6{
+  font-size: 18px;
+  line-height: 25px;
+}
+
 
 .page-title {
   @extend .section-title;
@@ -13,34 +45,27 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
   font-weight: 700;
   font-family: $font__main;
-  font-size: 20px;
+  font-size: 24px;
+  border-left: 5px solid #0f5fa3;
   position: relative;
   text-transform: uppercase;
   margin-bottom: 25px;
   > span {
+    padding-left: 27px;
     background-color: #FFF;
     z-index: 1;
     position: relative;
     padding-right: 10px;
   }
-  &:before {
-    content: '';
-    width: 100%;
-    height: 4px;
-    background-color: #000;
-    position: absolute;
-    display: block;
-    top: 8px;
-    right: 0;
-  }
+
   &:after {
     content: '';
     width: 100%;
-    height: 1px;
-    background-color: #000;
+    height:0px;
+    border-bottom: 1px dotted #444;
     position: absolute;
     display: block;
-    top: 15px;
+    top: 12px;
     right: 0;
   }
 

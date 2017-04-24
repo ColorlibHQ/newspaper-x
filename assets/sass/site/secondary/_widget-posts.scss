@@ -151,14 +151,29 @@
     .newspaper-x-content {
       display: none;
     }
+    .newspaper-x-category{
+      padding: 2px 7px 2px 10px;
+      line-height:25px;
+      font-weight: 400;
+      background: #0a396d;
+      a{
+        color: #fff;
+        font-size: 13px;
+        font-family: $font__main;
+      }
+    }
+    .newspaper-x-date{
+      line-height:25px;
+      font-weight: 400;
+      margin-left: 13px;
+      font-size:12px;
+      font-family: $font__main;
+      color: #bfbfbf;
+    }
     .newspaper-x-title {
       h3 {
-        font-size: 15px;
-        font-family: $font__alternate;
-        margin-top: 0;
         > a {
-          color: inherit;
-          font-weight: bold;
+          color: $color_text-color;
           &:hover,
           &:focus {
             text-decoration: none;

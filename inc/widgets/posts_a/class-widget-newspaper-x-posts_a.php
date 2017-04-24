@@ -24,6 +24,14 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 	}
 
 	public function form( $instance ) {
+		$defaults = array(
+			'order'            => 'desc'
+		);
+		$instance = wp_parse_args( (array) $instance, $defaults );
+		$defaults = array(
+			'order'            => 'desc'
+		);
+		$instance = wp_parse_args( (array) $instance, $defaults );
 
 		if ( isset( $instance['title'] ) ) {
 			$title = $instance['title'];
@@ -72,7 +80,15 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 				<?php } ?>
 			</select>
 		</p>
-
+        <p>
+            <label><?php _e( 'Order', 'newspaper-x' ); ?> :</label>
+            <select name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>"
+                    id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" class="pull-right">
+                <option value ="desc" <?php echo ($instance['order'] == 'desc') ? 'selected' : '';?> ><?php echo esc_html__( 'Descending', 'newspaper-x' )?></option>
+                <option value ="asc" <?php echo ($instance['order'] == 'asc') ? 'selected' : '';?> ><?php echo esc_html__( 'Ascending', 'newspaper-x' )?></option>
+                <option value ="rand" <?php echo ($instance['order'] == 'rand') ? 'selected' : '';?> ><?php echo esc_html__( 'Random', 'newspaper-x' )?></option>
+            </select>
+        </p>
 
 		<label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>">
             <span class="customize-control-title">
@@ -133,9 +149,10 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		$instance = array();
 
 		$instance['title']                = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-		$instance['newspaper_x_category'] = ( ! empty( $new_instance['newspaper_x_category'] ) ) ? $new_instance['newspaper_x_category'] : '';
-		$instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? strip_tags( $new_instance['show_post'] ) : '';
+		$instance['newspaper_x_category'] = ( ! empty( $new_instance['newspaper_x_category'] ) ) ? strip_tags($new_instance['newspaper_x_category']) : '';
+		$instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? absint( $new_instance['show_post'] ) : '';
 		$instance['show_date']            = ( ! empty( $new_instance['show_date'] ) ) ? $new_instance['show_date'] : '';
+		$instance['order']                = ( ! empty( $new_instance['order'] ) ) ? strip_tags( $new_instance['order'] ) : '';
 
 		return $instance;
 
@@ -156,6 +173,7 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 			'posts_per_page' => $args['show_post'],
 		);
 
+
 		/**
 		 * Grab the sticky posts
 		 */
@@ -164,6 +182,15 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 			'post__in'       => get_option( 'sticky_posts' ),
 		);
 
+		if($args['order'] == 'rand' ){
+			$atts['orderby'] = 'rand';
+            $sticky_atts['orderby'] = 'rand';
+        }else{
+        	$atts['order'] = $args['order'];
+            $atts['orderby'] = 'date';
+            $sticky_atts['order'] = $args['order'];
+            $sticky_atts['orderby'] = 'date';
+        }
 		/**
 		 * Grab category and add the new argument
 		 */
@@ -220,6 +247,11 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
+
+		$defaults = array(
+			'order'            => 'desc'
+		);
+		$instance = wp_parse_args( (array) $instance, $defaults );
 
 		if ( ! empty( $instance['newspaper_x_category'] ) ) {
 			$newspaper_x_category = $instance['newspaper_x_category'];

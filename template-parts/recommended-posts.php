@@ -24,7 +24,7 @@ $args = array(
 	'order'       => $order,
 	'post_type'   => 'post',
 	'post_status' => 'publish',
-	//'category'    => implode( ',', $cats )
+	'category'    => implode( ',', $cats )
 );
 
 $recent_posts = wp_get_recent_posts( $args, OBJECT );
@@ -61,20 +61,7 @@ if ( ! $recent_posts ) {
 				$image       = $src[0];
 				$placeholder = $srcsmall[0];
 			}
-			if($i == 3){?>
-									</ul>
-								</div>
-							</div> <!-- col-12 -->
-						</div> <!-- row -->
-					</div> <!-- container -->
-				</div> <!-- recent posts bg -->
-				<div class="newspapper-spacer">
-					<div class="container site-content">
-					 	<div class="row">
-							<div class="col-md-12">
-									<div class="newspaper-x-recent-posts">
-										<ul>
-			<?php }	?>
+			?>
 
 			<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
 			    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">

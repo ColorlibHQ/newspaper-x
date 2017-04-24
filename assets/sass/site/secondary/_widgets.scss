@@ -298,8 +298,14 @@
       padding: 0px;
       li{
         list-style:none;
+        margin-bottom:35px;
         a{
           color: #a9afb5;
+        }
+        .post-date{
+          display: block;
+          color: #455263;
+          font-size: 12px;
         }
       }
     }
@@ -353,19 +359,21 @@
         > li {
           padding-bottom: 10px;
           margin-bottom: 10px;
-          border-bottom: 1px dashed transparentize(#e1e1e1, 0.9);
+          border-bottom: 1px dotted transparentize(#e1e1e1, 0.9);
           &:last-of-type {
             border-bottom: none;
           }
+          &:hover,
+            &:focus {
+              a, .newspaper-x-cat-count{
+                text-decoration: none;
+                color: $color_contrast-hover;
+              }
+            }
           a {
             color: #a9afb5;
             font-family: $font__main;
             font-weight: 400;
-            &:hover,
-            &:focus {
-              text-decoration: none;
-              color: $color_brand-newspaper-x;
-            }
           }
 
           .newspaper-x-cat-count {
@@ -373,6 +381,12 @@
             color: #2c3745;
             font-family: $font__alternate;
             font-size: 15px;
+            &:before{
+             content: "(";
+            }
+            &:after{
+             content: ")";
+            }
           }
         }
       }
@@ -385,6 +399,41 @@
           padding-top: 10px;
           border-top: 1px dashed #e1e1e1;
         }
+      }
+    }
+  }
+  .contact-widget{
+    .social-contact{
+      padding-left:0px;
+      li{
+        display:inline;
+        margin-right: 12px;
+        padding:4px 9px;
+        border-radius:20px;
+        font-size:11px;
+          &.facebook{
+            background: #3b5998;
+          }
+          &.twitter{
+            background: #38a4f0;
+            padding:4px 7px;
+          }
+          &.tumblr{
+            background: #36465d;
+            padding:4px 9px;
+          }
+          &.gplus{
+            background: #ed3521;
+            padding:4px 5px;
+          }
+          &.youtube{
+            background: #d10027;
+            padding:4px 7px;
+          }
+
+          a{
+            color: #fff;
+          }
       }
     }
   }
