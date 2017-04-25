@@ -106,7 +106,7 @@ class Widget_Newspaper_X_Posts_C extends WP_Widget {
 					value: <?php echo esc_attr( $instance['show_post'] ); ?>,
 					range: 'min',
 					min  : 1,
-					max  : 10,
+					max  : 9,
 					step : 1,
 					slide: function (event, ui) {
 						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').val(ui.value).keyup();

@@ -211,6 +211,7 @@
           border-top: 3px solid $color_main-accent;
           bottom:2px;
         > a {
+          top:-1px;
         }
       }
       > a {
@@ -277,6 +278,9 @@
     .current_page_item{
       border-top: 3px solid $color_main-accent;
       bottom:2px;
+      > a {
+        top:-1px;
+      }
     }
   }
 }

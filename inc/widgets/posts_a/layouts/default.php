@@ -31,7 +31,7 @@ if ( $posts->have_posts() ): ?>
 				'noscript' => array()
 			);
 			?>
-			<div class="col-sm-6 col-xs-12">
+			<div class="col-sm-3 col-xs-6">
 				<div class="newspaper-x-blog-post-layout-a">
 					<div class="newspaper-x-image">
 						<a href="<?php echo esc_url( get_the_permalink() ); ?>">
@@ -44,18 +44,19 @@ if ( $posts->have_posts() ): ?>
 								?></a></h3>
 					</div>
 					<?php if ( $instance['show_date'] ): ?>
-						<div class="newspaper-x-post-meta">
-							<?php echo Newspaper_X_Helper::get_post_meta( get_the_ID() ) ?>
-						</div>
+						<span class="newspaper-x-author">
+							<a href="/author/<?php echo the_author_meta( 'nickname'); ?> "><?php echo esc_html( get_the_author()); ?></a> 
+						</span>
+						<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
 					<?php endif; ?>
-					<div class="newspaper-x-content">
+					<div class="newspaper-x-content-a">
 						<?php echo wp_trim_words( wp_kses_post( get_the_content() ), 15, ' <a href="' . esc_url( get_the_permalink() ) . '">...</a>' ) ?>
 					</div>
 				</div>
 			</div>
 			<?php
 
-			if ( fmod( $i, (int) 2 ) == 0 && $i != (int) $posts->post_count ) {
+			if ( fmod( $i, (int) 4 ) == 0 && $i != (int) $posts->post_count ) {
 				echo '</div><div class="row newspaper-x-layout-a-row">';
 			} elseif ( $i == (int) $posts->post_count ) {
 				continue;

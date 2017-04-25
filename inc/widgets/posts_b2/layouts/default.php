@@ -1,7 +1,7 @@
 <?php
 $i = 0;
-$big = get_template_directory() . '/inc/widgets/posts_b/layouts/big.php';
-$small = get_template_directory() . '/inc/widgets/posts_b/layouts/small.php';
+$big = get_template_directory() . '/inc/widgets/posts_b2/layouts/big.php';
+$small = get_template_directory() . '/inc/widgets/posts_b2/layouts/small.php';
 if ( $posts->have_posts() ): ?>
 	<?php if ( ! empty( $instance['title'] ) ) {
 		echo $before_title . esc_html( $instance['title'] ) . $after_title;
@@ -31,27 +31,21 @@ if ( $posts->have_posts() ): ?>
 				),
 				'noscript' => array()
 			);
-			?>
-			<div class="col-md-4 col-xs-6">
-				<div class="newspaper-x-blog-post-layout-b border">
-					<?php if($i>3){ 
-							if ( file_exists( $small ) ) {
-								include $small;
-							} else {
-								echo esc_html__( 'Please configure your widget', 'newspaper-x' );
-							}
-						 }else{ 
-							if ( file_exists( $big ) ) {
-								include $big;
-							} else {
-								echo esc_html__( 'Please configure your widget', 'newspaper-x' );
-							}
-					} ?>
-				</div>
-			</div>
-			<?php
+			if($i>3){ 
+				if ( file_exists( $small ) ) {
+					include $small;
+				} else {
+					echo esc_html__( 'Please configure your widget', 'newspaper-x' );
+				}
+			}else{ 
+				if ( file_exists( $big ) ) {
+					include $big;
+				} else {
+					echo esc_html__( 'Please configure your widget', 'newspaper-x' );
+				}
+			} 
 
-			if ( fmod( $i-3, (int) 3 ) == 0 && $i != (int) $posts->post_count ) {
+			if ( fmod( $i-3, (int) 2 ) == 0 && $i != (int) $posts->post_count  && $i>3)  {
 				echo '</div><div class="row newspaper-x-layout-b-row">';
 			} elseif ( $i == (int) $posts->post_count ) {
 				continue;

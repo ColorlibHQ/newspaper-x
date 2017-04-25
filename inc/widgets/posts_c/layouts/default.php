@@ -49,13 +49,13 @@ if ( $posts->have_posts() ): ?>
 
 					<?php if ( $instance['show_date'] ): ?>
 						<span class="newspaper-x-category">
-							<a href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ) ?></a> 
+							<a href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ); ?></a> 
 						</span>
-						<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
+						<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ); ?></span>
 					<?php endif; ?>
 
 					<div class="newspaper-x-content">
-						<?php echo wp_trim_words( wp_kses_post( get_the_content() ), 50, ' <a href="' . esc_url( get_the_permalink() ) . '">...</a>' ) ?>
+						<?php echo wp_trim_words( wp_kses_post( get_the_content() ), 16, ' <a href="' . esc_url( get_the_permalink() ) . '">...</a>' ); ?>
 					</div>
 				</div>
 			</div>

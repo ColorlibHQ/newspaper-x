@@ -1,6 +1,6 @@
 <?php
 
-class Widget_Newspaper_X_Posts_B extends WP_Widget {
+class Widget_Newspaper_X_Posts_B2 extends WP_Widget {
 
 	function __construct() {
 
@@ -8,7 +8,7 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'customize_preview_init', array( $this, 'enqueue' ) );
 
-		parent::__construct( 'newspaper_x_widget_posts_b', esc_html__( 'Newspaper X - Posts Layout B', 'newspaper-x' ), array(
+		parent::__construct( 'newspaper_x_widget_posts_b2', esc_html__( 'Newspaper X - Posts Layout B2', 'newspaper-x' ), array(
 			'classname'                   => 'newspaper_x_widgets',
 			'description'                 => esc_html__( 'Layout consists of a featured post thumbnail, followed by a handful of posts that are smaller in size. Perfect for emphasising important news.', 'newspaper-x' ),
 			'customize_selective_refresh' => true
@@ -106,7 +106,7 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 					value: <?php echo esc_attr( $instance['show_post'] ); ?>,
 					range: 'min',
 					min  : 1,
-					max  : 11,
+					max  : 7,
 					step : 1,
 					slide: function (event, ui) {
 						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').val(ui.value).keyup();
@@ -272,7 +272,7 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 
 		echo $before_widget;
 
-		$filepath = get_template_directory() . '/inc/widgets/posts_b/layouts/default.php';
+		$filepath = get_template_directory() . '/inc/widgets/posts_b2/layouts/default.php';
 
 		$posts = $this->get_posts( $instance );
 

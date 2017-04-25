@@ -83,8 +83,9 @@
           &:active {
             text-decoration: none;
             outline: none;
-            color: $color_brand-newspaper-x;
+            color: #FFF;
           }
+
         }
       }
       h1{
@@ -98,6 +99,9 @@
           a{
             font-size: 13px;
             font-family: $font__main;
+          }
+          &:hover {
+            background: $color_contrast-hover;
           }
       }
       .newspaper-x-date{
