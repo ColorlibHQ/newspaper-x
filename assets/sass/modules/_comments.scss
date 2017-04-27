@@ -1,0 +1,22 @@
+.comments-area{
+	margin-bottom: -30px;
+	.comments-form{
+		background: #f8f8f8;
+		#reply-title{
+		    color:$color_main-accent;
+		   	font-weight: 700;
+		  	font-family: $font__main;
+		  	font-size: 20px;
+		  	border-left: none;
+		  	text-transform: initial;
+		  	margin-bottom: 0px;
+		 	span{
+			  	background: none;
+			  	padding: 0px;
+			}
+			&:after{
+			  	border: none;
+			}
+		}
+	}
+}

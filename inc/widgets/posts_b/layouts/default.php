@@ -36,16 +36,12 @@ if ( $posts->have_posts() ): ?>
 				<div class="newspaper-x-blog-post-layout-b border">
 					<?php if($i>3){ 
 							if ( file_exists( $small ) ) {
-								include $small;
+								require $small;
 							} else {
 								echo esc_html__( 'Please configure your widget', 'newspaper-x' );
 							}
 						 }else{ 
-							if ( file_exists( $big ) ) {
-								include $big;
-							} else {
-								echo esc_html__( 'Please configure your widget', 'newspaper-x' );
-							}
+							get_template_part( '/inc/widgets/posts_b/layouts/big' );
 					} ?>
 				</div>
 			</div>

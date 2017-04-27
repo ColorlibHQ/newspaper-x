@@ -4,9 +4,8 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: $color__border-button;
-  border-radius: 3px;
-  background: $color__background-button;
-  color: rgba(0, 0, 0, .8);
+  background: $color_main-accent;;
+  color: #fff;
   @include font-size(0.75);
   line-height: 1;
   &:hover {
@@ -19,7 +18,19 @@ input[type="submit"] {
   }
 }
 
-button {
+button .button {
+  background-color: $color_main-accent;
+  font-family: $font__main;
+  color: #FFF;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  &:hover, &:focus {
+    background-color: $color_contrast-hover;
+  }
+  &.active {
+    background-color: #333333;
+  }
   &.search-submit {
     font-size: 0;
     background-color: #000;
@@ -47,16 +58,16 @@ button {
   .submit {
     font-family: $font__main;
     font-size: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 20px 25px;
-    // Different bg color
-    background-color: $color_brand-newspaper-x;
+    font-weight: 700;
+    padding: 15px 55px;
+    background-color: $color_main-accent;
     color: #FFF;
     border: none;
-    border-radius: 30px;
-    &:hover {
-      background-color: $color_brand-newspaper-x-darken;
+    &:hover, &:focus {
+      background-color: $color_contrast-hover;
+    }
+    &.active {
+      background-color: #333333;
     }
   }
 }

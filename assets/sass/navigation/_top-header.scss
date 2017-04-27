@@ -39,6 +39,12 @@
     label{
       max-width:140px;
     }
+    ::-moz-placeholder {
+      opacity: 1;
+    }
+    ::-webkit-input-placeholder {
+      opacity: 1;
+    }
     input[type="search"]{
       padding:3px;
       background: #04132d;

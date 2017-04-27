@@ -45,7 +45,7 @@ if ( $posts->have_posts() ): ?>
 				}
 			} 
 
-			if ( fmod( $i-3, (int) 2 ) == 0 && $i != (int) $posts->post_count  && $i>3)  {
+			if ( fmod( $i-3, (int) 2 ) == 0 && $i != (int) $posts->post_count  && $i>3 || $i==3)  {
 				echo '</div><div class="row newspaper-x-layout-b-row">';
 			} elseif ( $i == (int) $posts->post_count ) {
 				continue;

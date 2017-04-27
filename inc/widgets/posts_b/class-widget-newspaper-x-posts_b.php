@@ -272,16 +272,13 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 
 		echo $before_widget;
 
-		$filepath = get_template_directory() . '/inc/widgets/posts_b/layouts/default.php';
-
 		$posts = $this->get_posts( $instance );
-
-		if ( file_exists( $filepath ) ) {
-			include $filepath;
-		} else {
-			echo esc_html__( 'Please configure your widget', 'newspaper-x' );
-		}
-
+		$path = get_template_directory() . '/inc/widgets/posts_b/layouts/default.php';
+		if ( file_exists( $path ) ) {
+								include $path;
+							} else {
+								echo esc_html__( 'Please configure your widget', 'newspaper-x' );
+							}
 		wp_reset_postdata();
 		echo $after_widget;
 

@@ -13,33 +13,21 @@ if ( ! function_exists( 'newspaper_x_posted_on' ) ) :
 	 */
 	function newspaper_x_posted_on( $element = 'default' ) {
 		$cat       = get_the_category();
-		$comments  = wp_count_comments( get_the_ID() );
 		$date      = get_the_date();
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'newspaper-x' ) );
 
-		$html = '<ul>';
+		$html = '<div>';
 		if ( ! empty( $cat ) ) {
-			$html .= '<li class="post-category"><icon class="fa fa-folder"></icon> <a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . esc_html( get_the_category_by_ID( $cat[0]->term_id ) ) . '</a></li>';
+			$html .= '<span class="newspaper-x-category"> <a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . esc_html( get_the_category_by_ID( $cat[0]->term_id ) ) . '</a></span>';
 		}
-		$html .= '<li class="post-comments"><icon class="fa fa-comments"></icon> ' . esc_html( $comments->approved ) . ' </li>';
-		$html .= '<li class="post-date">' . esc_html( $date ) . ' </li>';
-		if ( $tags_list ) {
-			$html .= '<li class="post-tags"><icon class="fa fa-tags"></icon> ' . wp_kses_post( $tags_list ) . '</li>';
-		}
-		$html .= '</ul>';
+		$html .= '<span class="newspaper-x-date">' . esc_html( $date ) . ' </span>';
+		$html .= '</div>';
 
 		switch ( $element ) {
 			case 'category':
 				echo '<a href="' . esc_url( get_category_link( $cat[0]->term_id ) ) . '">' . esc_html( get_the_category_by_ID( $cat[0]->term_id ) ) . '</a>';
 				break;
-			case 'comments':
-				echo '<a class="newspaper-x-comments-link" href="' . esc_url( get_the_permalink( get_the_ID() ) ) . '/#comments"><span class=" fa fa-comment-o"></span> ' . esc_html( $comments->approved ) . '</a>';
-				break;
 			case 'date':
 				echo '<div class="newspaper-x-date">' . esc_html( $date ) . '</div>';
-				break;
-			case 'tags':
-				echo ! empty( $tags_list ) ? '<div class="newspaper-x-tags"><strong>' . esc_html__( 'TAGS: ', 'newspaper-x' ) . '</strong>' . wp_kses_post( $tags_list ) . '</div>' : '';
 				break;
 			default:
 				echo $html;
@@ -136,3 +124,16 @@ function newspaper_x_add_span_archive_count( $links ) {
 }
 
 add_filter( 'get_archives_link', 'newspaper_x_add_span_archive_count' );
+
+
+function post_tags_bottom($content) {
+    $tags_list = get_the_tag_list( '<span>', '</span>' );
+    	$tags = '<div class="newspaper-x-tags"></div>';
+    if ($tags_list) {
+    	$tags = '<div class="newspaper-x-tags"><strong>'.esc_html__( 'TAGS: ', 'newspaper-x' ).'</strong>'.$tags_list.' </div>';
+    }
+    $fullcontent = $content . $tags;
+    
+    return $fullcontent;
+}
+add_filter('the_content', 'post_tags_bottom', 1);

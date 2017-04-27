@@ -318,9 +318,8 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
   background: #0a396d;
-  color: rgba(0, 0, 0, 0.8);
+  color: #fff;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 1; }
@@ -338,37 +337,48 @@ input[type="submit"] {
   input[type="submit"]:focus {
     border-color: #aaa #bbb #bbb; }
 
-button.search-submit {
-  font-size: 0;
-  background-color: #000;
+button .button {
+  background-color: #0a396d;
+  font-family: "Nunito Sans", sans-serif;
   color: #FFF;
-  width: 56px;
-  height: 56px;
-  position: relative;
-  top: 4px;
   border: none;
-  margin-left: 4px; }
-  button.search-submit:hover {
-    border-color: transparent;
+  font-size: 16px;
+  font-weight: 700; }
+  button .button:hover, button .button:focus {
     background-color: #0e649b; }
-  button.search-submit:after {
-    content: '\f002';
-    font-family: 'FontAwesome';
-    line-height: 55px;
-    font-size: 15px; }
+  button .button.active {
+    background-color: #333333; }
+  button .button.search-submit {
+    font-size: 0;
+    background-color: #000;
+    color: #FFF;
+    width: 56px;
+    height: 56px;
+    position: relative;
+    top: 4px;
+    border: none;
+    margin-left: 4px; }
+    button .button.search-submit:hover {
+      border-color: transparent;
+      background-color: #0e649b; }
+    button .button.search-submit:after {
+      content: '\f002';
+      font-family: 'FontAwesome';
+      line-height: 55px;
+      font-size: 15px; }
 
 .form-submit .submit {
   font-family: "Nunito Sans", sans-serif;
   font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 20px 25px;
-  background-color: #0e649b;
+  font-weight: 700;
+  padding: 15px 55px;
+  background-color: #0a396d;
   color: #FFF;
-  border: none;
-  border-radius: 30px; }
-  .form-submit .submit:hover {
-    background-color: #02b8ae; }
+  border: none; }
+  .form-submit .submit:hover, .form-submit .submit:focus {
+    background-color: #0e649b; }
+  .form-submit .submit.active {
+    background-color: #333333; }
 
 input[type="text"],
 input[type="email"],
@@ -517,7 +527,8 @@ a {
   display: block;
   float: left;
   width: 100%;
-  border-top: 1px solid #e1e1e1; }
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -641,7 +652,8 @@ a {
     line-height: 57px; }
     #site-navigation .menu > li.active, #site-navigation .menu > li:hover {
       border-top: 3px solid #0a396d;
-      bottom: 2px; }
+      margin-top: -3px;
+      top: 1px; }
       #site-navigation .menu > li.active > a, #site-navigation .menu > li:hover > a {
         top: -1px; }
     #site-navigation .menu > li > a {
@@ -727,6 +739,10 @@ a {
     padding-top: 7px; }
     .top-header #searchform_topbar label {
       max-width: 140px; }
+    .top-header #searchform_topbar ::-moz-placeholder {
+      opacity: 1; }
+    .top-header #searchform_topbar ::-webkit-input-placeholder {
+      opacity: 1; }
     .top-header #searchform_topbar input[type="search"] {
       padding: 3px;
       background: #04132d;
@@ -1532,28 +1548,83 @@ a {
   margin: 0 0 1.5em; }
 
 .single-post .entry-header, .page .entry-header {
-  margin-top: 30px; }
+  margin: 30px 0; }
   .single-post .entry-header img, .page .entry-header img {
     width: 100%; }
 .single-post .entry-title, .page .entry-title {
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: bold;
   margin-top: 30px;
-  font-family: "Nunito Sans", sans-serif;
-  color: #333333; }
+  color: #001936; }
 
 .archive .entry-title {
   margin-top: 20px;
   margin-bottom: 15px; }
 
-.newspaper-x-archive-first-posts {
+.newspaper-x-archive-first-posts, .newspaper-x-archive-page {
   margin-bottom: 20px; }
+  .newspaper-x-archive-first-posts .newspaper-x-post-meta, .newspaper-x-archive-page .newspaper-x-post-meta {
+    margin-top: 20px; }
+    .newspaper-x-archive-first-posts .newspaper-x-post-meta .newspaper-x-category, .newspaper-x-archive-page .newspaper-x-post-meta .newspaper-x-category {
+      padding: 2px 7px 2px 10px;
+      line-height: 25px;
+      font-weight: 400;
+      background: #0a396d; }
+      .newspaper-x-archive-first-posts .newspaper-x-post-meta .newspaper-x-category a, .newspaper-x-archive-page .newspaper-x-post-meta .newspaper-x-category a {
+        color: #fff;
+        font-size: 13px;
+        font-family: "Nunito Sans", sans-serif; }
+      .newspaper-x-archive-first-posts .newspaper-x-post-meta .newspaper-x-category:hover, .newspaper-x-archive-page .newspaper-x-post-meta .newspaper-x-category:hover {
+        background: #0e649b; }
+    .newspaper-x-archive-first-posts .newspaper-x-post-meta .newspaper-x-date, .newspaper-x-archive-page .newspaper-x-post-meta .newspaper-x-date {
+      line-height: 25px;
+      font-weight: 400;
+      margin-left: 13px;
+      font-size: 12px;
+      font-family: "Nunito Sans", sans-serif;
+      color: #bfbfbf; }
 
 .single-post .newspaper-x-breadcrumbs {
   margin-top: 20px; }
 .single-post .newspaper-x-post-meta {
-  margin-bottom: 10px; }
+  margin-top: 20px; }
+  .single-post .newspaper-x-post-meta .newspaper-x-category {
+    padding: 2px 7px 2px 10px;
+    line-height: 25px;
+    font-weight: 400;
+    background: #0a396d; }
+    .single-post .newspaper-x-post-meta .newspaper-x-category a {
+      color: #fff;
+      font-size: 13px;
+      font-family: "Nunito Sans", sans-serif; }
+    .single-post .newspaper-x-post-meta .newspaper-x-category:hover {
+      background: #0e649b; }
+  .single-post .newspaper-x-post-meta .newspaper-x-date {
+    line-height: 25px;
+    font-weight: 400;
+    margin-left: 13px;
+    font-size: 12px;
+    font-family: "Nunito Sans", sans-serif;
+    color: #bfbfbf; }
+.single-post .newspaper-x-tags {
+  font-family: "Nunito Sans", sans-serif;
+  padding-bottom: 40px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ebebeb; }
+  .single-post .newspaper-x-tags strong {
+    font-size: 20px;
+    color: #001936;
+    line-height: 34px;
+    position: relative;
+    top: 2px; }
+  .single-post .newspaper-x-tags a {
+    padding: 4px 9px 4px 9px;
+    margin: -2px 5px;
+    border: 1px solid #7c95b1;
+    line-height: 33px;
+    font-size: 15px; }
+    .single-post .newspaper-x-tags a:hover {
+      background: #0a396d;
+      color: #fff;
+      border: 1px solid #0a396d; }
 
 /* Author box styling */
 .author-description {
@@ -1838,21 +1909,13 @@ a {
     .top-header .header-search-form #searchform_topbar {
       position: relative; }
       .top-header .header-search-form #searchform_topbar ::-webkit-input-placeholder {
-        color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+        color: #FFF; }
       .top-header .header-search-form #searchform_topbar :-moz-placeholder {
-        color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+        color: #FFF; }
       .top-header .header-search-form #searchform_topbar ::-moz-placeholder {
-        color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+        color: #FFF; }
       .top-header .header-search-form #searchform_topbar :-ms-input-placeholder {
-        color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
+        color: #FFF; }
       .top-header .header-search-form #searchform_topbar label {
         margin-bottom: 0;
         bottom: -4px;
@@ -2247,6 +2310,24 @@ a {
   font-weight: 400; }
   .newspaper-x-breadcrumbs .newspaper-x-breadcrumb-sep {
     margin: 0 10px; }
+
+.comments-area {
+  margin-bottom: -30px; }
+  .comments-area .comments-form {
+    background: #f8f8f8; }
+    .comments-area .comments-form #reply-title {
+      color: #0a396d;
+      font-weight: 700;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 20px;
+      border-left: none;
+      text-transform: initial;
+      margin-bottom: 0px; }
+      .comments-area .comments-form #reply-title span {
+        background: none;
+        padding: 0px; }
+      .comments-area .comments-form #reply-title:after {
+        border: none; }
 
 /*--------------------------------------------------------------
 # Media

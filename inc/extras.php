@@ -265,7 +265,7 @@ function newspaper_x_get_attachment_image() {
 
 add_filter( 'comment_form_defaults', 'newspaper_x_comment_form_defaults' );
 function newspaper_x_comment_form_defaults( $defaults ) {
-	$defaults['title_reply'] = '<span>' . esc_html__( 'Leave Comment', 'newspaper-x' ) . '</span>';
+	$defaults['title_reply'] = '<span>' . esc_html__( 'Leave a reply', 'newspaper-x' ) . '</span>';
 
 	return $defaults;
 }
