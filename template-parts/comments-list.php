@@ -5,54 +5,43 @@
  * return early without loading the comments.
  */
 if ( post_password_required() ) {
-	return;
+    return;
 }
 // If comments are open or we have at least one comment, load up the comment template.
-if ( comments_open() || get_comments_number() ) :
-	if ( have_comments() ) : ?>
-		<h4 class="comments-title">
-			<span>
-				<?php echo esc_html__( 'Comments', 'newspaper-x' ) ?>
-			</span>
-		</h4>
+if ( comments_open()) :
+    global $post_id;
+    $args = array(
+        'status'  => 'all',
+        'number'  => '5',
+        'post_id' => $post_id
+    );
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'newspaper-x' ); ?></h2>
-				<div class="nav-links">
+    $comments = get_comments($args);
+    if ($comments):
+        foreach($comments as $comment) :
+            ?>
+            <div class="comments-list row">
+                <div class="avatar text-center">
+                    <img src="<?php echo get_avatar_url($comment->user_id,array('size' => 75))?>" />
+                </div>
+                <div class="comment">
+                    <h6><?php echo $comment->comment_author; ?></h6>
+                    <p><?php echo $comment->comment_content; ?></p>
+                </div>
+                <div class="social-list">
+                    <ul>
+                        <a><li><i class="fa fa-facebook" aria-hidden="true"></i></li></a>
+                        <a><li><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
+                        <a><li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li></a>
+                        <a><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
+                    </ul>
+                </div>
 
-					<div
-						class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'newspaper-x' ) ); ?></div>
-					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'newspaper-x' ) ); ?></div>
-
-				</div><!-- .nav-links -->
-			</nav><!-- #comment-nav-above -->
-		<?php endif; // Check for comment navigation. ?>
-
-		<ol class="comment-list">
-			<?php
-			wp_list_comments( array(
-				                  'style'       => 'ol',
-				                  'short_ping'  => true,
-				                  'avatar_size' => 64,
-			                  ) );
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'newspaper-x' ); ?></h2>
-				<div class="nav-links">
-
-					<div
-						class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'newspaper-x' ) ); ?></div>
-					<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'newspaper-x' ) ); ?></div>
-
-				</div><!-- .nav-links -->
-			</nav><!-- #comment-nav-below -->
-			<?php
-		endif; // Check for comment navigation.
-
-	endif; // Check for have_comments().
+            </div>
+            <?php
+        endforeach;
+    endif; // Check if are comments.
 endif; // Check if comments are open.
 ?>
+
+

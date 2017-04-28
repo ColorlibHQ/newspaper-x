@@ -3,57 +3,61 @@ $i = 0;
 $big = get_template_directory() . '/inc/widgets/posts_b/layouts/big.php';
 $small = get_template_directory() . '/inc/widgets/posts_b/layouts/small.php';
 if ( $posts->have_posts() ): ?>
-	<?php if ( ! empty( $instance['title'] ) ) {
-		echo $before_title . esc_html( $instance['title'] ) . $after_title;
-	}
-	?>
-	<div class="row newspaper-x-layout-b-row">
-		<?php while ( $posts->have_posts() ) : $posts->the_post();
-			$i ++;
-			$image = '<img class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="" src="' . get_template_directory_uri() . '/assets/images/picture_placeholder.jpg" />';
-			if ( has_post_thumbnail() ) {
-				$image = get_the_post_thumbnail( get_the_ID(), 'newspaper-x-recent-post-big' );
-			}
+    <?php if ( ! empty( $instance['title'] ) ) {
+        echo $before_title . esc_html( $instance['title'] ) . $after_title;
+    }
+    ?>
+    <div class="row newspaper-x-layout-b-row">
+        <?php while ( $posts->have_posts() ) : $posts->the_post();
+            $i ++;
+            $image = '<img class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="" src="' . get_template_directory_uri() . '/assets/images/picture_placeholder.jpg" />';
+            if ( has_post_thumbnail() ) {
+                $image = get_the_post_thumbnail( get_the_ID(), 'newspaper-x-recent-post-big' );
+            }
 
-			$image_obj    = array( 'id' => get_the_ID(), 'image' => $image );
-			$new_image    = apply_filters( 'newspaper_x_widget_image', $image_obj );
-			$allowed_tags = array(
-				'img'      => array(
-					'data-srcset' => true,
-					'data-src'    => true,
-					'srcset'      => true,
-					'sizes'       => true,
-					'src'         => true,
-					'class'       => true,
-					'alt'         => true,
-					'width'       => true,
-					'height'      => true
-				),
-				'noscript' => array()
-			);
-			?>
-			<div class="col-md-4 col-xs-6">
-				<div class="newspaper-x-blog-post-layout-b border">
-					<?php if($i>3){ 
-							if ( file_exists( $small ) ) {
-								require $small;
-							} else {
-								echo esc_html__( 'Please configure your widget', 'newspaper-x' );
-							}
-						 }else{ 
-							get_template_part( '/inc/widgets/posts_b/layouts/big' );
-					} ?>
-				</div>
-			</div>
-			<?php
+            $image_obj    = array( 'id' => get_the_ID(), 'image' => $image );
+            $new_image    = apply_filters( 'newspaper_x_widget_image', $image_obj );
+            $allowed_tags = array(
+                'img'      => array(
+                    'data-srcset' => true,
+                    'data-src'    => true,
+                    'srcset'      => true,
+                    'sizes'       => true,
+                    'src'         => true,
+                    'class'       => true,
+                    'alt'         => true,
+                    'width'       => true,
+                    'height'      => true
+                ),
+                'noscript' => array()
+            );
+            ?>
+            <div class="col-md-4 col-xs-6">
+                <div class="newspaper-x-blog-post-layout-b border">
+                    <?php if($i>3){
+                        if ( file_exists( $small ) ) {
+                            require $small;
+                        } else {
+                            echo esc_html__( 'Please configure your widget', 'newspaper-x' );
+                        }
+                    }else{
+                        if ( file_exists( $big ) ) {
+                            require $big;
+                        } else {
+                            echo esc_html__( 'Please configure your widget', 'newspaper-x' );
+                        }
+                    } ?>
+                </div>
+            </div>
+            <?php
 
-			if ( fmod( $i-3, (int) 3 ) == 0 && $i != (int) $posts->post_count ) {
-				echo '</div><div class="row newspaper-x-layout-b-row">';
-			} elseif ( $i == (int) $posts->post_count ) {
-				continue;
-			}
+            if ( fmod( $i-3, (int) 3 ) == 0 && $i != (int) $posts->post_count ) {
+                echo '</div><div class="row newspaper-x-layout-b-row">';
+            } elseif ( $i == (int) $posts->post_count ) {
+                continue;
+            }
 
-			?>
-		<?php endwhile; ?>
-	</div>
+            ?>
+        <?php endwhile; ?>
+    </div>
 <?php endif; ?>
