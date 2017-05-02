@@ -30,10 +30,10 @@ if ( comments_open()) :
                 </div>
                 <div class="social-list">
                     <ul>
-                        <a><li><i class="fa fa-facebook" aria-hidden="true"></i></li></a>
-                        <a><li><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
-                        <a><li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li></a>
-                        <a><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
+                        <li><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                        <li><a><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
 

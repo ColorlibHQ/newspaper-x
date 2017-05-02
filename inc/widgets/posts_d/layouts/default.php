@@ -15,19 +15,19 @@
     <div>
         <ul class="social-contact">
             <?php if(!empty($instance['facebook'])){ ?>
-                <a href="<?php echo $instance['facebook']; ?>"><li class="facebook"><i class="fa fa-facebook"></i></li></a>
+                <li><a href="<?php echo $instance['facebook']; ?>"  class="facebook"><i class="fa fa-facebook"></i></a></li>
             <?php } ?>
             <?php if(!empty($instance['tumblr'])){ ?>
-                <a href="<?php echo $instance['tumblr']; ?>"><li class="tumblr"><i class="fa fa-tumblr"></i></li></a>
+                <li><a href="<?php echo $instance['tumblr']; ?>"  class="tumblr"><i class="fa fa-tumblr"></i></a></li>
             <?php } ?>
             <?php if(!empty($instance['twitter'])){ ?>
-                <a href="<?php echo $instance['twitter']; ?>"><li class="twitter"><i class="fa fa-twitter"></i></li></a>
+                <li><a href="<?php echo $instance['twitter']; ?>"  class="twitter"><i class="fa fa-twitter"></i></a></li>
             <?php } ?>
             <?php if(!empty($instance['gplus'])){ ?>
-                <a href="<?php echo $instance['gplus']; ?>"><li class="gplus"><i class="fa fa-google-plus"></i></li></a>
+                <li><a href="<?php echo $instance['gplus']; ?>"  class="gplus"><i class="fa fa-google-plus"></i></a></li>
             <?php } ?>
             <?php if(!empty($instance['youtube'])){ ?>
-                <a href="<?php echo $instance['youtube']; ?>"><li class="youtube"><i class="fa fa-youtube-play"></i></li></a>
+                <li><a href="<?php echo $instance['youtube']; ?>"  class="youtube"><i class="fa fa-youtube-play"></i></a></li>
             <?php } ?>
         </ul>
     </div>

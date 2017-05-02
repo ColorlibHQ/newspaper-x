@@ -85,3 +85,24 @@ li.blazy {
 .entry-content p {
   overflow: hidden;
 }
+.pagination{
+  .page-numbers{
+    color: #8c9597;
+    border: 1px solid #e1e1e1;
+    padding: 5px 11px;
+    font-size: 14px;
+    &.current{
+      color:#b4b9bb;
+      &:hover{
+        color: #b4b9bb;
+        border-color: #e1e1e1;
+        background: none;
+      }
+    }
+    &:hover{
+      color: #fff;
+      border-color: $color_contrast-hover;
+      background: $color_contrast-hover;
+    }
+  }
+}
