@@ -1,6 +1,6 @@
 <?php
 
-class Widget_Newspaper_X_Posts_D extends WP_Widget {
+class Widget_Newspaper_X_Contact extends WP_Widget {
 
 	function __construct() {
 
@@ -8,7 +8,7 @@ class Widget_Newspaper_X_Posts_D extends WP_Widget {
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'customize_preview_init', array( $this, 'enqueue' ) );
 
-		parent::__construct( 'newspaper_x_widget_posts_d', esc_html__( 'Newspaper X - Contact', 'newspaper-x' ), array(
+		parent::__construct( 'newspaper_x_widget_contact', esc_html__( 'Newspaper X - Contact', 'newspaper-x' ), array(
 			'classname'                   => 'newspaper_x_widgets',
 			'description'                 => esc_html__( 'Contact .', 'newspaper-x' ),
 			'customize_selective_refresh' => true
@@ -140,7 +140,7 @@ class Widget_Newspaper_X_Posts_D extends WP_Widget {
 
 		echo $args['before_widget'];
 
-		$filepath = get_template_directory() . '/inc/widgets/posts_d/layouts/default.php';
+		$filepath = get_template_directory() . '/inc/widgets/contact/layouts/default.php';
 
 		if ( file_exists( $filepath ) ) {
 			include $filepath;

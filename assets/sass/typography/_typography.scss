@@ -18,8 +18,12 @@ p {
 }
 
 article.post p {
-  font-family: $font__alternate;
-  color: $color__text-title;
+  font-size:15px;
+  font-family: $font__main;
+  color: #8b8d91;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 10px;
 }
 
 .single-post {

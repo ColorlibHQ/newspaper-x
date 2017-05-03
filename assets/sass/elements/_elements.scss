@@ -87,22 +87,24 @@ li.blazy {
 }
 .pagination{
   .page-numbers{
-    color: #8c9597;
-    border: 1px solid #e1e1e1;
-    padding: 5px 11px;
+    padding: 10px;
+    font-family: $font__main;
+    color: #8b8d91;   
     font-size: 14px;
     &.current{
-      color:#b4b9bb;
+      color:$color_main-accent;
       &:hover{
-        color: #b4b9bb;
-        border-color: #e1e1e1;
-        background: none;
+        color: $color_contrast-hover;
       }
     }
-    &:hover{
-      color: #fff;
-      border-color: $color_contrast-hover;
-      background: $color_contrast-hover;
+    &:hover,
+    &:focus{
+      color: $color_contrast-hover;
     }
+    &:active{
+      color: #333333;
+    }
+    .fa-angle-right{ margin-left:20px;}
+    .fa-angle-left{ margin-right:20px;}
   }
 }

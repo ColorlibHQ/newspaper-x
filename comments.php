@@ -23,18 +23,19 @@ if ( post_password_required() ) {
 <div id="comments" class="comments-area">
 	<div class="comments-form">
 		<div class="container">
-		
-			<?php
+		    <div class="col-md-8">
+                <?php
 
-			// If comments are closed and there are comments, let's leave a little note, shall we?
-			if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+                // If comments are closed and there are comments, let's leave a little note, shall we?
+                if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-				<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'newspaper-x' ); ?></p>
-				<?php
-			endif;
+                    <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'newspaper-x' ); ?></p>
+                    <?php
+                endif;
 
-			comment_form();
-			?>
+                comment_form();
+                ?>
+            </div>
 		</div>
 	</div>
 </div><!-- #comments -->

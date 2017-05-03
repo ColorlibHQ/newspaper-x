@@ -4,13 +4,13 @@
 
 <div class="textwidget contact-widget">
     <?php if(!empty($instance['phone'])){ ?>
-        <div><span>Phone:</span> <a href="tel:<?php echo $instance['phone']; ?>"><?php echo $instance['phone']; ?></a></div>
+        <div><span><?php echo esc_html__( 'Phone:', 'newspaper-x' ) ?></span> <a href="tel:<?php echo $instance['phone']; ?>"><?php echo $instance['phone']; ?></a></div>
     <?php } ?>
     <?php if(!empty($instance['email'])){ ?>
-        <div><span>Email:</span> <a href="mailto:<?php echo $instance['email']; ?>"><?php echo $instance['email']; ?></a></div>
+        <div><span><?php echo esc_html__( 'Email:', 'newspaper-x' ) ?></span> <a href="mailto:<?php echo $instance['email']; ?>"><?php echo $instance['email']; ?></a></div>
     <?php } ?>
     <?php if(!empty($instance['address'])){ ?>
-        <div><span>Address:</span> <?php echo $instance['address']; ?></div>
+        <div><span><?php echo esc_html__( 'Address:', 'newspaper-x' ) ?></span> <?php echo $instance['address']; ?></div>
     <?php }?>
     <div>
         <ul class="social-contact">

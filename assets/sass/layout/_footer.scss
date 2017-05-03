@@ -38,6 +38,9 @@
     right: -102px;
     background: #001d3e;
     padding: 10px 25px;
+    @media (max-width: 1200px) {
+      right:0px;
+    }
   }
   i {
     padding-left: 7px;

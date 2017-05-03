@@ -124,8 +124,8 @@ if ( $first_posts->have_posts() ):
 					?>
 				</div>
 			<?php the_posts_pagination( array(
-				                            'prev_text' => esc_html__( 'prev', 'newspaper-x' ),
-				                            'next_text' => esc_html__( 'next', 'newspaper-x' )
+				                            'prev_text' => '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+				                            'next_text' => '<i class="fa fa-angle-right" aria-hidden="true"></i>'
 			                            ) ); ?>
 			<?php
 			else :

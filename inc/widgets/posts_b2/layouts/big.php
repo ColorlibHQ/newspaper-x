@@ -1,6 +1,6 @@
 <div class="col-md-4 col-xs-6">
 	<div class="newspaper-x-blog-post-layout-b border">
-		<div class="row">
+		<div>
 			<div class="newspaper-x-image">
 				<a href="<?php echo esc_url( get_the_permalink() ); ?>">
 					<?php echo wp_kses( $new_image, $allowed_tags ); ?>

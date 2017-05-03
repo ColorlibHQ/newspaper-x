@@ -1,5 +1,7 @@
 .comments-area{
 	margin-bottom: -30px;
+	position: relative;
+	top: 30px;
 	.comments-form{
 		background: #f8f8f8;
 		padding-top: 15px;
@@ -18,6 +20,13 @@
 			&:after{
 			  	border: none;
 			}
+		}
+		.comment_notes_before{
+			display:block;
+			color:#8b8d91;
+			font-size: 15px;
+			font-family:$font__main;
+			margin-bottom:30px;
 		}
 	}
 }

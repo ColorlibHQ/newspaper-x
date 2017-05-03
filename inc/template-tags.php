@@ -136,4 +136,4 @@ function post_tags_bottom($content) {
 
     return $fullcontent;
 }
-add_filter('the_content', 'post_tags_bottom', 1);
+add_filter('the_content', 'post_tags_bottom', 0);

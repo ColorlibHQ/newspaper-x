@@ -54,8 +54,12 @@ p {
   font-weight: 400; }
 
 article.post p {
-  font-family: "Source Sans Pro", "sans-serif";
-  color: #333; }
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8b8d91;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 10px; }
 
 .single-post div.entry-content > p:first-child:first-letter {
   float: left;
@@ -310,20 +314,22 @@ li.blazy {
   overflow: hidden; }
 
 .pagination .page-numbers {
-  color: #8c9597;
-  border: 1px solid #e1e1e1;
-  padding: 5px 11px;
+  padding: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #8b8d91;
   font-size: 14px; }
   .pagination .page-numbers.current {
-    color: #b4b9bb; }
+    color: #0a396d; }
     .pagination .page-numbers.current:hover {
-      color: #b4b9bb;
-      border-color: #e1e1e1;
-      background: none; }
-  .pagination .page-numbers:hover {
-    color: #fff;
-    border-color: #0e649b;
-    background: #0e649b; }
+      color: #0e649b; }
+  .pagination .page-numbers:hover, .pagination .page-numbers:focus {
+    color: #0e649b; }
+  .pagination .page-numbers:active {
+    color: #333333; }
+  .pagination .page-numbers .fa-angle-right {
+    margin-left: 20px; }
+  .pagination .page-numbers .fa-angle-left {
+    margin-right: 20px; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -414,7 +420,6 @@ input[type="color"],
 textarea {
   color: #666;
   border: 1px solid #e1e1e1;
-  border-radius: 3px;
   font-size: 15px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -441,7 +446,6 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
 input[type="number"],
 input[type="tel"],
 input[type="range"],
@@ -452,11 +456,49 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
+  padding: 1px 15px;
+  line-height: 25px;
+  color: #8b8d91; }
+  input[type="text"]:hover, input[type="text"]:focus,
+  input[type="email"]:hover,
+  input[type="email"]:focus,
+  input[type="url"]:hover,
+  input[type="url"]:focus,
+  input[type="password"]:hover,
+  input[type="password"]:focus,
+  input[type="number"]:hover,
+  input[type="number"]:focus,
+  input[type="tel"]:hover,
+  input[type="tel"]:focus,
+  input[type="range"]:hover,
+  input[type="range"]:focus,
+  input[type="date"]:hover,
+  input[type="date"]:focus,
+  input[type="month"]:hover,
+  input[type="month"]:focus,
+  input[type="week"]:hover,
+  input[type="week"]:focus,
+  input[type="time"]:hover,
+  input[type="time"]:focus,
+  input[type="datetime"]:hover,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:hover,
+  input[type="datetime-local"]:focus,
+  input[type="color"]:hover,
+  input[type="color"]:focus {
+    border-color: #89b3ce; }
+
+input[type="search"] {
   padding: 10px; }
 
 textarea {
-  padding-left: 3px;
+  padding: 0px 15px;
+  line-height: 25px;
+  min-height: 160px;
+  color: #8b8d91;
   width: 100%; }
+  textarea:hover, textarea:focus {
+    border-color: #89b3ce; }
 
 #searchform {
   border: 1px solid #e1e1e1; }
@@ -1143,7 +1185,7 @@ a {
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories .children > li, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive .children > li {
           margin-top: 10px;
           padding-top: 10px;
-          border-top: 1px dashed #e1e1e1; }
+          border-top: 1px dotted #e1e1e1; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div ul {
       list-style-type: none; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul {
@@ -1151,27 +1193,27 @@ a {
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul .sub-menu {
         padding-left: 10px; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar {
-      padding: 0 30px;
+      padding: 0px;
       position: relative; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar .widget-title, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar h3 {
         display: none; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar #wp-calendar {
-        color: "Nunito Sans", sans-serif;
+        font-family: "Nunito Sans", sans-serif;
         width: 100%;
         font-size: 14px;
         font-weight: 300;
         border-collapse: separate;
-        border-spacing: 8px;
-        margin-left: -2px; }
+        border-spacing: 4px;
+        margin-left: 1px; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar #wp-calendar > caption {
           border: 1px solid #e1e1e1;
           color: #001936;
           font-famiy: "Nunito Sans", sans-serif;
           text-align: center;
           font-size: 20px;
-          font-weight: 700;
-          padding-bottom: 16px;
-          padding-top: 16px;
+          font-weight: 400;
+          padding-bottom: 22px;
+          padding-top: 22px;
           min-height: 55px;
           position: relative;
           margin-bottom: 20px; }
@@ -1185,7 +1227,7 @@ a {
           margin-bottom: 10px;
           text-align: center;
           border: 1px solid #e1e1e1;
-          padding: 3px 6px; }
+          padding: 9px 5px; }
           .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar #wp-calendar td#today {
             color: #fff;
             background: #0a396d; }
@@ -1208,7 +1250,7 @@ a {
           border: none;
           position: absolute;
           top: -2px;
-          left: 25%;
+          left: 5%;
           width: 35px;
           height: 55px;
           background-color: transparent;
@@ -1216,7 +1258,7 @@ a {
           .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar #wp-calendar #prev:before {
             content: '\f104';
             display: block;
-            font-size: 24px;
+            font-size: 14px;
             line-height: 55px;
             text-align: center;
             position: relative;
@@ -1230,7 +1272,7 @@ a {
           border: none;
           position: absolute;
           top: -2px;
-          right: 25%;
+          right: 5%;
           width: 35px;
           height: 55px;
           background-color: transparent;
@@ -1238,7 +1280,7 @@ a {
           .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar #wp-calendar #next:before {
             content: '\f105';
             display: block;
-            font-size: 24px;
+            font-size: 14px;
             line-height: 55px;
             text-align: center;
             position: relative;
@@ -1261,7 +1303,7 @@ a {
   display: block;
   text-transform: uppercase;
   font-famiy: "Nunito Sans", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -1371,7 +1413,7 @@ a {
       .site-footer .widget.widget_categories .children > li {
         margin-top: 10px;
         padding-top: 10px;
-        border-top: 1px dashed #e1e1e1; }
+        border-top: 1px dotted rgba(225, 225, 225, 0.1); }
   .site-footer .widget.widget_recent_comments ul {
     padding: 0px; }
     .site-footer .widget.widget_recent_comments ul li {
@@ -1423,17 +1465,17 @@ a {
       font-size: 14px;
       font-weight: 300;
       border-collapse: separate;
-      border-spacing: 6px;
-      margin-left: -2px; }
+      border-spacing: 4px;
+      margin-left: 1px; }
       .site-footer .widget.widget_calendar #wp-calendar > caption {
         border: 1px solid #002438;
         color: #a9afb5;
         font-famiy: "Nunito Sans", sans-serif;
         text-align: center;
         font-size: 20px;
-        font-weight: 700;
-        padding-bottom: 16px;
-        padding-top: 16px;
+        font-weight: 400;
+        padding-bottom: 22px;
+        padding-top: 22px;
         min-height: 55px;
         position: relative;
         margin-bottom: 20px; }
@@ -1447,7 +1489,7 @@ a {
         margin-bottom: 10px;
         text-align: center;
         border: 1px solid #002438;
-        padding: 3px 6px; }
+        padding: 9px 5px; }
         .site-footer .widget.widget_calendar #wp-calendar td#today {
           color: #fff;
           background: #0a396d;
@@ -1472,7 +1514,7 @@ a {
       .site-footer .widget.widget_calendar #wp-calendar #prev {
         border: none;
         position: absolute;
-        top: -2px;
+        top: -3px;
         left: 5%;
         width: 35px;
         height: 55px;
@@ -1481,7 +1523,7 @@ a {
         .site-footer .widget.widget_calendar #wp-calendar #prev:before {
           content: '\f104';
           display: block;
-          font-size: 24px;
+          font-size: 14px;
           line-height: 55px;
           text-align: center;
           position: relative;
@@ -1494,7 +1536,7 @@ a {
       .site-footer .widget.widget_calendar #wp-calendar #next {
         border: none;
         position: absolute;
-        top: -2px;
+        top: -3px;
         right: 5%;
         width: 35px;
         height: 55px;
@@ -1503,7 +1545,7 @@ a {
         .site-footer .widget.widget_calendar #wp-calendar #next:before {
           content: '\f105';
           display: block;
-          font-size: 24px;
+          font-size: 14px;
           line-height: 55px;
           text-align: center;
           position: relative;
@@ -1607,7 +1649,8 @@ a {
     .site-footer .contact-widget div a:hover {
       color: #0e649b; }
 .site-footer .contact-widget .social-contact {
-  padding-left: 0px; }
+  padding-left: 0px;
+  margin-top: 25px; }
   .site-footer .contact-widget .social-contact li {
     display: inline; }
     .site-footer .contact-widget .social-contact li a {
@@ -1676,7 +1719,8 @@ a {
   .newspaper_x_widgets .newspaper-x-blog-post-layout-a {
     display: inline-block; } }
 .newspaper_x_widgets .newspaper-x-blog-post-layout-a .newspaper-x-image img {
-  width: 100%; }
+  width: 100%;
+  max-height: 165px; }
 .newspaper_x_widgets .newspaper-x-blog-post-layout-a .newspaper-x-title h3 {
   font-size: 17px;
   text-transform: uppercase;
@@ -1708,10 +1752,15 @@ a {
       margin-bottom: 10px; } }
   .newspaper_x_widgets .newspaper-x-blog-post-layout-b .newspaper-x-image {
     margin-bottom: 20px;
+    max-height: 225px;
     display: inline-block;
     float: left; }
     .newspaper_x_widgets .newspaper-x-blog-post-layout-b .newspaper-x-image img {
       width: 100%; }
+  .newspaper_x_widgets .newspaper-x-blog-post-layout-b .col-sm-5 .newspaper-x-image {
+    max-height: 80px; }
+  .newspaper_x_widgets .newspaper-x-blog-post-layout-b .col-sm-4 .newspaper-x-image {
+    max-height: 100px; }
   .newspaper_x_widgets .newspaper-x-blog-post-layout-b .newspaper-x-content {
     font-family: "Nunito Sans", sans-serif;
     font-weight: 400;
@@ -1750,6 +1799,7 @@ a {
   .newspaper_x_widgets .newspaper-x-blog-post-layout-c .newspaper-x-image {
     width: 100%;
     display: block;
+    max-height: 225px;
     margin-bottom: 20px; }
     .newspaper_x_widgets .newspaper-x-blog-post-layout-c .newspaper-x-image > img {
       width: 100%; }
@@ -2075,7 +2125,9 @@ a {
     text-transform: uppercase;
     font-size: 17px;
     font-weight: 700;
-    color: #333; }
+    color: #001936; }
+    .newspaper-x-archive-first-posts .entry-title a:hover {
+      color: #0e649b; }
 
 .newspaper-x-archive-page .post, .newspaper-x-archive-page .page {
   margin-bottom: 25px; }
@@ -2083,7 +2135,9 @@ a {
     text-transform: uppercase;
     font-size: 17px;
     font-weight: 700;
-    color: #333; }
+    color: #001936; }
+    .newspaper-x-archive-page .post .entry-title a:hover, .newspaper-x-archive-page .page .entry-title a:hover {
+      color: #0e649b; }
 .newspaper-x-archive-page .newspaper-x-image-banner img {
   display: block;
   width: 100%; }
@@ -2437,6 +2491,9 @@ a {
   right: -102px;
   background: #001d3e;
   padding: 10px 25px; }
+  @media (max-width: 1200px) {
+    .back-to-top-area a {
+      right: 0px; } }
 .back-to-top-area i {
   padding-left: 7px; }
 
@@ -2461,6 +2518,16 @@ a {
 --------------------------------------------------------------*/
 .newspaper-x-recent-post-containter {
   background: #0e0e11; }
+  .newspaper-x-recent-post-containter .recent-mirror {
+    position: absolute;
+    height: 480px;
+    width: 100%;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-size: 60%; }
+    @media (max-width: 1200px) {
+      .newspaper-x-recent-post-containter .recent-mirror {
+        display: none; } }
 
 .newspapper-spacer {
   margin-top: 42px; }
@@ -2490,7 +2557,7 @@ a {
       @media (min-width: 768px) {
         .newspaper-x-recent-posts > ul > li {
           width: 25%;
-          height: 180px; }
+          height: 178px; }
           .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-0 {
             width: 65%;
             height: 480px; }
@@ -2541,6 +2608,9 @@ a {
         color: #FFF;
         font-family: 'Droid Serif';
         font-size: 14px; }
+        @media (max-width: 990px) {
+          .newspaper-x-recent-posts > ul > li .newspaper-x-post-info {
+            bottom: 45px; } }
         .newspaper-x-recent-posts > ul > li .newspaper-x-post-info a {
           color: #FFF; }
           .newspaper-x-recent-posts > ul > li .newspaper-x-post-info a:hover, .newspaper-x-recent-posts > ul > li .newspaper-x-post-info a:focus, .newspaper-x-recent-posts > ul > li .newspaper-x-post-info a:active {
@@ -2702,7 +2772,9 @@ a {
     margin: 0 10px; }
 
 .comments-area {
-  margin-bottom: -30px; }
+  margin-bottom: -30px;
+  position: relative;
+  top: 30px; }
   .comments-area .comments-form {
     background: #f8f8f8;
     padding-top: 15px; }
@@ -2719,6 +2791,12 @@ a {
         padding: 0px; }
       .comments-area .comments-form #reply-title:after {
         border: none; }
+    .comments-area .comments-form .comment_notes_before {
+      display: block;
+      color: #8b8d91;
+      font-size: 15px;
+      font-family: "Nunito Sans", sans-serif;
+      margin-bottom: 30px; }
 
 .comments-list {
   border: 1px solid #ebebeb;

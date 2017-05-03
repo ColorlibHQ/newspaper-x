@@ -33,64 +33,77 @@ if ( ! $recent_posts ) {
 	return false;
 }
 ?>
-<div class="newspaper-x-recent-posts">
-	<ul>
-		<?php
-		$i = 0;
-		foreach ( $recent_posts as $post ) {
-			$cat         = get_the_category( $post->ID );
-			$cat_link    = get_category_link( $cat[0]->term_id );
-			$cat         = $cat[0]->name;
-			$image       = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
-			$placeholder = $image;
-			$h= 'h1';
 
-			if($i>0){$h='h6';}
+<?php
+$i = 0;
+foreach ( $recent_posts as $post ) {
+	$cat         = get_the_category( $post->ID );
+	$cat_link    = get_category_link( $cat[0]->term_id );
+	$cat         = $cat[0]->name;
+	$image       = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
+	$placeholder = $image;
+	$h= 'h6';
 
-			if ( has_post_thumbnail() ) {
-				$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
-				                                    'newspaper-x-recent-post-big',
-				                                    false,
-				                                    '' );
 
-				$srcsmall = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
-				                                         'newspaper-x-recent-post-list-image',
-				                                         false,
-				                                         '' );
+	if ( has_post_thumbnail() ) {
+		$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
+		                                    'newspaper-x-recent-post-big',
+		                                    false,
+		                                    '' );
 
-				$image       = $src[0];
-				$placeholder = $srcsmall[0];
-			}
-			if($i == 3){?>
-									</ul>
+		$srcsmall = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
+		                                         'newspaper-x-recent-post-list-image',
+		                                         false,
+		                                         '' );
+
+		$image       = $src[0];
+		$placeholder = $srcsmall[0];
+	}
+if($i== 0){
+	$h='h1';
+	?>
+	<div class="newspaper-x-recent-post-containter" >
+		<div class="recent-mirror" style="background-image:url('<?php echo esc_url( $placeholder ) ?>')"></div> <!-- image bg -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="newspaper-x-recent-posts">
+						<ul>
+<?php }
+if($i == 3){?>
+						</ul>
+					</div>
+				</div> <!-- col-12 -->
+			</div> <!-- row -->
+		</div> <!-- container -->
+	</div> <!-- recent posts bg -->
+	<div class="newspapper-spacer">
+		<div class="container site-content">
+		 	<div class="row">
+				<div class="col-md-12">
+						<div class="newspaper-x-recent-posts">
+							<ul>
+						<?php }	?>
+
+							<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
+							    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
+								<div class="newspaper-x-post-info">
+									<<?php echo $h;?>>
+										<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
+											<?php echo wp_kses_post( wp_trim_words( $post->post_title, 6, $more = '&hellip;' ) ) ?>
+										</a>
+									</<?php echo $h;?>>
+									<span class="newspaper-x-category">
+										<a href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ) ?></a> 
+									</span>
+									<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
 								</div>
-							</div> <!-- col-12 -->
-						</div> <!-- row -->
-					</div> <!-- container -->
-				</div> <!-- recent posts bg -->
-				<div class="newspapper-spacer">
-					<div class="container site-content">
-					 	<div class="row">
-							<div class="col-md-12">
-									<div class="newspaper-x-recent-posts">
-										<ul>
-			<?php }	?>
-
-			<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
-			    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
-				<div class="newspaper-x-post-info">
-					<<?php echo $h;?>>
-						<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
-							<?php echo wp_kses_post( wp_trim_words( $post->post_title, 6, $more = '&hellip;' ) ) ?>
-						</a>
-					</<?php echo $h;?>>
-					<span class="newspaper-x-category">
-						<a href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ) ?></a> 
-					</span>
-					<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
+							</li>
+							<?php $i ++;
+						} ?>
+					</ul>
 				</div>
-			</li>
-			<?php $i ++;
-		} ?>
-	</ul>
+			</div>
+		</div>
+	</div>
 </div>

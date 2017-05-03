@@ -76,16 +76,10 @@ if ( $show_on_front == 'posts' ):
 else:
 	?>
 </div>
-<div class="newspaper-x-recent-post-containter">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
+
 				<!-- Recent Posts Module -->
 				<?php get_template_part( 'template-parts/recent-posts' ) ?>
-			</div>
-		</div>
-	</div>
-</div>
+
 <div class="container site-content">
 <!-- 	<div class="row">
 		<div class="col-md-12">

@@ -1,5 +1,16 @@
 .newspaper-x-recent-post-containter{
   background:#0e0e11;
+  .recent-mirror{
+    position: absolute;
+    height: 480px;
+    width: 100%;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    @media (max-width: 1200px) {
+      display:none;
+    }
+  }
 }
 .newspapper-spacer{
   margin-top:42px;
@@ -26,7 +37,7 @@
           height: 240px;
         }
         width: 25%;
-        height: 180px;
+        height: 178px;
       }
       width: 100%;
       height: 360px;
@@ -76,6 +87,9 @@
         color: #FFF;
         font-family: 'Droid Serif';
         font-size: 14px;
+        @media (max-width: 990px) {
+          bottom:45px;
+        }
         a {
           color: #FFF;
           &:hover,

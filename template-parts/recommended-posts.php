@@ -43,9 +43,8 @@ if ( ! $recent_posts ) {
 			$cat         = $cat[0]->name;
 			$image       = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
 			$placeholder = $image;
-			$h= 'h1';
+			$h= 'h6';
 
-			if($i>0){$h='h6';}
 
 			if ( has_post_thumbnail() ) {
 				$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),
@@ -61,8 +60,10 @@ if ( ! $recent_posts ) {
 				$image       = $src[0];
 				$placeholder = $srcsmall[0];
 			}
+			if($i==0){
+				$h='h1';
+			}
 			?>
-
 			<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
 			    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
 				<div class="newspaper-x-post-info">
