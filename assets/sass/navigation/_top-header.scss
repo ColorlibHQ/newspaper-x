@@ -54,6 +54,14 @@
       font-weight: 700;
       font-size: 14px;
     }
+    @media (max-width: 480px) {
+      width:100%;
+      display:block;
+      .search-top-bar-submit{
+        float: right;
+        top: 7px;
+      }
+    }
   }
   @media (max-width: 767px) {
     ul {

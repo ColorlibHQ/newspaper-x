@@ -5,7 +5,7 @@
 	?>
 
 	<?php if ( $enable_banner ): ?>
-			<div class="col-md-offset-2 newspapper-spacer col-md-8 header-banner">
+			<div class="col-md-offset-2 col-md-8 header-banner">
 				<?php
 				$banner = get_theme_mod( 'newspaper_x_banner_type', 'image' );
 				get_template_part( 'template-parts/banner/banner', $banner );

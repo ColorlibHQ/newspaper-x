@@ -35,6 +35,13 @@
     margin-top: 30px;
     color: $color_text-color;
   }
+  .entry-content{
+    p:first-of-type{
+      color: $color_text-color;
+      border-bottom: 1px dotted #bababa;
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .archive {
@@ -112,6 +119,9 @@
     padding-bottom: 40px;
     margin-bottom: 25px;
     border-bottom: 1px solid #ebebeb;
+    &:nth-of-type(2) {
+      display:none;
+    }
     strong{
       font-size:20px;
       color: $color__text-main;

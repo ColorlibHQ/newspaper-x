@@ -118,7 +118,10 @@ h6 {
   border-left: 5px solid #0f5fa3;
   position: relative;
   text-transform: uppercase;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  margin-top: 65px; }
+  .section-title.comment-reply-title, .comment-reply-title.page-title, .newspaper-x-content .comment-reply-title.widget-title, .newspaper-x-after-content-sidebar .comment-reply-title.widget-title, #comments > h3.comment-reply-title:first-of-type, .comment-reply-title#reply-title, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3.comment-reply-title {
+    margin-top: 20px; }
   .section-title > span, .page-title > span, .newspaper-x-content .widget-title > span, .newspaper-x-after-content-sidebar .widget-title > span, #comments > h3:first-of-type > span, #reply-title > span, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3 > span {
     padding-left: 27px;
     background-color: #FFF;
@@ -197,13 +200,13 @@ blockquote, q {
   display: block;
   width: 100%;
   border: none;
-  padding-left: 0;
-  padding-right: 0;
-  color: #0e649b; }
+  padding: 50px 40px 20px 40px;
+  background: #0a396d; }
   blockquote p, q p {
-    color: #0e649b;
+    color: #fff !important;
+    font-weight: 400;
     font-size: 20px;
-    font-style: italic; }
+    border: none !important; }
 
 q {
   display: inline-block;
@@ -212,9 +215,18 @@ q {
   color: #0e649b; }
 
 article.post blockquote p {
-  color: #0e649b;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
-  font-style: italic; }
+  font-style: italic;
+  text-align: center;
+  font-weight: 300; }
+  article.post blockquote p::after {
+    content: '';
+    width: 78px;
+    height: 1px;
+    background: #fff;
+    display: block;
+    margin: 20px auto 0px auto; }
 
 hr {
   background-color: #ccc;
@@ -635,8 +647,8 @@ a {
   display: block;
   width: 35px;
   height: 35px;
-  color: "Nunito Sans", sans-serif;
-  border-color: "Nunito Sans", sans-serif;
+  color: #001936;
+  border-color: #001936;
   background: transparent;
   margin: 0 auto;
   margin-bottom: 10px; }
@@ -821,6 +833,13 @@ a {
       font-family: "Nunito Sans", sans-serif;
       font-weight: 700;
       font-size: 14px; }
+    @media (max-width: 480px) {
+      .top-header #searchform_topbar {
+        width: 100%;
+        display: block; }
+        .top-header #searchform_topbar .search-top-bar-submit {
+          float: right;
+          top: 7px; } }
   @media (max-width: 767px) {
     .top-header ul {
       text-align: center; }
@@ -839,6 +858,11 @@ a {
 /* The social links are actually a menu */
 #menu-social.search-enabled, .search-enabled#menu-social-1 {
   margin-right: 30px; }
+@media (max-width: 480px) {
+  #menu-social, #menu-social-1 {
+    float: none !important; }
+    #menu-social ul, #menu-social-1 ul {
+      text-align: center; } }
 #menu-social ul, #menu-social-1 ul {
   list-style: none;
   margin: 0;
@@ -1751,7 +1775,7 @@ a {
     .newspaper_x_widgets .newspaper-x-blog-post-layout-b .newspaper-x-image {
       margin-bottom: 10px; } }
   .newspaper_x_widgets .newspaper-x-blog-post-layout-b .newspaper-x-image {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     max-height: 225px;
     display: inline-block;
     float: left; }
@@ -1800,7 +1824,7 @@ a {
     width: 100%;
     display: block;
     max-height: 225px;
-    margin-bottom: 20px; }
+    margin-bottom: 30px; }
     .newspaper_x_widgets .newspaper-x-blog-post-layout-c .newspaper-x-image > img {
       width: 100%; }
   .newspaper_x_widgets .newspaper-x-blog-post-layout-c .newspaper-x-content {
@@ -1994,6 +2018,10 @@ a {
 .single-post .entry-title, .page .entry-title {
   margin-top: 30px;
   color: #001936; }
+.single-post .entry-content p:first-of-type, .page .entry-content p:first-of-type {
+  color: #001936;
+  border-bottom: 1px dotted #bababa;
+  padding-bottom: 20px; }
 
 .archive .entry-title {
   margin-top: 20px;
@@ -2049,6 +2077,8 @@ a {
   padding-bottom: 40px;
   margin-bottom: 25px;
   border-bottom: 1px solid #ebebeb; }
+  .single-post .newspaper-x-tags:nth-of-type(2) {
+    display: none; }
   .single-post .newspaper-x-tags strong {
     font-size: 20px;
     color: #001936;
@@ -2255,6 +2285,9 @@ a {
 .size-thumbnail {
   max-width: 100%;
   height: auto; }
+
+.site-content {
+  margin-top: 38px; }
 
 /* Header */
 .site-branding {
@@ -2480,25 +2513,31 @@ a {
       display: inline;
       margin-left: 30px; }
 
-.back-to-top-area a {
-  font-size: 15px;
-  color: #FFF;
-  line-height: 25px;
-  font-family: "Source Sans Pro", "sans-serif";
-  float: right;
-  margin-top: -44px;
-  position: relative;
-  right: -102px;
-  background: #001d3e;
-  padding: 10px 25px; }
-  @media (max-width: 1200px) {
-    .back-to-top-area a {
-      right: 0px; } }
-.back-to-top-area i {
-  padding-left: 7px; }
+.back-to-top-area {
+  display: block; }
+  .back-to-top-area a {
+    font-size: 12px;
+    color: #FFF;
+    line-height: 25px;
+    font-family: "Nunito Sans", sans-serif;
+    float: right;
+    position: relative;
+    right: -102px;
+    background: #001d3e;
+    padding: 10px 25px;
+    font-weight: 700; }
+    @media (max-width: 1200px) {
+      .back-to-top-area a {
+        position: relative;
+        float: none;
+        margin: 0px;
+        right: 0px;
+        display: inline-block; } }
+  .back-to-top-area i {
+    padding-left: 7px; }
 
 .site-footer > .widgets-area {
-  padding: 40px 0 0 0; }
+  padding: 10px 0 0 0; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -2530,7 +2569,7 @@ a {
         display: none; } }
 
 .newspapper-spacer {
-  margin-top: 42px; }
+  margin-top: 40px; }
 
 .newspaper-x-recent-posts {
   margin-bottom: -3px; }
@@ -2698,6 +2737,9 @@ a {
   position: relative;
   overflow: hidden;
   max-height: 42px; }
+  @media (max-width: 767px) {
+    .newspaper-x-news-ticker {
+      display: none; } }
   .newspaper-x-news-ticker .owl-carousel {
     display: block;
     position: absolute;
@@ -2722,10 +2764,6 @@ a {
       position: relative;
       top: 3px;
       left: 3px; }
-    @media (max-width: 767px) {
-      .newspaper-x-news-ticker .newspaper-x-module-title {
-        display: inline-block;
-        margin-bottom: 20px; } }
     .newspaper-x-news-ticker .newspaper-x-module-title icon.fa {
       color: #0e649b;
       margin-right: 10px;

@@ -50,6 +50,10 @@ h6{
   position: relative;
   text-transform: uppercase;
   margin-bottom: 25px;
+  margin-top: 65px;
+  &.comment-reply-title{
+    margin-top: 20px;
+  }
   > span {
     padding-left: 27px;
     background-color: #FFF;
