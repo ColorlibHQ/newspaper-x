@@ -65,6 +65,9 @@ textarea {
 
 #searchform {
     border: 1px solid #e1e1e1;
+    @media (max-width: 361px) {
+      display: inline-block;
+    }
     .search-submit{
       background: none;
       font-size: 15px;

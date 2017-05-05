@@ -128,7 +128,7 @@ add_filter( 'get_archives_link', 'newspaper_x_add_span_archive_count' );
 
 function post_tags_bottom($content) {
     $tags_list = get_the_tag_list( '<span>', '</span>' );
-    $tags = '<div class="newspaper-x-tags"></div>';
+    $tags = '<div class="newspaper-x-tags"><span></span></div>';
     if ($tags_list) {
         $tags = '<div class="newspaper-x-tags"><strong>'.esc_html__( 'TAGS: ', 'newspaper-x' ).'</strong>'.$tags_list.' </div>';
     }

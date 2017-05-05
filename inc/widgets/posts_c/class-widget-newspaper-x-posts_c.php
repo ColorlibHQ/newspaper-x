@@ -99,14 +99,14 @@ class Widget_Newspaper_X_Posts_C extends WP_Widget {
 		       value="<?php echo esc_attr( $instance['show_post'] ); ?>"/>
 
 		<div id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>" data-attr-min="1"
-		     data-attr-max="10" data-attr-step="1" class="ss-slider"></div>
+		     data-attr-max="11" data-attr-step="1" class="ss-slider"></div>
 		<script>
 			jQuery(document).ready(function ($) {
 				$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').slider({
 					value: <?php echo esc_attr( $instance['show_post'] ); ?>,
 					range: 'min',
 					min  : 1,
-					max  : 9,
+					max  : 11,
 					step : 1,
 					slide: function (event, ui) {
 						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').val(ui.value).keyup();

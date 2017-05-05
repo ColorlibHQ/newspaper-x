@@ -37,10 +37,7 @@ h6{
 }
 
 
-.page-title {
-  @extend .section-title;
-  margin-top: 35px;
-}
+
 
 .section-title {
   font-weight: 700;
@@ -73,6 +70,10 @@ h6{
     right: 0;
   }
 
+}
+.page-title {
+  @extend .section-title;
+  margin-top: 15px;
 }
 
 .page-header {

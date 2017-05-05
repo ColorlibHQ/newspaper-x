@@ -5,64 +5,66 @@ if ( $posts->have_posts() ): ?>
 		echo $before_title . esc_html( $instance['title'] ) . $after_title;
 	}
 	?>
-	<div class="row newspaper-x-layout-a-row">
-		<?php while ( $posts->have_posts() ) : $posts->the_post();
-			$i ++;
+	
+<div class="container site-content">
+		 	<div class="row">
+				<div class="col-md-12">
+						<div class="newspaper-x-recent-posts">
+							<ul>
+							<?php while ( $posts->have_posts() ) : $posts->the_post();
+								$i ++;
 
-			$image = '<img class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="" src="' . get_template_directory_uri() . '/assets/images/picture_placeholder.jpg" />';
-			if ( has_post_thumbnail() ) {
-				$image = get_the_post_thumbnail( get_the_ID(), 'newspaper-x-recent-post-big' );
-			}
+								$cat         = get_the_category();
+								$cat_link    = get_category_link( $cat[0]->term_id );
+								$cat         = $cat[0]->name;
+								$image       = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
+								$placeholder = $image;
+								$h= 'h6';
 
-			$image_obj    = array( 'id' => get_the_ID(), 'image' => $image );
-			$new_image    = apply_filters( 'newspaper_x_widget_image', $image_obj );
-			$allowed_tags = array(
-				'img'      => array(
-					'data-srcset' => true,
-					'data-src'    => true,
-					'srcset'      => true,
-					'sizes'       => true,
-					'src'         => true,
-					'class'       => true,
-					'alt'         => true,
-					'width'       => true,
-					'height'      => true
-				),
-				'noscript' => array()
-			);
-			?>
-			<div class="col-sm-3 col-xs-6">
-				<div class="newspaper-x-blog-post-layout-a">
-					<div class="newspaper-x-image">
-						<a href="<?php echo esc_url( get_the_permalink() ); ?>">
-							<?php echo wp_kses( $new_image, $allowed_tags ); ?>
-						</a>
-					</div>
-					<div class="newspaper-x-title">
-						<h3>
-							<a href="<?php echo esc_url( get_the_permalink() ); ?>"><?php echo wp_trim_words( esc_html( get_the_title() ), 9 );
-								?></a></h3>
-					</div>
-					<?php if ( $instance['show_date'] ): ?>
-						<span class="newspaper-x-author">
-							<a href="/author/<?php echo the_author_meta( 'nickname'); ?> "><?php echo esc_html( get_the_author()); ?></a> 
-						</span>
-						<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
-					<?php endif; ?>
-					<div class="newspaper-x-content-a">
-						<?php echo wp_trim_words( wp_kses_post( get_the_content() ), 15, ' <a href="' . esc_url( get_the_permalink() ) . '">...</a>' ) ?>
-					</div>
+
+								if ( has_post_thumbnail() ) {
+									$src = wp_get_attachment_image_src( get_post_thumbnail_id(),
+									                                    'newspaper-x-recent-post-big',
+									                                    false,
+									                                    '' );
+
+									$srcsmall = wp_get_attachment_image_src( get_post_thumbnail_id(),
+									                                         'newspaper-x-recent-post-list-image',
+									                                         false,
+									                                         '' );
+
+									$image       = $src[0];
+									$placeholder = $srcsmall[0];
+								}
+							?>
+
+							<li class="blazy" id="newspaper-x-recent-post-4" data-src="<?php echo esc_url( $image ) ?>"
+							    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
+								<div class="newspaper-x-post-info">
+									<h6>
+										<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
+											<?php echo wp_trim_words( get_the_title(), 6 ); ?>
+										</a>
+									</h6>
+									<span class="newspaper-x-category">
+										<a href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ) ?></a> 
+									</span>
+									<?php if ( $instance['show_date'] ): ?>
+									<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
+									<?php endif; ?>
+								</div>
+							</li>
+
+							<?php 
+								if ( fmod( $i, (int) 4 ) == 0 && $i != (int) $posts->post_count ) {
+									echo '<ul></div><div class="newspaper-x-recent-posts newspapper-spacer"><ul>';
+								} elseif ( $i == (int) $posts->post_count ) {
+									continue;
+								}
+								endwhile; 
+							?>
+					</ul>
 				</div>
 			</div>
-			<?php
-
-			if ( fmod( $i, (int) 4 ) == 0 && $i != (int) $posts->post_count ) {
-				echo '</div><div class="row newspaper-x-layout-a-row">';
-			} elseif ( $i == (int) $posts->post_count ) {
-				continue;
-			}
-
-			?>
-		<?php endwhile; ?>
-	</div>
-<?php endif; ?>
+		</div>
+	<?php endif; ?>

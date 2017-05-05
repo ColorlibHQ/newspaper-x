@@ -19,7 +19,7 @@ $order    = is_array( $order ) ? $order[0] : $order;
 $order_by = is_array( $order_by ) ? $order_by[0] : $order_by;
 
 $args = array(
-	'numberposts' => 7,
+	'numberposts' => 3,
 	'orderby'     => $order_by,
 	'order'       => $order,
 	'post_type'   => 'post',

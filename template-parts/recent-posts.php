@@ -19,7 +19,7 @@ $order    = is_array( $order ) ? $order[0] : $order;
 $order_by = is_array( $order_by ) ? $order_by[0] : $order_by;
 
 $args = array(
-	'numberposts' => 7,
+	'numberposts' => 3,
 	'orderby'     => $order_by,
 	'order'       => $order,
 	'post_type'   => 'post',
@@ -42,7 +42,7 @@ foreach ( $recent_posts as $post ) {
 	$cat         = $cat[0]->name;
 	$image       = get_template_directory_uri() . '/assets/images/picture_placeholder.jpg';
 	$placeholder = $image;
-	$h= 'h6';
+	$h = ($i == 0) ? '1' : '6' ;
 
 
 	if ( has_post_thumbnail() ) {
@@ -58,47 +58,30 @@ foreach ( $recent_posts as $post ) {
 
 		$image       = $src[0];
 		$placeholder = $srcsmall[0];
-	}
-if($i== 0){
-	$h='h1';
-	?>
-	<div class="newspaper-x-recent-post-containter" >
-		<div class="recent-mirror" style="background-image:url('<?php echo esc_url( $placeholder ) ?>')"></div> <!-- image bg -->
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="newspaper-x-recent-posts">
-						<ul>
-<?php }
-if($i == 3){?>
-						</ul>
-					</div>
-				</div> <!-- col-12 -->
-			</div> <!-- row -->
-		</div> <!-- container -->
-	</div> <!-- recent posts bg -->
-	<div class="newspapper-spacer">
-		<div class="container site-content">
-		 	<div class="row">
-				<div class="col-md-12">
-						<div class="newspaper-x-recent-posts">
-							<ul>
-						<?php }	?>
+		if ($i == 0) {?>
+			<div class="newspaper-x-recent-post-containter" >
+				<div class="recent-mirror" style="background-image:url('<?php echo esc_url( $placeholder ) ?>')"></div> <!-- image bg -->
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="newspaper-x-recent-posts">
+								<ul>
+		<?php }	}?>
 
-							<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
-							    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
-								<div class="newspaper-x-post-info">
-									<<?php echo $h;?>>
-										<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
-											<?php echo wp_kses_post( wp_trim_words( $post->post_title, 6, $more = '&hellip;' ) ) ?>
-										</a>
-									</<?php echo $h;?>>
-									<span class="newspaper-x-category">
-										<a href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ) ?></a> 
-									</span>
-									<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
-								</div>
-							</li>
+									<li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>" data-src="<?php echo esc_url( $image ) ?>"
+									    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
+										<div class="newspaper-x-post-info">
+											<h<?php echo $h; ?>>
+												<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
+													<?php echo wp_kses_post( wp_trim_words( $post->post_title, 6, $more = '&hellip;' ) ) ?>
+												</a>
+											</h<?php echo $h; ?>>
+											<span class="newspaper-x-category">
+												<a href="<?php echo esc_url( $cat_link ) ?>"><?php echo esc_html( $cat ) ?></a> 
+											</span>
+											<span class="newspaper-x-date"><?php echo esc_html( get_the_date() ) ?></span>
+										</div>
+									</li>
 							<?php $i ++;
 						} ?>
 					</ul>
