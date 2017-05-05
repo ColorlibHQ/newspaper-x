@@ -28,15 +28,7 @@ if ( comments_open()) :
                     <h6><?php echo $comment->comment_author; ?></h6>
                     <p><?php echo $comment->comment_content; ?></p>
                 </div>
-                <div class="social-list">
-                    <ul>
-                        <li><a><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                        <li><a><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-
+                    <?php echo echo_social_media();?>
             </div>
             <?php
         endforeach;

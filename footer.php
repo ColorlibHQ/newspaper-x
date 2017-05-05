@@ -45,7 +45,7 @@
 							echo empty( $copyright ) ? wp_kses_post( $default ) : wp_kses_post( $copyright );
 						?>
 
-						<nav id="footer-navigation" class="pull-right text-right">
+						<nav id="footer-navigation" class="pull-right text-right hidden-xs">
 							<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'depth' => 1 ) ); ?>
 						</nav>
 					</div>

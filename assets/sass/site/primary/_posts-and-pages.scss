@@ -36,6 +36,9 @@
     color: $color_text-color;
   }
   .entry-content{
+    .archive{
+      color:#8b8d91;
+    }
     p:first-of-type{
       color: $color_text-color;
       border-bottom: 1px dotted #bababa;

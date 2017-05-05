@@ -84,8 +84,7 @@
   color: $color_text-color;
   border-color: $color_text-color;
   background: transparent;
-  margin: 0 auto;
-  margin-bottom: 10px;
+  margin: 10px auto;
 }
 
 #site-navigation.toggled ul {
@@ -146,6 +145,7 @@
       top: initial;
       position: relative;
       padding-left: 20px;
+      width:100%;
       ul {
         left: initial;
         top: initial;
