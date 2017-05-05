@@ -50,10 +50,8 @@ class Widget_Newspaper_X_Posts_D extends WP_Widget {
 			$instance['show_post'] = 4;
 		}
 
-		if ( isset( $instance['offset'] ) ) {
-			$offset = $instance['offset'];
-		} else {
-			$offset['offset'] = 3;
+		if ( empty($instance['offset'] ) ) {
+			$instance['offset'] = 0;
 		}
 
 		if ( isset( $instance['show_date'] ) ) {

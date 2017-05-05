@@ -48,12 +48,9 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 			$instance['show_post'] = 4;
 		}
 
-		if ( isset( $instance['offset'] ) ) {
-			$offset = $instance['offset'];
-		} else {
-			$offset['offset'] = 3;
+		if ( empty($instance['offset'] ) ) {
+			$instance['offset'] = 0;
 		}
-
 		if ( isset( $instance['show_date'] ) ) {
 			$show_date = $instance['show_date'];
 		} else {
@@ -139,7 +136,6 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		<input type="text" name="<?php echo esc_attr( $this->get_field_name( 'offset' ) ); ?>" class="rl-slider"
 		       id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"
 		       value="<?php echo esc_attr( $instance['offset'] ); ?>"/>
-
 		<div id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>" data-attr-min="0"
 		     data-attr-max="10" data-attr-step="1" class="ss-slider"></div>
 		<script>
@@ -191,7 +187,7 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		$instance['title']                = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['newspaper_x_category'] = ( ! empty( $new_instance['newspaper_x_category'] ) ) ? strip_tags($new_instance['newspaper_x_category']) : '';
 		$instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? absint( $new_instance['show_post'] ) : '';
-		$instance['offset']               = ( ! empty( $new_instance['offset'] ) ) ? absint( $new_instance['offset'] ) : '';
+		$instance['offset']               = ( ! empty( $new_instance['offset'] ) ) ? abs( $new_instance['offset'] ) : '';
 		$instance['show_date']            = ( ! empty( $new_instance['show_date'] ) ) ? $new_instance['show_date'] : '';
 		$instance['order']                = ( ! empty( $new_instance['order'] ) ) ? strip_tags( $new_instance['order'] ) : '';
 
