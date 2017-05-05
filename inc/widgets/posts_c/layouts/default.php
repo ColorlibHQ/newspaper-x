@@ -8,7 +8,7 @@ if ( $posts->have_posts() ): ?>
 	<div class="row newspaper-x-layout-c-row">
 		<?php while ( $posts->have_posts() ) : $posts->the_post();
 			$i ++;
-			$cat         = get_the_category( $post->ID );
+			$cat         = get_the_category();
 			$cat_link    = get_category_link( $cat[0]->term_id );
 			$cat         = $cat[0]->name;
 			$image = '<img class="attachment-newspaper-x-recent-post-big size-newspaper-x-recent-post-big wp-post-image" alt="" src="' . get_template_directory_uri() . '/assets/images/picture_placeholder.jpg" />';
