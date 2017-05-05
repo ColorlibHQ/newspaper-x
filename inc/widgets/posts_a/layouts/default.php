@@ -6,7 +6,7 @@ if ( $posts->have_posts() ): ?>
 	}
 	?>
 	
-<div class="container site-content">
+<div class="site-content">
 		 	<div class="row">
 				<div class="col-md-12">
 						<div class="newspaper-x-recent-posts">
@@ -64,7 +64,8 @@ if ( $posts->have_posts() ): ?>
 								endwhile; 
 							?>
 					</ul>
-				</div>
-			</div>
-		</div>
+				</div> <!-- recent posts-->
+			</div> <!-- col-md-12 -->
+		</div> <!-- row -->
+	</div> <!-- posts a-->
 	<?php endif; ?>

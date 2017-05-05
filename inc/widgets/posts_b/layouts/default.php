@@ -12,7 +12,6 @@ if ( $posts->have_posts() ): ?>
             if ( has_post_thumbnail() ) {
                 $image = get_the_post_thumbnail( get_the_ID(), 'newspaper-x-recent-post-big' );
             }
-
             $image_obj    = array( 'id' => get_the_ID(), 'image' => $image );
             $new_image    = apply_filters( 'newspaper_x_widget_image', $image_obj );
             $allowed_tags = array(
@@ -30,7 +29,7 @@ if ( $posts->have_posts() ): ?>
                 'noscript' => array()
             );
             ?>
-            <div class="col-md-4 col-xs-6">
+            <div class="col-md-<?php echo $instance['cols']; ?> col-xs-6">
                 <div class="newspaper-x-blog-post-layout-b">
                     <div class="newspaper-x-image">
                         <a href="<?php echo esc_url( get_the_permalink() ); ?>">
@@ -56,8 +55,8 @@ if ( $posts->have_posts() ): ?>
                 </div>
             </div>
             <?php
-
-            if ( fmod( $i, (int) 3 ) == 0 && $i != (int) $posts->post_count ) {
+            $cols = ($instance['cols'] == '3') ? 4 : 3 ;
+            if ( fmod( $i, (int)$cols ) == 0 && $i != (int) $posts->post_count ) {
                 echo '</div><div class="row newspaper-x-layout-b-row">';
             } elseif ( $i == (int) $posts->post_count ) {
                 continue;

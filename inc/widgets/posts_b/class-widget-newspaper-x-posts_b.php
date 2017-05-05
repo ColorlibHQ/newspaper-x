@@ -26,7 +26,8 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
     public function form( $instance ) {
 
         $defaults = array(
-            'order'            => 'desc'
+            'order'            => 'desc',
+            'cols'             => 4
         );
         $instance = wp_parse_args( (array) $instance, $defaults );
 
@@ -86,7 +87,14 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
                 <option value ="rand" <?php echo ($instance['order'] == 'rand') ? 'selected' : '';?> ><?php echo esc_html__( 'Random', 'newspaper-x' )?></option>
             </select>
         </p>
-
+        <p>
+            <label><?php _e( 'Number of columns', 'newspaper-x' ); ?> :</label>
+            <select name="<?php echo esc_attr( $this->get_field_name( 'cols' ) ); ?>"
+                    id="<?php echo esc_attr( $this->get_field_id( 'cols' ) ); ?>" class="pull-right">
+                <option value ="4" <?php echo ($instance['cols'] == '4') ? 'selected' : '';?> ><?php echo esc_html__( '3', 'newspaper-x' )?></option>
+                <option value ="3" <?php echo ($instance['cols'] == '3') ? 'selected' : '';?> ><?php echo esc_html__( '4', 'newspaper-x' )?></option>
+            </select>
+        </p>
 
         <label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>">
             <span class="customize-control-title">
@@ -151,6 +159,7 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
         $instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? absint( $new_instance['show_post'] ) : '';
         $instance['show_date']            = ( ! empty( $new_instance['show_date'] ) ) ? strip_tags( $new_instance['show_date'] ) : '';
         $instance['order']                = ( ! empty( $new_instance['order'] ) ) ? strip_tags( $new_instance['order'] ) : '';
+        $instance['cols']                 = ( ! empty( $new_instance['cols'] ) ) ? strip_tags( $new_instance['cols'] ) : '';
 
         return $instance;
 
@@ -246,7 +255,8 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
     public function widget( $args, $instance ) {
 
         $defaults = array(
-            'order'            => 'desc'
+            'order'            => 'desc',
+            'cols'             => 4
         );
         $instance = wp_parse_args( (array) $instance, $defaults );
 
