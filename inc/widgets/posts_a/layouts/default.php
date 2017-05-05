@@ -42,7 +42,7 @@ if ( $posts->have_posts() ): ?>
 							    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
 								<div class="newspaper-x-post-info">
 									<h6>
-										<a href="<?php echo esc_url( get_permalink( $post->ID ) ) ?>">
+										<a href="<?php echo esc_url( get_permalink() ) ?>">
 											<?php echo wp_trim_words( get_the_title(), 6 ); ?>
 										</a>
 									</h6>
