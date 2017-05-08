@@ -6,7 +6,7 @@ if ( $posts->have_posts() ): ?>
 	}
 	?>
 	
-<div class="site-content">
+<div class="site-content newspaper-spacer-a">
 		 	<div class="row">
 				<div class="col-md-12">
 						<div class="newspaper-x-recent-posts">

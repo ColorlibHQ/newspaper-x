@@ -735,11 +735,11 @@ a {
     margin-right: 37px;
     position: relative;
     line-height: 57px; }
-    #site-navigation .menu > li.active, #site-navigation .menu > li:hover {
+    #site-navigation .menu > li.current-menu-item, #site-navigation .menu > li:hover {
       border-top: 3px solid #0a396d;
       margin-top: -3px;
       top: 1px; }
-      #site-navigation .menu > li.active > a, #site-navigation .menu > li:hover > a {
+      #site-navigation .menu > li.current-menu-item > a, #site-navigation .menu > li:hover > a {
         top: -1px; }
     #site-navigation .menu > li > a {
       position: relative;
@@ -2056,7 +2056,7 @@ a {
       color: #bfbfbf; }
 
 .single-post .newspaper-x-breadcrumbs {
-  margin-top: 20px; }
+  margin-top: -20px; }
 .single-post .newspaper-x-post-meta {
   margin-top: 20px; }
   .single-post .newspaper-x-post-meta .newspaper-x-category {
@@ -2577,6 +2577,9 @@ a {
 .newspapper-spacer {
   margin-top: 40px; }
 
+.newspaper-spacer-a {
+  margin-top: 20px; }
+
 .newspaper-x-recent-posts {
   margin-bottom: -3px; }
   .newspaper-x-recent-posts > ul {
@@ -2856,16 +2859,15 @@ a {
       border-radius: 150px; }
   .comments-list .comment {
     padding: 10px 15px 0px 0px;
-    width: 75%;
+    width: 80%;
     float: left;
-    border-right: 1px solid #ebebeb;
     min-height: 170px; }
     .comments-list .comment p {
       margin-bottom: 40px;
       font-size: 14px;
       line-height: 20px; }
   .comments-list .social-list {
-    display: block;
+    display: none;
     width: 5%;
     float: right;
     height: 100%;
