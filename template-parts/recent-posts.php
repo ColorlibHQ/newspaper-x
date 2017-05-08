@@ -6,12 +6,6 @@
  *
  * @package Newspaper X
  */
-/*
-$cats = get_theme_mod( 'newspaper_x_recent_posts_category', array( '1' ) );
-
-if ( ! $cats || ! is_array( $cats ) || ( is_array( $cats ) && empty( array_filter( $cats ) ) ) ) {
-	$cats = array( '1' );
-}*/
 
 $order    = get_theme_mod( 'newspaper_x_recent_posts_ordering', 'DESC' );
 $order_by = get_theme_mod( 'newspaper_x_recent_posts_order_by', 'date' );
@@ -23,8 +17,7 @@ $args = array(
 	'orderby'     => $order_by,
 	'order'       => $order,
 	'post_type'   => 'post',
-	'post_status' => 'publish',
-	//'category'    => implode( ',', $cats )
+	'post_status' => 'publish'
 );
 
 $recent_posts = wp_get_recent_posts( $args, OBJECT );

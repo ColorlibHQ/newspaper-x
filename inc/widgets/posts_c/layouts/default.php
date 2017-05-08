@@ -33,7 +33,7 @@ if ( $posts->have_posts() ): ?>
 				'noscript' => array()
 			);
 			?>
-			<div class="col-md-4 col-xs-6">
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="newspaper-x-blog-post-layout-c">
 
 					<div class="newspaper-x-image">

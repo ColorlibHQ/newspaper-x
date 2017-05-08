@@ -7,6 +7,10 @@
  * @package Newspaper X
  */
 
+$breadcrumbs_enabled = get_theme_mod( 'newspaper_x_enable_post_breadcrumbs', true );
+if ( $breadcrumbs_enabled && is_single()) {
+    newspaper_x_breadcrumbs();
+}
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">

@@ -207,7 +207,7 @@
       margin-right: 37px;
       position: relative;
       line-height: 57px;
-      &.active,
+      &.current-menu-item,
       &:hover {
           border-top: 3px solid $color_main-accent;
           margin-top: -3px;
