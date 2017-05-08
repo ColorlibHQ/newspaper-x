@@ -70,3 +70,8 @@ require get_template_directory() . '/inc/widgets.php';
  * Sidebars
  */
 require get_template_directory() . '/inc/sidebars.php';
+
+/**
+ * User meta
+ */
+require get_template_directory() . '/inc/user-meta.php';

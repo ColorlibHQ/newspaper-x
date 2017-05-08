@@ -24,6 +24,11 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 	}
 
 	public function form( $instance ) {
+		$defaults = array(
+			'order'            => 'desc',
+			'offset'           => 3,
+		);
+		$instance = wp_parse_args( (array) $instance, $defaults );
 
 		if ( isset( $instance['title'] ) ) {
 			$title = $instance['title'];
@@ -43,6 +48,9 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 			$instance['show_post'] = 4;
 		}
 
+		if ( empty($instance['offset'] ) ) {
+			$instance['offset'] = 0;
+		}
 		if ( isset( $instance['show_date'] ) ) {
 			$show_date = $instance['show_date'];
 		} else {
@@ -72,7 +80,15 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 				<?php } ?>
 			</select>
 		</p>
-
+        <p>
+            <label><?php _e( 'Order', 'newspaper-x' ); ?> :</label>
+            <select name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>"
+                    id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" class="pull-right">
+                <option value ="desc" <?php echo ($instance['order'] == 'desc') ? 'selected' : '';?> ><?php echo esc_html__( 'Descending', 'newspaper-x' )?></option>
+                <option value ="asc" <?php echo ($instance['order'] == 'asc') ? 'selected' : '';?> ><?php echo esc_html__( 'Ascending', 'newspaper-x' )?></option>
+                <option value ="rand" <?php echo ($instance['order'] == 'rand') ? 'selected' : '';?> ><?php echo esc_html__( 'Random', 'newspaper-x' )?></option>
+            </select>
+        </p>
 
 		<label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>">
             <span class="customize-control-title">
@@ -85,14 +101,14 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		       value="<?php echo esc_attr( $instance['show_post'] ); ?>"/>
 
 		<div id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>" data-attr-min="1"
-		     data-attr-max="10" data-attr-step="1" class="ss-slider"></div>
+		     data-attr-max="12" data-attr-step="1" class="ss-slider"></div>
 		<script>
 			jQuery(document).ready(function ($) {
 				$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').slider({
 					value: <?php echo esc_attr( $instance['show_post'] ); ?>,
 					range: 'min',
 					min  : 1,
-					max  : 10,
+					max  : 12,
 					step : 1,
 					slide: function (event, ui) {
 						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').val(ui.value).keyup();
@@ -104,6 +120,42 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 				$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').val($('[id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').slider("value"));
 				$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').change(function () {
 					$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').slider({
+						value: $(this).val()
+					});
+				});
+			});
+		</script>
+
+
+		<label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>">
+            <span class="customize-control-title">
+               <?php echo esc_html__( 'Posts offset', 'newspaper-x' ); ?> :
+            </span>
+		</label>
+
+		<input type="text" name="<?php echo esc_attr( $this->get_field_name( 'offset' ) ); ?>" class="rl-slider"
+		       id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"
+		       value="<?php echo esc_attr( $instance['offset'] ); ?>"/>
+		<div id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>" data-attr-min="0"
+		     data-attr-max="10" data-attr-step="1" class="ss-slider"></div>
+		<script>
+			jQuery(document).ready(function ($) {
+				$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"]').slider({
+					value: <?php echo esc_attr( $instance['offset'] ); ?>,
+					range: 'min',
+					min  : 0,
+					max  : 10,
+					step : 1,
+					slide: function (event, ui) {
+						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"]').val(ui.value).keyup();
+					}
+				});
+				$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').on('focus', function () {
+					$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').trigger('blur');
+				});
+				$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').val($('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').slider("value"));
+				$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').change(function () {
+					$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').slider({
 						value: $(this).val()
 					});
 				});
@@ -133,9 +185,11 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		$instance = array();
 
 		$instance['title']                = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-		$instance['newspaper_x_category'] = ( ! empty( $new_instance['newspaper_x_category'] ) ) ? $new_instance['newspaper_x_category'] : '';
-		$instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? strip_tags( $new_instance['show_post'] ) : '';
+		$instance['newspaper_x_category'] = ( ! empty( $new_instance['newspaper_x_category'] ) ) ? strip_tags($new_instance['newspaper_x_category']) : '';
+		$instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? absint( $new_instance['show_post'] ) : '';
+		$instance['offset']               = ( ! empty( $new_instance['offset'] ) ) ? abs( $new_instance['offset'] ) : '';
 		$instance['show_date']            = ( ! empty( $new_instance['show_date'] ) ) ? $new_instance['show_date'] : '';
+		$instance['order']                = ( ! empty( $new_instance['order'] ) ) ? strip_tags( $new_instance['order'] ) : '';
 
 		return $instance;
 
@@ -154,16 +208,28 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 		 */
 		$atts = array(
 			'posts_per_page' => $args['show_post'],
+			'offset'         => $args['offset'],
 		);
+
 
 		/**
 		 * Grab the sticky posts
 		 */
 		$sticky_atts = array(
 			'posts_per_page' => $args['show_post'],
+			'offset'         => $args['offset'],
 			'post__in'       => get_option( 'sticky_posts' ),
 		);
 
+		if($args['order'] == 'rand' ){
+			$atts['orderby'] = 'rand';
+            $sticky_atts['orderby'] = 'rand';
+        }else{
+        	$atts['order'] = $args['order'];
+            $atts['orderby'] = 'date';
+            $sticky_atts['order'] = $args['order'];
+            $sticky_atts['orderby'] = 'date';
+        }
 		/**
 		 * Grab category and add the new argument
 		 */
@@ -220,6 +286,12 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
+
+		$defaults = array(
+			'order'            => 'desc',
+			'offset'           => 0
+		);
+		$instance = wp_parse_args( (array) $instance, $defaults );
 
 		if ( ! empty( $instance['newspaper_x_category'] ) ) {
 			$newspaper_x_category = $instance['newspaper_x_category'];

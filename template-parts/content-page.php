@@ -7,11 +7,6 @@
  * @package Newspaper X
  */
 
-$breadcrumbs_enabled = get_theme_mod( 'newspaper_x_enable_post_breadcrumbs', true );
-if ( $breadcrumbs_enabled ) {
-	newspaper_x_breadcrumbs();
-}
-
 ?>
 <article id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -89,10 +84,15 @@ if ( $breadcrumbs_enabled ) {
 			</div>
 			<?php
 		} else {
-			echo '<p>' . wp_trim_words( get_the_content( esc_html__( 'Read More', 'newspaper-x' ) ), 35 ) . '</p>';
+			echo '<p class="archive" >' . wp_trim_words( get_the_content( esc_html__( 'Read More', 'newspaper-x' ) ), 35 ) . '</p>';
 		}
 
 		?>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
+<?php
+if ( is_page() ) {
+    get_template_part( 'template-parts/comments-list' );
+}
+?>

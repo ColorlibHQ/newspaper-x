@@ -16,7 +16,6 @@ input[type="color"],
 textarea {
   color: $color__text-input;
   border: 1px solid $color__border-input;
-  border-radius: 3px;
   font-size: 15px;
   &:focus {
     color: $color__text-input-focus;
@@ -31,7 +30,6 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"],
 input[type="number"],
 input[type="tel"],
 input[type="range"],
@@ -42,20 +40,48 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-  padding: 10px;
+  padding: 1px 15px;
+  line-height:25px;
+  color:#8b8d91;
+  &:hover,
+  &:focus{
+    border-color: #89b3ce;
+  }
 }
-
+input[type="search"]{
+  padding:10px;
+}
 textarea {
-  padding-left: 3px;
-  width: 100%;
+  padding: 0px 15px;
+  line-height:25px;
+  min-height: 160px;
+  color:#8b8d91;
+  width:100%;
+  &:hover,
+  &:focus{
+    border-color: #89b3ce;
+  }
 }
 
 #searchform {
+    border: 1px solid #e1e1e1;
+    @media (max-width: 361px) {
+      display: inline-block;
+    }
+    .search-submit{
+      background: none;
+      font-size: 15px;
+      border-left: 1px solid;
+      border-right:0px;
+      border-top:0px;
+      border-bottom:0px;
+      padding: 9px 15px;
+      float: right;
+      margin-top: 7px;
+      color: #e1e1e1;
+    }
   > label {
     margin-bottom: 0;
-    top: 5px;
-    position: relative;
-    border: 3px solid #000;
     padding: 3px;
     border-radius: 0;
     > input[type="search"] {
@@ -63,13 +89,17 @@ textarea {
       bottom: 5px;
       position: relative;
       font-weight: 400;
-      border: 1px solid #000;
       top: 0;
+      border:none;
       border-radius: 0;
       @media (max-width: 1199px) {
         width: 238px;
       }
     }
+  }
+  &:hover,
+  &:focus{
+    border-color: #89b3ce;
   }
 }
 
@@ -109,7 +139,6 @@ textarea {
     border: none;
     outline: none;
     box-shadow: none;
-    bottom: 9px;
     position: relative;
   }
 }

@@ -31,7 +31,7 @@ if ( ! function_exists( 'newspaper_x_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			                    'primary'    => esc_html__( 'Primary', 'newspaper-x' ),
-			                    'top-header' => esc_html__( 'Top Header', 'newspaper-x' ),
+			                    'footer-menu' => esc_html__( 'Footer', 'newspaper-x' ),
 			                    'social'     => esc_html__( 'Top Social', 'newspaper-x' ),
 		                    ) );
 

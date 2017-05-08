@@ -1,7 +1,10 @@
 /* Top header */
 .top-header {
-  background: #202020;
+  background: #04132d;
   color: #fff;
+  .fa-circle{
+    color: #04132d;
+  }
   ul {
     list-style: none;
     padding-left: 0;
@@ -25,6 +28,38 @@
         a {
           padding-right: 0;
         }
+      }
+    }
+  }
+  #searchform_topbar{
+    float:left;
+    width: 175px;
+    border-bottom: 1px solid #202d44;
+    padding-top: 7px;
+    label{
+      max-width:140px;
+    }
+    ::-moz-placeholder {
+      opacity: 1;
+    }
+    ::-webkit-input-placeholder {
+      opacity: 1;
+    }
+    input[type="search"]{
+      padding:3px;
+      background: #04132d;
+      border: none;
+      color: #fff;
+      font-family: $font__main;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    @media (max-width: 480px) {
+      width:100%;
+      display:block;
+      .search-top-bar-submit{
+        float: right;
+        top: 7px;
       }
     }
   }

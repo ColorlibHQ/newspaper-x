@@ -8,18 +8,8 @@
  */
 
 get_header(); ?>
-<?php
-/**
- * Enable breadcrumbs
- */
-$breadcrumbs_enabled = get_theme_mod( 'newspaper_x_enable_post_breadcrumbs', 'breadcrumbs_enabled' );
-if ( $breadcrumbs_enabled == 'breadcrumbs_enabled' ) { ?>
-	<div class="row">
-		<div class="col-xs-12">
-			<?php newspaper_x_breadcrumbs(); ?>
-		</div>
-	</div>
-<?php }
+
+<?php 
 
 /**
  * Banner Settings;

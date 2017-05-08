@@ -14,6 +14,12 @@
   &.search-enabled {
     margin-right: 30px;
   }
+  @media (max-width: 480px) {
+    float:none !important;
+    ul{
+      text-align:center;
+    }
+  }
   ul {
     list-style: none;
     margin: 0;
@@ -22,14 +28,14 @@
       display: inline-block;
       position: relative;
       a {
-        padding: 10px 5px;
+        padding: 8px 5px;
         color: #FFF;
         &:before {
           content: '\f408';
           display: inline-block;
           padding: 0 5px;
           font-family: 'FontAwesome';
-          font-size: 16px;
+          font-size: 13px;
           vertical-align: top;
           -webkit-font-smoothing: antialiased;
         }

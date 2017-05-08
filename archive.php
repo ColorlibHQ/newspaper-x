@@ -8,18 +8,6 @@
  */
 
 get_header(); ?>
-<?php
-/**
- * Enable breadcrumbs
- */
-$breadcrumbs_enabled = get_theme_mod( 'newspaper_x_enable_post_breadcrumbs', 'breadcrumbs_enabled' );
-if ( $breadcrumbs_enabled == 'breadcrumbs_enabled' ) { ?>
-	<div class="row">
-		<div class="col-xs-12">
-			<?php newspaper_x_breadcrumbs(); ?>
-		</div>
-	</div>
-<?php } ?>
 
 <?php
 /**
@@ -124,8 +112,8 @@ if ( $first_posts->have_posts() ):
 					?>
 				</div>
 			<?php the_posts_pagination( array(
-				                            'prev_text' => esc_html__( 'prev', 'newspaper-x' ),
-				                            'next_text' => esc_html__( 'next', 'newspaper-x' )
+				                            'prev_text' => '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+				                            'next_text' => '<i class="fa fa-angle-right" aria-hidden="true"></i>'
 			                            ) ); ?>
 			<?php
 			else :

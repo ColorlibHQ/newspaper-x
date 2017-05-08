@@ -17,13 +17,13 @@ blockquote, q {
   display: block;
   width: 100%;
   border: none;
-  padding-left: 0;
-  padding-right: 0;
-  color: $color_brand-newspaper-x;
+  padding: 50px 40px 20px 40px;
+  background: $color_main-accent;
   p {
-    color: $color_brand-newspaper-x;
+    color: #fff !important;
+    font-weight:400;
     font-size: 20px;
-    font-style: italic;
+    border: none !important;
   }
 
 }
@@ -38,9 +38,19 @@ q {
 article.post{
   blockquote{
     p{
-      color: $color_brand-newspaper-x;
+      font-family: $font__main;
       font-size: 20px;
       font-style: italic;
+      text-align: center;
+      font-weight:300;
+      &::after{
+      content: '';
+      width:78px;
+      height: 1px;
+      background: #fff;
+      display:block;
+      margin:20px auto 0px auto;
+      }
     }
   }
 }
@@ -84,4 +94,27 @@ li.blazy {
 
 .entry-content p {
   overflow: hidden;
+}
+.pagination{
+  .page-numbers{
+    padding: 10px;
+    font-family: $font__main;
+    color: #8b8d91;   
+    font-size: 14px;
+    &.current{
+      color:$color_main-accent;
+      &:hover{
+        color: $color_contrast-hover;
+      }
+    }
+    &:hover,
+    &:focus{
+      color: $color_contrast-hover;
+    }
+    &:active{
+      color: #333333;
+    }
+    .fa-angle-right{ margin-left:20px;}
+    .fa-angle-left{ margin-right:20px;}
+  }
 }

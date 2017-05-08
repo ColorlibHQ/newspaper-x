@@ -11,18 +11,37 @@
 <div class="top-header">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<nav id="top-header-navigation" class="pull-left">
-					<?php wp_nav_menu( array( 'theme_location' => 'top-header', 'depth' => 1 ) ); ?>
-				</nav>
-				<div class="top-header-icons">
-					<?php
+			<div class="col-md-8">
+				<?php $news_ticker = get_theme_mod( 'newspaper_x_enable_news_ticker', true ); ?>
+				<?php if ( $news_ticker ) { ?>
+					<section class="newspaper-x-news-ticker">
+						<?php
+							get_template_part( 'template-parts/news-ticker' );
+						?>
+					</section>
+				<?php } ?>
+			</div>
+			<div class="col-md-4">
+				<?php 
 					$enable_search = get_theme_mod( 'newspaper_x_enable_top_bar_search', true );
+					if ( $enable_search ): ?>
+					<?php $search_query = get_search_query(); ?>
+						<form role="search" method="get" id="searchform_topbar" action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
+							<label>
+								<input class=""	id=""
+									placeholder="<?php echo esc_html__( 'Search...', 'newspaper-x' ) ?>"
+									value="<?php echo esc_attr( $search_query ); ?>" name="s"
+									type="search">
+							</label>
+							<button id="search-top-bar-submit" type="submit" class="search-top-bar-submit">
+							        <span class="fa fa-search"></span>
+							</button>
+						</form>
+				<?php endif; ?>
+				<div class="top-header-icons">
+					
+					<?php
 					$class         = 'menu pull-right';
-
-					if ( $enable_search ) {
-						$class = 'menu pull-right search-enabled';
-					}
 
 					if ( has_nav_menu( 'social' ) ) {
 
@@ -40,37 +59,9 @@
 								'fallback_cb'     => '',
 							)
 						);
-					}
+					} ?>
 
-					if ( $enable_search ): ?>
-						<button href="#" class="search-form-opener" type="button"><span class="fa fa-search"></span>
-						</button>
-					<?php endif; ?>
 				</div>
-				<?php if ( $enable_search ): ?>
-					<?php $search_query = get_search_query(); ?>
-					<div class="header-search-form">
-						<div class="container">
-							<!-- Search Form -->
-							<form role="search" method="get" id="searchform_topbar"
-							      action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
-								<label><span
-										class="screen-reader-text"><?php echo esc_html__( 'Search for:', 'newspaper-x' ) ?></span>
-									<input
-										class="search-field-top-bar <?php echo $search_query === '' ? '' : 'opened'; ?>"
-										id="search-field-top-bar"
-										placeholder="<?php echo esc_html__( 'Type the search term', 'newspaper-x' ) ?>"
-										value="<?php echo esc_attr( $search_query ); ?>" name="s"
-										type="search">
-								</label>
-								<button id="search-top-bar-submit" type="button"
-								        class="search-top-bar-submit <?php echo $search_query === '' ? '' : 'submit-button'; ?>"><span
-										class="first-bar"></span><span
-										class="second-bar"></span></button>
-							</form>
-						</div>
-					</div>
-				<?php endif; ?>
 			</div>
 		</div>
 	</div>

@@ -6,7 +6,7 @@
 .site-branding {
   padding: 15px;
   @media (min-width: 768px) {
-    padding: 25px 15px;
+    padding: 20px 15px;
   }
 
   .header-logo {
@@ -43,8 +43,6 @@
 }
 
 .search-form-opener {
-  position: absolute;
-  right: 15px;
   @media (max-width: 768px) {
     top: 0;
   }
@@ -120,26 +118,18 @@
     #searchform_topbar {
       ::-webkit-input-placeholder {
         color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"
       }
 
       :-moz-placeholder {
         color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"
       }
 
       ::-moz-placeholder {
         color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"
       }
 
       :-ms-input-placeholder {
         color: #FFF;
-        opacity: .8;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"
       }
       position: relative;
       label {

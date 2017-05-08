@@ -24,7 +24,13 @@ if ( ! $recent_posts ) {
 ?>
 <!-- News Ticker Module -->
 
-<span class="newspaper-x-module-title"><?php echo esc_html__( 'Latest News', 'newspaper-x' ) ?></span>
+<span class="newspaper-x-module-title">
+	<span class="fa-stack fa-lg">
+	  <i class="fa fa-circle fa-stack-2x"></i>
+	  <i class="fa fa-bullhorn fa-stack-1x fa-inverse"></i>
+	</span>
+	<?php echo esc_html__( 'Latest News', 'newspaper-x' ) ?>
+</span>
 <ul class="newspaper-x-news-carousel owl-carousel owl-theme">
 	<?php foreach ( $recent_posts as $post ) { ?>
 		<li class="item">
