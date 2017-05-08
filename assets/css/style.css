@@ -63,9 +63,9 @@ article.post p {
 
 .single-post div.entry-content > p:first-child:first-letter {
   float: left;
-  font-size: 75px;
+  font-size: 86px;
   text-align: left;
-  padding-right: 7px; }
+  padding-right: 15px; }
 
 a {
   color: #0a396d;
@@ -2700,6 +2700,11 @@ a {
             text-decoration: none;
             outline: none;
             color: #0e649b; }
+    .newspaper-x-recent-posts > ul .newspaper-x-post-sidebar {
+      width: 50%; }
+      @media (max-width: 768px) {
+        .newspaper-x-recent-posts > ul .newspaper-x-post-sidebar {
+          width: 100%; } }
 
 .newspaper-x-related-posts {
   margin-top: 40px;

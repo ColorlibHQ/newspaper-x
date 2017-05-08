@@ -24,7 +24,8 @@ $social_media = array(
 
 $filtered = array();
 foreach ( $social_media as $social_link ) {
-	if ( ! empty( get_the_author_meta( $social_link ) ) ) {
+	$author_meta  = get_the_author_meta( $social_link );
+	if ( ! empty( $author_meta ) ) {
 		$filtered[ $social_link ] = get_the_author_meta( $social_link );
 	}
 }
