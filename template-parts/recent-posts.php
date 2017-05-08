@@ -6,12 +6,12 @@
  *
  * @package Newspaper X
  */
-
+/*
 $cats = get_theme_mod( 'newspaper_x_recent_posts_category', array( '1' ) );
 
 if ( ! $cats || ! is_array( $cats ) || ( is_array( $cats ) && empty( array_filter( $cats ) ) ) ) {
 	$cats = array( '1' );
-}
+}*/
 
 $order    = get_theme_mod( 'newspaper_x_recent_posts_ordering', 'DESC' );
 $order_by = get_theme_mod( 'newspaper_x_recent_posts_order_by', 'date' );
@@ -60,7 +60,7 @@ foreach ( $recent_posts as $post ) {
 		$placeholder = $srcsmall[0];
 		if ($i == 0) {?>
 			<div class="newspaper-x-recent-post-containter" >
-				<div class="recent-mirror" style="background-image:url('<?php echo esc_url( $placeholder ) ?>')"></div> <!-- image bg -->
+				<div class="recent-mirror blazy" style="background-image:url('<?php echo esc_url( $placeholder ) ?>')" data-src="<?php echo esc_url( $image ) ?>"></div> <!-- image bg -->
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
