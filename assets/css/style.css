@@ -2330,7 +2330,8 @@ a {
 
 /* Header */
 .site-branding {
-  padding-top: 15px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
   .site-branding .header-logo .site-title {
     font-family: "Nunito Sans", sans-serif;
     color: #000;
@@ -2911,7 +2912,11 @@ a {
       margin-bottom: 0px; }
       .comments-area .comments-form #reply-title span {
         background: none;
-        padding: 0px; }
+        padding: 0px;
+        color: #0a396d;
+        font-weight: 400;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 20px; }
       .comments-area .comments-form #reply-title:after {
         border: none; }
     .comments-area .comments-form .comment_notes_before {
