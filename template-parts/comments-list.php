@@ -28,7 +28,7 @@ if ( comments_open()) :
                     <h6><?php echo $comment->comment_author; ?></h6>
                     <p><?php echo $comment->comment_content; ?></p>
                 </div>
-                    <?php echo echo_social_media();?>
+                <?php echo echo_social_media();?>
             </div>
             <?php
         endforeach;

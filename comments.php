@@ -16,14 +16,14 @@
  * return early without loading the comments.
  */
 if ( post_password_required() ) {
-	return;
+    return;
 }
 ?>
 
 <div id="comments" class="comments-area">
-	<div class="comments-form">
-		<div class="container">
-		    <div class="col-md-8">
+    <div class="comments-form">
+        <div class="container">
+            <div class="col-md-8">
                 <?php
 
                 // If comments are closed and there are comments, let's leave a little note, shall we?
@@ -36,6 +36,6 @@ if ( post_password_required() ) {
                 comment_form();
                 ?>
             </div>
-		</div>
-	</div>
+        </div>
+    </div>
 </div><!-- #comments -->
