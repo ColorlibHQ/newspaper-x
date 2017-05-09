@@ -45,7 +45,7 @@ if ( $posts->have_posts() ): ?>
                 }
             }
 
-            
+
 
             ?>
         <?php endwhile; ?>

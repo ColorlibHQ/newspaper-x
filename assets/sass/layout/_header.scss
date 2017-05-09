@@ -4,11 +4,8 @@
 
 /* Header */
 .site-branding {
-  padding: 15px;
-  @media (min-width: 768px) {
-    padding: 20px 15px;
-  }
-
+  padding-top: 15px;
+  padding-bottom: 15px;
   .header-logo {
     .site-title {
       font-family: $font__main;

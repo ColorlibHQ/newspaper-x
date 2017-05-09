@@ -49,10 +49,10 @@ input[type="color"] {
   }
 }
 input[type="search"]{
-  padding:10px;
+  padding:5px;
 }
 textarea {
-  padding: 0px 15px;
+  padding: 10px 15px;
   line-height:25px;
   min-height: 160px;
   color:#8b8d91;
@@ -65,17 +65,19 @@ textarea {
 
 #searchform {
     border: 1px solid #e1e1e1;
+    display: inline-block;
+    width: 100%;
     @media (max-width: 361px) {
       display: inline-block;
     }
     .search-submit{
       background: none;
-      font-size: 15px;
+      font-size: 11px;
       border-left: 1px solid;
       border-right:0px;
       border-top:0px;
       border-bottom:0px;
-      padding: 9px 15px;
+      padding: 6px 14px;
       float: right;
       margin-top: 7px;
       color: #e1e1e1;
@@ -93,7 +95,16 @@ textarea {
       border:none;
       border-radius: 0;
       @media (max-width: 1199px) {
-        width: 238px;
+        width: 200px;
+      }
+      @media (max-width: 995px) {
+        width: 160px;
+      }
+      @media (max-width: 768px) {
+        width: 285px;
+      }
+      @media (max-width: 768px) {
+        width: 160px;
       }
     }
   }
@@ -140,6 +151,7 @@ textarea {
     outline: none;
     box-shadow: none;
     position: relative;
+    left:7px;
   }
 }
 

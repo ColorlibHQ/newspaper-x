@@ -42,8 +42,13 @@
     ::-moz-placeholder {
       opacity: 1;
     }
-    ::-webkit-input-placeholder {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
       opacity: 1;
+      color: #fff;
+    }
+    ::placeholder{
+      opacity: 1;
+      color: #fff;
     }
     input[type="search"]{
       padding:3px;

@@ -6,6 +6,12 @@
     .widget-title {
       display: none;
     }
+    h3{
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: $color_text-color;
+    }
     margin-bottom: 30px;
   }
 
@@ -166,6 +172,7 @@
         	font-size:20px;
         }
         a{
+          white-space: nowrap !important;
 	      	padding: 4px 9px 4px 9px;
 	      	margin: -2px 5px;
 	      	border: 1px solid #7c95b1;
@@ -187,7 +194,7 @@
       * Dropdown categories/archives
       */
       > select {
-        width: 90%;
+        width: 100%;
         display: block;
         margin: 0 auto;
         margin-bottom: 30px;
@@ -281,11 +288,11 @@
         margin-left: 1px;
         > caption {
           border: 1px solid #e1e1e1;
-          color: $color_text-color;
+          color: #001c28;
           font-famiy: $font__main;
           text-align: center;
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 700;
           padding-bottom: 22px;
           padding-top: 22px;
           min-height: 55px;
@@ -637,7 +644,7 @@
           font-famiy: $font__main;
           text-align: center;
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 700;
           padding-bottom: 22px;
           padding-top: 22px;
           min-height: 55px;
@@ -759,6 +766,7 @@
 	      	margin: -2px 5px;
 	      	border: 1px solid #001c31;
 	      	line-height: 45px;
+          white-space: nowrap !important;
 	      	font-size: 15px !important;
 	      	&:hover{
 	        	background: $color_main-accent;

@@ -11,6 +11,26 @@
       border: none !important;
     }
   }
+  .newspaper-x-layout-b-row{
+    .card-info{
+      position: relative;
+      left: 15px;
+    }
+    .newspaper-x-title{
+      h3, h4 {
+        margin-top: -5px;
+      }
+      h3{
+        line-height: 0px;
+        margin-bottom: 5px;
+        a{
+          font-size:15px;
+          font-weight:700;
+          line-height: 20px;
+        }
+      }
+    }
+  }
   .newspaper-x-blog-post-layout-a {
     .newspaper-x-content-a {
       font-weight: 400;

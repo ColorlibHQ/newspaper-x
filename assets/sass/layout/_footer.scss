@@ -30,16 +30,32 @@
     display:block;
   a {
     font-size: 12px;
-    color: #FFF;
+    color: #f1f1f1;
     line-height: 25px;
     font-family: $font__main;
     float: right;
     position: relative;
-    right: -102px;
+    right: -120px;
     background: #001d3e;
-    padding: 10px 25px;
+    padding: 10px 31px 11px 36px;
     font-weight: 700;
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
+      span{
+        display:none;
+      }
+      padding: 6px;
+      font-size: 23px;
+      text-align: center;
+      height: 35px;
+      width: 35px;
+      right: -35px;
+      line-height: 25px;
+      i{
+        padding-left: 5px;
+        padding-right: 3px;
+      }
+    }
+    @media (max-width: 768px) {
       position:relative;
       float:none;
       margin:0px;
@@ -55,5 +71,8 @@
 .site-footer {
   > .widgets-area {
     padding: 10px 0 0 0;
+    @media (max-width: 990px) {
+      padding: 30px 0px;
+    }
   }
 }
