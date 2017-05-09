@@ -1,6 +1,7 @@
 .newspaper-x-recent-post-containter{
   background:#0e0e11;
   margin-top: -38px;
+  line-height:16px;
   .recent-mirror{
     position: absolute;
     height: 480px;
@@ -157,6 +158,32 @@
          @media (max-width: 768px) {
           width: 100%;
          }
+    }
+  }
+}
+.newspaper-x-recent-posts-a{
+  ul{
+    li{
+      .newspaper-x-post-info{
+        bottom:42px;
+        h6{
+          a{
+            font-weight: 700;
+            bottom: -2px;
+            position: relative;
+          }
+        }
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        background: #000;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:#000;
+        opacity: .5;
+      }
     }
   }
 }

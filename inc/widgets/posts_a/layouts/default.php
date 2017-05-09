@@ -9,7 +9,7 @@ if ( $posts->have_posts() ): ?>
 <div class="site-content newspaper-spacer-a">
 		 	<div class="row">
 				<div class="col-md-12">
-						<div class="newspaper-x-recent-posts">
+						<div class="newspaper-x-recent-posts newspaper-x-recent-posts-a">
 							<ul>
 							<?php while ( $posts->have_posts() ) : $posts->the_post();
 								$i ++;

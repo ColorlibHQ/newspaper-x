@@ -30,14 +30,14 @@
     display:block;
   a {
     font-size: 12px;
-    color: #FFF;
+    color: #f1f1f1;
     line-height: 25px;
     font-family: $font__main;
     float: right;
     position: relative;
-    right: -102px;
+    right: -115px;
     background: #001d3e;
-    padding: 10px 25px;
+    padding: 10px 31px 11px 36px;
     font-weight: 700;
     @media (max-width: 1200px) {
       position:relative;

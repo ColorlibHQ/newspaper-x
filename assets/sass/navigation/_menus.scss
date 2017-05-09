@@ -189,12 +189,12 @@
 /* Newspaper X Menu Customization starts here */
 #site-navigation {
   a {
-    font-size: 18px;
+    font-size: 15px;
     font-family: $font__main;
     line-height: 26px;
     padding-bottom: 10px;
     position: relative;
-    color: $color__text-title;
+    color: #939393;
     display: inline-block;
     font-weight: 300;
   }
@@ -240,7 +240,7 @@
           font-size: 16px;
           display: inline-block;
           padding-left: 5px;
-          color: $color__text-title;
+          color: #939393;
         }
         > ul {
           li {
@@ -275,6 +275,11 @@
             }
           }
         }
+      }
+    }
+    .sub-menu{
+      a{
+        color: #333;
       }
     }
     .current_page_item{

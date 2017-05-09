@@ -109,6 +109,7 @@ h6 {
   line-height: 25px; }
 
 .section-title, .page-title, .newspaper-x-content .widget-title, .newspaper-x-after-content-sidebar .widget-title, #comments > h3:first-of-type, #reply-title, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3 {
+  padding: 2px 0px;
   font-weight: 700;
   font-family: "Nunito Sans", sans-serif;
   font-size: 24px;
@@ -120,16 +121,20 @@ h6 {
   .section-title.comment-reply-title, .comment-reply-title.page-title, .newspaper-x-content .comment-reply-title.widget-title, .newspaper-x-after-content-sidebar .comment-reply-title.widget-title, #comments > h3.comment-reply-title:first-of-type, .comment-reply-title#reply-title, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3.comment-reply-title {
     margin-top: 20px; }
   .section-title > span, .page-title > span, .newspaper-x-content .widget-title > span, .newspaper-x-after-content-sidebar .widget-title > span, #comments > h3:first-of-type > span, #reply-title > span, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3 > span {
-    padding-left: 27px;
+    padding-left: 18px;
     background-color: #FFF;
     z-index: 1;
+    font-family: "Nunito Sans", sans-serif;
     position: relative;
-    padding-right: 10px; }
+    padding-right: 18px;
+    color: #001936;
+    font-size: 24px;
+    font-weight: 900; }
   .section-title:after, .page-title:after, .newspaper-x-content .widget-title:after, .newspaper-x-after-content-sidebar .widget-title:after, #comments > h3:first-of-type:after, #reply-title:after, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3:after {
     content: '';
     width: 100%;
     height: 0px;
-    border-bottom: 1px dotted #444;
+    border-bottom: 1px dotted #b7b7b7;
     position: absolute;
     display: block;
     top: 12px;
@@ -501,7 +506,7 @@ input[type="color"] {
     border-color: #89b3ce; }
 
 input[type="search"] {
-  padding: 10px; }
+  padding: 5px; }
 
 textarea {
   padding: 0px 15px;
@@ -519,12 +524,12 @@ textarea {
       display: inline-block; } }
   #searchform .search-submit {
     background: none;
-    font-size: 15px;
+    font-size: 11px;
     border-left: 1px solid;
     border-right: 0px;
     border-top: 0px;
     border-bottom: 0px;
-    padding: 9px 15px;
+    padding: 6px 14px;
     float: right;
     margin-top: 7px;
     color: #e1e1e1; }
@@ -578,7 +583,8 @@ textarea {
   border: none;
   outline: none;
   box-shadow: none;
-  position: relative; }
+  position: relative;
+  left: 7px; }
 
 #cat {
   padding: 10px;
@@ -719,12 +725,12 @@ a {
 
 /* Newspaper X Menu Customization starts here */
 #site-navigation a {
-  font-size: 18px;
+  font-size: 15px;
   font-family: "Nunito Sans", sans-serif;
   line-height: 26px;
   padding-bottom: 10px;
   position: relative;
-  color: #333;
+  color: #939393;
   display: inline-block;
   font-weight: 300; }
 #site-navigation .menu {
@@ -761,7 +767,7 @@ a {
       font-size: 16px;
       display: inline-block;
       padding-left: 5px;
-      color: #333; }
+      color: #939393; }
     #site-navigation .menu > li.menu-item-has-children > ul li:hover {
       color: #FFF;
       background-color: #0e649b; }
@@ -783,6 +789,8 @@ a {
     #site-navigation .menu > li.menu-item-has-children > ul li a {
       padding: 10px 20px;
       font-size: 15px; }
+  #site-navigation .menu .sub-menu a {
+    color: #333; }
   #site-navigation .menu .current_page_item {
     border-top: 3px solid #0a396d;
     bottom: 2px; }
@@ -827,7 +835,12 @@ a {
     .top-header #searchform_topbar ::-moz-placeholder {
       opacity: 1; }
     .top-header #searchform_topbar ::-webkit-input-placeholder {
-      opacity: 1; }
+      /* Chrome/Opera/Safari */
+      opacity: 1;
+      color: #fff; }
+    .top-header #searchform_topbar ::placeholder {
+      opacity: 1;
+      color: #fff; }
     .top-header #searchform_topbar input[type="search"] {
       padding: 3px;
       background: #04132d;
@@ -874,7 +887,7 @@ a {
     display: inline-block;
     position: relative; }
     #menu-social ul li a, #menu-social-1 ul li a {
-      padding: 8px 5px;
+      padding: 8px 2px;
       color: #FFF;
       /* Add hover effects for the links, the brand colors */
       /* Add the social links depending on the link href */ }
@@ -1048,6 +1061,11 @@ a {
     margin-bottom: 30px; }
     .newspaper-x-blog-sidebar .widget_search .widget-title {
       display: none; }
+    .newspaper-x-blog-sidebar .widget_search h3 {
+      text-transform: uppercase;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #001936; }
   .newspaper-x-blog-sidebar select {
     padding: 10px; }
   .newspaper-x-blog-sidebar .widget_newspaper_x_banner, .newspaper-x-blog-sidebar .widget_text {
@@ -1238,7 +1256,7 @@ a {
           font-famiy: "Nunito Sans", sans-serif;
           text-align: center;
           font-size: 20px;
-          font-weight: 400;
+          font-weight: 700;
           padding-bottom: 22px;
           padding-top: 22px;
           min-height: 55px;
@@ -1710,6 +1728,22 @@ a {
   margin-bottom: 30px; }
 .newspaper_x_widgets .newspaper-x-layout-b-row:last-of-type .border {
   border: none !important; }
+.newspaper_x_widgets .newspaper-x-layout-b-row .card-info {
+  position: relative;
+  left: 15px; }
+.newspaper_x_widgets .newspaper-x-layout-b-row .newspaper-x-title h3, .newspaper_x_widgets .newspaper-x-layout-b-row .newspaper-x-title h4 {
+  margin-top: -5px; }
+.newspaper_x_widgets .newspaper-x-layout-b-row .newspaper-x-title h3 {
+  line-height: 0px;
+  margin-bottom: 5px; }
+  .newspaper_x_widgets .newspaper-x-layout-b-row .newspaper-x-title h3 a {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px; }
+.newspaper_x_widgets .newspaper-x-layout-b-row .newspaper-x-post-d-sidebar .newspaper-x-title h3, .newspaper_x_widgets .newspaper-x-layout-b-row .newspaper-x-post-d-sidebar .newspaper-x-title h4 {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0px; }
 .newspaper_x_widgets .newspaper-x-blog-post-layout-a .newspaper-x-content-a {
   font-weight: 400;
   line-height: 20px;
@@ -2522,14 +2556,14 @@ a {
   display: block; }
   .back-to-top-area a {
     font-size: 12px;
-    color: #FFF;
+    color: #f1f1f1;
     line-height: 25px;
     font-family: "Nunito Sans", sans-serif;
     float: right;
     position: relative;
-    right: -102px;
+    right: -115px;
     background: #001d3e;
-    padding: 10px 25px;
+    padding: 10px 31px 11px 36px;
     font-weight: 700; }
     @media (max-width: 1200px) {
       .back-to-top-area a {
@@ -2562,7 +2596,8 @@ a {
 --------------------------------------------------------------*/
 .newspaper-x-recent-post-containter {
   background: #0e0e11;
-  margin-top: -38px; }
+  margin-top: -38px;
+  line-height: 16px; }
   .newspaper-x-recent-post-containter .recent-mirror {
     position: absolute;
     height: 480px;
@@ -2706,6 +2741,22 @@ a {
         .newspaper-x-recent-posts > ul .newspaper-x-post-sidebar {
           width: 100%; } }
 
+.newspaper-x-recent-posts-a ul li .newspaper-x-post-info {
+  bottom: 42px; }
+  .newspaper-x-recent-posts-a ul li .newspaper-x-post-info h6 a {
+    font-weight: 700;
+    bottom: -2px;
+    position: relative; }
+.newspaper-x-recent-posts-a ul li:after {
+  content: '';
+  position: absolute;
+  background: #000;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .5; }
+
 .newspaper-x-related-posts {
   margin-top: 40px;
   margin-bottom: 50px; }
@@ -2761,7 +2812,8 @@ a {
     display: block;
     position: absolute;
     top: 0px;
-    width: 100%; }
+    width: 100%;
+    left: -10px; }
   .newspaper-x-news-ticker .newspaper-x-module-title {
     color: #FFF;
     padding: 0px 21px 0px 11px;
