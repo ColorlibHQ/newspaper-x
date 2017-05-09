@@ -118,3 +118,9 @@ li.blazy {
     .fa-angle-left{ margin-right:20px;}
   }
 }
+ul{
+  &.children{
+    list-style:none;
+    padding: 0px;
+  }
+}

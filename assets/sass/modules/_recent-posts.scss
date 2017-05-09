@@ -1,3 +1,22 @@
+.newspaper-x-with-sidebar{
+  .newspaper-x-post-sidebar {
+    width: 50%;
+     @media (max-width: 768px) {
+      width: 100%;
+     }
+  }
+  .newspaper-x-post-d-sidebar{
+      .newspaper-x-title {
+        h3, h4 {
+            font-size: 16px;
+            line-height: 26px;
+            margin: 0px;
+        }
+      }
+  }
+
+}
+
 .newspaper-x-recent-post-containter{
   background:#0e0e11;
   margin-top: -38px;
@@ -153,12 +172,7 @@
         }
       }
     }
-    .newspaper-x-post-sidebar {
-        width: 50%;
-         @media (max-width: 768px) {
-          width: 100%;
-         }
-    }
+    
   }
 }
 .newspaper-x-recent-posts-a{

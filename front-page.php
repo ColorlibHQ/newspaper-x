@@ -90,7 +90,7 @@ else:
 	<div class="row">
 
 		<?php if ( is_active_sidebar( 'content-area' ) ) { ?>
-			<div class="<?php echo is_active_sidebar( 'sidebar' ) ? 'col-md-8' : 'col-md-12' ?> newspaper-x-content">
+			<div class="<?php echo is_active_sidebar( 'sidebar' ) ? 'col-md-8' : 'col-md-12' ?> newspaper-x-content newspaper-x-with-sidebar">
 				<?php dynamic_sidebar( 'content-area' ); ?>
 			</div>
 		<?php } ?>

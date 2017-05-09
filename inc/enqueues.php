@@ -9,7 +9,7 @@ function newspaper_x_scripts() {
 	/**
 	 * Load Google Fonts
 	 */
-	wp_enqueue_style( 'newspaper-x-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,700|Nunito+Sans:300,400,700,900|Source+Sans+Pro:400,700', array(), $newspaper_x['Version'], 'all' );
+	wp_enqueue_style( 'newspaper-x-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,700|Nunito+Sans:300,400,600,700,900|Source+Sans+Pro:400,700', array(), $newspaper_x['Version'], 'all' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/vendors/fontawesome//font-awesome.min.css' );
 
 	/**
