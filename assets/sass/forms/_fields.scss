@@ -52,7 +52,7 @@ input[type="search"]{
   padding:5px;
 }
 textarea {
-  padding: 0px 15px;
+  padding: 10px 15px;
   line-height:25px;
   min-height: 160px;
   color:#8b8d91;
@@ -65,6 +65,8 @@ textarea {
 
 #searchform {
     border: 1px solid #e1e1e1;
+    display: inline-block;
+    width: 100%;
     @media (max-width: 361px) {
       display: inline-block;
     }
@@ -93,7 +95,16 @@ textarea {
       border:none;
       border-radius: 0;
       @media (max-width: 1199px) {
-        width: 238px;
+        width: 200px;
+      }
+      @media (max-width: 995px) {
+        width: 160px;
+      }
+      @media (max-width: 768px) {
+        width: 285px;
+      }
+      @media (max-width: 768px) {
+        width: 160px;
       }
     }
   }

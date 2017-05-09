@@ -71,5 +71,8 @@
 .site-footer {
   > .widgets-area {
     padding: 10px 0 0 0;
+    @media (max-width: 990px) {
+      padding: 30px 0px;
+    }
   }
 }

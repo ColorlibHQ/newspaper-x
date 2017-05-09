@@ -11,7 +11,7 @@
 <div class="top-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-lg-8">
                 <?php $news_ticker = get_theme_mod( 'newspaper_x_enable_news_ticker', true ); ?>
                 <?php if ( $news_ticker ) { ?>
                     <section class="newspaper-x-news-ticker">
@@ -21,7 +21,7 @@
                     </section>
                 <?php } ?>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <?php
                 $enable_search = get_theme_mod( 'newspaper_x_enable_top_bar_search', true );
                 if ( $enable_search ): ?>
