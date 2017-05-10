@@ -7,8 +7,8 @@ global $wp_customize;
 $wp_customize->add_setting( 'newspaper_x_enable_top_bar',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -20,8 +20,8 @@ $wp_customize->add_setting( 'newspaper_x_enable_top_bar',
 $wp_customize->add_setting( 'newspaper_x_enable_top_bar_search',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -30,8 +30,8 @@ $wp_customize->add_setting( 'newspaper_x_enable_top_bar_search',
 $wp_customize->add_setting( 'newspaper_x_enable_news_ticker',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -43,8 +43,8 @@ $wp_customize->add_setting( 'newspaper_x_enable_news_ticker',
 $wp_customize->add_setting( 'newspaper_x_enable_post_breadcrumbs',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -57,8 +57,8 @@ $wp_customize->add_setting( 'newspaper_x_enable_post_breadcrumbs',
 $wp_customize->add_setting( 'newspaper_x_blog_breadcrumb_menu_post_category',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -70,8 +70,8 @@ $wp_customize->add_setting( 'newspaper_x_blog_breadcrumb_menu_post_category',
 $wp_customize->add_setting( 'newspaper_x_footer_columns',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_radio_buttons'
 	                            ),
 	                            'default'           => 3
                             )
@@ -84,8 +84,8 @@ $wp_customize->add_setting( 'newspaper_x_footer_columns',
 $wp_customize->add_setting( 'newspaper_x_enable_copyright',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -105,8 +105,8 @@ $wp_customize->add_setting( 'newspaper_x_copyright_contents',
 $wp_customize->add_setting( 'newspaper_x_enable_go_top',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -118,8 +118,8 @@ $wp_customize->add_setting( 'newspaper_x_enable_go_top',
 $wp_customize->add_setting( 'newspaper_x_related_posts_enabled',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -141,8 +141,8 @@ $wp_customize->add_setting( 'newspaper_x_howmany_blog_posts',
 $wp_customize->add_setting( 'newspaper_x_autoplay_blog_posts',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -154,8 +154,8 @@ $wp_customize->add_setting( 'newspaper_x_autoplay_blog_posts',
 $wp_customize->add_setting( 'newspaper_x_enable_related_title_blog_posts',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -167,8 +167,8 @@ $wp_customize->add_setting( 'newspaper_x_enable_related_title_blog_posts',
 $wp_customize->add_setting( 'newspaper_x_enable_related_date_blog_posts',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => false
                             )
@@ -180,8 +180,8 @@ $wp_customize->add_setting( 'newspaper_x_enable_related_date_blog_posts',
 $wp_customize->add_setting( 'newspaper_x_enable_author_box',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )

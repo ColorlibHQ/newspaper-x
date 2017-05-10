@@ -8,7 +8,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_top_bar',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Top Bar Section', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_general_section',
 	                            )
@@ -23,7 +23,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_top_bar_search',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Search form', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_general_section',
 	                            )
@@ -38,7 +38,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_news_ticker',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'News ticker', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_general_section',
 	                            )
@@ -52,7 +52,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_post_breadcrumbs',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Breadcrumbs', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -70,7 +70,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_blog_breadcrumb_menu_post_category',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Show post category in breadcrumbs', 'newspaper-x' ),
 		                            'section'         => 'newspaper_x_blog_section',
 		                            'active_callback' => 'breadcrumbs_enabled_callback',
@@ -102,7 +102,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_copyright',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Copyright footer bar', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_footer_section',
 	                            )
@@ -125,7 +125,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_go_top',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Go Top Button', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_footer_section',
 	                            )
@@ -141,7 +141,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_author_box',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Author info section', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -155,7 +155,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_related_posts_enabled',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Related Posts Section', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -169,7 +169,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_autoplay_blog_posts',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Autoplay related carousel', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -203,7 +203,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_related_title_blog_posts',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Posts title in the carousel', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -217,7 +217,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_related_date_blog_posts',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Posts date in the carousel', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -232,5 +232,4 @@ function breadcrumbs_enabled_callback( $control ) {
 	}
 
 	return false;
-
 }
