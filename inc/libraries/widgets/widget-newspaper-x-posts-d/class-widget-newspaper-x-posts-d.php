@@ -136,7 +136,6 @@ class Widget_Newspaper_X_Posts_D extends WP_Widget {
                  data-attr-max="10" data-attr-step="1" class="ss-slider"></div>
             <script>
 							jQuery(document).ready(function ($) {
-								console.log('aaa');
 								$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"]').slider({
 									value: <?php echo esc_attr( $instance['offset'] ); ?>,
 									range: 'min',
