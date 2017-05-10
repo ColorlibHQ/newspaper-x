@@ -1,4 +1,4 @@
-<div class="col-md-6 col-xs-6  <?php if ( is_active_sidebar('sidebar') ) { echo 'newspaper-x-post-d-sidebar';} ?>">
+<div class="col-md-6 col-xs-6  <?php if ( is_active_sidebar('sidebar-homepage') ) { echo 'newspaper-x-post-d-sidebar';} ?>">
     <div class="newspaper-x-blog-post-layout-b border">
         <div class="row">
             <div class="col-sm-4 col-xs-12">

@@ -45,20 +45,7 @@
 		}
 
 		wp.customize.selectiveRefresh.bind('widget-updated', function (placement) {
-			switch ( placement.widgetIdParts.idBase ) {
-				case 'newsmag_widget_posts_carousel':
-					MachoThemes.initOwlCarousel($);
-					break;
-				case 'newsmag_slider_widget':
-					MachoThemes.initMainSlider($);
-					break;
-				case 'newsmag_widget_posts_video':
-				case 'newsmag_widget_posts_video_grid':
-					MachoThemes.initPlyr($);
-					break;
-			}
 			MachoThemes.initBlazyLoad($);
-			MachoThemes.initStyleSelects($);
 		});
 	});
 })(jQuery);

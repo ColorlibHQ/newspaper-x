@@ -25,8 +25,8 @@ class Newspaper_X_Hooks {
 		/**
 		 * Ajax request to retrieve Attachment Image
 		 */
-		add_action( 'wp_ajax_newsmag_get_attachment_image', array( $this, 'get_attachment_image' ) );
-		add_action( 'wp_ajax_nopriv_newsmag_get_attachment_image', array( $this, 'get_attachment_image' ) );
+		add_action( 'wp_ajax_newspaper_x_get_attachment_image', array( $this, 'get_attachment_image' ) );
+		add_action( 'wp_ajax_nopriv_newspaper_x_get_attachment_image', array( $this, 'get_attachment_image' ) );
 		/**
 		 * Custom body classes
 		 */

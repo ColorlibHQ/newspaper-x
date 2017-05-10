@@ -46,6 +46,14 @@ class Newspaper_X_Sidebars {
 				'after_title'   => '</h3>',
 			),
 			array(
+				'id'            => 'sidebar-homepage',
+				'name'          => esc_html__( 'Frontpage Sidebar', 'newspaper-x' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3>',
+				'after_title'   => '</h3>',
+			),
+			array(
 				'id'            => 'content-area',
 				'name'          => esc_html__( 'Homepage - Content area', 'newspaper-x' ),
 				'description'   => esc_html__( 'The sidebar holds the entire homepage content.', 'newspaper-x' ),
@@ -120,6 +128,7 @@ class Newspaper_X_Sidebars {
 			'Widget_Newspaper_X_Posts_B',
 			'Widget_Newspaper_X_Posts_C',
 			'Widget_Newspaper_X_Posts_D',
+			'Widget_Newspaper_X_Banner',
 		);
 
 		foreach ( $widgets as $widget ) {
