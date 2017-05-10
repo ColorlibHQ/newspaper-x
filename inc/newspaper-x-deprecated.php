@@ -71,3 +71,4 @@ function newspaper_x_check_archive() {
 function newspaper_x_get_first_posts( $array ) {
 	return Newspaper_X_Helper::get_first_posts( $array );
 }
+

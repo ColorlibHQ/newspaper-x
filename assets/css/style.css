@@ -2640,10 +2640,10 @@ a {
   .newspaper-x-recent-post-containter .recent-mirror {
     position: absolute;
     height: 480px;
-    width: 100%;
+    width: 50%;
     opacity: 0.4;
     background-repeat: no-repeat;
-    background-size: 60%; }
+    background-size: cover; }
     @media (max-width: 1200px) {
       .newspaper-x-recent-post-containter .recent-mirror {
         display: none; } }

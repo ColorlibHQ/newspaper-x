@@ -24,10 +24,10 @@
   .recent-mirror{
     position: absolute;
     height: 480px;
-    width: 100%;
+    width: 50%;
     opacity: 0.4;
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: cover;
     @media (max-width: 1200px) {
       display:none;
     }
