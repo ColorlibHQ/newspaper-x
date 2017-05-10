@@ -148,6 +148,9 @@ h6 {
   margin: 0;
   border: none; }
 
+.newspaper-x-related-posts .newspaper-x-related-posts-title > h3 {
+  margin-top: 20px; }
+
 dfn, cite, em, i {
   font-style: italic; }
 
@@ -2124,7 +2127,7 @@ a {
     color: #bfbfbf; }
 .single-post .newspaper-x-tags {
   font-family: "Nunito Sans", sans-serif;
-  padding-bottom: 40px;
+  padding-bottom: 27px;
   margin-bottom: 25px;
   border-bottom: 1px solid #ebebeb; }
   .single-post .newspaper-x-tags:nth-of-type(2) {

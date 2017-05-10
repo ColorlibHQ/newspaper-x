@@ -12,11 +12,7 @@ class Newspaper_X_Customizer {
 	 * MedZone_Customizer_Helper constructor.
 	 */
 	public function __construct() {
-		$path = get_template_directory() . '/inc/libraries/epsilon-framework-addon';
-		if ( file_exists( $path . '/class-epsilon-control-checkbox-multiple.php' ) ) {
-			require_once $path . '/class-epsilon-control-checkbox-multiple.php';
-		}
-
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customizer_enqueue_scripts' ) );
 		add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 		$this->change_default_panels();
@@ -27,6 +23,12 @@ class Newspaper_X_Customizer {
 	 * Loads the settings for the panels
 	 */
 	public function add_theme_options() {
+		$path = get_template_directory() . '/inc/libraries/epsilon-framework-addon';
+
+		if ( file_exists( $path . '/class-epsilon-control-checkbox-multiple.php' ) ) {
+			require_once $path . '/class-epsilon-control-checkbox-multiple.php';
+		}
+
 		$path  = get_template_directory() . '/inc/customizer/settings';
 		$dirs  = glob( $path . '/*', GLOB_ONLYDIR );
 		$files = array( 'panels', 'sections', 'settings', 'controls' );
@@ -99,6 +101,15 @@ class Newspaper_X_Customizer {
 			},
 		) );
 
+	}
+
+	/*
+	 * Our Customizer script
+	 *
+	 * Dependencies: Customizer Controls script (core)
+	 */
+	public function customizer_enqueue_scripts() {
+		wp_enqueue_script( 'customizer-scripts', get_template_directory_uri() . '/inc/customizer/assets/js/customizer.js', array( 'customize-controls' ) );
 	}
 
 	/**

@@ -44,11 +44,11 @@ class Newspaper_X_Profile_Fields {
 
 		$socials = array_filter( $socials );
 
-		$html = '<div class="social-list"><ul>';
+		$html = '<ul class="social-links">';
 		foreach ( $socials as $k => $v ) {
 			$html .= '<li><a href="' . esc_url( $v ) .'" target="_blank"><i class="fa fa-' . esc_attr( $k ) . '"></i></a></li>';
 		}
-		$html .= '</ul></div><!-- end .author-bio-social -->';
+		$html .= '</ul><!-- end .author-bio-social -->';
 
 		echo $html;
 	}

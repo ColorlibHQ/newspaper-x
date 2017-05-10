@@ -16,12 +16,14 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 
     }
 
-    public function enqueue() {
-        wp_enqueue_script( 'jquery-ui' );
-        wp_enqueue_script( 'jquery-ui-slider' );
-        wp_enqueue_style( 'epsilon-styles', get_template_directory_uri() . '/inc/libraries/epsilon-framework/assets/css/style.css' );
-        wp_enqueue_script( 'epsilon-object', get_template_directory_uri() . '/inc/libraries/epsilon-framework/assets/js/epsilon.js', array( 'jquery' ) );
-    }
+	public function enqueue() {
+		if ( is_admin() && ! is_customize_preview() ) {
+			wp_enqueue_script( 'jquery-ui' );
+			wp_enqueue_script( 'jquery-ui-slider' );
+			wp_enqueue_style( 'epsilon-styles', get_template_directory_uri() . '/inc/libraries/epsilon-framework/assets/css/style.css' );
+			wp_enqueue_script( 'epsilon-object', get_template_directory_uri() . '/inc/libraries/epsilon-framework/assets/js/epsilon.js', array( 'jquery' ) );
+		}
+	}
 
     public function form( $instance ) {
         $defaults = array(

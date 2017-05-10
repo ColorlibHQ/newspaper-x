@@ -18,7 +18,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * @access public
 		 * @var    string
 		 */
-		public $type = 'checkbox-multiple';
+		public $type = 'epsilon-checkbox-multiple';
 
 		/**
 		 * Enqueue scripts/styles.
@@ -28,7 +28,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * @return void
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'newspaper-x-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/libraries/epsilon-framework-addon/assets/js/epsilon-control-checkbox-multiple.js', array( 'jquery' ) );
+			wp_enqueue_script( 'newspaper-x-customize-controls', trailingslashit( get_template_directory_uri() ) . 'inc/libraries/epsilon-framework-addon/assets/js/epsilon-control-checkbox-multiple.js', array( 'epsilon-object' ) );
 		}
 
 		/**
@@ -45,33 +45,33 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			} ?>
 
 			<?php if ( ! empty( $this->label ) ) : ?>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $this->description ) ) : ?>
-				<span
-					class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+                <span
+                        class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 			<?php endif; ?>
 
 			<?php $multi_values = ! is_array( $this->value() ) ? explode( ',', $this->value() ) : $this->value(); ?>
 
-			<ul>
+            <ul>
 				<?php foreach ( $this->choices as $value => $label ) : ?>
 
-					<li>
-						<label>
-							<input type="checkbox"
-							       class="newspaper-x-control-multiple"
-							       value="<?php echo esc_attr( $value ); ?>" <?php checked( in_array( $value, $multi_values ) ); ?> />
+                    <li>
+                        <label>
+                            <input type="checkbox"
+                                   class="newspaper-x-control-multiple"
+                                   value="<?php echo esc_attr( $value ); ?>" <?php checked( in_array( $value, $multi_values ) ); ?> />
 							<?php echo esc_html( $label ); ?>
-						</label>
-					</li>
+                        </label>
+                    </li>
 
 				<?php endforeach; ?>
-			</ul>
+            </ul>
 
-			<input type="hidden" <?php $this->link(); ?>
-			       value="<?php echo esc_attr( implode( ',', $multi_values ) ); ?>"/>
+            <input type="hidden" <?php $this->link(); ?>
+                   value="<?php echo esc_attr( implode( ',', $multi_values ) ); ?>"/>
 		<?php }
 	}
 }

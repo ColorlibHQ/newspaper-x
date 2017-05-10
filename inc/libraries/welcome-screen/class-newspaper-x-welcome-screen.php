@@ -18,12 +18,6 @@ class Newspaper_X_Welcome_Screen {
 		/* enqueue script and style for welcome screen */
 		add_action( 'admin_enqueue_scripts', array( $this, 'newspaper_x_welcome_style_and_scripts' ) );
 
-		/* enqueue script for customizer */
-		add_action( 'customize_controls_enqueue_scripts', array(
-			$this,
-			'newspaper_x_welcome_scripts_for_customizer'
-		) );
-
 		/* ajax callback for dismissable required actions */
 		add_action( 'wp_ajax_newspaper_x_dismiss_required_action', array(
 			$this,
@@ -142,8 +136,8 @@ class Newspaper_X_Welcome_Screen {
 	 */
 	public function newspaper_x_welcome_style_and_scripts( $hook_suffix ) {
 
-		wp_enqueue_style( 'newspaper-x-welcome-screen-css', get_template_directory_uri() . '/inc/admin/welcome-screen/css/welcome.css' );
-		wp_enqueue_script( 'newspaper-x-welcome-screen-js', get_template_directory_uri() . '/inc/admin/welcome-screen/js/welcome.js', array( 'jquery' ) );
+		wp_enqueue_style( 'newspaper-x-welcome-screen-css', get_template_directory_uri() . '/inc/libraries/welcome-screen/css/welcome.css' );
+		wp_enqueue_script( 'newspaper-x-welcome-screen-js', get_template_directory_uri() . '/inc/libraries/welcome-screen/js/welcome.js', array( 'jquery' ) );
 
 		wp_localize_script( 'newspaper-x-welcome-screen-js', 'newspaperXWelcomeScreenObject', array(
 			'nr_actions_required'      => absint( $this->count_actions() ),
@@ -161,8 +155,8 @@ class Newspaper_X_Welcome_Screen {
 	 */
 	public function newspaper_x_welcome_scripts_for_customizer() {
 
-		wp_enqueue_style( 'newspaper-x-welcome-screen-customizer-css', get_template_directory_uri() . '/inc/admin/welcome-screen/css/welcome_customizer.css' );
-		wp_enqueue_script( 'newspaper-x-welcome-screen-customizer-js', get_template_directory_uri() . '/inc/admin/welcome-screen/js/welcome_customizer.js', array( 'jquery' ), '20120206', true );
+		wp_enqueue_style( 'newspaper-x-welcome-screen-customizer-css', get_template_directory_uri() . '/inc/libraries/welcome-screen/css/welcome_customizer.css' );
+		wp_enqueue_script( 'newspaper-x-welcome-screen-customizer-js', get_template_directory_uri() . '/inc/libraries/welcome-screen/js/welcome_customizer.js', array( 'jquery' ), '20120206', true );
 
 		wp_localize_script( 'newspaper-x-welcome-screen-customizer-js', 'newspaperXWelcomeScreenCustomizerObject', array(
 			'nr_actions_required' => absint( $this->count_actions() ),
@@ -396,19 +390,19 @@ class Newspaper_X_Welcome_Screen {
 			<?php
 			switch ( $active_tab ) {
 				case 'getting_started':
-					require_once get_template_directory() . '/inc/admin/welcome-screen/sections/getting-started.php';
+					require_once get_template_directory() . '/inc/libraries/welcome-screen/sections/getting-started.php';
 					break;
 				case 'recommended_actions':
-					require_once get_template_directory() . '/inc/admin/welcome-screen/sections/actions-required.php';
+					require_once get_template_directory() . '/inc/libraries/welcome-screen/sections/actions-required.php';
 					break;
 				case 'recommended_plugins':
-					require_once get_template_directory() . '/inc/admin/welcome-screen/sections/recommended-plugins.php';
+					require_once get_template_directory() . '/inc/libraries/welcome-screen/sections/recommended-plugins.php';
 					break;
 				case 'support':
-					require_once get_template_directory() . '/inc/admin/welcome-screen/sections/support.php';
+					require_once get_template_directory() . '/inc/libraries/welcome-screen/sections/support.php';
 					break;
 				default:
-					require_once get_template_directory() . '/inc/admin/welcome-screen/sections/getting-started.php';
+					require_once get_template_directory() . '/inc/libraries/welcome-screen/sections/getting-started.php';
 					break;
 			}
 			?>

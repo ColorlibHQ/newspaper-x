@@ -113,6 +113,7 @@ $wp_customize->add_control(
 		'active_callback' => 'banners_type_false_callback',
 	)
 );
+
 function banners_type_callback( $control ) {
 	if ( $control->manager->get_setting( 'newspaper_x_banner_type' )->value() == 'image' ) {
 		return true;
