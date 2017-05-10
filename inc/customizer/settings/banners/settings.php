@@ -6,8 +6,8 @@ global $wp_customize;
 $wp_customize->add_setting( 'newspaper_x_banner_type',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_radio_buttons'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_radio_buttons'
 	                            ),
 	                            'default'           => 'image'
                             )
@@ -28,8 +28,8 @@ $wp_customize->add_setting( 'newspaper_x_show_banner_after',
 $wp_customize->add_setting( 'newspaper_x_show_banner_on_homepage',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -40,8 +40,8 @@ $wp_customize->add_setting( 'newspaper_x_show_banner_on_homepage',
 $wp_customize->add_setting( 'newspaper_x_show_banner_on_archive_pages',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_checkbox'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_checkbox'
 	                            ),
 	                            'default'           => true
                             )
@@ -54,8 +54,8 @@ $wp_customize->add_setting( 'newspaper_x_show_banner_on_archive_pages',
 $wp_customize->add_setting( 'newspaper_x_banner_image',
                             array(
 	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer_Helper',
-		                            'newspaper_x_sanitize_file_url'
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_file_url'
 	                            ),
 	                            'default'           => esc_url( get_template_directory_uri() . '/assets/images/banner.jpg' ),
                             )

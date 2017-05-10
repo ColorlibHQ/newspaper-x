@@ -232,5 +232,4 @@ function breadcrumbs_enabled_callback( $control ) {
 	}
 
 	return false;
-
 }
