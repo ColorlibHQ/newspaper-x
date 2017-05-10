@@ -2637,16 +2637,6 @@ a {
   background: #0e0e11;
   margin-top: -38px;
   line-height: 16px; }
-  .newspaper-x-recent-post-containter .recent-mirror {
-    position: absolute;
-    height: 480px;
-    width: 50%;
-    opacity: 0.4;
-    background-repeat: no-repeat;
-    background-size: cover; }
-    @media (max-width: 1200px) {
-      .newspaper-x-recent-post-containter .recent-mirror {
-        display: none; } }
 
 .newspapper-spacer {
   margin-top: 40px; }
