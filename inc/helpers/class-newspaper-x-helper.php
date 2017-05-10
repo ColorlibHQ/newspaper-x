@@ -20,7 +20,7 @@ class Newspaper_X_Helper {
 	 *
 	 * @return WP_Query
 	 */
-	public static function newspaper_x_get_first_posts( $array ) {
+	public static function get_first_posts( $array ) {
 		$atts = array(
 			'posts_per_page'      => 2,
 			'order'               => 'DESC',

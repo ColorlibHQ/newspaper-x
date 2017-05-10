@@ -1,5 +1,5 @@
 = License =
-Newspaper X WordPress theme, Copyright (C) 2016 MachoThemes.com
+Newspaper X WordPress theme, Copyright (C) 2016 Colorlib.com
 Newspaper X WordPress theme is licensed under the GPL3.
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
@@ -9,9 +9,9 @@ The exceptions to this license are as follows:
 
 - Images used in theme screenshot are taken from unsplash.com
     
-- Logo created by MachoThemes
+- Logo created by Colorlib
 
-- Banner placeholders created by MachoThemes
+- Banner placeholders created by Colorlib
 
 === Vendors ===
     
@@ -33,14 +33,14 @@ The exceptions to this license are as follows:
 - Adsense loader
     -- By Osvaldas Valutis, www.osvaldas.info
     -- available for use under the MIT License
-- MachoThemes
-    -- MachoThemes https://machothemes.com
+- Colorlib
+    -- Colorlib https://Colorlib.com
     -- available for use under the MIT License
 - Selectize
     -- Copyright (c) 2013 Brian Reavis & contributors
     -- Licensed under the Apache License, Version 2.0 (the "License");
 - Epsilon
-    -- MachoThemes https://machothemes.com
+    -- Colorlib https://Colorlib.com
     -- available for use under the MIT License
 
 === Fonts ===

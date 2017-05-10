@@ -20,7 +20,7 @@ class Newspaper_X_Hooks {
 		/**
 		 * Comment form defaults
 		 */
-		add_filter( 'comment_form_defaults', 'newspaper_x_comment_form_defaults' );
+		add_filter( 'comment_form_defaults', array( $this,'newspaper_x_comment_form_defaults' ));
 
 		/**
 		 * Ajax request to retrieve Attachment Image
@@ -212,7 +212,7 @@ class Newspaper_X_Hooks {
 	 *
 	 * @return mixed
 	 */
-	public function comment_form_defaults( $defaults ) {
+	public function newspaper_x_comment_form_defaults( $defaults ) {
 		$commenter = wp_get_current_commenter();
 		$req = get_option( 'require_name_email' );
 		$aria_req = ( $req ? " aria-required='true'" : '' );

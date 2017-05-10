@@ -24,3 +24,4 @@ $wp_customize->add_section( 'newspaper_x_blog_section',
 	                            'priority' => 3,
                             )
 );
+

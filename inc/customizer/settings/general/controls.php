@@ -8,13 +8,13 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_top_bar',
 	                            array(
-		                            'type'    => 'epsilon-toggle',
-		                            'label'   => esc_html__( 'Top Bar Section', 'newspaper-x' ),
-		                            'section' => 'newspaper_x_general_section',
+		                            'type'        => 'epsilon-toggle',
+		                            'label'       => esc_html__( 'Top Bar Section', 'newspaper-x' ),
+		                            'description' => esc_html__( 'Enable a top bar section', 'newspaper-x' ),
+		                            'section'     => 'newspaper_x_general_section',
 	                            )
                             )
 );
-
 
 /**
  * Enable top bar search
@@ -23,9 +23,10 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_top_bar_search',
 	                            array(
-		                            'type'    => 'epsilon-toggle',
-		                            'label'   => esc_html__( 'Search form', 'newspaper-x' ),
-		                            'section' => 'newspaper_x_general_section',
+		                            'type'        => 'epsilon-toggle',
+		                            'label'       => esc_html__( 'Search form', 'newspaper-x' ),
+		                            'description' => esc_html__( 'Toggle the display of the search icon and functionality in the main navigation menu.', 'newspaper-x' ),
+		                            'section'     => 'newspaper_x_general_section',
 	                            )
                             )
 );
@@ -70,8 +71,8 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_blog_breadcrumb_menu_post_category',
 	                            array(
-		                            'type'    => 'epsilon-toggle',
-		                            'label'   => esc_html__( 'Show post category in breadcrumbs', 'newspaper-x' ),
+		                            'type'            => 'epsilon-toggle',
+		                            'label'           => esc_html__( 'Show post category in breadcrumbs', 'newspaper-x' ),
 		                            'section'         => 'newspaper_x_blog_section',
 		                            'active_callback' => 'breadcrumbs_enabled_callback',
 	                            )
