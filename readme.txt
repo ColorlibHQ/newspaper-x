@@ -25,6 +25,9 @@ Magazine WordPress theme.
 
 
 == Changelog ==
+### V1.2.0
+	- Redesign
+
 ### V1.1.2
 	 - Escaped where needed
 	 - Newspaper-x-bootstrap enqueue handler changed to bootstrap
