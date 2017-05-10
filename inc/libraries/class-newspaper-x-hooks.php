@@ -20,7 +20,7 @@ class Newspaper_X_Hooks {
 		/**
 		 * Comment form defaults
 		 */
-		add_filter( 'comment_form_defaults', array( $this,'newspaper_x_comment_form_defaults' ));
+		add_filter( 'comment_form_defaults', array( $this, 'comment_form_defaults' ) );
 
 		/**
 		 * Ajax request to retrieve Attachment Image
@@ -55,7 +55,7 @@ class Newspaper_X_Hooks {
 		/**
 		 * Add post tags
 		 */
-		add_filter('the_content', array($this, 'post_tags_bottom'), 0);
+		add_filter( 'the_content', array( $this, 'post_tags_bottom' ), 0 );
 	}
 
 	/**
@@ -200,9 +200,9 @@ class Newspaper_X_Hooks {
 	 * Init related posts
 	 */
 	public function load_related_posts() {
-		$display_related_blog_posts = get_theme_mod( 'newspaper_x_related_posts_enabled', 'enabled' );
+		$display_related_blog_posts = get_theme_mod( 'newspaper_x_related_posts_enabled', true );
 
-		if ( $display_related_blog_posts == 'enabled' ) {
+		if ( $display_related_blog_posts ) {
 			Newspaper_X_Related_Posts::getInstance();
 		}
 	}
@@ -212,22 +212,22 @@ class Newspaper_X_Hooks {
 	 *
 	 * @return mixed
 	 */
-	public function newspaper_x_comment_form_defaults( $defaults ) {
-		$commenter = wp_get_current_commenter();
-		$req = get_option( 'require_name_email' );
-		$aria_req = ( $req ? " aria-required='true'" : '' );
-		$defaults['title_reply'] = '<span>' . esc_html__( 'Leave a reply', 'newspaper-x' ) . '</span>';
-		$defaults['label_submit'] = esc_html__( 'Submit', 'newspaper-x' );
+	public function comment_form_defaults( $defaults ) {
+		$commenter                        = wp_get_current_commenter();
+		$req                              = get_option( 'require_name_email' );
+		$aria_req                         = ( $req ? " aria-required='true'" : '' );
+		$defaults['title_reply']          = '<span>' . esc_html__( 'Leave a reply', 'newspaper-x' ) . '</span>';
+		$defaults['label_submit']         = esc_html__( 'Submit', 'newspaper-x' );
 		$defaults['comment_notes_before'] = '<span class="comment_notes_before">' . esc_html__( 'Your email address will not be published. Required fields are marked *', 'newspaper-x' ) . '</span>';
-		$defaults['comment_field'] = '<p class="comment-form-comment"><textarea id="comment" name="comment"  placeholder="' . esc_html__( 'Comment', 'newspaper-x' ) . '" aria-required="true"></textarea></p>';
-		$defaults['fields'] = array(
+		$defaults['comment_field']        = '<p class="comment-form-comment"><textarea id="comment" name="comment"  placeholder="' . esc_html__( 'Comment', 'newspaper-x' ) . '" aria-required="true"></textarea></p>';
+		$defaults['fields']               = array(
 
 			'author' =>
-				'<div class="row"><p class="comment-form-author col-sm-4"><input id="author" name="author" type="text" placeholder="' . esc_html__( 'Name', 'newspaper-x' ) .( $req ? '*' : '' ) .'" value="' . esc_attr( $commenter['comment_author'] ) .
+				'<div class="row"><p class="comment-form-author col-sm-4"><input id="author" name="author" type="text" placeholder="' . esc_html__( 'Name', 'newspaper-x' ) . ( $req ? '*' : '' ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 				'" size="30"' . $aria_req . ' /></p>',
 
 			'email' =>
-				'<p class="comment-form-email col-sm-4"><input id="email" name="email" type="text" placeholder="' . esc_html__( 'Email', 'newspaper-x' ) .( $req ? '*' : '' ) .'" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+				'<p class="comment-form-email col-sm-4"><input id="email" name="email" type="text" placeholder="' . esc_html__( 'Email', 'newspaper-x' ) . ( $req ? '*' : '' ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 				'" size="30"' . $aria_req . ' /></p>',
 
 			'url' =>
@@ -235,6 +235,7 @@ class Newspaper_X_Hooks {
 				'<input id="url" name="url" type="text" placeholder="' . esc_html__( 'Website', 'newspaper-x' ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
 				'" size="30" /></p></div>',
 		);
+
 		return $defaults;
 	}
 
@@ -243,11 +244,15 @@ class Newspaper_X_Hooks {
 	 *
 	 * @return string
 	 */
-	public function post_tags_bottom($content) {
+	public function post_tags_bottom( $content ) {
 		$tags_list = get_the_tag_list( '<span>', '</span>' );
+		if ( ! $tags_list ) {
+			return $content;
+		}
+
 		$tags = '<div class="newspaper-x-tags"><span></span></div>';
-		if ($tags_list) {
-			$tags = '<div class="newspaper-x-tags"><strong>'.esc_html__( 'TAGS: ', 'newspaper-x' ).'</strong>'.$tags_list.' </div>';
+		if ( $tags_list ) {
+			$tags = '<div class="newspaper-x-tags"><strong>' . esc_html__( 'TAGS: ', 'newspaper-x' ) . '</strong>' . $tags_list . ' </div>';
 		}
 		$fullcontent = $content . $tags;
 

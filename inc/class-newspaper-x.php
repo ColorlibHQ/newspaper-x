@@ -48,6 +48,13 @@ class Newspaper_X {
 	}
 
 	/**
+	 * Initiate the user profiles
+	 */
+	public function init_user_profile() {
+		new Newspaper_X_Profile_Fields();
+	}
+
+	/**
 	 * Load Lazyload
 	 */
 	public function init_lazyload() {
@@ -172,16 +179,16 @@ class Newspaper_X {
 			'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) )
 		) );
 
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-
 		/**
 		 * OwlCarousel Library
 		 */
 		wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.js', array( 'jquery' ), '', true );
 		wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.css' );
 		wp_enqueue_style( 'owl.carousel-theme', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.theme.default.css' );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
 
 	/**

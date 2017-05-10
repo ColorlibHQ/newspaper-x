@@ -52,19 +52,6 @@ $wp_customize->add_setting( 'newspaper_x_enable_post_breadcrumbs',
 
 
 /**
- * Breadcrumb post category
- */
-$wp_customize->add_setting( 'newspaper_x_blog_breadcrumb_menu_post_category',
-                            array(
-	                            'sanitize_callback' => array(
-		                            'Newspaper_X_Customizer',
-		                            'sanitize_checkbox'
-	                            ),
-	                            'default'           => true
-                            )
-);
-
-/**
  * Footer Options
  */
 $wp_customize->add_setting( 'newspaper_x_footer_columns',
