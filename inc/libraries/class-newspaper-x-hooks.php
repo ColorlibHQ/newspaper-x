@@ -55,7 +55,7 @@ class Newspaper_X_Hooks {
 		/**
 		 * Add post tags
 		 */
-		add_filter('the_content', 'post_tags_bottom', 0);
+		add_filter('the_content', array($this, 'post_tags_bottom'), 0);
 	}
 
 	/**
