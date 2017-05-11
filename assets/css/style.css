@@ -2038,7 +2038,7 @@ a {
     .newspaper-x-blog-sidebar .widget_newspaper_x_recent .newspaper-x-recent-post-widget:last-of-type, .newspaper-x-sidebar .widget_newspaper_x_recent .newspaper-x-recent-post-widget:last-of-type {
       border: none; }
 
-.archive .newspaper-x-blog-sidebar, .category .newspaper-x-blog-sidebar, .blog .newspaper-x-blog-sidebar {
+.archive .newspaper-x-blog-sidebar, .category .newspaper-x-blog-sidebar, .search-results .newspaper-x-blog-sidebar, .blog .newspaper-x-blog-sidebar {
   margin-top: -20px; }
 
 /*--------------------------------------------------------------
