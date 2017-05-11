@@ -47,6 +47,20 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 );
 
 /**
+ * Enable the header background image
+ */
+$wp_customize->add_control( new WP_Customize_Color_Control(
+	                            $wp_customize,
+	                            'newspaper_x_header_bg',
+	                            array(
+		                            'label'    => esc_html__( 'Header background', 'newspaper-x' ),
+		                            'section'  => 'colors',
+		                            'settings' => 'newspaper_x_header_bg'
+	                            )
+                            )
+);
+
+/**
  * Enable breadcrumbs on single posts
  */
 $wp_customize->add_control( new Epsilon_Control_Toggle(

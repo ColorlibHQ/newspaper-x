@@ -27,8 +27,7 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 
 	public function form( $instance ) {
 		$defaults = array(
-			'order' => 'desc',
-			'offset'    => 0,
+			'order' => 'desc'
 		);
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
@@ -126,44 +125,6 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 					});
         </script>
 
-
-        <label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>">
-            <span class="customize-control-title">
-               <?php echo esc_html__( 'Posts offset', 'newspaper-x' ); ?> :
-            </span>
-        </label>
-
-         <div class="slider-container">
-            <input type="text" name="<?php echo esc_attr( $this->get_field_name( 'offset' ) ); ?>" class="rl-slider"
-                   id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"
-                   value="<?php echo esc_attr( $instance['offset'] ); ?>"/>
-
-            <div id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>" data-attr-min="0"
-                 data-attr-max="10" data-attr-step="1" class="ss-slider"></div>
-            <script>
-							jQuery(document).ready(function ($) {
-								$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"]').slider({
-									value: <?php echo esc_attr( $instance['offset'] ); ?>,
-									range: 'min',
-									min  : 0,
-									max  : 10,
-									step : 1,
-									slide: function (event, ui) {
-										$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"]').val(ui.value).keyup();
-									}
-								});
-								$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').on('focus', function () {
-									$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').trigger('blur');
-								});
-								$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').val($('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').slider("value"));
-								$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').change(function () {
-									$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').slider({
-										value: $(this).val()
-									});
-								});
-							});
-            </script>
-        </div>
         <div class="checkbox_switch">
 				<span class="customize-control-title onoffswitch_label">
                     <?php echo esc_html__( 'Show Date and Comments', 'newspaper-x' ); ?>

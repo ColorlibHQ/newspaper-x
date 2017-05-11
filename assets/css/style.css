@@ -353,7 +353,14 @@ li.blazy {
 
 ul.children {
   list-style: none;
-  padding: 0px; }
+  padding: 0; }
+
+[class^='customize-partial-edit-shortcut-widget-newspaper_x_header_module'],
+[class*=' customize-partial-edit-shortcut-widget-newspaper_x_header_module'] {
+  left: 50%; }
+
+.customize-partial-edit-shortcut-newspaper_x_header_bg {
+  right: 0; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -2656,12 +2663,12 @@ a {
 .newspaper-x-with-sidebar .newspaper-x-post-d-sidebar .newspaper-x-title h3, .newspaper-x-with-sidebar .newspaper-x-post-d-sidebar .newspaper-x-title h4 {
   font-size: 16px;
   line-height: 26px;
-  margin: 0px; }
+  margin: 0; }
 
-.newspaper-x-recent-post-containter {
+.newspaper-x-header-widget-area {
   background: #0e0e11;
   margin-top: -38px;
-  line-height: 16px; }
+  line-height: 0; }
 
 .newspapper-spacer {
   margin-top: 40px; }

@@ -148,14 +148,16 @@ class Newspaper_X {
 		wp_enqueue_style( 'newspaper-x-style', get_stylesheet_uri() );
 		wp_enqueue_style( 'newspaper-x-stylesheet', get_template_directory_uri() . '/assets/css/style.css', array(), $theme['Version'] );
 
-		$color = get_bloginfo( 'header_textcolor', 'display' );
-		if ( $color !== 'blank' ) {
+
+		$color = get_theme_mod( 'newspaper_x_header_bg', '#0E0E11' );
+
+		if ( $color !== '#0E0E11' ) {
 			$custom_css = "
-                .site-description{
-                    color: " . esc_html( $color ) . ";
+                .newspaper-x-header-widget-area{
+                    background: " . esc_html( $color ) . ";
                 }";
 
-			wp_add_inline_style( 'newspaper-x-style', $custom_css );
+			wp_add_inline_style( 'newspaper-x-stylesheet', $custom_css );
 		}
 		/**
 		 * Load menu script & skip-link-focus-fix

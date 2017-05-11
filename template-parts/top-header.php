@@ -13,13 +13,9 @@
         <div class="row">
             <div class="col-lg-8">
 				<?php $news_ticker = get_theme_mod( 'newspaper_x_enable_news_ticker', true ); ?>
-				<?php if ( $news_ticker ) { ?>
-                    <section class="newspaper-x-news-ticker">
-						<?php
-						get_template_part( 'template-parts/news-ticker' );
-						?>
-                    </section>
-				<?php } ?>
+				<?php if ( $news_ticker ) {
+					get_template_part( 'template-parts/news-ticker' );
+				} ?>
             </div>
 			<?php $has_menu = has_nav_menu( 'social' ); ?>
             <div class="col-lg-4">
@@ -27,7 +23,8 @@
 				$enable_search = get_theme_mod( 'newspaper_x_enable_top_bar_search', true );
 				if ( $enable_search ): ?>
 					<?php $search_query = get_search_query(); ?>
-                    <form role="search" method="get" <?php echo $has_menu ? '' : 'class="pull-right"' ?> id="searchform_topbar"
+                    <form role="search" method="get" <?php echo $has_menu ? '' : 'class="pull-right"' ?>
+                          id="searchform_topbar"
                           action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
                         <label>
                             <input class="" id=""
@@ -60,7 +57,9 @@
 								'fallback_cb'     => '',
 							)
 						);
-						?> </div> <?php
+						?>
+                    </div>
+					<?php
 				}
 				?>
 

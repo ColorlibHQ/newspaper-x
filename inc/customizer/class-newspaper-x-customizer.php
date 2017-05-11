@@ -101,6 +101,13 @@ class Newspaper_X_Customizer {
 			},
 		) );
 
+		$wp_customize->selective_refresh->add_partial( 'newspaper_x_header_bg', array(
+			'selector'        => '.newspaper-x-header-widget-area',
+			'render_callback' => function () {
+				get_template_part( 'template-parts/header-widget-area' );
+			},
+		) );
+
 	}
 
 	/*

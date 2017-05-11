@@ -173,3 +173,16 @@ $wp_customize->add_setting( 'newspaper_x_enable_author_box',
 	                            'default'           => true
                             )
 );
+
+/**
+ * Header background
+ */
+$wp_customize->add_setting( 'newspaper_x_header_bg',
+                            array(
+	                            'sanitize_callback' => array(
+		                            'Newspaper_X_Customizer',
+		                            'sanitize_hex_color'
+	                            ),
+	                            'default'           => '#0E0E11'
+                            )
+);

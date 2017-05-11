@@ -57,7 +57,7 @@ $wp_customize->add_setting( 'newspaper_x_banner_image',
 		                            'Newspaper_X_Customizer',
 		                            'sanitize_file_url'
 	                            ),
-	                            'default'           => esc_url( get_template_directory_uri() . '/assets/images/banner.jpg' ),
+	                            'default'           => esc_url( get_template_directory_uri() . '/assets/images/banner.png' ),
                             )
 );
 /**
