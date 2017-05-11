@@ -27,8 +27,8 @@ if ( is_home() && ! is_front_page() ) : ?>
 		</header><!-- .page-header -->
 	</div>
 <?php endif; ?>
-	<div class="row">
-		<div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	<div class="row blog">
+		<div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<main id="main" class="site-main" role="main">
 				<?php
 				$banner_count_index = 0;
@@ -61,6 +61,9 @@ if ( is_home() && ! is_front_page() ) : ?>
 								echo '</div><div class="row">';
 							} elseif ( $banner_count_index == (int) $wp_query->post_count ) {
 								continue;
+							}
+							if($banner_count_index == 2){
+								echo '</div></main></div></div><div class="row"><div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12"><main id="main" class="site-main" role="main"><div class="row">' ;
 							}
 						endwhile;
 						?>
