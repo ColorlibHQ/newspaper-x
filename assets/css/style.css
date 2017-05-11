@@ -2750,6 +2750,7 @@ a {
         position: absolute;
         bottom: 25px;
         left: 35px;
+        right: 35px;
         max-height: 95px;
         z-index: 1;
         color: #FFF;
