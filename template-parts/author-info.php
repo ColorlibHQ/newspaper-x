@@ -14,23 +14,15 @@ if ( is_single() && ! empty( $curauth->description ) && $enabled_author ) { ?>
     <!-- Author description -->
     <div class="row author-description">
         <!-- Avatar -->
-        <div class="col-md-2 tpl-avatar">
-			<?php echo get_avatar( get_the_author_meta( 'ID' ), 85 ); ?>
+        <div class="avatar text-center">
+            <img src="<?php echo get_avatar_url (get_the_author_meta( 'ID' ),array('size' => 75))?>" />
         </div>
-        <!-- .Avatar -->
-        <!-- Short Description -->
-        <div class="col-md-10" itemscope="" itemtype="http://schema.org/Person">
-            <h4 class="post-author"><?php echo get_the_author_posts_link(); ?></h4>
-
-			<?php if ( ! empty( $url ) ): ?>
-                <a class="post-author-website" href="<?php echo esc_url( get_the_author_meta( 'url' ) ) ?>"><?php echo
-					get_the_author_meta( 'url' ) ?></a>
-			<?php endif; ?>
-
-			<?php Newspaper_X_Profile_Fields::echo_social_media(); ?>
+        <div class="description">
+            <h6><?php echo get_the_author_posts_link(); ?></h6>
+            <!-- Short Description -->
             <p><?php the_author_meta( 'description' ); ?></p>
         </div>
-        <!-- .Short Description -->
+        <?php Newspaper_X_Profile_Fields::echo_social_media(); ?>
     </div>
     <!-- .Author description -->
 <?php } ?>
