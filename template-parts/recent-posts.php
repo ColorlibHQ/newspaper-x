@@ -53,7 +53,6 @@ foreach ( $recent_posts as $post ) {
 		$placeholder = $srcsmall[0];
 		if ($i == 0) {?>
 			<div class="newspaper-x-recent-post-containter" >
-				<div class="recent-mirror blazy" style="background-image:url('<?php echo esc_url( $placeholder ) ?>')" data-src="<?php echo esc_url( $image ) ?>"></div> <!-- image bg -->
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">

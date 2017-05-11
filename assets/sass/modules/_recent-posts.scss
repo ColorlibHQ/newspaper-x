@@ -21,17 +21,6 @@
   background:#0e0e11;
   margin-top: -38px;
   line-height:16px;
-  .recent-mirror{
-    position: absolute;
-    height: 480px;
-    width: 100%;
-    opacity: 0.4;
-    background-repeat: no-repeat;
-    background-size: 60%;
-    @media (max-width: 1200px) {
-      display:none;
-    }
-  }
 }
 .newspapper-spacer{
   margin-top:40px;

@@ -16,27 +16,6 @@ if ( ! defined( 'WPINC' ) ) {
  */
 
 /**
- *
- * Gets called only if the "display related posts" option is checked
- * in the back-end
- *
- * @since   1.0.0
- *
- */
-function Newspaper_X_CallRelatedPostsClass() {
-	$display_related_blog_posts = get_theme_mod( 'newspaper_x_related_posts_enabled', true );
-
-	if ( $display_related_blog_posts == 'enabled' ) {
-
-		// instantiate the class & load everything else
-		Newspaper_X_Related_Posts::getInstance();
-	}
-}
-
-add_action( 'wp_loaded', 'Newspaper_X_CallRelatedPostsClass' );
-
-
-/**
  * Class Newspaper_X_Related_Posts_Output
  */
 class Newspaper_X_Related_Posts {
@@ -55,7 +34,6 @@ class Newspaper_X_Related_Posts {
 		if ( $related_posts ) {
 			add_action( 'newspaper_x_single_after_article', array( $this, 'output_related_posts' ), 2 );
 		}
-
 
 	}
 

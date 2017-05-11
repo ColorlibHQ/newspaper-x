@@ -48,6 +48,13 @@ class Newspaper_X {
 	}
 
 	/**
+	 * Initiate the user profiles
+	 */
+	public function init_user_profile() {
+		new Newspaper_X_Profile_Fields();
+	}
+
+	/**
 	 * Load Lazyload
 	 */
 	public function init_lazyload() {
@@ -91,8 +98,7 @@ class Newspaper_X {
 
 			$newspaper_x_recommended_plugins = array(
 				'kiwi-social-share'        => array( 'recommended' => false ),
-				'modula-best-grid-gallery' => array( 'recommended' => true ),
-				'pirate-forms'             => array( 'recommended' => false )
+				'modula-best-grid-gallery' => array( 'recommended' => true )
 			);
 
 			/*
@@ -105,9 +111,9 @@ class Newspaper_X {
 			 */
 			$newspaper_x_required_actions = array(
 				array(
-					"id"          => 'newsmag-req-ac-static-latest-news',
+					"id"          => 'newspaper-x-req-ac-static-latest-news',
 					"title"       => esc_html__( 'Set front page to static', 'newspaper-x' ),
-					"description" => esc_html__( 'If you just installed Newsmag, and are not able to see the front-page demo, you need to go to Settings -> Reading , Front page displays and select "Static Page".', 'newspaper-x' ),
+					"description" => esc_html__( 'If you just installed Newspaper X, and are not able to see the front-page demo, you need to go to Settings -> Reading , Front page displays and select "Static Page".', 'newspaper-x' ),
 					"help"        => 'If you need more help understanding how this works, check out the following <a target="_blank"  href="https://codex.wordpress.org/Creating_a_Static_Front_Page#WordPress_Static_Front_Page_Process">link</a>. <br/><br/> <a class="button button-secondary" target="_blank"  href="' . self_admin_url( 'options-reading.php' ) . '">' . __( 'Set manually', 'newspaper-x' ) . '</a> <a class="button button-primary"  href="' . wp_nonce_url( self_admin_url( 'themes.php?page=newsmag-welcome&tab=recommended_actions&action=set_page_automatic' ), 'set_page_automatic' ) . '">' . __( 'Set automatically', 'newspaper-x' ) . '</a>',
 					"check"       => Newspaper_X_Notify_System::is_not_static_page()
 				)
@@ -173,16 +179,16 @@ class Newspaper_X {
 			'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) )
 		) );
 
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-
 		/**
 		 * OwlCarousel Library
 		 */
 		wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.js', array( 'jquery' ), '', true );
 		wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.css' );
 		wp_enqueue_style( 'owl.carousel-theme', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.theme.default.css' );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
 
 	/**
@@ -247,7 +253,7 @@ class Newspaper_X {
 		// Add theme support for Infinite Scroll.
 		add_theme_support( 'infinite-scroll', array(
 			'container' => 'main',
-			'render'    => array('Newspaper_X_Helper', 'infinite_scroll_render'),
+			'render'    => array( 'Newspaper_X_Helper', 'infinite_scroll_render' ),
 			'footer'    => 'page',
 		) );
 

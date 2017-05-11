@@ -10,6 +10,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * @todo - change newspaper_x posts navigation to default wordpress
+ *
  * @param array $args
  */
 
@@ -54,3 +55,20 @@ function newspaper_x_format_icon( $format = 'standard' ) {
 function newspaper_x_on_iis() {
 	return Newspaper_X_Helper::on_iis();
 }
+
+/**
+ * Helper function to determine what kind of archive page we are viewing and return an array
+ */
+function newspaper_x_check_archive() {
+	return Newspaper_X_Helper::check_archive();
+}
+
+/**
+ * @param $array
+ *
+ * @return WP_Query
+ */
+function newspaper_x_get_first_posts( $array ) {
+	return Newspaper_X_Helper::get_first_posts( $array );
+}
+

@@ -38,7 +38,7 @@ if ( $posts->have_posts() ): ?>
                             }
                             ?>
 
-                            <li class="blazy <?php if ( is_active_sidebar('sidebar') ) { echo 'newspaper-x-post-sidebar';} ?>" id="newspaper-x-recent-post-4" data-src="<?php echo esc_url( $image ) ?>"
+                            <li class="blazy <?php if ( is_active_sidebar('sidebar-homepage') ) { echo 'newspaper-x-post-sidebar';} ?>" id="newspaper-x-recent-post-4" data-src="<?php echo esc_url( $image ) ?>"
                                 style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
                                 <div class="newspaper-x-post-info">
                                     <h6>
