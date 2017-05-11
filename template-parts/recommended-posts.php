@@ -7,14 +7,14 @@
  * @package Newspaper X
  */
 
-$cats = get_theme_mod( 'newspaper_x_recent_posts_category', array( '1' ) );
+$cats = get_theme_mod( 'newspaper_x_frontpage_header_category', array( '1' ) );
 
 if ( ! $cats || ! is_array( $cats ) || ( is_array( $cats ) && empty( array_filter( $cats ) ) ) ) {
 	$cats = array( '1' );
 }
 
-$order    = get_theme_mod( 'newspaper_x_recent_posts_ordering', 'DESC' );
-$order_by = get_theme_mod( 'newspaper_x_recent_posts_order_by', 'date' );
+$order    = get_theme_mod( 'newspaper_x_frontpage_header_ordering', 'DESC' );
+$order_by = get_theme_mod( 'newspaper_x_frontpage_header_order_by', 'date' );
 $order    = is_array( $order ) ? $order[0] : $order;
 $order_by = is_array( $order_by ) ? $order_by[0] : $order_by;
 
@@ -27,9 +27,9 @@ $args = array(
 	'category'    => implode( ',', $cats )
 );
 
-$recent_posts = wp_get_recent_posts( $args, OBJECT );
+$frontpage_header = wp_get_recent_posts( $args, OBJECT );
 wp_reset_postdata();
-if ( ! $recent_posts ) {
+if ( ! $frontpage_header ) {
 	return false;
 }
 ?>
@@ -37,7 +37,7 @@ if ( ! $recent_posts ) {
 	<ul>
 		<?php
 		$i = 0;
-		foreach ( $recent_posts as $post ) {
+		foreach ( $frontpage_header as $post ) {
 			$cat         = get_the_category( $post->ID );
 			$cat_link    = get_category_link( $cat[0]->term_id );
 			$cat         = $cat[0]->name;

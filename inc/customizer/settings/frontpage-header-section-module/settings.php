@@ -4,7 +4,7 @@ global $wp_customize;
 /**
  * Show / Hide the top bar
  */
-$wp_customize->add_setting( 'newspaper_x_recent_posts_category',
+$wp_customize->add_setting( 'newspaper_x_frontpage_header_category',
                             array(
 	                            'sanitize_callback' => array(
 		                            'Newspaper_X_Customizer',
@@ -14,7 +14,7 @@ $wp_customize->add_setting( 'newspaper_x_recent_posts_category',
                             )
 );
 
-$wp_customize->add_setting( 'newspaper_x_recent_posts_ordering',
+$wp_customize->add_setting( 'newspaper_x_frontpage_header_ordering',
                             array(
 	                            'sanitize_callback' => array(
 		                            'Newspaper_X_Customizer',
@@ -24,7 +24,7 @@ $wp_customize->add_setting( 'newspaper_x_recent_posts_ordering',
                             )
 );
 
-$wp_customize->add_setting( 'newspaper_x_recent_posts_order_by',
+$wp_customize->add_setting( 'newspaper_x_frontpage_header_order_by',
                             array(
 	                            'sanitize_callback' => array(
 		                            'Newspaper_X_Customizer',

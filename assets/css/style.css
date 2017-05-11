@@ -1966,12 +1966,14 @@ a {
   text-align: center; }
   .newspaper-x-image-banner a {
     display: inline-block;
-    margin: 0 0 10px; }
+    margin: 0 0 15px 0; }
     .newspaper-x-image-banner a > img {
       width: 100%; }
   .newspaper-x-image-banner > img {
-    display: inline-block;
-    margin: 0 0 30px; }
+    display: inline-block; }
+
+.widget_newspaper_x_banner {
+  margin-top: 30px; }
 
 @media (max-width: 767px) {
   .newspaper-x-content .newspaper-x-image-banner {
@@ -2036,6 +2038,9 @@ a {
     .newspaper-x-blog-sidebar .widget_newspaper_x_recent .newspaper-x-recent-post-widget:last-of-type, .newspaper-x-sidebar .widget_newspaper_x_recent .newspaper-x-recent-post-widget:last-of-type {
       border: none; }
 
+.archive .newspaper-x-blog-sidebar, .category .newspaper-x-blog-sidebar {
+  margin-top: -20px; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -2079,6 +2084,9 @@ a {
 .archive .entry-title {
   margin-top: 20px;
   margin-bottom: 15px; }
+
+.newspaper-x-image-banner {
+  margin-bottom: 30px; }
 
 .newspaper-x-archive-first-posts, .newspaper-x-archive-page {
   margin-bottom: 20px; }
