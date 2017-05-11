@@ -77,8 +77,8 @@ else:
     ?>
     </div>
 
-    <!-- Recent Posts Module -->
-    <?php get_template_part( 'template-parts/recent-posts' ) ?>
+    <!-- Header Widget Area -->
+    <?php get_template_part( 'template-parts/header-widget-area' ) ?>
 
     <div class="container site-content">
     <div class="row">
@@ -89,7 +89,7 @@ else:
             </div>
         <?php } ?>
 
-        <?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
+        <?php if ( is_active_sidebar( 'sidebar-homepage' ) ) { ?>
             <div class="col-md-4 newspaper-x-blog-sidebar">
                 <?php dynamic_sidebar( 'sidebar-homepage' ); ?>
             </div>

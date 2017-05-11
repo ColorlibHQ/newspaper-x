@@ -20,34 +20,32 @@ if ( $breadcrumbs_enabled ) {
         ?>
         <div class="newspaper-x-image">
             <?php
-            $image = '<img class="wp-post-image" alt="" src="' . get_template_directory_uri() . '/assets/images/picture_placeholder.jpg" />';
             if ( has_post_thumbnail() ) {
                 $image = is_single() ? get_the_post_thumbnail( get_the_ID(), 'newspaper-x-single-post' ) : get_the_post_thumbnail( get_the_ID(), 'newspaper-x-recent-post-big' );
+                $image_obj = array( 'id' => get_the_ID(), 'image' => $image );
+                $new_image = apply_filters( 'newspaper_x_widget_image', $image_obj );
+
+                $allowed_tags = array(
+                    'img'      => array(
+                        'data-srcset' => true,
+                        'data-src'    => true,
+                        'srcset'      => true,
+                        'sizes'       => true,
+                        'src'         => true,
+                        'class'       => true,
+                        'alt'         => true,
+                        'width'       => true,
+                        'height'      => true
+                    ),
+                    'noscript' => array()
+                );
+
+                echo ! is_page() ? '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' : '';
+
+                echo wp_kses( $new_image, $allowed_tags );
+
+                echo ! is_page() ? '</a>' : '';
             }
-
-            $image_obj = array( 'id' => get_the_ID(), 'image' => $image );
-            $new_image = apply_filters( 'newspaper_x_widget_image', $image_obj );
-
-            $allowed_tags = array(
-                'img'      => array(
-                    'data-srcset' => true,
-                    'data-src'    => true,
-                    'srcset'      => true,
-                    'sizes'       => true,
-                    'src'         => true,
-                    'class'       => true,
-                    'alt'         => true,
-                    'width'       => true,
-                    'height'      => true
-                ),
-                'noscript' => array()
-            );
-
-            echo ! is_page() ? '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' : '';
-
-            echo wp_kses( $new_image, $allowed_tags );
-
-            echo ! is_page() ? '</a>' : '';
             ?>
         </div>
         <?php

@@ -27,17 +27,18 @@ class Widget_Newspaper_X_Posts_D extends WP_Widget {
 
 	public function form( $instance ) {
 		$defaults = array(
-			'title'     => '',
-			'order'     => 'desc',
-			'offset'    => '0',
-			'cols'      => 2,
-			'show_post' => 4,
-			'show_date' => 'on'
+			'title'                => '',
+			'order'                => 'desc',
+			'offset'               => '0',
+			'cols'                 => 2,
+			'show_post'            => 4,
+			'show_date'            => 'on',
+			'newspaper_x_category' => ''
 		);
 
-		if ( $instance['offset'] == 0 ) {
+		if ( ! empty( $instance['offset'] ) && $instance['offset'] == 0 ) {
 			$instance['offset'] = '0';
-        }
+		}
 
 		$instance = wp_parse_args( (array) $instance, $defaults );
 
@@ -284,11 +285,12 @@ class Widget_Newspaper_X_Posts_D extends WP_Widget {
 	public function widget( $args, $instance ) {
 
 		$defaults = array(
-			'order'     => 'desc',
-			'offset'    => 0,
-			'cols'      => 2,
-			'show_post' => 4,
-			'show_date' => 'on'
+			'order'                => 'desc',
+			'offset'               => 0,
+			'cols'                 => 2,
+			'show_post'            => 4,
+			'show_date'            => 'on',
+			'newspaper_x_category' => ''
 		);
 		$instance = wp_parse_args( (array) $instance, $defaults );
 

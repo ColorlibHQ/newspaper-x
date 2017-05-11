@@ -353,7 +353,14 @@ li.blazy {
 
 ul.children {
   list-style: none;
-  padding: 0px; }
+  padding: 0; }
+
+[class^='customize-partial-edit-shortcut-widget-newspaper_x_header_module'],
+[class*=' customize-partial-edit-shortcut-widget-newspaper_x_header_module'] {
+  left: 50%; }
+
+.customize-partial-edit-shortcut-newspaper_x_header_bg {
+  right: 0; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -1966,12 +1973,14 @@ a {
   text-align: center; }
   .newspaper-x-image-banner a {
     display: inline-block;
-    margin: 0 0 10px; }
+    margin: 0 0 15px 0; }
     .newspaper-x-image-banner a > img {
       width: 100%; }
   .newspaper-x-image-banner > img {
-    display: inline-block;
-    margin: 0 0 30px; }
+    display: inline-block; }
+
+.widget_newspaper_x_banner {
+  margin-top: 30px; }
 
 @media (max-width: 767px) {
   .newspaper-x-content .newspaper-x-image-banner {
@@ -2036,6 +2045,9 @@ a {
     .newspaper-x-blog-sidebar .widget_newspaper_x_recent .newspaper-x-recent-post-widget:last-of-type, .newspaper-x-sidebar .widget_newspaper_x_recent .newspaper-x-recent-post-widget:last-of-type {
       border: none; }
 
+.archive .newspaper-x-blog-sidebar, .category .newspaper-x-blog-sidebar, .search-results .newspaper-x-blog-sidebar, .blog .newspaper-x-blog-sidebar {
+  margin-top: -20px; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -2079,6 +2091,9 @@ a {
 .archive .entry-title {
   margin-top: 20px;
   margin-bottom: 15px; }
+
+.newspaper-x-image-banner {
+  margin-bottom: 30px; }
 
 .newspaper-x-archive-first-posts, .newspaper-x-archive-page {
   margin-bottom: 20px; }
@@ -2151,38 +2166,55 @@ a {
 
 /* Author box styling */
 .author-description {
-  padding: 30px;
-  border: 1px solid #e1e1e1;
-  position: relative;
-  margin: 0; }
-  .author-description h4 {
-    margin-top: 0; }
-    .author-description h4 > a {
-      color: #333;
-      font-size: 20px; }
-  .author-description .post-author-website {
-    font-size: 15px;
-    text-decoration: underline;
-    color: #0e649b;
-    font-style: italic;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    display: inline-block; }
-  .author-description .social-links {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline-block; }
-    .author-description .social-links li {
-      display: inline-block;
-      padding-right: 25px; }
-      .author-description .social-links li > a {
-        font-size: 20px;
-        color: #001936; }
-        .author-description .social-links li > a:hover {
-          color: #0e649b; }
+  border: 1px solid #ebebeb;
+  display: flex;
+  margin: 36px 0; }
+  .author-description .avatar {
+    width: 20%;
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    .author-description .avatar img {
+      border-radius: 150px; }
+  .author-description .description {
+    padding: 10px 15px 0px 0px;
+    width: 75%;
+    float: left;
+    align-items: stretch; }
+    .author-description .description h6 a {
+      font-weight: 700; }
+    .author-description .description p {
+      margin-bottom: 40px;
+      color: #8b8d91;
+      font-size: 14px;
+      line-height: 20px; }
+  .author-description .social-list {
+    display: block;
+    width: 5%;
+    float: right;
+    text-align: center;
+    align-items: stretch;
+    border-left: 1px solid #ebebeb; }
+    .author-description .social-list ul {
+      padding: 0px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      list-style: none; }
+      .author-description .social-list ul a {
+        color: #ebebeb;
+        font-size: 11px;
+        margin-top: 20px; }
+  @media (max-width: 550px) {
+    .author-description .avatar {
+      width: 90%;
+      border-right: 1px solid #ebebeb; }
+    .author-description .comment {
+      width: 90%;
+      padding-left: 10px; }
+      .author-description .comment h6 {
+        text-align: center; }
+    .author-description .social-list {
+      width: 10%; } }
 
 .newspaper-x-image {
   overflow: hidden;
@@ -2631,12 +2663,12 @@ a {
 .newspaper-x-with-sidebar .newspaper-x-post-d-sidebar .newspaper-x-title h3, .newspaper-x-with-sidebar .newspaper-x-post-d-sidebar .newspaper-x-title h4 {
   font-size: 16px;
   line-height: 26px;
-  margin: 0px; }
+  margin: 0; }
 
-.newspaper-x-recent-post-containter {
+.newspaper-x-header-widget-area {
   background: #0e0e11;
   margin-top: -38px;
-  line-height: 16px; }
+  line-height: 0; }
 
 .newspapper-spacer {
   margin-top: 40px; }
@@ -2718,6 +2750,7 @@ a {
         position: absolute;
         bottom: 25px;
         left: 35px;
+        right: 35px;
         max-height: 95px;
         z-index: 1;
         color: #FFF;

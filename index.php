@@ -21,12 +21,14 @@ $banner_count = get_theme_mod( 'newspaper_x_show_banner_after', 6 );
 $banner = get_theme_mod( 'newspaper_x_banner_type', 'image' );
 
 if ( is_home() && ! is_front_page() ) : ?>
-	<header class="col-xs-12">
-		<h3 class="page-title"><span><?php single_post_title(); ?></span></h3>
-	</header><!-- .page-header -->
-<?php endif; ?>
 	<div class="row">
-		<div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
+		<header class="col-xs-12">
+			<h3 class="page-title"><span><?php single_post_title(); ?></span></h3>
+		</header><!-- .page-header -->
+	</div>
+<?php endif; ?>
+	<div class="row blog">
+		<div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			<main id="main" class="site-main" role="main">
 				<?php
 				$banner_count_index = 0;
@@ -37,7 +39,9 @@ if ( is_home() && ! is_front_page() ) : ?>
 						while ( have_posts() ) : the_post();
 
 							if ( fmod( $banner_count_index, $banner_count ) == 0 && $banner_count_index != 0 ) {
+								echo '</div><div clss="row"><div class="newspaper-x-image-banner">';
 								get_template_part( 'template-parts/banner/banner', $banner );
+								echo '</div></div><div class="row">';
 							}
 
 							$banner_count_index ++;
@@ -57,6 +61,9 @@ if ( is_home() && ! is_front_page() ) : ?>
 								echo '</div><div class="row">';
 							} elseif ( $banner_count_index == (int) $wp_query->post_count ) {
 								continue;
+							}
+							if($banner_count_index == 2){
+								echo '</div></main></div></div><div class="row"><div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12"><main id="main" class="site-main" role="main"><div class="row">' ;
 							}
 						endwhile;
 						?>

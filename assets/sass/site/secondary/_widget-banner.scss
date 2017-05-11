@@ -2,7 +2,7 @@
   text-align: center;
   a {
     display: inline-block;
-    margin: 0 0 10px;
+    margin: 0 0 15px 0;
 
     > img {
       width: 100%;
@@ -10,10 +10,11 @@
   }
   > img {
     display: inline-block;
-    margin: 0 0 30px;
   }
 }
-
+.widget_newspaper_x_banner{
+  margin-top: 30px;
+}
 @media (max-width: 767px) {
   .newspaper-x-content {
     .newspaper-x-image-banner {

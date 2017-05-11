@@ -15,8 +15,7 @@ get_header(); ?>
 <?php
 while ( have_posts() ) : the_post();
     $post_id = get_the_ID();
-    get_template_part( 'template-parts/content', get_post_format() );
-
+    get_template_part( 'template-parts/content', get_post_format() );  
     ?>
 
     </main><!-- #main -->
