@@ -1718,36 +1718,85 @@ a {
     font-family: "Nunito Sans", sans-serif; }
     .site-footer .contact-widget div a:hover {
       color: #0e649b; }
-.site-footer .contact-widget .social-contact {
+.site-footer .contact-widget #social-contact {
   padding-left: 0px;
   margin-top: 25px; }
-  .site-footer .contact-widget .social-contact li {
+  .site-footer .contact-widget #social-contact li {
     display: inline; }
-    .site-footer .contact-widget .social-contact li a {
-      margin-right: 7px;
-      padding: 7px 11px 6px 12px;
-      border-radius: 20px;
-      font-size: 11px;
+    .site-footer .contact-widget #social-contact li a {
+      /* Add the social links depending on the link href */
       color: #fff; }
-      .site-footer .contact-widget .social-contact li a.facebook {
+      .site-footer .contact-widget #social-contact li a:before {
+        content: '\f408';
+        display: inline-block;
+        font-family: 'FontAwesome';
+        font-size: 11px;
+        -webkit-font-smoothing: antialiased;
+        padding: 2px 11px 2px 12px;
+        margin-right: 7px;
+        border-radius: 20px;
+        margin-bottom: 10px; }
+      .site-footer .contact-widget #social-contact li a span {
+        display: none; }
+      .site-footer .contact-widget #social-contact li a[href*="wordpress.org"]::before, .site-footer .contact-widget #social-contact li a[href*="wordpress.com"]::before {
+        content: '\f19a';
+        background: #21759b;
+        padding: 2px 9px 2px 11px; }
+      .site-footer .contact-widget #social-contact li a[href*="facebook.com"]::before {
+        content: '\f09a';
         background: #3b5998; }
-      .site-footer .contact-widget .social-contact li a.twitter {
+      .site-footer .contact-widget #social-contact li a[href*="twitter.com"]::before {
+        content: '\f099';
         background: #38a4f0;
-        padding: 7px 7px 6px 10px;
+        padding: 2px 9px 2px 10px;
         margin-right: 7px; }
-      .site-footer .contact-widget .social-contact li a.tumblr {
-        background: #36465d;
-        padding: 7px 11px 6px 12px;
-        margin-right: 5px; }
-      .site-footer .contact-widget .social-contact li a.gplus {
+      .site-footer .contact-widget #social-contact li a[href*="dribbble.com"]::before {
+        content: '\f17d';
+        background: #ea4c89;
+        padding: 2px 10px 2px 10px; }
+      .site-footer .contact-widget #social-contact li a[href*="plus.google.com"]::before {
+        content: '\f0d5';
         background: #ed3521;
-        padding: 7px 7px 6px 7px;
+        padding: 2px 9px 2px 7px;
         margin-right: 7px; }
-      .site-footer .contact-widget .social-contact li a.youtube {
+      .site-footer .contact-widget #social-contact li a[href*="pinterest.com"]::before {
+        content: '\f231';
+        background: #c8232c; }
+      .site-footer .contact-widget #social-contact li a[href*="github.com"]::before {
+        content: '\f09b';
+        background: #171515; }
+      .site-footer .contact-widget #social-contact li a[href*="tumblr.com"]::before {
+        content: '\f173';
+        background: #36465d;
+        padding: 2px 11px 2px 12px;
+        margin-right: 5px; }
+      .site-footer .contact-widget #social-contact li a[href*="youtube.com"]::before {
+        content: '\f167';
         background: #d10027;
-        padding: 7px 10px 6px 9px; }
-      .site-footer .contact-widget .social-contact li a:hover {
-        color: #fff; }
+        padding: 2px 11px 2px 11px; }
+      .site-footer .contact-widget #social-contact li a[href*="flickr.com"]::before {
+        content: '\f16e';
+        background: #ff0084;
+        padding: 2px 11px 2px 11px; }
+      .site-footer .contact-widget #social-contact li a[href*="vimeo.com"]::before {
+        content: '\f27d';
+        background: #1AB7EA;
+        padding: 2px 10px 2px 9px; }
+      .site-footer .contact-widget #social-contact li a[href*="instagram.com"]::before {
+        content: '\f16d';
+        background: #3f729b;
+        padding: 2px 10px 2px 11px; }
+      .site-footer .contact-widget #social-contact li a[href*="codepen.io"]::before {
+        content: '\f1cb';
+        background: #000;
+        padding: 2px 9px 2px 10px; }
+      .site-footer .contact-widget #social-contact li a[href*="linkedin.com"]::before {
+        content: '\f0e1';
+        background: #0e76a8;
+        padding: 2px 9px 2px 11px; }
+      .site-footer .contact-widget #social-contact li a:hover {
+        color: #fff;
+        opacity: 0.9; }
 
 .newspaper_x_widgets.newspaper-x-layout-a {
   margin-bottom: 30px; }

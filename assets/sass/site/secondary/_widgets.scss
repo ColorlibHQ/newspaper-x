@@ -884,41 +884,103 @@
         }
       }
     }    
-    .social-contact{
+    #social-contact{
       padding-left:0px;
       margin-top:25px;
         li{
 	        display:inline;
 	      a{
-	        margin-right: 7px;
-			padding: 7px 11px 6px 12px;
-	        border-radius:20px;
-	        font-size:11px;
-	          &.facebook{
-	            background: #3b5998;
-	          }
-	          &.twitter{
-	            background: #38a4f0;
-	            padding: 7px 7px 6px 10px;
-				margin-right: 7px;
-	          }
-	          &.tumblr{
-	            background: #36465d;
-	            padding: 7px 11px 6px 12px;
-				margin-right: 5px;
-	          }
-	          &.gplus{
-	            background: #ed3521;
-	            padding: 7px 7px 6px 7px;
-				margin-right: 7px;
-	          }
-	          &.youtube{
-	            background: #d10027;
-	            padding:7px 10px 6px 9px;
-	          }
+            &:before {
+            content: '\f408';
+            display: inline-block;
+            font-family: 'FontAwesome';
+            font-size: 11px;
+            -webkit-font-smoothing: antialiased;
+            padding: 2px 11px 2px 12px;
+            margin-right: 7px;
+            border-radius:20px;
+            margin-bottom: 10px;
+          }
+          span{
+            display:none;
+          }
+          /* Add the social links depending on the link href */
+            &[href*="wordpress.org"]::before,
+            &[href*="wordpress.com"]::before {
+              content: '\f19a';
+              background: #21759b;
+              padding: 2px 9px 2px 11px;
+            }
+            &[href*="facebook.com"]::before {
+              content: '\f09a';
+              background: #3b5998;
+            }
+            &[href*="twitter.com"]::before {
+              content: '\f099';
+              background: #38a4f0;
+              padding: 2px 9px 2px 10px;
+              margin-right: 7px;
+            }
+            &[href*="dribbble.com"]::before {
+              content: '\f17d';
+              background: #ea4c89;
+              padding: 2px 10px 2px 10px;
+            }
+            &[href*="plus.google.com"]::before {
+              content: '\f0d5';
+              background: #ed3521;
+              padding: 2px 9px 2px 7px;
+              margin-right: 7px;
+            }
+            &[href*="pinterest.com"]::before {
+              content: '\f231';
+              background: #c8232c;
+            }
+            &[href*="github.com"]::before {
+              content: '\f09b';
+              background: #171515;
+            }
+            &[href*="tumblr.com"]::before {
+              content: '\f173';
+              background: #36465d;
+              padding: 2px 11px 2px 12px;
+              margin-right: 5px;
+            }
+            &[href*="youtube.com"]::before {
+              content: '\f167';
+              background: #d10027;
+              padding: 2px 11px 2px 11px;
+            }
+            &[href*="flickr.com"]::before {
+              content: '\f16e';
+              background: #ff0084;
+              padding: 2px 11px 2px 11px;
+            }
+            &[href*="vimeo.com"]::before {
+              content: '\f27d';
+              background: #1AB7EA;
+              padding: 2px 10px 2px 9px;
+            }
+            &[href*="instagram.com"]::before {
+              content: '\f16d';
+              background: #3f729b;
+              padding: 2px 10px 2px 11px;
+            }
+            &[href*="codepen.io"]::before {
+              content: '\f1cb';
+              background: #000;
+              padding: 2px 9px 2px 10px;
+            }
+            &[href*="linkedin.com"]::before {
+              content: '\f0e1';
+              background: #0e76a8;
+              padding: 2px 9px 2px 11px;
+            }
+
             color: #fff;
             &:hover{
             	color:#fff;
+              opacity: 0.9;
             }
           }
       }
