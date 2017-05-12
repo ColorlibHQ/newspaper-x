@@ -109,7 +109,7 @@ h6 {
   line-height: 25px; }
 
 .section-title, .page-title, .newspaper-x-content .widget-title, .newspaper-x-after-content-sidebar .widget-title, #comments > h3:first-of-type, #reply-title, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3 {
-  padding: 2px 0px;
+  padding: 2px 0;
   font-weight: 700;
   font-family: "Nunito Sans", sans-serif;
   font-size: 24px;
@@ -1131,7 +1131,7 @@ a {
     */ }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) > ul, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) > ol {
       margin: 0;
-      padding: 0 18px 30px 18px;
+      padding: 0px 0px 30px 0px;
       list-style-type: none; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) select {
       max-width: 100%; }
@@ -1139,7 +1139,7 @@ a {
         max-width: 233px; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul {
       margin: 0;
-      padding: 0 18px 30px 18px; }
+      padding: 0px 18px 30px 18px; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul li > ul {
         margin-left: 0; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_meta ul li {
@@ -1193,7 +1193,7 @@ a {
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud {
       font-family: "Nunito Sans", sans-serif; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud .tagcloud {
-        padding: 0 18px 30px 18px; }
+        padding: 0px 0px 30px 0px; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud .tagcloud h3 {
           font-size: 20px; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud .tagcloud a {
@@ -1219,8 +1219,8 @@ a {
         padding: 10px; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul {
         list-style-type: none;
-        margin: 0;
-        padding: 0 18px 0 18px;
+        margin: 0px;
+        padding: 0px;
         font-size: 15px;
         color: #001936; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul > li, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul > li {
@@ -1258,7 +1258,7 @@ a {
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div ul {
       list-style-type: none; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul {
-      padding: 0 18px 18px; }
+      padding: 0px; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul .sub-menu {
         padding-left: 10px; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar {
@@ -1368,7 +1368,7 @@ a {
 
 .widget-title-styled, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) > h3, .newspaper-x-blog-sidebar .widget_newspaper_x_recent > h3, .newspaper-x-sidebar .widget_newspaper_x_recent > h3 {
   color: #333;
-  padding: 18px;
+  padding: 18px 0px;
   display: block;
   text-transform: uppercase;
   font-famiy: "Nunito Sans", sans-serif;
@@ -2753,11 +2753,45 @@ a {
           height: 178px; }
           .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-0 {
             width: 68%;
-            height: 480px; }
+            height: 480px;
+            background-size: cover; }
+            .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-0:after {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.3);
+              content: '';
+              -moz-transition: all 0.4s;
+              -webkit-transition: all 0.4s;
+              transition: all 0.4s; }
+            .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-0:hover:after {
+              -moz-transition: all 0.4s;
+              -webkit-transition: all 0.4s;
+              transition: all 0.4s;
+              background: transparent; }
           .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-1, .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-2 {
             width: 32%;
-            height: 240px; } }
-      @media (min-width: 1000px) {
+            height: 240px;
+            background-size: cover; }
+            .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-1:after, .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-2:after {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.3);
+              content: '';
+              -moz-transition: all 0.4s;
+              -webkit-transition: all 0.4s;
+              transition: all 0.4s; }
+            .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-1:hover:after, .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-2:hover:after {
+              -moz-transition: all 0.4s;
+              -webkit-transition: all 0.4s;
+              transition: all 0.4s;
+              background: transparent; } }
+      @media (min-width: 1200px) {
         .newspaper-x-recent-posts > ul > li {
           width: 25%; } }
       @media (min-width: 990px) {

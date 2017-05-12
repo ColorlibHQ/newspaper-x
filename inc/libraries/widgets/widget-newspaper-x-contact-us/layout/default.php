@@ -25,7 +25,6 @@
                 );
                 wp_nav_menu( $social_menu_args );
             }
-            $instance['facebook'] = 'fa';
     ?>
 
 </div>
