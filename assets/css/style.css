@@ -1131,7 +1131,7 @@ a {
     */ }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) > ul, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) > ol {
       margin: 0;
-      padding: 0 18px 30px 18px;
+      padding: 0px 0px 30px 0px;
       list-style-type: none; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) select {
       max-width: 100%; }
@@ -1139,7 +1139,7 @@ a {
         max-width: 233px; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul {
       margin: 0;
-      padding: 0 18px 30px 18px; }
+      padding: 0px 18px 30px 18px; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul li > ul {
         margin-left: 0; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_meta ul li {
@@ -1193,7 +1193,7 @@ a {
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud {
       font-family: "Nunito Sans", sans-serif; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud .tagcloud {
-        padding: 0 18px 30px 18px; }
+        padding: 0px 0px 30px 0px; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud .tagcloud h3 {
           font-size: 20px; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_tag_cloud .tagcloud a {
@@ -1219,8 +1219,8 @@ a {
         padding: 10px; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul {
         list-style-type: none;
-        margin: 0;
-        padding: 0 18px 0 18px;
+        margin: 0px;
+        padding: 0px;
         font-size: 15px;
         color: #001936; }
         .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_categories > ul > li, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_archive > ul > li {
@@ -1258,7 +1258,7 @@ a {
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div ul {
       list-style-type: none; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul {
-      padding: 0 18px 18px; }
+      padding: 0px; }
       .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_nav_menu > div > ul .sub-menu {
         padding-left: 10px; }
     .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text).widget_calendar {
@@ -1368,7 +1368,7 @@ a {
 
 .widget-title-styled, .newspaper-x-blog-sidebar .widget:not(.widget_search):not(.widget_newspaper_x_banner):not(.widget_text) > h3, .newspaper-x-blog-sidebar .widget_newspaper_x_recent > h3, .newspaper-x-sidebar .widget_newspaper_x_recent > h3 {
   color: #333;
-  padding: 18px;
+  padding: 18px 0px;
   display: block;
   text-transform: uppercase;
   font-famiy: "Nunito Sans", sans-serif;
@@ -2756,7 +2756,13 @@ a {
             height: 480px; }
           .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-1, .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-2 {
             width: 32%;
-            height: 240px; } }
+            height: 240px;
+            background-size: 104%; }
+            .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-1:hover, .newspaper-x-recent-posts > ul > li#newspaper-x-recent-post-2:hover {
+              -moz-transition: all 0.3s;
+              -webkit-transition: all 0.3s;
+              transition: all 0.3s;
+              background-size: 115%; } }
       @media (min-width: 1000px) {
         .newspaper-x-recent-posts > ul > li {
           width: 25%; } }
