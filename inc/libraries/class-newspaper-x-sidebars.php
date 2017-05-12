@@ -137,6 +137,7 @@ class Newspaper_X_Sidebars {
 			'Widget_Newspaper_X_Posts_C',
 			'Widget_Newspaper_X_Posts_D',
 			'Widget_Newspaper_X_Banner',
+			'Widget_Newspaper_X_Contact_Us',
 			'Widget_Newspaper_X_Header_Module',
 		);
 
