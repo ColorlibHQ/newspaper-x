@@ -14,11 +14,11 @@ p {
   color: #8c9597;
   line-height: 25px;
   margin-bottom: 1.5em;
-  font-weight:400;
+  font-weight: 400;
 }
 
 article.post p {
-  font-size:15px;
+  font-size: 15px;
   font-family: $font__main;
   color: #8b8d91;
   font-weight: 400;
@@ -30,8 +30,10 @@ article.post p {
   div.entry-content > p:first-child:first-letter {
     float: left;
     font-size: 86px;
+    line-height:75px;
     text-align: left;
-    padding-right:15px;
+    padding-right: 15px;
+    display: inline-block;
   }
 }
 

@@ -9,7 +9,7 @@
 
 $breadcrumbs_enabled = get_theme_mod( 'newspaper_x_enable_post_breadcrumbs', true );
 if ( $breadcrumbs_enabled && is_single() ) {
-	newspaper_x_breadcrumbs();
+	Newspaper_X_Helper::add_breadcrumbs();
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -84,7 +84,7 @@ if ( $breadcrumbs_enabled && is_single() ) {
 		?>
     </footer><!-- .entry-footer -->
 
-	<?php if ( is_single() ):do_action( 'newspaper_x_single_after_article' );endif; ?>
+	<?php if ( is_single() ):do_action( 'newspaper_x_single_after_article' ); endif; ?>
 
 </article><!-- #post-## -->
 

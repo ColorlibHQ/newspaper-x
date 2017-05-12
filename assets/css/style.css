@@ -64,8 +64,10 @@ article.post p {
 .single-post div.entry-content > p:first-child:first-letter {
   float: left;
   font-size: 86px;
+  line-height: 75px;
   text-align: left;
-  padding-right: 15px; }
+  padding-right: 15px;
+  display: inline-block; }
 
 a {
   color: #0a396d;
@@ -3019,12 +3021,12 @@ a {
     margin: 0 10px; }
 
 .comments-area {
-  margin-bottom: -30px;
   position: relative;
   top: 30px; }
   .comments-area .comments-form {
     background: #f8f8f8;
-    padding-top: 15px; }
+    padding-top: 15px;
+    padding-bottom: 15px; }
     .comments-area .comments-form #reply-title {
       color: #0a396d;
       font-weight: 400;
