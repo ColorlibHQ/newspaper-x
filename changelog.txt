@@ -1,3 +1,7 @@
+### V1.2.8
+	- (DROP CAPS) - first-letter pseudo-selector was not working correctly on chrome
+	- Various bug fixes
+
 ### V1.1.1
 	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:15
 

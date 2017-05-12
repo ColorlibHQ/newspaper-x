@@ -54,7 +54,7 @@ if ( $breadcrumbs_enabled ) {
         }
         if ( 'post' === get_post_type() ) : ?>
             <div class="newspaper-x-post-meta">
-                <?php newspaper_x_posted_on(); ?>
+                <?php Newspaper_X_Helper::posted_on(); ?>
             </div><!-- .entry-meta -->
             <?php
         endif; ?>
@@ -92,8 +92,4 @@ if ( $breadcrumbs_enabled ) {
     </div><!-- .entry-content -->
 
 </article><!-- #post-## -->
-<?php
-if ( is_page() ) {
-    get_template_part( 'template-parts/comments-list' );
-}
-?>
+
