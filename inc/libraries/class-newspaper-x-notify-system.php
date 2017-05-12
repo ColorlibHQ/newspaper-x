@@ -11,21 +11,7 @@ class Newspaper_X_Notify_System extends Epsilon_Notify_System {
 	 * @return bool
 	 */
 	public static function has_widgets() {
-		if ( ! is_active_sidebar( 'content-area' ) ) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * @return bool
-	 */
-	public static function newsmag_has_posts() {
-		$args  = array( "s" => 'Gary Johns: \'What is Aleppo\'' );
-		$query = get_posts( $args );
-
-		if ( ! empty( $query ) ) {
+		if ( is_active_sidebar( 'content-area' ) || is_active_sidebar( 'after-content-area' ) ) {
 			return true;
 		}
 
@@ -35,11 +21,21 @@ class Newspaper_X_Notify_System extends Epsilon_Notify_System {
 	/**
 	 * @return bool
 	 */
+	public static function has_posts() {
+		$has_posts = get_option('newspaper_x_importer_finished');
+
+		return (bool) $has_posts;
+	}
+
+	/**
+	 * @return bool
+	 */
 	public static function has_content() {
 		$check = array(
 			'widgets' => self::has_widgets(),
-			'posts'   => self::newsmag_has_posts(),
+			'posts'   => self::has_posts(),
 		);
+
 
 		if ( $check['widgets'] && $check['posts'] ) {
 			return true;

@@ -109,7 +109,7 @@ h6 {
   line-height: 25px; }
 
 .section-title, .page-title, .newspaper-x-content .widget-title, .newspaper-x-after-content-sidebar .widget-title, #comments > h3:first-of-type, #reply-title, .newspaper-x-related-posts .newspaper-x-related-posts-title > h3 {
-  padding: 2px 0px;
+  padding: 2px 0;
   font-weight: 700;
   font-family: "Nunito Sans", sans-serif;
   font-size: 24px;

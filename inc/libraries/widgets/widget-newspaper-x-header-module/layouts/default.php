@@ -1,5 +1,9 @@
 <?php if ( $posts->have_posts() ): $i = 0; ?>
-    <div class="newspaper-x-recent-posts container">
+    <div class="newspaper-x-recent-posts <?php echo ( $args['id'] === 'header-widget-area' ) ? 'container' : '' ?>">
+		<?php
+		if ( $instance['title'] ): ?>
+            <h3 class="page-title"><span><?php echo wp_kses_post( $instance['title'] ) ?></M></span></h3>
+		<?php endif; ?>
         <ul>
 			<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
 				<?php

@@ -56,6 +56,18 @@ class Newspaper_X_Hooks {
 		 * Add post tags
 		 */
 		add_filter( 'the_content', array( $this, 'post_tags_bottom' ), 0 );
+
+		/**
+		 * Add action that the import has finished
+		 */
+		add_action( 'import_end', array( $this, 'import_finished' ) );
+	}
+
+	/**
+	 * Add a reference in the database that the theme import has finished
+	 */
+	public function import_finished() {
+		update_option( 'newspaper_x_importer_finished', '1' );
 	}
 
 	/**

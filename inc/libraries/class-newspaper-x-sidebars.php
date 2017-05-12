@@ -46,16 +46,8 @@ class Newspaper_X_Sidebars {
 				'after_title'   => '</h3>',
 			),
 			array(
-				'id'            => 'sidebar-homepage',
-				'name'          => esc_html__( 'Frontpage Sidebar', 'newspaper-x' ),
-				'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3>',
-				'after_title'   => '</h3>',
-			),
-			array(
 				'id'            => 'header-widget-area',
-				'name'          => esc_html__( 'Header Widget Area', 'newspaper-x' ),
+				'name'          => esc_html__( 'Homepage - Header area', 'newspaper-x' ),
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h3>',
@@ -78,6 +70,14 @@ class Newspaper_X_Sidebars {
 				'after_title'   => '</span></h3>',
 				'before_widget' => '<div id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</div>'
+			),
+			array(
+				'id'            => 'sidebar-homepage',
+				'name'          => esc_html__( 'Homepage - Sidebar', 'newspaper-x' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3>',
+				'after_title'   => '</h3>',
 			),
 			array(
 				'id'            => 'footer-1',
