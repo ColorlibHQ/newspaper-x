@@ -410,28 +410,9 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
-#searchform > label {
-  margin-bottom: 0;
-  top: 5px;
-  position: relative;
-  border: 3px solid #000;
-  padding: 3px;
-  border-radius: 0; }
-  #searchform > label > input[type="search"] {
-    width: 285px;
-    bottom: 5px;
-    position: relative;
-    font-weight: 400;
-    border: 1px solid #000;
-    top: 0;
-    border-radius: 0; }
-    @media (max-width: 1199px) {
-      #searchform > label > input[type="search"] {
-        width: 238px; } }
-
-#searchform_topbar label {
+#searchform label {
   margin-bottom: 0; }
-#searchform_topbar #search-field-top-bar {
+#searchform #search-field {
   background: transparent;
   border-top: none;
   border-left: none;
@@ -448,13 +429,13 @@ textarea {
   transition: all 0.3s;
   float: right;
   font-weight: 400; }
-  #searchform_topbar #search-field-top-bar.opened {
+  #searchform #search-field.opened {
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
     width: 100%;
     padding-left: 10px; }
-#searchform_topbar .search-top-bar-submit {
+#searchform .search-submit {
   background: transparent;
   color: #FFF;
   font-size: 14px;
@@ -463,6 +444,36 @@ textarea {
   box-shadow: none;
   bottom: 9px;
   position: relative; }
+
+.widget_search #searchform > label {
+  margin-bottom: 0;
+  top: 5px;
+  position: relative;
+  border: 3px solid #000;
+  padding: 3px;
+  border-radius: 0; }
+  .widget_search #searchform > label > input[type="search"] {
+    width: 285px !important;
+    bottom: 5px;
+    color: #666 !important;
+    position: relative;
+    font-weight: 400;
+    border: 1px solid #000 !important;
+    top: 0;
+    border-radius: 0; }
+    @media (max-width: 1199px) {
+      .widget_search #searchform > label > input[type="search"] {
+        width: 238px; } }
+.widget_search #searchform .search-submit {
+  font-size: 0;
+  background-color: #000;
+  color: #FFF;
+  width: 56px;
+  height: 56px;
+  position: relative;
+  top: -15px;
+  border: none;
+  margin-left: 4px; }
 
 #cat {
   padding: 10px;
@@ -1718,31 +1729,31 @@ a {
       height: 78px;
       -webkit-transition: all .2s linear;
       transition: all .2s linear; }
-    .top-header .header-search-form #searchform_topbar {
+    .top-header .header-search-form #searchform {
       position: relative; }
-      .top-header .header-search-form #searchform_topbar ::-webkit-input-placeholder {
+      .top-header .header-search-form #searchform ::-webkit-input-placeholder {
         color: #FFF;
         opacity: .8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
-      .top-header .header-search-form #searchform_topbar :-moz-placeholder {
+      .top-header .header-search-form #searchform :-moz-placeholder {
         color: #FFF;
         opacity: .8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
-      .top-header .header-search-form #searchform_topbar ::-moz-placeholder {
+      .top-header .header-search-form #searchform ::-moz-placeholder {
         color: #FFF;
         opacity: .8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
-      .top-header .header-search-form #searchform_topbar :-ms-input-placeholder {
+      .top-header .header-search-form #searchform :-ms-input-placeholder {
         color: #FFF;
         opacity: .8;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; }
-      .top-header .header-search-form #searchform_topbar label {
+      .top-header .header-search-form #searchform label {
         margin-bottom: 0;
         bottom: -4px;
         position: relative;
         font-weight: 400;
         width: 97%; }
-      .top-header .header-search-form #searchform_topbar #search-field-top-bar {
+      .top-header .header-search-form #searchform #search-field {
         margin-top: 20px;
         background: transparent;
         border: none;
@@ -1754,9 +1765,9 @@ a {
         font-weight: 400;
         height: 32px;
         width: 100%; }
-        .top-header .header-search-form #searchform_topbar #search-field-top-bar:focus {
+        .top-header .header-search-form #searchform #search-field:focus {
           outline: none; }
-      .top-header .header-search-form #searchform_topbar .search-top-bar-submit {
+      .top-header .header-search-form #searchform .search-submit {
         background: transparent;
         color: #FFF;
         font-size: 17px;
@@ -1770,9 +1781,9 @@ a {
         vertical-align: middle;
         width: 23px;
         height: 23px; }
-        .top-header .header-search-form #searchform_topbar .search-top-bar-submit:hover, .top-header .header-search-form #searchform_topbar .search-top-bar-submit.input-open {
+        .top-header .header-search-form #searchform .search-submit:hover, .top-header .header-search-form #searchform .search-submit.input-open {
           color: #f2f2f2; }
-        .top-header .header-search-form #searchform_topbar .search-top-bar-submit .first-bar, .top-header .header-search-form #searchform_topbar .search-top-bar-submit .second-bar {
+        .top-header .header-search-form #searchform .search-submit .first-bar, .top-header .header-search-form #searchform .search-submit .second-bar {
           width: 2px;
           height: 22px;
           background: #FFF;
@@ -1781,20 +1792,22 @@ a {
           position: absolute;
           top: 0;
           right: 10px; }
-        .top-header .header-search-form #searchform_topbar .search-top-bar-submit .first-bar {
+        .top-header .header-search-form #searchform .search-submit .first-bar {
           -webkit-transform: rotate(-45deg);
           -khtml-transform: rotate(-45deg);
           -moz-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg); }
-        .top-header .header-search-form #searchform_topbar .search-top-bar-submit .second-bar {
+        .top-header .header-search-form #searchform .search-submit .second-bar {
           -webkit-transform: rotate(45deg);
           -khtml-transform: rotate(45deg);
           -moz-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
           -o-transform: rotate(45deg);
           transform: rotate(45deg); }
+        .top-header .header-search-form #searchform .search-submit:after {
+          visibility: hidden; }
 
 .header-banner {
   text-align: right; }

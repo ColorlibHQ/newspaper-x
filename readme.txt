@@ -1,19 +1,19 @@
 === Newspaper X ===
 
-Contributors: automattic
+Contributors: puikinsh
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
 Requires at least: 4.0
 Tested up to: 4.7
-Stable tag: 1.1.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Stable tag: 1.1.2
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A starter theme called Newspaper X, or underscores.
+A starter theme called Newspaper X;
 
 == Description ==
 
-Hi. I'm a starter theme called Newspaper X, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Magazine WordPress theme.
 
 == Installation ==
 	
@@ -25,6 +25,9 @@ Hi. I'm a starter theme called Newspaper X, or underscores, if you like. I'm a t
 
 
 == Changelog ==
+### V1.2.0
+	- Redesign
+
 ### V1.1.2
 	 - Escaped where needed
 	 - Newspaper-x-bootstrap enqueue handler changed to bootstrap
@@ -54,10 +57,13 @@ The exceptions to this license are as follows:
 === Images ===
 
 - Images used in theme screenshot are taken from unsplash.com
+    -- All photos published on Unsplash are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash.
+    -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
+   
 
-- Logo created by MachoThemes
+- Logo created by Colorlib
 
-- Banner placeholders created by MachoThemes
+- Banner placeholders created by Colorlib
 
 === Vendors ===
 
@@ -79,14 +85,14 @@ The exceptions to this license are as follows:
 - Adsense loader
     -- By Osvaldas Valutis, www.osvaldas.info
     -- available for use under the MIT License
-- MachoThemes
-    -- MachoThemes https://machothemes.com
+- Colorlib
+    -- Colorlib https://Colorlib.com
     -- available for use under the MIT License
 - Selectize
     -- Copyright (c) 2013 Brian Reavis & contributors
     -- Licensed under the Apache License, Version 2.0 (the "License");
 - Epsilon
-    -- MachoThemes https://machothemes.com
+    -- Colorlib https://Colorlib.com
     -- available for use under the MIT License
 
 === Fonts ===
@@ -99,4 +105,4 @@ The exceptions to this license are as follows:
     -- Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 - Google Fonts
     -- License: SIL OFL 1.1
-    -- URL: http://scripts.sil.org/OFL
+-- URL: http://scripts.sil.org/OFL

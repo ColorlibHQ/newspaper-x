@@ -4,8 +4,8 @@ if ( typeof(MachoThemes) === 'undefined' ) {
 
 MachoThemes.initSearchForm = function ($) {
 	var element = $('.header-search-form'),
-			input = $('#search-field-top-bar'),
-			inputSubmit = $('#search-top-bar-submit'),
+			input = $('#search-field'),
+			inputSubmit = $('#search-submit'),
 			trigger = $('.search-form-opener');
 
 	trigger.on('click', function (e) {
