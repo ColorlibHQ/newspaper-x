@@ -92,7 +92,7 @@ The exceptions to this license are as follows:
     -- Copyright (c) 2013 Brian Reavis & contributors
     -- Licensed under the Apache License, Version 2.0 (the "License");
 - Epsilon
-    -- Colorlib https://Colorlib.com
+    -- MachoThemes https://machothemes.com
     -- available for use under the MIT License
 
 === Fonts ===
