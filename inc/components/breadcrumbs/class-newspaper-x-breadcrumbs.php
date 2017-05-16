@@ -72,7 +72,7 @@ class Newspaper_X_Breadcrumbs {
 		// Setup default array for changeable variables
 		$defaults = array(
 			'home_prefix'            => get_theme_mod( 'newspaper_x_blog_breadcrumb_menu_prefix', __( '', 'newspaper-x' ) ),
-			'separator'              => '/',
+			'separator'              => esc_html__('/','newspaper-x' ),
 			'show_post_type_archive' => '1',
 			'show_terms'             => get_theme_mod( 'newspaper_x_blog_breadcrumb_menu_post_category', true ),
 			'home_label'             => esc_html__( 'Home', 'newspaper-x' ),
