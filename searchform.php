@@ -1,6 +1,6 @@
 <?php $search_query = get_search_query(); ?>
 <form role="search" method="get" id="searchform"
-      action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
+      action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<label><span
 			class="screen-reader-text"><?php echo esc_html__( 'Search for:', 'newspaper-x' ) ?></span>
 		<input
