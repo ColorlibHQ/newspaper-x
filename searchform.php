@@ -1,4 +1,4 @@
-
+<?php $search_query = get_search_query(); ?>
 <form role="search" method="get" id="searchform"
       action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
 	<label><span

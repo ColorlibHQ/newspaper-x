@@ -48,10 +48,12 @@
 					<?php endif; ?>
 				</div>
 				<?php if ( $enable_search ): ?>
-					<?php $search_query = get_search_query(); ?>
 					<div class="header-search-form">
 						<div class="container">
-							<?php get_search_form(); ?>
+							<?php 
+								$search = get_search_form(false); 
+								echo str_replace('type="submit"','type="button"',$search);
+							?>
 						</div>
 					</div>
 				<?php endif; ?>
