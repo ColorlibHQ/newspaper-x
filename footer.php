@@ -39,7 +39,9 @@
 				<div class="row text-center">
 					<div class="col-md-12">
 						<?php
-						$default = sprintf( __( '&copy; %1$s <a href="%2$s">Newspaper X. All rights reserved.</a>', 'newspaper-x' ), date( "Y" ), 'https://colorlib.com' );
+						$blog_title = get_bloginfo( 'name' );
+						$blog_url = get_bloginfo( 'url' );
+						$default = sprintf( __( '&copy; %1$s <a href="%2$s">%3$s. All rights reserved.</a> Created by <a href="%4$s">Colorlib</a>.', 'newspaper-x' ), date( "Y" ), $blog_url, $blog_title, 'https://colorlib.com' );
 
 						$copyright = get_theme_mod( 'newspaper_x_copyright_contents' );
 						echo empty( $copyright ) ? wp_kses_post( $default ) : wp_kses_post( $copyright );
