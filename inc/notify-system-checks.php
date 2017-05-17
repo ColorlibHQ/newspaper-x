@@ -50,7 +50,7 @@ if ( ! class_exists( 'MT_Notify_System' ) ) {
 		/**
 		 * @return bool
 		 */
-		public static function newmsag_has_posts() {
+		public static function has_posts() {
 			$args  = array( "s" => 'Gary Johns: \'What is Aleppo\'' );
 			$query = get_posts( $args );
 
@@ -67,7 +67,7 @@ if ( ! class_exists( 'MT_Notify_System' ) ) {
 		public static function has_content() {
 			$check = array(
 				'widgets' => self::has_widgets(),
-				'posts'   => self::newmsag_has_posts(),
+				'posts'   => self::has_posts(),
 			);
 
 			if ( $check['widgets'] && $check['posts'] ) {
@@ -82,7 +82,9 @@ if ( ! class_exists( 'MT_Notify_System' ) ) {
 		 */
 		public static function check_wordpress_importer() {
 			if ( file_exists( ABSPATH . 'wp-content/plugins/wordpress-importer/wordpress-importer.php' ) ) {
-				include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+				if ( ! function_exists( 'is_plugin_active' ) ) {
+					include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+				}
 
 				return is_plugin_active( 'wordpress-importer/wordpress-importer.php' );
 			}
@@ -106,7 +108,9 @@ if ( ! class_exists( 'MT_Notify_System' ) ) {
 		 */
 		public static function check_plugin_is_active( $slug ) {
 			if ( file_exists( ABSPATH . 'wp-content/plugins/' . $slug . '/' . $slug . '.php' ) ) {
-				include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+				if ( ! function_exists( 'is_plugin_active' ) ) {
+					include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+				}
 
 				return is_plugin_active( $slug . '/' . $slug . '.php' );
 			}

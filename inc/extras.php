@@ -228,3 +228,11 @@ function newspaper_x_comment_form_defaults( $defaults ) {
 
 	return $defaults;
 }
+
+function newspaper_x_excerpt_more( $more ) {
+	global $post;
+
+	return ' <a class="read-more" href="' . esc_url( get_permalink( $post->ID ) ) . '">' . esc_html__( '[Read More]', 'newspaper-x' ) . '</a>';
+}
+
+add_filter( 'excerpt_more', 'newspaper_x_excerpt_more' );

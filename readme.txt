@@ -5,11 +5,9 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0
 Tested up to: 4.7
-Stable tag: 1.1.2
+Stable tag: 1.1.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-
-A starter theme called Newspaper X;
 
 == Description ==
 
@@ -25,8 +23,9 @@ Magazine WordPress theme.
 
 
 == Changelog ==
-### V1.2.0
-	- Redesign
+### V1.1.5
+	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:38
+	- Fixes issues from the review team https://themes.trac.wordpress.org/ticket/34644#comment:42
 
 ### V1.1.2
 	 - Escaped where needed

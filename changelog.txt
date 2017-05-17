@@ -1,3 +1,15 @@
+### V1.1.5
+	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:38
+	- Fixes issues from the review team https://themes.trac.wordpress.org/ticket/34644#comment:42
+
+### V1.1.2
+	 - Escaped where needed
+	 - Newspaper-x-bootstrap enqueue handler changed to bootstrap
+	 - Updated licenses
+	 - Removed banner widget
+	 - Posts widget merged
+	 - Footer credits are now translatable.
+
 ### V1.1.1
 	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:15
 

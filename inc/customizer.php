@@ -28,7 +28,7 @@ add_action( 'customize_register', 'newspaper_x_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function newspaper_x_customize_preview_js() {
-	wp_enqueue_script( 'newspaper_x_customizer', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/previewer.js', array( 'customize-preview' ), false, true );
+	wp_enqueue_script( 'newspaper_x_customizer', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/previewer.js', array( 'customize-preview' ), '123123123', true );
 
 	wp_localize_script( 'newspaper_x_customizer', 'WPUrls', array(
 		'siteurl' => esc_url( get_option( 'siteurl' ) ),
@@ -46,13 +46,13 @@ function newspaper_x_customizer_enqueue_scripts() {
 	 *
 	 * Dependencies: Customizer Controls script (core)
 	 */
-	wp_enqueue_script( 'epsilon-object', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/epsilon.js', array( 'jquery' ), '22515141' );
+	wp_enqueue_script( 'epsilon-object', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/epsilon.js', array( 'jquery' ), '225115141' );
 	wp_localize_script( 'epsilon-object', 'WPUrls', array(
 		'siteurl' => esc_url( get_option( 'siteurl' ) ),
 		'theme'   => esc_url( get_template_directory_uri() ),
 		'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) )
 	) );
-	wp_enqueue_script( 'newspaper_x_customizer-scripts', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/customizer.js', array( 'customize-controls' ) );
+	wp_enqueue_script( 'newspaper_x_customizer-scripts', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/js/customizer.js', array( 'customize-controls' ), '1231231' );
 	wp_enqueue_style( 'epsilon-styles', get_template_directory_uri() . '/inc/customizer/epsilon-framework/assets/css/style.css', array(), '2' );
 
 }

@@ -39,7 +39,7 @@
 				<div class="row text-center">
 					<div class="col-md-12">
 						<?php
-						$default =  printf( esc_html__( 'Theme: %1$s by %2$s.', 'newspaper-x' ), 'Newspaper-x', '<a href="https://colorlib.com" rel="designer">Colorlib</a>');
+						$default =  printf( esc_html__( 'Theme: %1$s by %2$s.', 'newspaper-x' ), 'Newspaper-X', '<a href="https://colorlib.com" rel="designer">Colorlib</a>');
 						$copyright = get_theme_mod( 'newspaper_x_copyright_contents' );
 						echo empty( $copyright ) ? wp_kses_post( $default ) : wp_kses_post( $copyright );
 						?>
