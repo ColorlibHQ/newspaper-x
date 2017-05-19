@@ -21,10 +21,10 @@ wp_enqueue_script( 'updates' );
 
 		foreach ( $newspaper_x_required_actions as $newspaper_x_required_action_key => $newspaper_x_required_action_value ):
 			$hidden = false;
-			if ( @$newspaper_x_show_required_actions[ $newspaper_x_required_action_value['id'] ] === false ) {
+			if ( $newspaper_x_show_required_actions[ $newspaper_x_required_action_value['id'] ] === false ) {
 				$hidden = true;
 			}
-			if ( @$newspaper_x_required_action_value['check'] ) {
+			if ( $newspaper_x_required_action_value['check'] ) {
 				continue;
 			}
 			?>

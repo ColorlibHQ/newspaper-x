@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <?php
-                        $default = sprintf( __( '&copy; %s <a href="%s">Newspaper X. All rights reserved.</a>', 'newspaper-x' ), date( "Y" ), 'https://colorlib.com' );
+                        $default = sprintf( __( '&copy; %1$s Newspaper-X a theme by <a href="%2$s">Colorlib</a>', 'newspaper-x' ), date( "Y" ), 'https://colorlib.com' );
 
                         $copyright = get_theme_mod( 'newspaper_x_copyright_contents' );
                         echo empty( $copyright ) ? wp_kses_post( $default ) : wp_kses_post( $copyright );
