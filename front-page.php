@@ -9,7 +9,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Newsmag
+ * @package Newspaper_x
  */
 
 get_header();

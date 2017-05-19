@@ -8,7 +8,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 class Newspaper_X_Hooks {
 	/**
-	 * Newsmag_Hooks constructor.
+	 * Newspaper_X_Hooks constructor.
 	 */
 	public function __construct() {
 		/**
@@ -122,7 +122,7 @@ class Newspaper_X_Hooks {
 	}
 
 	/**
-	 * Flush out the transients used in newsmag_categorized_blog.
+	 * Flush out the transients used in newspaper_x_categories.
 	 */
 	public function category_transient_flusher() {
 		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
