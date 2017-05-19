@@ -112,7 +112,7 @@
       -webkit-transition: all .2s linear;
       transition: all .2s linear;
     }
-    #searchform_topbar {
+    #searchform {
       ::-webkit-input-placeholder {
         color: #FFF;
       }
@@ -136,7 +136,7 @@
         font-weight: 400;
         width: 97%;
       }
-      #search-field-top-bar {
+      #search-field {
         margin-top: 20px;
         background: transparent;
         border: none;
@@ -155,7 +155,8 @@
           outline: none;
         }
       }
-      .search-top-bar-submit {
+      .search-submit {
+        margin-top: 0px;
         background: transparent;
         color: #FFF;
         font-size: 17px;
@@ -190,6 +191,9 @@
 
         .second-bar {
           @include transform(rotate(45deg));
+        }
+        &:after{
+          visibility:hidden;
         }
       }
     }

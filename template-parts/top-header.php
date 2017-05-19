@@ -23,19 +23,7 @@
 				$enable_search = get_theme_mod( 'newspaper_x_enable_top_bar_search', true );
 				if ( $enable_search ): ?>
 					<?php $search_query = get_search_query(); ?>
-                    <form role="search" method="get" <?php echo $has_menu ? '' : 'class="pull-right"' ?>
-                          id="searchform_topbar"
-                          action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
-                        <label>
-                            <input class="" id=""
-                                   placeholder="<?php echo esc_html__( 'Search...', 'newspaper-x' ) ?>"
-                                   value="<?php echo esc_attr( $search_query ); ?>" name="s"
-                                   type="search">
-                        </label>
-                        <button id="search-top-bar-submit" type="submit" class="search-top-bar-submit">
-                            <span class="fa fa-search"></span>
-                        </button>
-                    </form>
+					<?php get_search_form();?>
 				<?php endif; ?>
 				<?php
 				$class = 'menu pull-right';

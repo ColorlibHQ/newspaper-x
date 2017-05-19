@@ -41,7 +41,7 @@ class Widget_Newspaper_X_Header_Module extends WP_Widget {
         </p>
 
         <p>
-            <label><?php _e( 'Category', 'newsmag' ); ?> :</label>
+            <label><?php _e( 'Category', 'newspaper-x' ); ?> :</label>
             <select class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'category' ) ); ?>"
                     id="<?php echo esc_attr( $this->get_field_id( 'category' ) ); ?>">
                 <option value="" <?php if ( empty( $instance['category'] ) ) {
@@ -150,7 +150,7 @@ class Widget_Newspaper_X_Header_Module extends WP_Widget {
 		if ( file_exists( $filepath ) ) {
 			include $filepath;
 		} else {
-			esc_html_e( 'Please configure your widget', 'newsmag' );
+			esc_html_e( 'Please configure your widget', 'newspaper-x' );
 		}
 
 

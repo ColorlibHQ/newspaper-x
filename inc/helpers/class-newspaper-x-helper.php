@@ -240,7 +240,7 @@ class Newspaper_X_Helper {
 		$img  = $image_object['image'];
 
 		if ( $lazy ) {
-			$img = apply_filters( 'newsmag_widget_image', $image_object );
+			$img = apply_filters( 'newspaper_x_widget_image', $image_object );
 		}
 
 		$allowed_tags = array(
