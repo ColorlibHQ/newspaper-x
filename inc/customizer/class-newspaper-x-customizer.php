@@ -9,7 +9,7 @@ class Newspaper_X_Customizer {
 	 * The basic constructor of the helper
 	 * It changes the default panels of the customizer
 	 *
-	 * MedZone_Customizer_Helper constructor.
+	 * Newspaper_X_Customizer constructor.
 	 */
 	public function __construct() {
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customizer_enqueue_scripts' ) );
@@ -71,7 +71,7 @@ class Newspaper_X_Customizer {
 		/**
 		 * Change labels
 		 */
-		$wp_customize->get_control( 'custom_logo' )->description = esc_html__( 'The image logo, if set, will override the text logo. You can not have both at the same time. A tagline can be displayed under the text logo.', 'medzone' );
+		$wp_customize->get_control( 'custom_logo' )->description = esc_html__( 'The image logo, if set, will override the text logo. You can not have both at the same time. A tagline can be displayed under the text logo.', 'newspaper-x' );
 
 
 		// Abort if selective refresh is not available.
