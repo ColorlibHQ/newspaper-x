@@ -31,7 +31,7 @@
       }
     }
   }
-  #searchform_topbar{
+  #searchform{
     float:left;
     width: 175px;
     border-bottom: 1px solid #202d44;
@@ -58,6 +58,7 @@
       font-family: $font__main;
       font-weight: 700;
       font-size: 14px;
+      max-width: 128px;
     }
     @media (max-width: 480px) {
       width:100%;
