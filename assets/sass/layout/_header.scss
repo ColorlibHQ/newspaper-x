@@ -192,6 +192,9 @@
         .second-bar {
           @include transform(rotate(45deg));
         }
+        &:after{
+          visibility:hidden;
+        }
       }
     }
   }

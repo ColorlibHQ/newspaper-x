@@ -7,5 +7,3 @@
 	</label>
 	<button class="search-submit" value="<?php echo esc_html__( 'Search  ', 'newspaper-x' ) ?>" type="submit"><span class="fa fa-search"></span></button>
 </form>
-
-
