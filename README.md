@@ -1,13 +1,15 @@
-= License =
-Newspaper X WordPress theme, Copyright (C) 2016 Colorlib.com
+= License = 
+Newspaper X WordPress theme, Copyright (C) 2017 https://colorlib.com 
 Newspaper X WordPress theme is licensed under the GPL3.
+
+Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License. The exceptions to this license are as follows:
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
 The exceptions to this license are as follows:
 
 === Images ===
 
-- Images used in theme screenshot are taken from unsplash.com
+- Images used in theme screenshot are taken from unsplash.com -- All photos published on Unsplash are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash. -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
     
 - Logo created by Colorlib
 

@@ -29,16 +29,6 @@ function newspaper_x_breadcrumbs() {
 }
 
 /**
- * @param $url
- *
- * @return int
- * @deprecated, please use Newspaper_X_Helper::get_attachment_id(); instead;
- */
-function newspaper_x_get_attachment_id( $url ) {
-	return Newspaper_X_Helper::get_attachment_id( $url );
-}
-
-/**
  * @param string $format
  *
  * @deprecated, please use Newspaper_X_Helper::format_icon(); instead
