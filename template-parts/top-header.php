@@ -9,23 +9,40 @@
 
 ?>
 <div class="top-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<nav id="top-header-navigation" class="pull-left">
-					<?php wp_nav_menu( array( 'theme_location' => 'top-header', 'depth' => 1 ) ); ?>
-				</nav>
-				<div class="top-header-icons">
-					<?php
-					$enable_search = get_theme_mod( 'newspaper_x_enable_top_bar_search', true );
-					$class         = 'menu pull-right';
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+				<?php $news_ticker = get_theme_mod( 'newspaper_x_enable_news_ticker', true ); ?>
+				<?php if ( $news_ticker ) {
+					get_template_part( 'template-parts/news-ticker' );
+				} ?>
+            </div>
+			<?php $has_menu = has_nav_menu( 'social' ); ?>
+            <div class="col-lg-4">
+				<?php
+				$enable_search = get_theme_mod( 'newspaper_x_enable_top_bar_search', true );
+				if ( $enable_search ): ?>
+					<?php $search_query = get_search_query(); ?>
+                    <form role="search" method="get" <?php echo $has_menu ? '' : 'class="pull-right"' ?>
+                          id="searchform_topbar"
+                          action="<?php echo esc_url_raw( home_url( '/' ) ); ?>">
+                        <label>
+                            <input class="" id=""
+                                   placeholder="<?php echo esc_html__( 'Search...', 'newspaper-x' ) ?>"
+                                   value="<?php echo esc_attr( $search_query ); ?>" name="s"
+                                   type="search">
+                        </label>
+                        <button id="search-top-bar-submit" type="submit" class="search-top-bar-submit">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </form>
+				<?php endif; ?>
+				<?php
+				$class = 'menu pull-right';
 
-					if ( $enable_search ) {
-						$class = 'menu pull-right search-enabled';
-					}
-
-					if ( has_nav_menu( 'social' ) ) {
-
+				if ( has_nav_menu( 'social' ) ) { ?>
+                    <div class="top-header-icons">
+						<?php
 						wp_nav_menu(
 							array(
 								'theme_location'  => 'social',
@@ -40,24 +57,13 @@
 								'fallback_cb'     => '',
 							)
 						);
-					}
+						?>
+                    </div>
+					<?php
+				}
+				?>
 
-					if ( $enable_search ): ?>
-						<button href="#" class="search-form-opener" type="button"><span class="fa fa-search"></span>
-						</button>
-					<?php endif; ?>
-				</div>
-				<?php if ( $enable_search ): ?>
-					<div class="header-search-form">
-						<div class="container">
-							<?php 
-								$search = get_search_form(false); 
-								echo str_replace('type="submit"','type="button"',$search);
-							?>
-						</div>
-					</div>
-				<?php endif; ?>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </div>

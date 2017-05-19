@@ -1,42 +1,43 @@
 .newspaper-x-news-ticker {
-  margin-top: 13px;
+  @media (max-width: 767px){
+    display: none;
+  }
   position: relative;
-  background-color: #000;
   overflow: hidden;
-  max-height: 45px;
+  max-height: 42px;
   .owl-carousel {
     display: block;
     position: absolute;
-    top: 12px;
+    top: 0px;
     width: 100%;
+    left: -10px;
   }
 
   .newspaper-x-module-title {
     color: #FFF;
-    padding: 12px 30px;
+    padding: 0px 21px 0px 11px;
+    font-size:15px;
+    font-family: $font__main;
     font-weight: bold;
-    background: #2d2d2d;
+    background: $color_main-accent;
     display: inline-block;
     position: relative;
-    @media (max-width: 767px) {
-      display: inline-block;
-      margin-bottom: 20px;
+    line-height: 42px;
+    .fa-stack-1x{
+      font-size:13px;
+      left: 3px;
+      bottom: 1px;
+    }
+    .fa-stack-2x {
+      font-size: 30px;
+      position: relative;
+      top: 3px;
+      left: 3px;
     }
     icon.fa {
       color: $color_brand-newspaper-x;
       margin-right: 10px;
-    }
-    &:after {
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 8.5px 0 8.5px 11px;
-      border-color: transparent transparent transparent #2d2d2d;
-      content: '';
-      display: block;
-      position: absolute;
-      right: -11px;
-      top: 15px;
+      font-size: 13px;
     }
   }
 
@@ -55,7 +56,7 @@
       a {
         color: #fff;
         font-size: 14px;
-        font-family: $font__alternate;
+        font-family: $font__main;
         font-weight: 400;
       }
     }

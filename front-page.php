@@ -9,7 +9,7 @@
  *
  * @link    https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Newsmag
+ * @package Newspaper_x
  */
 
 get_header();
@@ -19,23 +19,23 @@ if ( $show_on_front == 'posts' ):
 	$banner    = get_theme_mod( 'newspaper_x_banner_type', 'image' );
 
 	?>
-	<div class="row">
-		<div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
-			<main id="main" class="site-main margin-top" role="main">
+    <div class="row">
+        <div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <main id="main" class="site-main margin-top" role="main">
 				<?php
 				$banner_count_index = 0;
 				if ( have_posts() ) :
 					?>
-					<div class="row">
+                    <div class="row">
 						<?php
 						while ( have_posts() ) : the_post();
 
 							if ( fmod( $banner_count_index, $banner_count ) == 0 && $banner_count_index != 0 ) { ?>
-								<div class="row">
-									<div class="col-xs-12 newspaper-x-image-banner">
+                                <div class="row">
+                                    <div class="col-xs-12 newspaper-x-image-banner">
 										<?php get_template_part( 'template-parts/banner/banner', $banner ); ?>
-									</div>
-								</div>
+                                    </div>
+                                </div>
 								<?php
 							}
 
@@ -46,11 +46,11 @@ if ( $show_on_front == 'posts' ):
 							 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 							 */
 							?>
-							<div class="col-md-6">
+                            <div class="col-md-6">
 								<?php
 								get_template_part( 'template-parts/content', get_post_format() );
 								?>
-							</div>
+                            </div>
 							<?php
 							if ( fmod( $banner_count_index, 2 ) == 0 && $banner_count_index != (int) $wp_query->post_count ) {
 								echo '</div><div class="row">';
@@ -59,7 +59,7 @@ if ( $show_on_front == 'posts' ):
 							}
 						endwhile;
 						?>
-					</div>
+                    </div>
 					<?php
 					the_posts_navigation();
 				else :
@@ -68,45 +68,45 @@ if ( $show_on_front == 'posts' ):
 					echo '</div>';
 				endif;
 				?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
+            </main><!-- #main -->
+        </div><!-- #primary -->
 		<?php get_sidebar( 'default-widget-area' ); ?>
-	</div>
+    </div>
 	<?php
 else:
 	?>
-	<div class="row">
-		<div class="col-md-12">
-			<!-- Recent Posts Module -->
-			<?php get_template_part( 'template-parts/recent-posts' ) ?>
-		</div>
-	</div>
+    </div>
 
-	<div class="row">
+    <!-- Header Widget Area -->
+	<?php get_template_part( 'template-parts/header-widget-area' ) ?>
+
+    <div class="container site-content">
+    <div class="row">
+
 		<?php if ( is_active_sidebar( 'content-area' ) ) { ?>
-			<div class="<?php echo is_active_sidebar( 'sidebar' ) ? 'col-md-8' : 'col-md-12' ?> newspaper-x-content">
+            <div class="<?php echo is_active_sidebar( 'sidebar-homepage' ) ? 'col-md-8' : 'col-md-12' ?> newspaper-x-content newspaper-x-with-sidebar">
 				<?php dynamic_sidebar( 'content-area' ); ?>
-			</div>
+            </div>
 		<?php } ?>
 
-		<?php if ( is_active_sidebar( 'sidebar' ) ) { ?>
-			<div class="col-md-4 newspaper-x-blog-sidebar">
-				<?php dynamic_sidebar( 'sidebar' ); ?>
-			</div>
+		<?php if ( is_active_sidebar( 'sidebar-homepage' ) ) { ?>
+            <div class="col-md-4 newspaper-x-blog-sidebar">
+				<?php dynamic_sidebar( 'sidebar-homepage' ); ?>
+            </div>
 		<?php } ?>
-	</div>
+    </div>
 
-	<section class="newspaper-x-after-content-area">
-		<div class="row">
-			<div class="col-xs-12 newspaper-x-after-content-sidebar">
+    <section class="newspaper-x-after-content-area">
+        <div class="row">
+            <div class="col-xs-12 newspaper-x-after-content-sidebar">
 				<?php
 				if ( is_active_sidebar( 'after-content-area' ) ) {
 					dynamic_sidebar( 'after-content-area' );
 				}
 				?>
-			</div>
-		</div><!--/.row-->
-	</section>
+            </div>
+        </div><!--/.row-->
+    </section>
 <?php endif; ?>
 
 <?php get_footer();

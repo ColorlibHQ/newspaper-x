@@ -8,13 +8,13 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_top_bar',
 	                            array(
-		                            'type'    => 'mte-toggle',
-		                            'label'   => esc_html__( 'Top Bar Section', 'newspaper-x' ),
-		                            'section' => 'newspaper_x_general_section',
+		                            'type'        => 'epsilon-toggle',
+		                            'label'       => esc_html__( 'Top Bar Section', 'newspaper-x' ),
+		                            'description' => esc_html__( 'Enable a top bar section', 'newspaper-x' ),
+		                            'section'     => 'newspaper_x_general_section',
 	                            )
                             )
 );
-
 
 /**
  * Enable top bar search
@@ -23,9 +23,10 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_top_bar_search',
 	                            array(
-		                            'type'    => 'mte-toggle',
-		                            'label'   => esc_html__( 'Search form', 'newspaper-x' ),
-		                            'section' => 'newspaper_x_general_section',
+		                            'type'        => 'epsilon-toggle',
+		                            'label'       => esc_html__( 'Search form', 'newspaper-x' ),
+		                            'description' => esc_html__( 'Toggle the display of the search icon and functionality in the main navigation menu.', 'newspaper-x' ),
+		                            'section'     => 'newspaper_x_general_section',
 	                            )
                             )
 );
@@ -38,9 +39,23 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_news_ticker',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'News ticker', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_general_section',
+	                            )
+                            )
+);
+
+/**
+ * Enable the header background image
+ */
+$wp_customize->add_control( new WP_Customize_Color_Control(
+	                            $wp_customize,
+	                            'newspaper_x_header_bg',
+	                            array(
+		                            'label'    => esc_html__( 'Header background', 'newspaper-x' ),
+		                            'section'  => 'colors',
+		                            'settings' => 'newspaper_x_header_bg'
 	                            )
                             )
 );
@@ -52,28 +67,9 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_post_breadcrumbs',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Breadcrumbs', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
-	                            )
-                            )
-);
-/**
- *  Breadcrumbs separator
- */
-
-/**
- *  Breadcrumbs post category
- */
-
-$wp_customize->add_control( new Epsilon_Control_Toggle(
-	                            $wp_customize,
-	                            'newspaper_x_blog_breadcrumb_menu_post_category',
-	                            array(
-		                            'type'    => 'mte-toggle',
-		                            'label'   => esc_html__( 'Show post category in breadcrumbs', 'newspaper-x' ),
-		                            'section'         => 'newspaper_x_blog_section',
-		                            'active_callback' => 'breadcrumbs_enabled_callback',
 	                            )
                             )
 );
@@ -102,7 +98,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_copyright',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Copyright footer bar', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_footer_section',
 	                            )
@@ -125,7 +121,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_go_top',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Go Top Button', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_footer_section',
 	                            )
@@ -141,7 +137,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_author_box',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Author info section', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -155,7 +151,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_related_posts_enabled',
 	                            array(
-		                            'type'    => 'mte-toggle',
+		                            'type'    => 'epsilon-toggle',
 		                            'label'   => esc_html__( 'Related Posts Section', 'newspaper-x' ),
 		                            'section' => 'newspaper_x_blog_section',
 	                            )
@@ -169,9 +165,10 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_autoplay_blog_posts',
 	                            array(
-		                            'type'    => 'mte-toggle',
-		                            'label'   => esc_html__( 'Autoplay related carousel', 'newspaper-x' ),
-		                            'section' => 'newspaper_x_blog_section',
+		                            'type'            => 'epsilon-toggle',
+		                            'label'           => esc_html__( 'Autoplay related carousel', 'newspaper-x' ),
+		                            'section'         => 'newspaper_x_blog_section',
+		                            'active_callback' => 'newspaper_x_related_posts_enabled_callback',
 	                            )
                             )
 );
@@ -182,15 +179,16 @@ $wp_customize->add_control( new Epsilon_Control_Slider(
 	                            $wp_customize,
 	                            'newspaper_x_howmany_blog_posts',
 	                            array(
-		                            'label'       => esc_html__( 'How many blog posts to display in the carousel at once?', 'newspaper-x' ),
-		                            'description' => esc_html__( 'No more than 4 posts at once;', 'newspaper-x' ),
-		                            'choices'     => array(
+		                            'label'           => esc_html__( 'How many blog posts to display in the carousel at once?', 'newspaper-x' ),
+		                            'description'     => esc_html__( 'No more than 4 posts at once;', 'newspaper-x' ),
+		                            'choices'         => array(
 			                            'min'  => 1,
 			                            'max'  => 4,
 			                            'step' => 1,
 		                            ),
-		                            'section'     => 'newspaper_x_blog_section',
-		                            'default'     => 4
+		                            'section'         => 'newspaper_x_blog_section',
+		                            'default'         => 4,
+		                            'active_callback' => 'newspaper_x_related_posts_enabled_callback',
 	                            )
                             )
 );
@@ -203,9 +201,10 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_related_title_blog_posts',
 	                            array(
-		                            'type'    => 'mte-toggle',
-		                            'label'   => esc_html__( 'Posts title in the carousel', 'newspaper-x' ),
-		                            'section' => 'newspaper_x_blog_section',
+		                            'type'            => 'epsilon-toggle',
+		                            'label'           => esc_html__( 'Posts title in the carousel', 'newspaper-x' ),
+		                            'section'         => 'newspaper_x_blog_section',
+		                            'active_callback' => 'newspaper_x_related_posts_enabled_callback',
 	                            )
                             )
 );
@@ -217,20 +216,31 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_enable_related_date_blog_posts',
 	                            array(
-		                            'type'    => 'mte-toggle',
-		                            'label'   => esc_html__( 'Posts date in the carousel', 'newspaper-x' ),
-		                            'section' => 'newspaper_x_blog_section',
+		                            'type'            => 'epsilon-toggle',
+		                            'label'           => esc_html__( 'Posts date in the carousel', 'newspaper-x' ),
+		                            'section'         => 'newspaper_x_blog_section',
+		                            'active_callback' => 'newspaper_x_related_posts_enabled_callback',
 	                            )
                             )
 );
 /**
  * Active Callback for breadcrumb
  */
-function breadcrumbs_enabled_callback( $control ) {
+function newspaper_x_breadcrumbs_enabled_callback( $control ) {
 	if ( $control->manager->get_setting( 'newspaper_x_enable_post_breadcrumbs' )->value() == 'breadcrumbs_enabled' ) {
 		return true;
 	}
 
 	return false;
+}
 
+/**
+ * Active Callback for copyright
+ */
+function newspaper_x_related_posts_enabled_callback( $control ) {
+	if ( $control->manager->get_setting( 'newspaper_x_related_posts_enabled' )->value() == true ) {
+		return true;
+	}
+
+	return false;
 }

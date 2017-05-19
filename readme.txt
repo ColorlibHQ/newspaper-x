@@ -5,9 +5,11 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0
 Tested up to: 4.7
-Stable tag: 1.1.5
+Stable tag: 1.2.9
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+A starter theme called Newspaper X;
 
 == Description ==
 
@@ -23,6 +25,11 @@ Magazine WordPress theme.
 
 
 == Changelog ==
+### V1.2.8
+	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
+	- (DROP CAPS) - first-letter pseudo-selector was not working correctly on chrome
+	- Various bug fixes
+
 ### V1.1.5
 	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:38
 	- Fixes issues from the review team https://themes.trac.wordpress.org/ticket/34644#comment:42
@@ -43,11 +50,11 @@ Magazine WordPress theme.
 	- Theme structure re-done
 
 ### V1.0.0
-	- Initial release
+- Initial release
 
 == Credits ==
 
-* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv3 or later](https://www.gnu.org/licenses/gpl-3.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License.
@@ -55,10 +62,7 @@ The exceptions to this license are as follows:
 
 === Images ===
 
-- Images used in theme screenshot are taken from unsplash.com
-    -- All photos published on Unsplash are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash.
-    -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
-   
+- Images used in theme screenshot are taken from unsplash.com -- All photos published on Unsplash are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash. -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
 
 - Logo created by Colorlib
 
@@ -91,7 +95,7 @@ The exceptions to this license are as follows:
     -- Copyright (c) 2013 Brian Reavis & contributors
     -- Licensed under the Apache License, Version 2.0 (the "License");
 - Epsilon
-    -- MachoThemes https://machothemes.com
+    -- Colorlib https://Colorlib.com
     -- available for use under the MIT License
 
 === Fonts ===
@@ -104,4 +108,4 @@ The exceptions to this license are as follows:
     -- Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 - Google Fonts
     -- License: SIL OFL 1.1
--- URL: http://scripts.sil.org/OFL
+    -- URL: http://scripts.sil.org/OFL

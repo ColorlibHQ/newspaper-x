@@ -6,6 +6,8 @@
   display: block;
   float: left;
   width: 100%;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
 
   ul {
     display: none;
@@ -79,11 +81,10 @@
   display: block;
   width: 35px;
   height: 35px;
-  color: $font__main;
-  border-color: $font__main;
+  color: $color_text-color;
+  border-color: $color_text-color;
   background: transparent;
-  margin: 0 auto;
-  margin-bottom: 10px;
+  margin: 10px auto;
 }
 
 #site-navigation.toggled ul {
@@ -144,6 +145,7 @@
       top: initial;
       position: relative;
       padding-left: 20px;
+      width:100%;
       ul {
         left: initial;
         top: initial;
@@ -187,42 +189,36 @@
 /* Newspaper X Menu Customization starts here */
 #site-navigation {
   a {
-    font-size: 18px;
-    font-family: "Oswald";
+    font-size: 15px;
+    font-family: $font__main;
     line-height: 26px;
     padding-bottom: 10px;
     position: relative;
-    color: $color__text-title;
+    color: #939393;
     display: inline-block;
-    font-weight: 700;
+    font-weight: 300;
   }
 
   .menu {
-    border-top: 4px solid #000;
-    padding-top: 20px;
     padding-bottom: 10px;
     position: relative;
-    &:before {
-      width: 100%;
-      position: absolute;
-      content: '';
-      height: 1px;
-      background-color: #000;
-      display: block;
-      top: 2px;
-    }
     > li {
       display: inline-block;
-      padding-right: 40px;
+      margin-right: 37px;
       position: relative;
-      &.active,
+      line-height: 57px;
+      &.current-menu-item,
       &:hover {
+          border-top: 3px solid $color_main-accent;
+          margin-top: -3px;
+          top:1px;
         > a {
-          color: $color_brand-newspaper-x;
+          top: -1px;
         }
       }
       > a {
         position: relative;
+        text-align:center;
         &:after {
           position: absolute;
           bottom: -1px;
@@ -244,13 +240,13 @@
           font-size: 16px;
           display: inline-block;
           padding-left: 5px;
-          color: $color__text-title;
+          color: #939393;
         }
         > ul {
           li {
             &:hover {
               color: #FFF;
-              background-color: $color_brand-newspaper-x;
+              background-color: $color_contrast-hover;
               > a, &:after {
                 color: #FFF;
               }
@@ -263,8 +259,8 @@
                 font-size: 16px;
                 display: inline-block;
                 position: absolute;
-                right: 5px;
-                bottom: 12px;
+                right: 10px;
+                bottom: 1px;
                 color: $color__text-title;
               }
               &:hover {
@@ -279,6 +275,13 @@
             }
           }
         }
+      }
+    }
+    .current_page_item{
+      border-top: 3px solid $color_main-accent;
+      bottom:2px;
+      > a {
+        top:-1px;
       }
     }
   }

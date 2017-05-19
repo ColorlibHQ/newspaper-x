@@ -47,7 +47,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_show_banner_on_homepage',
 	                            array(
-		                            'type'        => 'mte-toggle',
+		                            'type'        => 'epsilon-toggle',
 		                            'label'       => esc_html__( 'Enable banner on homepage', 'newspaper-x' ),
 		                            'section'     => 'newspaper_x_general_banners_controls',
 	                            )
@@ -61,7 +61,7 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_show_banner_on_archive_pages',
 	                            array(
-		                            'type'        => 'mte-toggle',
+		                            'type'        => 'epsilon-toggle',
 		                            'label'       => esc_html__( 'Enable banner on archives', 'newspaper-x' ),
 		                            'section'     => 'newspaper_x_general_banners_controls',
 	                            )
@@ -113,6 +113,7 @@ $wp_customize->add_control(
 		'active_callback' => 'banners_type_false_callback',
 	)
 );
+
 function banners_type_callback( $control ) {
 	if ( $control->manager->get_setting( 'newspaper_x_banner_type' )->value() == 'image' ) {
 		return true;
