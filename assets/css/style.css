@@ -859,6 +859,8 @@ a {
     width: 175px;
     border-bottom: 1px solid #202d44;
     padding-top: 7px; }
+    .top-header #searchform.search-right {
+      float: right !important; }
     .top-header #searchform label {
       max-width: 140px; }
     .top-header #searchform ::-moz-placeholder {
@@ -2592,6 +2594,8 @@ a {
           -ms-transform: rotate(45deg);
           -o-transform: rotate(45deg);
           transform: rotate(45deg); }
+        .top-header .header-search-form #searchform .search-submit:after {
+          visibility: hidden; }
 
 .header-banner {
   text-align: right; }

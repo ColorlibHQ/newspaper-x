@@ -36,6 +36,9 @@
     width: 175px;
     border-bottom: 1px solid #202d44;
     padding-top: 7px;
+    &.search-right{
+     float: right !important;
+    }
     label{
       max-width:140px;
     }
