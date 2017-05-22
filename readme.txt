@@ -25,6 +25,12 @@ Magazine WordPress theme.
 
 
 == Changelog ==
+### V1.2.10
+	- Small issue fix in the welcome screen admin notice
+
+### V1.2.9
+	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
+
 ### V1.2.8
 	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
 	- (DROP CAPS) - first-letter pseudo-selector was not working correctly on chrome
