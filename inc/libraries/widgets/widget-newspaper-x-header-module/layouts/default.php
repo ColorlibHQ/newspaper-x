@@ -32,7 +32,7 @@
 				?>
                 <li class="blazy" id="newspaper-x-recent-post-<?php echo $i; ?>"
                     data-src="<?php echo esc_url( $image ) ?>"
-                    style="background-image:url('<?php echo esc_url( $placeholder ) ?>')">
+                    style="background-image:url('<?php echo esc_url( $image ) ?>')">
                     <div class="newspaper-x-post-info">
                         <<?php echo $h; ?>>
                         <a href="<?php echo esc_url( get_permalink( get_the_ID() ) ) ?>">
