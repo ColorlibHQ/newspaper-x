@@ -14,10 +14,10 @@ get_header(); ?>
  * Banner Settings;
  */
 $banner_count = get_theme_mod( 'newspaper_x_show_banner_after', 6 );
-$archive_title = get_the_archive_title();
+$queried_tag = get_query_var('tag');
 global $wp_query;
 $args = array(
-    'tag' => $archive_title
+    'tag' => $queried_tag
 );
 $posts_by_tags = new WP_Query( $args );
 
