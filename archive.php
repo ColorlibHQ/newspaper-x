@@ -14,14 +14,18 @@ get_header(); ?>
  * Banner Settings;
  */
 $banner_count = get_theme_mod( 'newspaper_x_show_banner_after', 6 );
-$queried_tag = get_query_var('tag');
+$archive      = newspaper_x_check_archive();
+$first_posts  = newspaper_x_get_first_posts( $archive );
 global $wp_query;
-$args = array(
-    'tag' => $queried_tag
-);
-$posts_by_tags = new WP_Query( $args );
 
-if ( $posts_by_tags->have_posts() ):
+if (is_tag()) {
+	$queried_tag = get_query_var('tag');
+	$args = array(
+    'tag' => $queried_tag
+	);
+	$first_posts = new WP_Query( $args );
+}
+if ( $first_posts->have_posts() ):
 	?>
 	<div class="row">
 		<header class="col-xs-12">
@@ -34,7 +38,7 @@ if ( $posts_by_tags->have_posts() ):
 	<div class="row">
 		<div class="col-xs-12 newspaper-x-archive-first-posts">
 			<div class="row">
-				<?php while ( $posts_by_tags->have_posts() ) : $posts_by_tags->the_post(); ?>
+				<?php while ( $first_posts->have_posts() ) : $first_posts->the_post(); ?>
 
 					<div class="col-md-6">
 						<?php
