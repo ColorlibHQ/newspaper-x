@@ -6,4 +6,9 @@
 /* The blog sidebar should be pushed to align with the content */
 #secondary {
   margin-top: 20px;
+
+	@media only screen and (max-width: 768px) {
+		clear: both;
+	}
 }
+
