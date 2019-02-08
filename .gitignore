@@ -1,6 +1,0 @@
-*.log
-
-/css/style.css.map
-/node_modules/
-.idea/
-/.standard.json

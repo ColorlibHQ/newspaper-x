@@ -18,13 +18,6 @@ $archive      = newspaper_x_check_archive();
 $first_posts  = newspaper_x_get_first_posts( $archive );
 global $wp_query;
 
-if (is_tag()) {
-	$queried_tag = get_query_var('tag');
-	$args = array(
-    'tag' => $queried_tag
-	);
-	$first_posts = new WP_Query( $args );
-}
 if ( $first_posts->have_posts() ):
 	?>
 	<div class="row">
