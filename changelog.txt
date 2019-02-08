@@ -1,11 +1,3 @@
-### V1.3.0
-	- Fixes an issue with tags not displaying all posts on archive pages
-	- Fixes an issue with homepage widgets loading small resolution images
-	- Fixes an issue where the links on archive pages were not working
-
-### V1.2.10
-	- Small issue fix in the welcome screen admin notice
-
 ### V1.2.9
 	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
 
