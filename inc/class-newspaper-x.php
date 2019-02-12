@@ -97,7 +97,6 @@ class Newspaper_X {
 			global $newspaper_x_required_actions, $newspaper_x_recommended_plugins;
 
 			$newspaper_x_recommended_plugins = array(
-				'kiwi-social-share'        => array( 'recommended' => false ),
 				'modula-best-grid-gallery' => array( 'recommended' => true ),
 				'fancybox-for-wordpress'   => array( 'recommended' => false ),
 				'simple-custom-post-order' => array( 'recommended' => false ),
