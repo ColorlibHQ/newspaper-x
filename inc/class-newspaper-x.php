@@ -97,9 +97,16 @@ class Newspaper_X {
 			global $newspaper_x_required_actions, $newspaper_x_recommended_plugins;
 
 			$newspaper_x_recommended_plugins = array(
+        'kali-forms'                       => array( 'recommended' => true ),
 				'modula-best-grid-gallery' => array( 'recommended' => true ),
 				'fancybox-for-wordpress'   => array( 'recommended' => false ),
 				'simple-custom-post-order' => array( 'recommended' => false ),
+				'modula-best-grid-gallery'         => array( 'recommended' => true ),
+				'fancybox-for-wordpress'           => array( 'recommended' => false ),
+				'simple-custom-post-order'         => array( 'recommended' => false ),
+				'colorlib-404-customizer'          => array( 'recommended' => false ),
+				'colorlib-coming-soon-maintenance' => array( 'recommended' => false ),
+				'colorlib-login-customizer'        => array( 'recommended' => false ),
 			);
 			/*
 			 * id - unique id; required
