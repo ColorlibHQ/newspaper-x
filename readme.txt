@@ -21,16 +21,13 @@ Magazine WordPress theme.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+== Translation ==
+Theme can be translated directly on https://translate.wordpress.org/projects/wp-themes/newspaper-x without relying on the .po file. All the translatable strings are pulled automatically. For more info please check this link https://make.wordpress.org/polyglots/handbook/tools/glotpress-translate-wordpress-org/
+
 == Frequently Asked Questions ==
 
 
 == Changelog ==
-### V1.2.10
-	- Small issue fix in the welcome screen admin notice
-
-### V1.2.9
-	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
-
 ### V1.2.8
 	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
 	- (DROP CAPS) - first-letter pseudo-selector was not working correctly on chrome
