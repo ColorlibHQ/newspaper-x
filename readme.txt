@@ -5,7 +5,7 @@ Tags: translation-ready, custom-background, theme-options, custom-menu, post-for
 
 Requires at least: 4.0
 Tested up to: 4.7
-Stable tag: 1.2.9
+Stable tag: 1.3.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,7 +16,7 @@ A starter theme called Newspaper X;
 Magazine WordPress theme.
 
 == Installation ==
-	
+
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
@@ -24,36 +24,9 @@ Magazine WordPress theme.
 == Translation ==
 Theme can be translated directly on https://translate.wordpress.org/projects/wp-themes/newspaper-x without relying on the .po file. All the translatable strings are pulled automatically. For more info please check this link https://make.wordpress.org/polyglots/handbook/tools/glotpress-translate-wordpress-org/
 
-== Frequently Asked Questions ==
-
-
 == Changelog ==
-### V1.2.8
-	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
-	- (DROP CAPS) - first-letter pseudo-selector was not working correctly on chrome
-	- Various bug fixes
 
-### V1.1.5
-	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:38
-	- Fixes issues from the review team https://themes.trac.wordpress.org/ticket/34644#comment:42
-
-### V1.1.2
-	 - Escaped where needed
-	 - Newspaper-x-bootstrap enqueue handler changed to bootstrap
-	 - Updated licenses
-	 - Removed banner widget
-	 - Posts widget merged
-	 - Footer credits are now translatable.
-
-### V1.1.1
-	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:15
-
-### V1.1.0
-	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:9
-	- Theme structure re-done
-
-### V1.0.0
-- Initial release
+* See [changelog.txt](https://github.com/MachoThemes/newspaper-x/blob/master/changelog.txt) for previous versions.
 
 == Credits ==
 
