@@ -104,7 +104,7 @@ li.blazy {
     font-size: 14px;
     &.current {
       color: $color_main-accent;
-      &:hover {
+      &:hover, &:focus {
         color: $color_contrast-hover;
       }
     }

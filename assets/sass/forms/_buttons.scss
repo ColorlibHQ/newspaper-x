@@ -41,7 +41,7 @@ button .button {
     top: 4px;
     border: none;
     margin-left: 4px;
-    &:hover {
+    &:hover, &:focus {
       border-color: transparent;
       background-color: $color_brand-newspaper-x;
     }

@@ -80,7 +80,10 @@ textarea {
       padding: 6px 14px;
       float: right;
       margin-top: 7px;
-      color: #e1e1e1;
+	  color: #e1e1e1;
+	  &:focus .fa {
+		  color: $color_brand-newspaper-x;
+	  }
     }
   > label {
     margin-bottom: 0;

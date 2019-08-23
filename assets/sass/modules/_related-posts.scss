@@ -30,7 +30,7 @@
       &:last-of-type {
         margin-right: 0;
       }
-      &:hover {
+      &:hover, &:focus-within {
         border-color: $color_brand-newspaper-x;
       }
       a {
