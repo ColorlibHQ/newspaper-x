@@ -99,7 +99,6 @@ class Newspaper_X {
 			$newspaper_x_recommended_plugins = array(
         		'kali-forms'                       => array( 'recommended' => true ),
 				'modula-best-grid-gallery'         => array( 'recommended' => true ),
-				'strong-testimonials'              => array( 'recommended' => true ),
 				'fancybox-for-wordpress'           => array( 'recommended' => false ),
 				'simple-custom-post-order'         => array( 'recommended' => false ),
 				'colorlib-404-customizer'          => array( 'recommended' => false ),
