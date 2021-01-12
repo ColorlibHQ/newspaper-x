@@ -48,13 +48,6 @@ class Newspaper_X {
 	}
 
 	/**
-	 * Initiate the user profiles
-	 */
-	public function init_user_profile() {
-		new Newspaper_X_Profile_Fields();
-	}
-
-	/**
 	 * Load Lazyload
 	 */
 	public function init_lazyload() {

@@ -24,6 +24,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	<?php wp_body_open(); ?>
 	<?php
 	/**
 	 * Enable / Disable the top bar
