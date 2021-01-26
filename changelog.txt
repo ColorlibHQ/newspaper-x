@@ -1,3 +1,6 @@
+### V1.3.2
+	- Compatibility with jQuery 3.0
+
 ### V1.3.1
 	- Updated list of recommended plugins
 	- Improved accesibility with keyboard navigation
