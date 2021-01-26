@@ -52,11 +52,6 @@ class Epsilon_Framework {
 			$this,
 			'epsilon_framework_ajax_action'
 		) );
-		add_action( 'wp_ajax_nopriv_epsilon_framework_ajax_action', array(
-			$this,
-			'epsilon_framework_ajax_action'
-		) );
-
 
 	}
 
@@ -111,26 +106,68 @@ class Epsilon_Framework {
 		wp_localize_script( 'epsilon-object', 'WPUrls', array(
 			'siteurl' => get_option( 'siteurl' ),
 			'theme'   => get_template_directory_uri(),
-			'ajaxurl' => admin_url( 'admin-ajax.php' )
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'nonce'   => wp_create_nonce( 'epsilon_framework_ajax_action' ),
 		) );
 		wp_enqueue_style( 'epsilon-styles', get_template_directory_uri() . $this->path . '/epsilon-framework/assets/css/style.css' );
 
 	}
 
-	/**
-	 * Ajax handler
-	 */
 	public function epsilon_framework_ajax_action() {
-		if ( $_POST['action'] !== 'epsilon_framework_ajax_action' ) {
-			wp_die( json_encode( array( 'status' => false, 'error' => 'Not allowed' ) ) );
+
+		if ( ! check_ajax_referer( 'epsilon_framework_ajax_action', 'security' ) ) {
+			wp_die(
+				json_encode(
+					array(
+						'status' => false,
+						'error'  => 'Not allowed',
+					)
+				)
+			);
+		}
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+		    wp_die(
+				json_encode(
+					array(
+						'status' => false,
+						'error'  => 'Not allowed',
+					)
+				)
+			);
+		}
+
+		if ( 'epsilon_framework_ajax_action' !== $_POST['action'] ) {
+			wp_die(
+				json_encode(
+					array(
+						'status' => false,
+						'error'  => 'Not allowed',
+					)
+				)
+			);
 		}
 
 		if ( count( $_POST['args']['action'] ) !== 2 ) {
-			wp_die( json_encode( array( 'status' => false, 'error' => 'Not allowed' ) ) );
+			wp_die(
+				json_encode(
+					array(
+						'status' => false,
+						'error'  => 'Not allowed',
+					)
+				)
+			);
 		}
 
-		if ( ! class_exists( $_POST['args']['action'][0] ) ) {
-			wp_die( json_encode( array( 'status' => false, 'error' => 'Class does not exist' ) ) );
+		if ( 'Epsilon_Framework' != $_POST['args']['action'][0] ) {
+			wp_die(
+				json_encode(
+					array(
+						'status' => false,
+						'error'  => 'Class does not exist',
+					)
+				)
+			);
 		}
 
 		$class  = $_POST['args']['action'][0];
@@ -140,10 +177,24 @@ class Epsilon_Framework {
 		$response = $class::$method( $args );
 
 		if ( 'ok' == $response ) {
-			wp_die( json_encode( array( 'status' => true, 'message' => 'ok' ) ) );
+			wp_die(
+				json_encode(
+					array(
+						'status'  => true,
+						'message' => 'ok',
+					)
+				)
+			);
 		}
 
-		wp_die( json_encode( array( 'status' => false, 'message' => 'nok' ) ) );
+		wp_die(
+			json_encode(
+				array(
+					'status'  => false,
+					'message' => 'nok',
+				)
+			)
+		);
 	}
 
 	/**

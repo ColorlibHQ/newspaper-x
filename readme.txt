@@ -38,7 +38,7 @@ The exceptions to this license are as follows:
 
 === Images ===
 
-- Images used in theme screenshot are taken from unsplash.com -- All photos published on Unsplash are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash. -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
+- Images used in theme screenshot are taken from stocksnap.io -- All photos published on stocksnap are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or stocksnap. -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
 
 - Logo created by Colorlib
 
