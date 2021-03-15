@@ -1,3 +1,6 @@
+### V1.3.4 
+	- Improved : Escaping 
+
 ### V1.3.2
 	- Compatibility with jQuery 3.0
 

@@ -76,7 +76,7 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 				$categories = get_categories( 'hide_empty=0' );
 				foreach ( $categories as $category ) { ?>
                     <option
-                            value="<?php echo esc_attr( $category->slug ); ?>" <?php selected( esc_attr( $category->slug ), $instance['newspaper_x_category'] ); ?>><?php echo esc_attr( $category->cat_name ); ?></option>
+                            value="<?php echo esc_attr( $category->slug ); ?>" <?php selected( esc_attr( $category->slug ), $instance['newspaper_x_category'] ); ?>><?php echo esc_html( $category->cat_name ); ?></option>
 				<?php } ?>
             </select>
         </p>
