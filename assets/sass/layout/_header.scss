@@ -54,7 +54,7 @@
   height: 41px;
   margin-left: 4px;
   text-align: right;
-  &:hover {
+  &:hover, &:focus {
     border-color: transparent;
     background-color: $color_brand-newspaper-x;
   }
@@ -170,7 +170,7 @@
         vertical-align: middle;
         width: 23px;
         height: 23px;
-        &:hover, &.input-open {
+        &:hover, &:focus, &.input-open {
           color: darken(#FFF, 5%);
         }
 

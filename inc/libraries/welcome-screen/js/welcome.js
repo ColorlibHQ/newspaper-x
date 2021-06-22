@@ -7,7 +7,7 @@ jQuery(document).ready(function () {
 	}
 
 	/* Dismiss required actions */
-	jQuery(".newspaper-x-required-action-button").click(function () {
+	jQuery(".newspaper-x-required-action-button").on('click', function () {
 
 		var id = jQuery(this).attr('id'),
 				action = jQuery(this).attr('data-action');

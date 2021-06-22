@@ -78,7 +78,7 @@
 		    	font-family: $font__main;
 		    	a{
 		    		color: #8c9597;;
-		    		&:hover{
+		    		&:hover, &:focus {
 		    			color:$color_contrast-hover;
 		    		}
 		    	}
@@ -99,7 +99,7 @@
 		    		color: $color_text-color;
 		    		font-size: 18px;
 		    		font-weight: 700;
-		    		&:hover{
+		    		&:hover, &:focus {
 		    			color:$color_contrast-hover;
 		    		}
 		    	}
@@ -130,7 +130,7 @@
 		    	font-family: $font__main;
 		    	a{
 		    		color: $color_main-accent;
-		    		&:hover{
+		    		&:hover, &:focus {
 		    			color:$color_contrast-hover;
 		    		}
 		    	}
@@ -148,7 +148,7 @@
 		    	a{
 		    		font-size: 15px;
 		    		color: #8b8d91;
-		    		&:hover{
+		    		&:hover, &:focus {
 		    			color:$color_contrast-hover;
 		    		}
 		    	}
@@ -178,7 +178,7 @@
 	      	border: 1px solid #7c95b1;
 	      	line-height: 45px;
 	      	font-size: 15px !important;
-	      	&:hover{
+	      	&:hover, &:focus {
 	        	background: $color_main-accent;
 	        	color: #fff;
 	        	border: 1px solid $color_main-accent;
@@ -446,7 +446,7 @@
         margin-bottom:20px;
         a{
           color: #a9afb5;
-          &:hover{
+          &:hover, &:focus {
 		    	color:$color_contrast-hover;
 		    }
         }
@@ -495,7 +495,7 @@
         }
       }
     }
-    
+
     &.widget_categories {
       padding-right: 0px;
       position: relative;
@@ -513,12 +513,12 @@
             border-bottom: none;
           }
           &:hover,
-            &:focus {
-              a, .newspaper-x-cat-count{
-                text-decoration: none;
-                color: $color_contrast-hover;
-              }
-            }
+			&:focus-within {
+				a, .newspaper-x-cat-count{
+				text-decoration: none;
+				color: $color_contrast-hover;
+				}
+			}
           a {
             color: #a9afb5;
             font-family: $font__main;
@@ -554,9 +554,9 @@
     * Style the recent comments
     */
     &.widget_recent_comments{
-    	ul{	
+    	ul{
     		padding:0px;
-    		li{	
+    		li{
     			list-style: none;
 		    	margin-bottom: 15px;
 		    	font-size: 15px;
@@ -564,7 +564,7 @@
 		    	font-family: $font__main;
 		    	a{
 		    		color: #fff;
-		    		&:hover{
+		    		&:hover, &:focus {
 		    			color:$color_contrast-hover;
 		    		}
 		    	}
@@ -575,15 +575,15 @@
     * Style the meta
     */
      &.widget_meta{
-    	ul{	
+    	ul{
     		padding:0px;
-    		li{	
+    		li{
     			list-style: none;
 		    	font-size: 15px;
 		    	font-family: $font__main;
 		    	a{
 		    		color: #a9afb5;;
-		    		&:hover{
+		    		&:hover, &:focus {
 		    			color:$color_contrast-hover;
 		    		}
 		    	}
@@ -632,7 +632,7 @@
       }
       #wp-calendar {
         color: $font__main;
-        width:100%; 
+        width:100%;
     		font-size:14px;
     		font-weight:300;
     		border-collapse:separate;
@@ -768,7 +768,7 @@
 	      	line-height: 45px;
           white-space: nowrap !important;
 	      	font-size: 15px !important;
-	      	&:hover{
+	      	&:hover, &:focus {
 	        	background: $color_main-accent;
 	        	color: #fff;
 	        	border: 1px solid $color_main-accent;
@@ -780,7 +780,7 @@
     * Style the widget rss
     */
     &.widget_rss{
-    	ul{	
+    	ul{
     		padding:0px;
     		li{
     			list-style:none;
@@ -792,7 +792,7 @@
 		    		color: #f1f1f1;
 		    		font-size: 18px;
 		    		font-weight: 700;
-		    		&:hover{
+		    		&:hover, &:focus {
 		    			color:$color_contrast-hover;
 		    		}
 		    	}
@@ -879,11 +879,11 @@
         color:#a9afb5;
         font-size:15px;
         font-family: $font__main;
-        &:hover{
+        &:hover, &:focus {
           color:$color_contrast-hover;
         }
       }
-    }    
+    }
     #social-contact{
       padding-left:0px;
       margin-top:25px;
@@ -978,7 +978,7 @@
             }
 
             color: #fff;
-            &:hover{
+            &:hover, &:focus {
             	color:#fff;
               opacity: 0.9;
             }

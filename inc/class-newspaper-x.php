@@ -48,13 +48,6 @@ class Newspaper_X {
 	}
 
 	/**
-	 * Initiate the user profiles
-	 */
-	public function init_user_profile() {
-		new Newspaper_X_Profile_Fields();
-	}
-
-	/**
 	 * Load Lazyload
 	 */
 	public function init_lazyload() {
@@ -97,10 +90,15 @@ class Newspaper_X {
 			global $newspaper_x_required_actions, $newspaper_x_recommended_plugins;
 
 			$newspaper_x_recommended_plugins = array(
-				'kiwi-social-share'        => array( 'recommended' => false ),
-				'modula-best-grid-gallery' => array( 'recommended' => true ),
-				'fancybox-for-wordpress'   => array( 'recommended' => false ),
-				'simple-custom-post-order' => array( 'recommended' => false ),
+        		'kali-forms'                       => array( 'recommended' => true ),
+				'modula-best-grid-gallery'         => array( 'recommended' => true ),
+				'fancybox-for-wordpress'           => array( 'recommended' => false ),
+				'simple-custom-post-order'         => array( 'recommended' => false ),
+				'colorlib-404-customizer'          => array( 'recommended' => false ),
+				'colorlib-coming-soon-maintenance' => array( 'recommended' => false ),
+				'colorlib-login-customizer'        => array( 'recommended' => false ),
+				'kb-support'                       => array( 'recommended' => false ),
+				'rsvp'                             => array( 'recommended' => false )
 			);
 			/*
 			 * id - unique id; required
@@ -129,14 +127,14 @@ class Newspaper_X {
 					"id"          => 'newspaper-x-req-ac-download-data',
 					"title"       => esc_html__( 'Download theme sample data', 'newspaper-x' ),
 					"description" => esc_html__( 'Head over to our website and download the sample content data.', 'newspaper-x' ),
-					"help"        => '<a target="_blank"  href="https://colorlibvault-divilabltd.netdna-ssl.com/newspaper-x-content.xml">' . __( 'Posts', 'newspaper-x' ) . '</a>, 
+					"help"        => '<a target="_blank"  href="https://colorlibvault-divilabltd.netdna-ssl.com/newspaper-x-content.xml">' . __( 'Posts', 'newspaper-x' ) . '</a>,
 									   <a target="_blank"  href="https://colorlibvault-divilabltd.netdna-ssl.com/newspaper-x-widgets.wie">' . __( 'Widgets', 'newspaper-x' ) . '</a>',
 					"check"       => Newspaper_X_Notify_System::has_content(),
 				),
 				array(
 					"id"    => 'newspaper-x-req-ac-install-data',
 					"title" => esc_html__( 'Import Sample Data', 'newspaper-x' ),
-					"help"  => '<a class="button button-primary" target="_blank"  href="' . self_admin_url( 'admin.php?import=wordpress' ) . '">' . __( 'Import Posts', 'newspaper-x' ) . '</a> 
+					"help"  => '<a class="button button-primary" target="_blank"  href="' . self_admin_url( 'admin.php?import=wordpress' ) . '">' . __( 'Import Posts', 'newspaper-x' ) . '</a>
 									   <a class="button button-primary" target="_blank"  href="' . self_admin_url( 'tools.php?page=widget-importer-exporter' ) . '">' . __( 'Import Widgets', 'newspaper-x' ) . '</a>',
 					"check" => Newspaper_X_Notify_System::has_import_plugins(),
 				),
