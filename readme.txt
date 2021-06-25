@@ -3,9 +3,14 @@
 Contributors: puikinsh
 Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
 
-Requires at least: 4.0
-Tested up to: 4.7
-Stable tag: 1.2.9
+Requires PHP at least: 5.0
+Tested PHP up to: 8.0.7
+
+Requires WP at least: 4.0
+Tested WP up to: 5.7.2
+
+Stable tag: 1.3.5
+
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,47 +21,17 @@ A starter theme called Newspaper X;
 Magazine WordPress theme.
 
 == Installation ==
-	
+
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Frequently Asked Questions ==
-
+== Translation ==
+Theme can be translated directly on https://translate.wordpress.org/projects/wp-themes/newspaper-x without relying on the .po file. All the translatable strings are pulled automatically. For more info please check this link https://make.wordpress.org/polyglots/handbook/tools/glotpress-translate-wordpress-org/
 
 == Changelog ==
-### V1.2.10
-	- Small issue fix in the welcome screen admin notice
 
-### V1.2.9
-	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
-
-### V1.2.8
-	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:47
-	- (DROP CAPS) - first-letter pseudo-selector was not working correctly on chrome
-	- Various bug fixes
-
-### V1.1.5
-	- Fixes issues from the review team themes.trac.wordpress.org/ticket/34644#comment:38
-	- Fixes issues from the review team https://themes.trac.wordpress.org/ticket/34644#comment:42
-
-### V1.1.2
-	 - Escaped where needed
-	 - Newspaper-x-bootstrap enqueue handler changed to bootstrap
-	 - Updated licenses
-	 - Removed banner widget
-	 - Posts widget merged
-	 - Footer credits are now translatable.
-
-### V1.1.1
-	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:15
-
-### V1.1.0
-	- Various bug fixes https://themes.trac.wordpress.org/ticket/34644#comment:9
-	- Theme structure re-done
-
-### V1.0.0
-- Initial release
+* See [changelog.txt](https://github.com/MachoThemes/newspaper-x/blob/master/changelog.txt) for previous versions.
 
 == Credits ==
 
@@ -68,7 +43,7 @@ The exceptions to this license are as follows:
 
 === Images ===
 
-- Images used in theme screenshot are taken from unsplash.com -- All photos published on Unsplash are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or Unsplash. -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
+- Images used in theme screenshot are taken from stocksnap.io -- All photos published on stocksnap are licensed under Creative Commons Zero which means you can copy, modify, distribute and use the photos for free, including commercial purposes, without asking permission from or providing attribution to the photographer or stocksnap. -- Licensed under Creative Commons Zero (https://creativecommons.org/publicdomain/zero/1.0/)
 
 - Logo created by Colorlib
 

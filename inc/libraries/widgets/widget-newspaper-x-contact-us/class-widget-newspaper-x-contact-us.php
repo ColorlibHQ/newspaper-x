@@ -103,7 +103,7 @@ class Widget_Newspaper_X_Contact_Us extends WP_Widget {
 		</p>
         
 		<p>
-					<label for="<?php echo esc_attr( $this->get_field_id( 'social_menu' ) ); ?>"><?php esc_attr_e( 'Social Menu:', 'newspaper-x' ); ?></label>
+					<label for="<?php echo esc_attr( $this->get_field_id( 'social_menu' ) ); ?>"><?php esc_html_e( 'Social Menu:', 'newspaper-x' ); ?></label>
 					<select id="<?php echo $this->get_field_id( 'social_menu' ); ?>" name="<?php echo $this->get_field_name( 'social_menu' ); ?>">
 						<option value="0"><?php _e( '&mdash; Select &mdash;', 'newspaper-x' ); ?></option>
 						<?php foreach ( $menus as $menu ) : ?>

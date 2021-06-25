@@ -4,7 +4,7 @@
   }
 
 
-          
+
 
   .newspaper-x-layout-b-row:last-of-type{
     .border{
@@ -237,7 +237,7 @@
         font-size: 13px;
         font-family: $font__main;
       }
-      &:hover {
+      &:hover, &:focus-within {
         background: $color_contrast-hover;
       }
     }

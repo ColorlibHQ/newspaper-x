@@ -7,6 +7,12 @@
  * @package Newspaper_X
  */
 
+if ( ! function_exists( 'wp_body_open' ) ) {
+    function wp_body_open() {
+        do_action( 'wp_body_open' );
+    }
+}
+
 /**
  * Start Newspaper_X theme framework
  */

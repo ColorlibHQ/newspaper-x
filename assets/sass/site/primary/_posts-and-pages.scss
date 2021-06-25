@@ -70,7 +70,7 @@
         font-size: 13px;
         font-family: $font__main;
       }
-      &:hover {
+      &:hover, &:focus-within {
         background: $color_contrast-hover;
       }
     }
@@ -106,7 +106,7 @@
         font-size: 13px;
         font-family: $font__main;
       }
-      &:hover {
+      &:hover, &:focus-within {
         background: $color_contrast-hover;
       }
     }
@@ -140,7 +140,7 @@
       border: 1px solid #7c95b1;
       line-height: 33px;
       font-size: 15px;
-      &:hover{
+      &:hover, &:focus {
         background: $color_main-accent;
         color: #fff;
         border: 1px solid $color_main-accent;
@@ -234,7 +234,7 @@
     width: 100%;
   }
 
-  &:hover {
+  &:hover, &:focus-within {
     > img,
     > a > img {
       -moz-transform: scale(1.1);
@@ -252,7 +252,7 @@
       font-size: 17px;
       font-weight: 700;
       color: $color_text-color;
-      &:hover{
+      &:hover, &:focus-within {
         color:$color_contrast-hover;
       }
     }
@@ -269,7 +269,7 @@
         font-size: 17px;
         font-weight: 700;
         color: $color_text-color;
-        &:hover{
+        &:hover, &:focus-within {
           color:$color_contrast-hover;
         }
       }

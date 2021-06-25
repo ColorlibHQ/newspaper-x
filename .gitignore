@@ -1,6 +1,6 @@
-*.log
-
-/css/style.css.map
-/node_modules/
-.idea/
-/.standard.json
+node_modules/*
+.idea/*
+.vscode/*
+package-lock.json
+.standard.json
+newspaper-x.zip

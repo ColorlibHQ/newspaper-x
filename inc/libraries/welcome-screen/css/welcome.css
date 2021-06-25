@@ -180,4 +180,8 @@
 
 .about-wrap .three-col .plugin_box.col {
     width: 29.81%;
+    margin-right: 15px;
+}
+.about-wrap .three-col .plugin_box.col:nth-child(3n){
+    margin-right: 0;
 }

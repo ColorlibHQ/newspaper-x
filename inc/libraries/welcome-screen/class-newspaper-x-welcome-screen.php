@@ -39,6 +39,15 @@ class Newspaper_X_Welcome_Screen {
 			 * Check action
 			 */
 			if ( ! empty( $_GET['action'] ) && $_GET['action'] === 'set_page_automatic' ) {
+
+				if ( ! check_ajax_referer( 'epsilon_framework_ajax_action', 'security' ) ) {
+					return;
+				}
+
+				if ( ! current_user_can( 'manage_options' ) ) {
+				    return;
+				}
+				
 				$active_tab = $_GET['tab'];
 				$about      = get_page_by_title( 'Homepage' );
 				update_option( 'page_on_front', $about->ID );
@@ -60,6 +69,15 @@ class Newspaper_X_Welcome_Screen {
 			 * Check action
 			 */
 			if ( ! empty( $_GET['action'] ) && ! empty( $_GET['plugin'] ) && $_GET['action'] === 'activate_plugin' ) {
+
+				if ( ! check_ajax_referer( 'epsilon_framework_ajax_action', 'security' ) ) {
+					return;
+				}
+
+				if ( ! current_user_can( 'manage_options' ) ) {
+				    return;
+				}
+
 				$active_tab = $_GET['tab'];
 				$url        = self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=' . $active_tab );
 				activate_plugin( $_GET['plugin'], $url );
@@ -73,6 +91,15 @@ class Newspaper_X_Welcome_Screen {
 			 * Check action
 			 */
 			if ( ! empty( $_GET['action'] ) && ! empty( $_GET['plugin'] ) && $_GET['action'] === 'deactivate_plugin' ) {
+
+				if ( ! check_ajax_referer( 'epsilon_framework_ajax_action', 'security' ) ) {
+					return;
+				}
+
+				if ( ! current_user_can( 'manage_options' ) ) {
+				    return;
+				}
+
 				$active_tab = $_GET['tab'];
 				$url        = self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=' . $active_tab );
 				$current    = get_option( 'active_plugins', array() );
@@ -122,7 +149,7 @@ class Newspaper_X_Welcome_Screen {
 	public function newspaper_x_welcome_admin_notice() {
 		?>
 		<div class="updated notice is-dismissible">
-			<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing Newspaper X! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'newspaper-x' ), '<a href="' . esc_url( admin_url( 'themes.php?page=newspaper-x-welcome' ) ) . '">', '</a>' ); ?></p>
+			<p><?php echo sprintf( __( 'Welcome! Thank you for choosing Newspaper X! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'newspaper-x' ), '<a href="' . esc_url( admin_url( 'themes.php?page=newspaper-x-welcome' ) ) . '">', '</a>' ); ?></p>
 			<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=newspaper-x-welcome' ) ); ?>" class="button"
 			      style="text-decoration: none;"><?php echo esc_html__( 'Get started with Newspaper X', 'newspaper-x' ); ?></a></p>
 		</div>
