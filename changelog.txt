@@ -1,5 +1,9 @@
+### V1.3.5
+	- Update from wpchill fork
+	- version update
+
 ### V1.3.4 
-	- Improved : Escaping 
+	- Improved : Escaping 	
 
 ### V1.3.2
 	- Compatibility with jQuery 3.0
