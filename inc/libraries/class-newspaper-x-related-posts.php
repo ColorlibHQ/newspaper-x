@@ -65,7 +65,7 @@ class Newspaper_X_Related_Posts {
 	 *
 	 * @return void
 	 */
-	private function __wakeup() {
+	public function __wakeup() {
 	}
 
 
