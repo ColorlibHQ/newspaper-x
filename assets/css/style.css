@@ -2366,7 +2366,9 @@ a {
 
 /* The blog sidebar should be pushed to align with the content */
 #secondary {
-  margin-top: 20px; }
+  margin-top: 20px;
+  display: inline-block;
+}
 
 /*--------------------------------------------------------------
 ## Comments
