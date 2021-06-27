@@ -226,7 +226,8 @@ class Newspaper_X {
 	 */
 	public function admin_enqueues() {
 		wp_enqueue_style( 'newspaper-x-fonts', 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Poppins:400,500,600,700', array(), '', 'all' );
-	}
+        wp_enqueue_style( 'newspaper-x-admin.stylesheet', get_template_directory_uri() . '/assets/css/admin.style.css', array(), '');
+    }
 
 	/**
 	 * Editor styles

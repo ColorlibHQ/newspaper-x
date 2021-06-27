@@ -1,0 +1,4 @@
+/*wp-admin style*/
+#adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
+    min-width: 170px;
+}
