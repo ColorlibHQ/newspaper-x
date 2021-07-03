@@ -43,6 +43,7 @@ if (have_posts()) :
             </div>
         </div>
     </div>
+
 <?php endif; ?>
     <div class="row">
         <div id="primary" class="newspaper-x-content newspaper-x-archive-page col-lg-8 col-md-8 col-sm-12 col-xs-12">

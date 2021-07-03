@@ -62,7 +62,7 @@ if ( $breadcrumbs_enabled ) {
 
     <div class="entry-content">
         <?php
-        if ( is_page() ) {
+        if ( is_page() || is_bbpress()) {
             the_content();
 
             wp_link_pages( array(
