@@ -127,8 +127,8 @@ class Newspaper_X {
 					"id"          => 'newspaper-x-req-ac-download-data',
 					"title"       => esc_html__( 'Download theme sample data', 'newspaper-x' ),
 					"description" => esc_html__( 'Head over to our website and download the sample content data.', 'newspaper-x' ),
-					"help"        => '<a target="_blank"  href="https://colorlibvault-divilabltd.netdna-ssl.com/newspaper-x-content.xml">' . __( 'Posts', 'newspaper-x' ) . '</a>,
-									   <a target="_blank"  href="https://colorlibvault-divilabltd.netdna-ssl.com/newspaper-x-widgets.wie">' . __( 'Widgets', 'newspaper-x' ) . '</a>',
+					"help"        => '<a target="_blank"  href="https://preview.colorlib.com/downloads/newspaper-x-content.xml">' . __( 'Posts', 'newspaper-x' ) . '</a>,
+									   <a target="_blank"  href="https://preview.colorlib.com/downloads/newspaper-x-widgets.wie">' . __( 'Widgets', 'newspaper-x' ) . '</a>',
 					"check"       => Newspaper_X_Notify_System::has_content(),
 				),
 				array(
