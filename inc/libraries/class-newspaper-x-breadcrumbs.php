@@ -356,7 +356,6 @@ class Newspaper_X_Breadcrumbs {
 
 		$terms_markup .= $this->get_single_breadcrumb_markup( $term['name']->post_title, $term['link'] );
 
-		return $terms_markup;
 		// Get the post terms
 		if ( $this->post->post_type == 'post' ) {
 			$taxonomy = 'category';
