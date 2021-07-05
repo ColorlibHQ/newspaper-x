@@ -692,7 +692,7 @@ class Newspaper_X_Breadcrumbs {
 
 		// Setup the elements attributes for breadcrumb microdata rich snippets
 		if ( $microdata ) {
-			$microdata_itemscope = 'itemscope itemtype="http://data-vocabulary.org/Breadcrumb"';
+			$microdata_itemscope = 'itemscope itemtype="https://schema.org/BreadcrumbList"';
 			$microdata_url       = 'itemprop="url"';
 			$microdata_title     = 'itemprop="title"';
 		}
