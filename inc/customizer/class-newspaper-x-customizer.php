@@ -48,30 +48,68 @@ class Newspaper_X_Customizer {
 	public function change_default_panels() {
 		global $wp_customize;
 
+		if ( ! $wp_customize instanceof WP_Customize_Manager ) {
+			return;
+		}
+
+		/*
+		 * Each object below is checked before use. get_setting(), get_section() and
+		 * get_control() return null when the thing is not registered -- custom_logo,
+		 * background_image and header_image exist only while the matching theme
+		 * support does -- and assigning a property on null is fatal on PHP 8.
+		 */
+
 		/**
 		 * Change transports
 		 */
-		$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
-		$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
-		$wp_customize->get_setting( 'custom_logo' )->transport     = 'refresh';
+		$blogname_setting = $wp_customize->get_setting( 'blogname' );
+		if ( $blogname_setting ) {
+			$blogname_setting->transport = 'postMessage';
+		}
+		$blogdescription_setting = $wp_customize->get_setting( 'blogdescription' );
+		if ( $blogdescription_setting ) {
+			$blogdescription_setting->transport = 'postMessage';
+		}
+		$custom_logo_setting = $wp_customize->get_setting( 'custom_logo' );
+		if ( $custom_logo_setting ) {
+			$custom_logo_setting->transport = 'refresh';
+		}
 
 		/**
 		 * Change panels
 		 */
-		$wp_customize->get_section( 'background_image' )->panel = 'newspaper_x_panel_general';
+		$background_image_section = $wp_customize->get_section( 'background_image' );
+		if ( $background_image_section ) {
+			$background_image_section->panel = 'newspaper_x_panel_general';
+		}
 
 		/**
 		 * Change priorities
 		 */
-		$wp_customize->get_control( 'custom_logo' )->priority     = 0;
-		$wp_customize->get_control( 'blogname' )->priority        = 2;
-		$wp_customize->get_section( 'header_image' )->priority    = 4;
-		$wp_customize->get_control( 'blogdescription' )->priority = 17;
+		$custom_logo_control = $wp_customize->get_control( 'custom_logo' );
+		if ( $custom_logo_control ) {
+			$custom_logo_control->priority = 0;
+		}
+		$blogname_control = $wp_customize->get_control( 'blogname' );
+		if ( $blogname_control ) {
+			$blogname_control->priority = 2;
+		}
+		$header_image_section = $wp_customize->get_section( 'header_image' );
+		if ( $header_image_section ) {
+			$header_image_section->priority = 4;
+		}
+		$blogdescription_control = $wp_customize->get_control( 'blogdescription' );
+		if ( $blogdescription_control ) {
+			$blogdescription_control->priority = 17;
+		}
 
 		/**
 		 * Change labels
 		 */
-		$wp_customize->get_control( 'custom_logo' )->description = esc_html__( 'The image logo, if set, will override the text logo. You can not have both at the same time. A tagline can be displayed under the text logo.', 'newspaper-x' );
+		$custom_logo_control = $wp_customize->get_control( 'custom_logo' );
+		if ( $custom_logo_control ) {
+			$custom_logo_control->description = esc_html__( 'The image logo, if set, will override the text logo. You can not have both at the same time. A tagline can be displayed under the text logo.', 'newspaper-x' );
+		}
 
 
 		// Abort if selective refresh is not available.

@@ -61,6 +61,16 @@ class Newspaper_X_Breadcrumbs {
 	 * @var
 	 */
 	private $options;
+
+	/**
+	 * Whether to show the post type archive in the trail.
+	 *
+	 * Assigned in the constructor but never declared, which PHP 8.2 deprecates as
+	 * a dynamic property.
+	 *
+	 * @var string
+	 */
+	private $show_post_type_archive;
 	/**
 	 * Class Constructor
 	 */

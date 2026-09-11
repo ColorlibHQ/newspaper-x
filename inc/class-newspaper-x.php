@@ -19,6 +19,7 @@ class Newspaper_X {
 		 * Customizer enqueues & controls
 		 */
 		add_action( 'customize_register', array( $this, 'customize_register_init' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customize_controls_enqueues' ) );
 
 		add_action( 'after_setup_theme', array( $this, 'content_width' ), 10 );
 		/**
@@ -68,17 +69,22 @@ class Newspaper_X {
 		new Newspaper_X_Customizer();
 	}
 
-	/**
-	 * Initiate epsilon framework
-	 */
-	public function init_epsilon() {
-		$args = array(
-			'controls' => array( 'slider', 'toggle' ),
-			'sections' => array( 'recommended-actions' ),
-			'path'     => '/inc/libraries'
-		);
 
-		new Epsilon_Framework( $args );
+	/**
+	 * Styles for the theme's own Customizer controls.
+	 *
+	 * The on/off switch markup used to come from the bundled Epsilon framework,
+	 * whose stylesheet was never actually enqueued -- the framework object was
+	 * never constructed -- so the switches rendered as bare checkboxes. The rules
+	 * live in the theme now and are loaded only on the Customizer controls screen.
+	 */
+	public function customize_controls_enqueues() {
+		wp_enqueue_style(
+			'newspaper-x-customizer-controls',
+			get_template_directory_uri() . '/assets/css/customizer.css',
+			array(),
+			wp_get_theme()->get( 'Version' )
+		);
 	}
 
 	/**

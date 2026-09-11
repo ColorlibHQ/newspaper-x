@@ -23,7 +23,7 @@ $wp_customize->add_control(
  * The banner shown after a certain number of posts
  */
 $wp_customize->add_control(
-	new Epsilon_Control_Slider(
+	new Newspaper_X_Control_Range(
 		$wp_customize,
 		'newspaper_x_show_banner_after',
 		array(
@@ -43,11 +43,11 @@ $wp_customize->add_control(
 /**
  * Display banner on homepage
  */
-$wp_customize->add_control( new Epsilon_Control_Toggle(
+$wp_customize->add_control( new Newspaper_X_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_show_banner_on_homepage',
 	                            array(
-		                            'type'        => 'epsilon-toggle',
+		                            'type'        => 'newspaper-x-toggle',
 		                            'label'       => esc_html__( 'Enable banner on homepage', 'newspaper-x' ),
 		                            'section'     => 'newspaper_x_general_banners_controls',
 	                            )
@@ -57,11 +57,11 @@ $wp_customize->add_control( new Epsilon_Control_Toggle(
 /**
  * Display banner on categories page
  */
-$wp_customize->add_control( new Epsilon_Control_Toggle(
+$wp_customize->add_control( new Newspaper_X_Control_Toggle(
 	                            $wp_customize,
 	                            'newspaper_x_show_banner_on_archive_pages',
 	                            array(
-		                            'type'        => 'epsilon-toggle',
+		                            'type'        => 'newspaper-x-toggle',
 		                            'label'       => esc_html__( 'Enable banner on archives', 'newspaper-x' ),
 		                            'section'     => 'newspaper_x_general_banners_controls',
 	                            )

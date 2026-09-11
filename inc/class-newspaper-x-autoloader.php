@@ -26,7 +26,7 @@ class Newspaper_X_Autoloader {
 			get_template_directory() . '/inc/libraries/',
 			get_template_directory() . '/inc/helpers/',
 			get_template_directory() . '/inc/customizer/',
-			get_template_directory() . '/inc/libraries/epsilon-framework/',
+			get_template_directory() . '/inc/customizer/controls/',
 			get_template_directory() . '/inc/libraries/welcome-screen/'
 		);
 

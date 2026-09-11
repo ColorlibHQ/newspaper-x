@@ -1,0 +1,146 @@
+/*
+ * Customizer control styling.
+ *
+ * The on/off switch and tooltip rules came from the bundled Epsilon
+ * framework's stylesheet. They are kept here, scoped to the Customizer, so
+ * the framework could be removed without the toggles losing their styling.
+ */
+.wp-admin .checkbox_switch {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.customize-control-title.onoffswitch_label {
+    width: 71%;
+}
+.onoffswitch_label {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 21px;
+    margin-top: -1px;
+}
+.onoffswitch {
+    position: relative;
+    width: 52px;
+    display: inline-block;
+    float: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none !important;
+}
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 22px;
+    padding: 0;
+    line-height: 19px;
+    transition: background-color 0.2s ease-in;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    border-radius: 30px;
+    background-color: #c4c4c4;
+    -webkit-box-shadow: inset 0 2px 1px rgba(0, 0, 0, .11);
+    -moz-box-shadow: inset 0 2px 1px rgba(0, 0, 0, .11);
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, .11);
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    position: absolute;
+    top: 2px;
+    bottom: 0;
+    right: 32px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in 0s;
+}
+.onoffswitch-label:after {
+    content: "OFF";
+    display: block;
+    color: #FFF;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 6px;
+    font-size: 11px;
+    font-family: 'Arial';
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #3caf0e;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label,
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    border-color: #3caf0e;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 2px;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:after {
+    content: "ON";
+    display: block;
+    color: #FFF;
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    right: 27px;
+    font-size: 11px;
+    font-family: 'Arial';
+}
+.widget-content .customize-control-title.onoffswitch_label {
+    width: 65%;
+    margin-right: 26px;
+}
+.mte-tooltip {
+    width: 150px;
+    position: absolute;
+    background: #55AAD3;
+    color: #EEE;
+    font-size: 12px;
+    min-height: 50px;
+    border-radius: 5px;
+    left: -75px; /* half of its width */
+    bottom: 25px;
+    z-index: 10;
+    display: none;
+    padding: 12px;
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+}
+.accordion-section-content > li:nth-of-type(2) .mte-tooltip {
+    bottom: initial;
+    top: 25px;
+}
+.dashicons.dashicons-editor-help:hover > .mte-tooltip {
+    display: block;
+}
+
+.newspaper-x-range {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.newspaper-x-range input[type="range"] {
+	flex: 1 1 auto;
+	margin: 0;
+}
+.newspaper-x-range__value {
+	min-width: 2.5em;
+	padding: 2px 6px;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	background: #fff;
+	font-variant-numeric: tabular-nums;
+	text-align: center;
+}

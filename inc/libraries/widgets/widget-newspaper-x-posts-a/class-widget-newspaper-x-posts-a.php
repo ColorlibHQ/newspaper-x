@@ -4,9 +4,6 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 
 	function __construct() {
 
-		add_action( 'admin_init', array( $this, 'enqueue' ) );
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue' ) );
-		add_action( 'customize_preview_init', array( $this, 'enqueue' ) );
 
 		parent::__construct( 'newspaper_x_widget_posts_a', esc_html__( 'Newspaper X - Posts Layout A', 'newspaper-x' ), array(
 			'classname'                   => 'newspaper_x_widgets',
@@ -14,15 +11,6 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
 			'customize_selective_refresh' => true
 		) );
 
-	}
-
-	public function enqueue() {
-		if ( is_admin() && ! is_customize_preview() ) {
-			wp_enqueue_script( 'jquery-ui' );
-			wp_enqueue_script( 'jquery-ui-slider' );
-			wp_enqueue_style( 'epsilon-styles', get_template_directory_uri() . '/inc/libraries/epsilon-framework/assets/css/style.css' );
-			wp_enqueue_script( 'epsilon-object', get_template_directory_uri() . '/inc/libraries/epsilon-framework/assets/js/epsilon.js', array( 'jquery' ) );
-		}
 	}
 
 	public function form( $instance ) {
@@ -96,37 +84,12 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
             </span>
         </label>
 
-        <input type="text" name="<?php echo esc_attr( $this->get_field_name( 'show_post' ) ); ?>" class="rl-slider"
+        <input type="range" name="<?php echo esc_attr( $this->get_field_name( 'show_post' ) ); ?>" class="newspaper-x-widget-range"
                id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"
-               value="<?php echo esc_attr( $instance['show_post'] ); ?>"/>
-
-        <div id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>" data-attr-min="1"
-             data-attr-max="12" data-attr-step="1" class="ss-slider"></div>
-        <script>
-					jQuery(document).ready(function ($) {
-						$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').slider({
-							value: <?php echo esc_attr( $instance['show_post'] ); ?>,
-							range: 'min',
-							min  : 1,
-							max  : 12,
-							step : 1,
-							slide: function (event, ui) {
-								$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"]').val(ui.value).keyup();
-							}
-						});
-						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').on('focus', function () {
-							$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').trigger('blur');
-						});
-						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').val($('[id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').slider("value"));
-						$('[id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').change(function () {
-							$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ) ?>"]').slider({
-								value: $(this).val()
-							});
-						});
-					});
-        </script>
-
-
+               min="1" max="12" step="1"
+               value="<?php echo esc_attr( $instance['show_post'] ); ?>"
+               oninput="this.nextElementSibling.value = this.value"/>
+        <output class="newspaper-x-widget-range__value"><?php echo esc_attr( $instance['show_post'] ); ?></output>
         <label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>">
             <span class="customize-control-title">
                <?php echo esc_html__( 'Posts offset', 'newspaper-x' ); ?> :
@@ -134,35 +97,12 @@ class Widget_Newspaper_X_Posts_A extends WP_Widget {
         </label>
 
          <div class="slider-container">
-            <input type="text" name="<?php echo esc_attr( $this->get_field_name( 'offset' ) ); ?>" class="rl-slider"
-                   id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"
-                   value="<?php echo esc_attr( $instance['offset'] ); ?>"/>
-
-            <div id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>" data-attr-min="0"
-                 data-attr-max="10" data-attr-step="1" class="ss-slider"></div>
-            <script>
-							jQuery(document).ready(function ($) {
-								$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"]').slider({
-									value: <?php echo esc_attr( $instance['offset'] ); ?>,
-									range: 'min',
-									min  : 0,
-									max  : 10,
-									step : 1,
-									slide: function (event, ui) {
-										$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"]').val(ui.value).keyup();
-									}
-								});
-								$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').on('focus', function () {
-									$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').trigger('blur');
-								});
-								$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').val($('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').slider("value"));
-								$('[id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').change(function () {
-									$('[id="slider_<?php echo esc_attr( $this->get_field_id( 'offset' ) ) ?>"]').slider({
-										value: $(this).val()
-									});
-								});
-							});
-            </script>
+        <input type="range" name="<?php echo esc_attr( $this->get_field_name( 'offset' ) ); ?>" class="newspaper-x-widget-range"
+               id="input_<?php echo esc_attr( $this->get_field_id( 'offset' ) ); ?>"
+               min="0" max="10" step="1"
+               value="<?php echo esc_attr( $instance['offset'] ); ?>"
+               oninput="this.nextElementSibling.value = this.value"/>
+        <output class="newspaper-x-widget-range__value"><?php echo esc_attr( $instance['offset'] ); ?></output>
         </div>
         <div class="checkbox_switch">
 				<span class="customize-control-title onoffswitch_label">

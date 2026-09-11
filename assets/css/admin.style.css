@@ -2,3 +2,26 @@
 #adminmenu .wp-not-current-submenu .wp-submenu, .folded #adminmenu .wp-has-current-submenu .wp-submenu {
     min-width: 170px;
 }
+/*
+ * Range inputs in the post widgets' forms.
+ *
+ * These were jQuery UI sliders driven by the bundled Epsilon framework's
+ * JavaScript. They are native range inputs now, so the widgets load no
+ * JavaScript of their own.
+ */
+.newspaper-x-widget-range {
+	width: calc(100% - 4em);
+	vertical-align: middle;
+	margin: 0 6px 0 0;
+}
+.newspaper-x-widget-range__value {
+	display: inline-block;
+	min-width: 2.5em;
+	padding: 2px 6px;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	background: #fff;
+	font-variant-numeric: tabular-nums;
+	text-align: center;
+	vertical-align: middle;
+}

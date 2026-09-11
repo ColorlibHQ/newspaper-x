@@ -6,7 +6,19 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Class Newspaper_X_Notify_System
  */
-class Newspaper_X_Notify_System extends Epsilon_Notify_System {
+class Newspaper_X_Notify_System {
+	/**
+	 * Is a static page used as the front page?
+	 *
+	 * Previously inherited from Epsilon_Notify_System, which this class no longer
+	 * extends.
+	 *
+	 * @return bool
+	 */
+	public static function is_not_static_page() {
+		return 'page' === get_option( 'show_on_front' );
+	}
+
 	/**
 	 * @return bool
 	 */
@@ -61,22 +73,27 @@ class Newspaper_X_Notify_System extends Epsilon_Notify_System {
 	 * @return bool
 	 */
 	public static function check_plugin_is_installed( $slug ) {
-		if ( file_exists( ABSPATH . 'wp-content/plugins/' . $slug . '/' . $slug . '.php' ) ) {
-			return true;
-		}
-
-		return false;
+		/*
+		 * WP_PLUGIN_DIR, not ABSPATH . 'wp-content/plugins/', which was hard-coded
+		 * here and is wrong on any site that moves wp-content.
+		 */
+		return file_exists( WP_PLUGIN_DIR . '/' . $slug . '/' . $slug . '.php' );
 	}
 
 	/**
 	 * @return bool
 	 */
 	public static function check_plugin_is_active( $slug ) {
-		if ( file_exists( ABSPATH . 'wp-content/plugins/' . $slug . '/' . $slug . '.php' ) ) {
-			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
-			return is_plugin_active( $slug . '/' . $slug . '.php' );
+		if ( ! self::check_plugin_is_installed( $slug ) ) {
+			// Returned null implicitly before, which is not a boolean answer.
+			return false;
 		}
+
+		if ( ! function_exists( 'is_plugin_active' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		return is_plugin_active( $slug . '/' . $slug . '.php' );
 	}
 
 	public static function has_import_plugin( $slug = NULL ) {
