@@ -8,6 +8,8 @@ wp_enqueue_script( 'plugin-install' );
 wp_enqueue_script( 'updates' );
 ?>
 
+<?php $this->prime_plugin_information( array_keys( $newspaper_x_recommended_plugins ) ); ?>
+
 <div class="feature-section recommended-plugins three-col demo-import-boxed" id="plugin-filter">
 	<?php foreach ( $newspaper_x_recommended_plugins as $plugin => $prop ) { ?>
 		<?php

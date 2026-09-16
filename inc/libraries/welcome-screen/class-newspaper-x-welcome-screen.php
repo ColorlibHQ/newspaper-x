@@ -281,32 +281,114 @@ class Newspaper_X_Welcome_Screen {
 		return $i;
 	}
 
-	public function call_plugin_api( $slug ) {
-		include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' );
+	/**
+	 * Warm the cache for every recommended plugin in one request.
+	 *
+	 * plugins_api() asks WordPress.org about one plugin at a time, and this
+	 * page asks about eight -- eight serial round trips, which measured a
+	 * little over three seconds from a German datacentre. The API also accepts
+	 * request[slugs][] and answers for all of them at once, which is one round
+	 * trip. Everything it returns is cached per slug, so a partly warm cache
+	 * only asks for what it is missing.
+	 *
+	 * Nothing here is required: whatever this does not manage to cache, the
+	 * per-slug call below still fetches.
+	 *
+	 * @param array $slugs
+	 *
+	 * @return void
+	 */
+	public function prime_plugin_information( $slugs ) {
+		$missing = array();
 
-		if ( false === ( $call_api = get_transient( 'newspaper_x_plugin_information_transient_' . $slug ) ) ) {
-			$call_api = plugins_api( 'plugin_information', array(
-				'slug'   => $slug,
-				'fields' => array(
-					'downloaded'        => false,
-					'rating'            => false,
-					'description'       => false,
-					'short_description' => true,
-					'donate_link'       => false,
-					'tags'              => false,
-					'sections'          => true,
-					'homepage'          => true,
-					'added'             => false,
-					'last_updated'      => false,
-					'compatibility'     => false,
-					'tested'            => false,
-					'requires'          => false,
-					'downloadlink'      => false,
-					'icons'             => true
-				)
-			) );
-			set_transient( 'newspaper_x_plugin_information_transient_' . $slug, $call_api, 30 * MINUTE_IN_SECONDS );
+		foreach ( (array) $slugs as $slug ) {
+			if ( false === get_transient( 'newspaper_x_plugin_information_transient_' . $slug ) ) {
+				$missing[] = $slug;
+			}
 		}
+
+		if ( ! $missing ) {
+			return;
+		}
+
+		$args = array( 'action' => 'plugin_information' );
+
+		foreach ( $missing as $slug ) {
+			$args['request']['slugs'][] = $slug;
+		}
+
+		/* The card shows a name, a version, an author and an icon. */
+		$args['request']['fields'] = array(
+			'icons'             => true,
+			'short_description' => true,
+			'sections'          => false,
+			'banners'           => false,
+			'tags'              => false,
+			'reviews'           => false,
+			'versions'          => false,
+			'screenshots'       => false,
+		);
+
+		$response = wp_remote_get(
+			add_query_arg( $args, 'https://api.wordpress.org/plugins/info/1.2/' ),
+			array( 'timeout' => 15, 'user-agent' => 'WordPress/' . get_bloginfo( 'version' ) . '; ' . home_url( '/' ) )
+		);
+
+		if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
+			return;
+		}
+
+		$body = json_decode( wp_remote_retrieve_body( $response ) );
+
+		if ( ! is_object( $body ) ) {
+			return;
+		}
+
+		foreach ( $missing as $slug ) {
+			if ( ! isset( $body->$slug ) || ! is_object( $body->$slug ) || empty( $body->$slug->name ) ) {
+				continue;
+			}
+
+			set_transient( 'newspaper_x_plugin_information_transient_' . $slug, $body->$slug, DAY_IN_SECONDS );
+		}
+	}
+
+	/**
+	 * @param string $slug
+	 *
+	 * @return object|false
+	 */
+	public function call_plugin_api( $slug ) {
+		$transient = 'newspaper_x_plugin_information_transient_' . $slug;
+		$cached    = get_transient( $transient );
+
+		if ( false !== $cached ) {
+			return $cached;
+		}
+
+		include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+
+		$call_api = plugins_api( 'plugin_information', array(
+			'slug'   => $slug,
+			'fields' => array(
+				'icons'             => true,
+				'short_description' => true,
+				'sections'          => false,
+				'banners'           => false,
+				'tags'              => false,
+				'reviews'           => false,
+			),
+		) );
+
+		/*
+		 * A failure is not cached. It used to be, for half an hour, so one
+		 * network blip left the page broken long after the network recovered.
+		 */
+		if ( is_wp_error( $call_api ) ) {
+			return false;
+		}
+
+		set_transient( $transient, $call_api, DAY_IN_SECONDS );
 
 		return $call_api;
 	}
