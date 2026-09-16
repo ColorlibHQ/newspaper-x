@@ -11,7 +11,17 @@ wp_enqueue_script( 'updates' );
 <div class="feature-section recommended-plugins three-col demo-import-boxed" id="plugin-filter">
 	<?php foreach ( $newspaper_x_recommended_plugins as $plugin => $prop ) { ?>
 		<?php
-		$info   = $this->call_plugin_api( $plugin );
+		$info = $this->call_plugin_api( $plugin );
+
+		/*
+		 * WordPress.org keeps answering for a plugin it has closed, but with no
+		 * version, author or icon -- which renders as a blank card with an
+		 * Install button that cannot work. Skip it instead.
+		 */
+		if ( empty( $info->version ) || empty( $info->name ) ) {
+			continue;
+		}
+
 		$icon   = $this->check_for_icon( $info->icons );
 		$active = $this->check_active( $plugin );
 		$url    = $this->create_action_link( $active['needs'], $plugin );
@@ -43,16 +53,20 @@ wp_enqueue_script( 'updates' );
 			</span>
 			<span class="separator">|</span>
 				<?php echo wp_kses_post( $info->author ) ?>
-			<div class="action_bar <?php echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ?>">
+			<?php $newspaper_x_active = ( $active['needs'] !== 'install' && $active['status'] ); ?>
+			<?php /* The button belongs inside the bar: as a sibling it was positioned
+			         independently, so it stood taller than the bar it was meant to sit
+			         in and the bar had to reserve a fixed 105px for it whatever the
+			         label said. */ ?>
+			<div class="action_bar <?php echo $newspaper_x_active ? 'active' : '' ?>">
 				<span class="plugin_name">
-					<?php echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'Active: ' : '' ?><?php echo esc_html( $info->name ); ?>
+					<?php echo $newspaper_x_active ? esc_html__( 'Active:', 'newspaper-x' ) . ' ' : '' ?><?php echo esc_html( $info->name ); ?>
+				</span>
+				<span class="plugin-card-<?php echo esc_attr( $plugin ) ?> action_button <?php echo $newspaper_x_active ? 'active' : '' ?>">
+					<a data-slug="<?php echo esc_attr( $plugin ) ?>" class="<?php echo esc_attr( $class ); ?>"
+					   href="<?php echo esc_url( $url ) ?>"><?php echo esc_html( $label ) ?></a>
 				</span>
 			</div>
-			<span
-				class="plugin-card-<?php echo esc_attr( $plugin ) ?> action_button <?php echo ( $active['needs'] !== 'install' && $active['status'] ) ? 'active' : '' ?>">
-				<a data-slug="<?php echo esc_attr( $plugin ) ?>" class="<?php echo esc_attr( $class ); ?>"
-				   href="<?php echo esc_url( $url ) ?>"> <?php echo esc_html( $label ) ?> </a>
-			</span>
 		</div>
 	<?php } ?>
 </div>
