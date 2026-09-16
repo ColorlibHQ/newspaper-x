@@ -1,3 +1,44 @@
+### V1.4.0
+	Security
+	- newspaper_x_get_attachment_image and newspaper_x_dismiss_required_action were
+	  registered for logged-out visitors. Both now require a nonce and the
+	  edit_theme_options capability.
+	- The contact widget printed its phone, email and address into href attributes
+	  unescaped.
+	- Colour settings are re-validated where they are printed, not only on the way in.
+
+	Compatibility
+	- Font Awesome 4.6.2 replaced with 7.3.1, subsetted to the 47 glyphs the theme
+	  renders: 7.4KB of woff2 rather than 254KB. Load the full set with
+	  add_filter( 'newspaper_x_full_fontawesome', '__return_true' ).
+	- Bootstrap updated to 3.4.1, which fixes CVE-2019-8331. Bootstrap's JavaScript
+	  is no longer loaded; the theme never used it.
+	- Owl Carousel updated to 2.3.4.
+	- The Epsilon framework is removed. Its Customizer controls are replaced by
+	  native WP_Customize_Control subclasses.
+	- PHP 8.5: case statements terminated with a semicolon, and a dynamic property
+	  on the breadcrumbs class.
+	- WordPress 6.7: translations are no longer loaded before init.
+	- The calendar widget styled #prev and #next, which WordPress replaced in 4.9.
+
+	Fixes
+	- The welcome screen's "Set automatically" button verified the wrong nonce and
+	  answered -1 instead of setting the pages.
+	- The font-size mixin resolved rem against a 16px root while Bootstrap sets 10px,
+	  so code blocks, the skip link and the mobile menu icon all rendered at 62.5%
+	  of their intended size.
+	- The contact widget was styled only inside the footer and rendered as a bare
+	  list of links anywhere else. It also used a fixed element id, so two copies
+	  collided.
+	- Removed a render-blocking request that sent every visitor's user agent to
+	  api.wordpress.org over plain HTTP to detect Internet Explorer.
+
+	Housekeeping
+	- Internet Explorer support dropped.
+	- Build tooling replaced: Dart Sass, PostCSS and Autoprefixer in place of
+	  Grunt 0.4, webpack 2, Babel 6 and node-sass 4.
+	- jquery.sticky.js removed; nothing enqueued it.
+
 ### V1.3.5
 	- Update from wpchill fork
 	- version update

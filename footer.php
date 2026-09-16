@@ -24,7 +24,7 @@
                     <div class="col-md-12 text-center">
                         <a href="javascript:void(0)" id="back-to-top">
                             <span><?php echo esc_html__( 'Go Up', 'newspaper-x' ) ?></span>
-                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                            <i class="fa-solid fa-angle-up" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>

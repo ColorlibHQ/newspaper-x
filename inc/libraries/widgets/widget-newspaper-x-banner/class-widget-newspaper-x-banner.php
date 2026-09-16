@@ -23,7 +23,8 @@ class Widget_Newspaper_X_Banner extends WP_Widget {
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
-		extract( $args );
+		$before_widget = isset( $args['before_widget'] ) ? $args['before_widget'] : '';
+		$after_widget  = isset( $args['after_widget'] ) ? $args['after_widget'] : '';
 		$params = array();
 
 		if ( empty( $instance ) ) {
@@ -65,6 +66,9 @@ class Widget_Newspaper_X_Banner extends WP_Widget {
 		wp_enqueue_media();
 		wp_enqueue_style( 'newspaper_x_media_upload_css', get_template_directory_uri() . '/inc/customizer/assets/css/upload-media.css' );
 		wp_enqueue_script( 'newspaper_x_media_upload_js', get_template_directory_uri() . '/inc/customizer/assets/js/upload-media.js', array( 'jquery' ) );
+		wp_localize_script( 'newspaper_x_media_upload_js', 'newspaperXMedia', array(
+			'nonce' => wp_create_nonce( 'newspaper_x_get_attachment_image' ),
+		) );
 
 		$defaults = array(
 			'image_id'  => '',
@@ -72,9 +76,9 @@ class Widget_Newspaper_X_Banner extends WP_Widget {
 		);
 
 		// Merge the user-selected arguments with the defaults.
-		$instance = wp_parse_args( (array) $instance, $defaults );
-		// Extract the array to allow easy use of variables.
-		extract( $instance );
+		$instance  = wp_parse_args( (array) $instance, $defaults );
+		$image_id  = $instance['image_id'];
+		$image_url = $instance['image_url'];
 		// Loads the widget form.
 		?>
 

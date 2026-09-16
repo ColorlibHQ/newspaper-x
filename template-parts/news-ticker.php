@@ -23,8 +23,8 @@ if ( $frontpage_header->have_posts() ): $i = 0; ?>
 <section class="newspaper-x-news-ticker">
     <span class="newspaper-x-module-title">
         <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-bullhorn fa-stack-1x fa-inverse"></i>
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
+            <i class="fa-solid fa-bullhorn fa-stack-1x fa-inverse"></i>
         </span>
         <?php echo esc_html__( 'Latest News', 'newspaper-x' ) ?>
     </span>

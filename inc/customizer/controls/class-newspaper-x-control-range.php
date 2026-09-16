@@ -70,7 +70,6 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Newspaper_X_Cont
 					max="<?php echo esc_attr( $bounds['max'] ); ?>"
 					step="<?php echo esc_attr( $bounds['step'] ); ?>"
 					value="<?php echo esc_attr( $this->value() ); ?>"
-					oninput="document.getElementById('<?php echo esc_js( $output_id ); ?>').value = this.value"
 					<?php $this->link(); ?>
 				/>
 				<output

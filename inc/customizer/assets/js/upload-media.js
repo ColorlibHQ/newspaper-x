@@ -38,7 +38,8 @@ jQuery(function ($) {
 			var data = {
 				action         : 'newspaper_x_get_attachment_image',
 				attachment_id  : id,
-				attachment_size: mediaControl.size
+				attachment_size: mediaControl.size,
+				nonce          : (typeof newspaperXMedia !== 'undefined') ? newspaperXMedia.nonce : ''
 			};
 
 			jQuery.post(ajaxurl, data, function (response) {

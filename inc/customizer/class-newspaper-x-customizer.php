@@ -289,9 +289,10 @@ class Newspaper_X_Customizer {
 	 * @return string|void
 	 */
 	public static function color_escaping_option_sanitize( $input ) {
-		$input = esc_attr( $input );
-
-		return $input;
+		// esc_attr() is the wrong tool for a colour: it leaves ';' and '{'
+		// intact, which is all an injected rule needs once the value is
+		// printed inside a <style> block.
+		return self::sanitize_hex_color( $input );
 	}
 
 	/**
@@ -300,11 +301,15 @@ class Newspaper_X_Customizer {
 	 * @return string
 	 */
 	public static function color_option_hex_sanitize( $color ) {
-		if ( $unhashed = sanitize_hex_color_no_hash( $color ) ) {
+		$unhashed = sanitize_hex_color_no_hash( $color );
+
+		if ( $unhashed ) {
 			return '#' . $unhashed;
 		}
 
-		return $color;
+		// A value that is not a colour used to be returned unchanged, which
+		// stored it verbatim and printed it straight into a <style> block.
+		return '';
 	}
 
 	/**

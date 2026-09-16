@@ -139,8 +139,8 @@ class Newspaper_X_Related_Posts {
 		 */
 		echo '<div class="newspaper-x-carousel-navigation hidden-xs text-right">';
 		echo '<ul class="newspaper-x-carousel-arrows clearfix">';
-		echo '<li><a href="#" class="newspaper-x-owl-prev fa fa-angle-left"></a></li>';
-		echo '<li><a href="#" class="newspaper-x-owl-next fa fa-angle-right"></a></li>';
+		echo '<li><a href="#" class="newspaper-x-owl-prev fa-solid fa-angle-left"></a></li>';
+		echo '<li><a href="#" class="newspaper-x-owl-next fa-solid fa-angle-right"></a></li>';
 		echo '</ul>';
 		echo '</div>';
 		echo '</div><!--/.row-->';

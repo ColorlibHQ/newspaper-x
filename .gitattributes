@@ -1,0 +1,12 @@
+# Files that exist for the repository, not for the shipped theme. Without these,
+# GitHub's "Download ZIP" (which is git archive) hands users the repo scaffolding,
+# and a package built from it fails review on WordPress.org.
+/.gitattributes   export-ignore
+/.gitignore       export-ignore
+/.github/         export-ignore
+/README.md        export-ignore
+/package.json     export-ignore
+/package-lock.json export-ignore
+
+# assets/sass/ deliberately stays in the package: WordPress.org expects the
+# sources for any compiled asset to ship with the theme or be linked.

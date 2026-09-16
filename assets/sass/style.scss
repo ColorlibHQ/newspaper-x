@@ -88,3 +88,16 @@
 # Media
 --------------------------------------------------------------*/
 @import "media/_media";
+
+/*--------------------------------------------------------------
+# Bootstrap overrides
+--------------------------------------------------------------*/
+/*
+ * The bundled Bootstrap used to be edited directly: .container carried 30px of
+ * side padding rather than Bootstrap's 15px. The vendored file is stock now, so
+ * the wider gutter this theme is designed around lives here instead.
+ */
+.container {
+	padding-right: 30px;
+	padding-left: 30px;
+}

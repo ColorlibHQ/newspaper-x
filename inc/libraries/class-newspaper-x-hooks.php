@@ -23,10 +23,14 @@ class Newspaper_X_Hooks {
 		add_filter( 'comment_form_defaults', array( $this, 'comment_form_defaults' ) );
 
 		/**
-		 * Ajax request to retrieve Attachment Image
+		 * Ajax request to retrieve Attachment Image.
+		 *
+		 * Only the widget and Customizer media controls call this, so it is not
+		 * registered for logged-out visitors: as a nopriv action it let anyone
+		 * walk attachment IDs and read back the URL of any upload, including
+		 * media attached to private or unpublished posts.
 		 */
 		add_action( 'wp_ajax_newspaper_x_get_attachment_image', array( $this, 'get_attachment_image' ) );
-		add_action( 'wp_ajax_nopriv_newspaper_x_get_attachment_image', array( $this, 'get_attachment_image' ) );
 		/**
 		 * Custom body classes
 		 */
@@ -199,13 +203,31 @@ class Newspaper_X_Hooks {
 	 *
 	 */
 	public function get_attachment_image() {
-		$id   = intval( $_POST['attachment_id'] );
-		$size = esc_html( $_POST['attachment_size'] );
+		check_ajax_referer( 'newspaper_x_get_attachment_image', 'nonce' );
 
-		$src = wp_get_attachment_image( $id, false );
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			wp_die( '', '', 403 );
+		}
 
-		echo $src;
-		die();
+		$id = isset( $_POST['attachment_id'] ) ? absint( wp_unslash( $_POST['attachment_id'] ) ) : 0;
+
+		// The requested size used to be read and then thrown away, so every
+		// control previewed its image at the default size. Honour it, but only
+		// if it names a size this install actually has.
+		$size  = isset( $_POST['attachment_size'] ) ? sanitize_key( wp_unslash( $_POST['attachment_size'] ) ) : '';
+		$sizes = get_intermediate_image_sizes();
+		$sizes[] = 'full';
+
+		if ( ! in_array( $size, $sizes, true ) ) {
+			$size = 'thumbnail';
+		}
+
+		if ( ! $id || 'attachment' !== get_post_type( $id ) ) {
+			wp_die( '', '', 400 );
+		}
+
+		echo wp_get_attachment_image( $id, $size );
+		wp_die();
 	}
 
 	/**

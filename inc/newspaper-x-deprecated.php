@@ -9,7 +9,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 
 /**
- * @todo - change newspaper_x posts navigation to default wordpress
+ * @todo - change newspaper_x posts navigation to default WordPress
  *
  * @param array $args
  */

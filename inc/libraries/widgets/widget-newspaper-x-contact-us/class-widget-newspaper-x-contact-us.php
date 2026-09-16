@@ -20,7 +20,8 @@ class Widget_Newspaper_X_Contact_Us extends WP_Widget {
 	 * @param array $instance
 	 */
 	public function widget( $args, $instance ) {
-		extract( $args );
+		$before_widget = isset( $args['before_widget'] ) ? $args['before_widget'] : '';
+		$after_widget  = isset( $args['after_widget'] ) ? $args['after_widget'] : '';
 		$params = array();
 
 		if ( empty( $instance ) ) {
@@ -73,15 +74,13 @@ class Widget_Newspaper_X_Contact_Us extends WP_Widget {
 		$menus = wp_get_nav_menus();
 		// Merge the user-selected arguments with the defaults.
 		$instance = wp_parse_args( (array) $instance, $defaults );
-		// Extract the array to allow easy use of variables.
-		extract( $instance );
 		// Loads the widget form.
 		?>
 		<p>
 			<label><?php echo esc_html__( 'Title', 'newspaper-x' ); ?> :</label>
 			<input type="text" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			       id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
-			       value="<?php echo $instance['title'] ; ?>">
+			       value="<?php echo esc_attr( $instance['title'] ); ?>">
 		</p>
 		<p>
 			<label><?php echo esc_html__( 'Phone', 'newspaper-x' ); ?> :</label>
@@ -104,7 +103,7 @@ class Widget_Newspaper_X_Contact_Us extends WP_Widget {
         
 		<p>
 					<label for="<?php echo esc_attr( $this->get_field_id( 'social_menu' ) ); ?>"><?php esc_html_e( 'Social Menu:', 'newspaper-x' ); ?></label>
-					<select id="<?php echo $this->get_field_id( 'social_menu' ); ?>" name="<?php echo $this->get_field_name( 'social_menu' ); ?>">
+					<select id="<?php echo esc_attr( $this->get_field_id( 'social_menu' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'social_menu' ) ); ?>">
 						<option value="0"><?php _e( '&mdash; Select &mdash;', 'newspaper-x' ); ?></option>
 						<?php foreach ( $menus as $menu ) : ?>
 							<option value="<?php echo esc_attr( $menu->term_id ); ?>" <?php selected( $social_menu, $menu->term_id ); ?>>

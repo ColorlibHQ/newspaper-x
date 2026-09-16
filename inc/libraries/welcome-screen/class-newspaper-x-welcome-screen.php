@@ -23,94 +23,82 @@ class Newspaper_X_Welcome_Screen {
 			$this,
 			'newspaper_x_dismiss_required_action_callback'
 		) );
-		add_action( 'wp_ajax_nopriv_newspaper_x_dismiss_required_action', array(
-			$this,
-			'newspaper_x_dismiss_required_action_callback'
-		) );
 
-		add_action( 'admin_init', array( $this, 'newspaper_x_activate_plugin' ) );
-		add_action( 'admin_init', array( $this, 'newspaper_x_deactivate_plugin' ) );
 		add_action( 'admin_init', array( $this, 'newspaper_x_set_pages' ) );
 	}
 
 	public function newspaper_x_set_pages() {
-		if ( ! empty( $_GET ) ) {
-			/**
-			 * Check action
-			 */
-			if ( ! empty( $_GET['action'] ) && $_GET['action'] === 'set_page_automatic' ) {
-
-				if ( ! check_ajax_referer( 'epsilon_framework_ajax_action', 'security' ) ) {
-					return;
-				}
-
-				if ( ! current_user_can( 'manage_options' ) ) {
-				    return;
-				}
-				
-				$active_tab = $_GET['tab'];
-				$about      = get_page_by_title( 'Homepage' );
-				update_option( 'page_on_front', $about->ID );
-				update_option( 'show_on_front', 'page' );
-
-				// Set the blog page
-				$blog = get_page_by_title( 'Blog' );
-				update_option( 'page_for_posts', $blog->ID );
-
-				wp_redirect( self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=' . $active_tab ) );
-			}
+		if ( empty( $_GET['action'] ) || 'set_page_automatic' !== $_GET['action'] ) {
+			return;
 		}
+
+		// The button is built with wp_nonce_url( ..., 'set_page_automatic' ). This
+		// used to verify 'epsilon_framework_ajax_action', which never matched, so
+		// the whole feature answered -1 instead of setting the pages.
+		if ( ! isset( $_GET['_wpnonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_GET['_wpnonce'] ) ), 'set_page_automatic' ) ) {
+			return;
+		}
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		$home = self::get_page_by_title( 'Homepage' );
+		$blog = self::get_page_by_title( 'Blog' );
+
+		// Nothing to point at: leave the site's reading settings alone rather
+		// than fataling on a null page, which is what happened before.
+		if ( ! $home ) {
+			return;
+		}
+
+		update_option( 'show_on_front', 'page' );
+		update_option( 'page_on_front', $home->ID );
+
+		if ( $blog ) {
+			update_option( 'page_for_posts', $blog->ID );
+		}
+
+		wp_safe_redirect( self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=' . self::get_active_tab() ) );
+		exit;
+	}
+
+	/**
+	 * Look up a published page by title.
+	 *
+	 * get_page_by_title() is deprecated as of WordPress 6.2.
+	 *
+	 * @param string $title
+	 *
+	 * @return WP_Post|null
+	 */
+	private static function get_page_by_title( $title ) {
+		$pages = get_posts( array(
+			'post_type'              => 'page',
+			'title'                  => $title,
+			'post_status'            => 'publish',
+			'posts_per_page'         => 1,
+			'no_found_rows'          => true,
+			'update_post_term_cache' => false,
+			'update_post_meta_cache' => false,
+		) );
+
+		return $pages ? $pages[0] : null;
+	}
+
+	/**
+	 * The requested welcome-screen tab, restricted to the tabs that exist.
+	 *
+	 * @return string
+	 */
+	private static function get_active_tab() {
+		$tabs = array( 'getting_started', 'recommended_actions', 'recommended_plugins', 'support' );
+		$tab  = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : '';
+
+		return in_array( $tab, $tabs, true ) ? $tab : 'getting_started';
 	}
 
 
-	public function newspaper_x_activate_plugin() {
-		if ( ! empty( $_GET ) ) {
-			/**
-			 * Check action
-			 */
-			if ( ! empty( $_GET['action'] ) && ! empty( $_GET['plugin'] ) && $_GET['action'] === 'activate_plugin' ) {
-
-				if ( ! check_ajax_referer( 'epsilon_framework_ajax_action', 'security' ) ) {
-					return;
-				}
-
-				if ( ! current_user_can( 'manage_options' ) ) {
-				    return;
-				}
-
-				$active_tab = $_GET['tab'];
-				$url        = self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=' . $active_tab );
-				activate_plugin( $_GET['plugin'], $url );
-			}
-		}
-	}
-
-	public function newspaper_x_deactivate_plugin() {
-		if ( ! empty( $_GET ) ) {
-			/**
-			 * Check action
-			 */
-			if ( ! empty( $_GET['action'] ) && ! empty( $_GET['plugin'] ) && $_GET['action'] === 'deactivate_plugin' ) {
-
-				if ( ! check_ajax_referer( 'epsilon_framework_ajax_action', 'security' ) ) {
-					return;
-				}
-
-				if ( ! current_user_can( 'manage_options' ) ) {
-				    return;
-				}
-
-				$active_tab = $_GET['tab'];
-				$url        = self_admin_url( 'themes.php?page=newspaper-x-welcome&tab=' . $active_tab );
-				$current    = get_option( 'active_plugins', array() );
-				$search     = array_search( $_GET['plugin'], $current );
-				if ( array_key_exists( $search, $current ) ) {
-					unset( $current[ $search ] );
-				}
-				update_option( 'active_plugins', $current );
-			}
-		}
-	}
 
 	/**
 	 * Creates the dashboard page
@@ -168,6 +156,7 @@ class Newspaper_X_Welcome_Screen {
 
 		wp_localize_script( 'newspaper-x-welcome-screen-js', 'newspaperXWelcomeScreenObject', array(
 			'nr_actions_required'      => absint( $this->count_actions() ),
+			'nonce'                    => wp_create_nonce( 'newspaper_x_dismiss_required_action' ),
 			'ajaxurl'                  => esc_url( admin_url( 'admin-ajax.php' ) ),
 			'template_directory'       => esc_url( get_template_directory_uri() ),
 			'no_required_actions_text' => esc_html__( 'Hooray! There are no required actions for you right now.', 'newspaper-x' )
@@ -202,7 +191,14 @@ class Newspaper_X_Welcome_Screen {
 
 		global $newspaper_x_required_actions;
 
-		$action_id = ( isset( $_GET['id'] ) ) ? $_GET['id'] : 0;
+		check_ajax_referer( 'newspaper_x_dismiss_required_action', 'nonce' );
+
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			wp_die( '', '', 403 );
+		}
+
+		$action_id = isset( $_GET['id'] ) ? sanitize_key( wp_unslash( $_GET['id'] ) ) : '';
+		$todo      = isset( $_GET['todo'] ) ? sanitize_key( wp_unslash( $_GET['todo'] ) ) : '';
 
 		echo esc_html( $action_id ); /* this is needed and it's the id of the dismissable required action */
 
@@ -213,11 +209,11 @@ class Newspaper_X_Welcome_Screen {
 
 				$newspaper_x_show_required_actions = get_option( 'newspaper_x_show_required_actions' );
 
-				switch ( $_GET['todo'] ) {
-					case 'add';
+				switch ( $todo ) {
+					case 'add':
 						$newspaper_x_show_required_actions[ $action_id ] = true;
 						break;
-					case 'dismiss';
+					case 'dismiss':
 						$newspaper_x_show_required_actions[ $action_id ] = false;
 						break;
 				}
@@ -382,12 +378,12 @@ class Newspaper_X_Welcome_Screen {
 	 * @since 1.8.2.4
 	 */
 	public function newspaper_x_welcome_screen() {
-		require_once( ABSPATH . 'wp-load.php' );
-		require_once( ABSPATH . 'wp-admin/admin.php' );
-		require_once( ABSPATH . 'wp-admin/admin-header.php' );
-
+		// This used to require wp-load.php, wp-admin/admin.php and admin-header.php
+		// here. All three are already loaded by the time a theme page callback
+		// runs; re-including them printed a second admin header, and loading core
+		// files from a theme is not allowed on WordPress.org.
 		$newspaper_x  = wp_get_theme();
-		$active_tab   = isset( $_GET['tab'] ) ? $_GET['tab'] : 'getting_started';
+		$active_tab   = self::get_active_tab();
 		$action_count = $this->count_actions();
 
 		?>

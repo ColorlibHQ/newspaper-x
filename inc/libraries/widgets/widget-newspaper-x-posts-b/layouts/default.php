@@ -29,7 +29,7 @@ if ( $posts->have_posts() ): ?>
                 'noscript' => array()
             );
             ?>
-            <div class="col-md-<?php echo $instance['cols']; ?> col-xs-6">
+            <div class="col-md-<?php echo absint( $instance['cols'] ); ?> col-xs-6">
                 <div class="newspaper-x-blog-post-layout-b">
                     <div class="newspaper-x-image">
                         <a href="<?php echo esc_url( get_the_permalink() ); ?>">

@@ -13,11 +13,16 @@ jQuery(document).ready(function () {
 				action = jQuery(this).attr('data-action');
 		jQuery.ajax({
 			type      : "GET",
-			data      : { action: 'newspaper_x_dismiss_required_action', id: id, todo: action },
+			data      : {
+				action: 'newspaper_x_dismiss_required_action',
+				id    : id,
+				todo  : action,
+				nonce : newspaperXWelcomeScreenObject.nonce
+			},
 			dataType  : "html",
 			url       : newspaperXWelcomeScreenObject.ajaxurl,
 			beforeSend: function (data, settings) {
-				jQuery('.newspaper-x-tab-pane#actions_required h1').append('<div id="temp_load" style="text-align:center"><img src=' + newspaperXWelcomeScreenObject.template_directory + '"/inc/libraries/welcome-screenreen/img/ajax-loader.gif" /></div>');
+				jQuery('.newspaper-x-tab-pane#actions_required h1').append('<div id="temp_load" style="text-align:center"><img src="' + newspaperXWelcomeScreenObject.template_directory + '/inc/libraries/welcome-screen/img/ajax-loader.gif" alt="" /></div>');
 			},
 			success   : function (data) {
 				location.reload();

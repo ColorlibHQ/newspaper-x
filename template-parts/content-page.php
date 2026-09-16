@@ -71,9 +71,9 @@ if ( $breadcrumbs_enabled ) {
             ) );
 
             $prev = get_previous_post_link();
-            $prev = str_replace( '&laquo;', '<span class="fa fa-caret-left"></span>', $prev );
+            $prev = str_replace( '&laquo;', '<span class="fa-solid fa-caret-left"></span>', $prev );
             $next = get_next_post_link();
-            $next = str_replace( '&raquo;', '<span class="fa fa-caret-right"></span>', $next );
+            $next = str_replace( '&raquo;', '<span class="fa-solid fa-caret-right"></span>', $next );
             ?>
             <div class="newspaper-x-next-prev row">
                 <div class="col-md-6 text-left">

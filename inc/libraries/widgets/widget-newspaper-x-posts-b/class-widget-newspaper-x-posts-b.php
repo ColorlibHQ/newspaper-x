@@ -95,9 +95,8 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
         <input type="range" name="<?php echo esc_attr( $this->get_field_name( 'show_post' ) ); ?>" class="newspaper-x-widget-range"
                id="input_<?php echo esc_attr( $this->get_field_id( 'show_post' ) ); ?>"
                min="1" max="12" step="1"
-               value="<?php echo esc_attr( $instance['show_post'] ); ?>"
-               oninput="this.nextElementSibling.value = this.value"/>
-        <output class="newspaper-x-widget-range__value"><?php echo esc_attr( $instance['show_post'] ); ?></output>
+               value="<?php echo esc_attr( $instance['show_post'] ); ?>"/>
+        <output class="newspaper-x-widget-range__value"><?php echo absint( $instance['show_post'] ); ?></output>
         <div class="checkbox_switch">
 				<span class="customize-control-title onoffswitch_label">
                     <?php echo esc_html__( 'Show Date and Comments', 'newspaper-x' ); ?>
@@ -124,7 +123,7 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 		$instance['show_post']            = ( ! empty( $new_instance['show_post'] ) ) ? absint( $new_instance['show_post'] ) : '';
 		$instance['show_date']            = ( ! empty( $new_instance['show_date'] ) ) ? strip_tags( $new_instance['show_date'] ) : '';
 		$instance['order']                = ( ! empty( $new_instance['order'] ) ) ? strip_tags( $new_instance['order'] ) : '';
-		$instance['cols']                 = ( ! empty( $new_instance['cols'] ) ) ? strip_tags( $new_instance['cols'] ) : '';
+		$instance['cols']                 = ( ! empty( $new_instance['cols'] ) ) ? absint( $new_instance['cols'] ) : '';
 
 		return $instance;
 
@@ -243,7 +242,12 @@ class Widget_Newspaper_X_Posts_B extends WP_Widget {
 			$instance['show_date'] = 'on';
 		}
 
-		extract( $args, EXTR_SKIP );
+		// Sidebar arguments, named explicitly rather than unpacked into scope. The
+		// layout file included below reads $before_title and $after_title.
+		$before_widget = isset( $args['before_widget'] ) ? $args['before_widget'] : '';
+		$after_widget  = isset( $args['after_widget'] ) ? $args['after_widget'] : '';
+		$before_title  = isset( $args['before_title'] ) ? $args['before_title'] : '';
+		$after_title   = isset( $args['after_title'] ) ? $args['after_title'] : '';
 
 		echo $before_widget;
 

@@ -72,6 +72,43 @@
       }
     }
   }
+  /*
+   * Top bar layout from the large breakpoint up.
+   *
+   * The right-hand column is a fixed col-lg-4 -- 380px at 1280px -- with the
+   * search form floated left inside it and the social menu floated right. Past
+   * about five social links the two no longer fit side by side, the menu drops
+   * onto a second row and the bar doubles in height. The ticker seldom needs its
+   * full two thirds, so the right side takes the width it actually needs and the
+   * ticker absorbs what is left. Floats are ignored on flex items, so the
+   * existing float and .pull-right rules simply stop applying here.
+   */
+  @media (min-width: 992px) {
+    > .container > .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      > .col-lg-8 {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      > .col-lg-4 {
+        flex: 0 0 auto;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+
+    #searchform {
+      padding-top: 0;
+      margin-right: 30px;
+    }
+  }
+
   @media (max-width: 767px) {
     ul {
       text-align: center;

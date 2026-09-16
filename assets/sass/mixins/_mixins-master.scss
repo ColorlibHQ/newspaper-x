@@ -1,7 +1,13 @@
 // Rem output with px fallback
+// $sizeValue is a multiple of 16px, the size this theme's design is drawn at.
+//
+// The rem line used to assume a 16px root. Bootstrap sets html { font-size: 10px },
+// so it resolved to 62.5% of the px line above it and won -- every call site
+// rendered noticeably smaller than intended. The menu toggle's icon came out at
+// 7.5px, and code blocks at 9.4px.
 @mixin font-size($sizeValue: 1) {
   font-size: ($sizeValue * 16) * 1px;
-  font-size: $sizeValue * 1rem;
+  font-size: ($sizeValue * 1.6) * 1rem;
 }
 
 // Center block

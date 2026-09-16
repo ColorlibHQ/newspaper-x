@@ -16,7 +16,6 @@ class Newspaper_X_Sidebars {
 	 * Sigma_Shop_Sidebars constructor.
 	 */
 	public function __construct() {
-		$this->collect_sidebars();
 		add_action( 'widgets_init', array( $this, 'set_sidebars' ) );
 		add_action( 'widgets_init', array( $this, 'initiate_widgets' ) );
 
@@ -26,6 +25,12 @@ class Newspaper_X_Sidebars {
 	 * registers sidebars
 	 */
 	public function set_sidebars() {
+		// Built here rather than in the constructor: the names and descriptions
+		// are translated, and this class is instantiated while the theme's files
+		// are being included -- before init, where WordPress 6.7 and later warn
+		// that translations are being loaded too early.
+		$this->collect_sidebars();
+
 		foreach ( $this->sidebars as $sidebar ) {
 			register_sidebar( $sidebar );
 		}

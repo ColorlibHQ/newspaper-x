@@ -5,6 +5,16 @@
   position: relative;
   overflow: hidden;
   max-height: 42px;
+  .owl-stage-outer {
+    /*
+     * Owl derives each item's width from the container and rounds down, so when
+     * the container lands on a fractional width the next headline can begin a
+     * pixel inside the visible area and show as a thin vertical bar beside the
+     * current one. The items are far wider than their text, so trimming a pixel
+     * off the right edge hides it without clipping anything.
+     */
+    clip-path: inset(0 1px 0 0);
+  }
   .owl-carousel {
     display: block;
     position: absolute;

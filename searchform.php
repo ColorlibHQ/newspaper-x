@@ -5,5 +5,5 @@
 		<input class="search-field" placeholder="<?php echo esc_attr__( 'Search...', 'newspaper-x' ) ?>" value="" name="s"
 		       type="search">
 	</label>
-	<button class="search-submit" value="<?php echo esc_attr__( 'Search  ', 'newspaper-x' ) ?>" type="submit"><span class="fa fa-search"></span></button>
+	<button class="search-submit" value="<?php echo esc_attr__( 'Search  ', 'newspaper-x' ) ?>" type="submit"><span class="fa-solid fa-magnifying-glass"></span></button>
 </form>

@@ -82,7 +82,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<button class="menu-toggle" aria-controls="primary-menu"
-						        aria-expanded="false"><span class="fa fa-bars"></span></button>
+						        aria-expanded="false"><span class="fa-solid fa-bars"></span></button>
 						<?php
 						if ( has_nav_menu( 'primary' ) ) {
 							wp_nav_menu( array(

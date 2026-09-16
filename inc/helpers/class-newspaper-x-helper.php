@@ -222,15 +222,15 @@ class Newspaper_X_Helper
         }
 
         $icons = array(
-            'aside' => 'fa fa-hashtag',
-            'image' => 'fa fa-picture-o',
-            'quote' => 'fa fa-quote-left',
-            'link' => 'fa fa-link',
-            'gallery' => 'fa fa-th-large',
-            'video' => 'fa fa-video-camera',
-            'status' => 'fa fa-heartbeat',
-            'audio' => 'fa fa-headphones',
-            'chat' => 'fa fa-comment-o'
+            'aside' => 'fa-solid fa-hashtag',
+            'image' => 'fa-regular fa-image',
+            'quote' => 'fa-solid fa-quote-left',
+            'link' => 'fa-solid fa-link',
+            'gallery' => 'fa-solid fa-table-cells-large',
+            'video' => 'fa-solid fa-video',
+            'status' => 'fa-solid fa-heart-pulse',
+            'audio' => 'fa-solid fa-headphones',
+            'chat' => 'fa-regular fa-comment'
         );
 
         return $icons[$format];
@@ -340,7 +340,11 @@ class Newspaper_X_Helper
      */
     public static function on_iis()
     {
-        $sSoftware = strtolower($_SERVER["SERVER_SOFTWARE"]);
+        if (empty($_SERVER['SERVER_SOFTWARE'])) {
+            return false;
+        }
+
+        $sSoftware = strtolower(sanitize_text_field(wp_unslash($_SERVER['SERVER_SOFTWARE'])));
         if (strpos($sSoftware, "microsoft-iis") !== false) {
             return true;
         }
