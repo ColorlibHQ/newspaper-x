@@ -1,3 +1,22 @@
+### V1.4.1
+	Fixes found while testing 1.4.0 against the theme's own demo content.
+
+	- The Layout A widget stacked its posts into a column of full-width blocks
+	  instead of laying them across the row. Rebuilding the stylesheet on Dart
+	  Sass changed the order two rules came out in, and a base width overrode
+	  every breakpoint.
+	- The top bar wrapped onto a second row, doubling in height, once a site had
+	  more than about five social links. The row is a flex line from the large
+	  breakpoint up, so the search form and the icons stay on one line whatever
+	  the count.
+	- A news ticker headline could show a one pixel sliver of the next headline
+	  beside it.
+	- The welcome screen loaded its translations before init, which WordPress 6.7
+	  and later warn about and which leaves those strings untranslated.
+	- Removed the last references to the retired Epsilon framework: a require for
+	  a control class in a directory that no longer exists, and two CSS class
+	  names on the welcome screen.
+
 ### V1.4.0
 	Security
 	- newspaper_x_get_attachment_image and newspaper_x_dismiss_required_action were

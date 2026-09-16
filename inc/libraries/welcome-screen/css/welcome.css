@@ -3,7 +3,7 @@
  * ------------------------------------------------------------------------- */
 
 /* New Logo */
-.wp-badge.epsilon-welcome-logo {
+.wp-badge.newspaper-x-welcome-logo {
     color: #fff;
     background-image: url(../img/colorlib-logo.png);
     background-position: center center;
@@ -12,7 +12,7 @@
 }
 
 /* proper positioning of the icons */
-.epsilon-wrap i.dashicons {
+.newspaper-x-welcome-wrap i.dashicons {
     margin-right: 15px;
     position: relative;
     top: 3px;

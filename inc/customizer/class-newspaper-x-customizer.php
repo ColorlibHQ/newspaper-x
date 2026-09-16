@@ -23,12 +23,6 @@ class Newspaper_X_Customizer {
 	 * Loads the settings for the panels
 	 */
 	public function add_theme_options() {
-		$path = get_template_directory() . '/inc/libraries/epsilon-framework-addon';
-
-		if ( file_exists( $path . '/class-epsilon-control-checkbox-multiple.php' ) ) {
-			require_once $path . '/class-epsilon-control-checkbox-multiple.php';
-		}
-
 		$path  = get_template_directory() . '/inc/customizer/settings';
 		$dirs  = glob( $path . '/*', GLOB_ONLYDIR );
 		$files = array( 'panels', 'sections', 'settings', 'controls' );

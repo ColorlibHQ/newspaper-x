@@ -388,14 +388,14 @@ class Newspaper_X_Welcome_Screen {
 
 		?>
 
-		<div class="wrap about-wrap epsilon-wrap">
+		<div class="wrap about-wrap newspaper-x-welcome-wrap">
 
 			<h1><?php echo esc_html__( 'Welcome to Newspaper X! - Version ', 'newspaper-x' ) . esc_html( $newspaper_x['Version'] ); ?></h1>
 
 			<div
 				class="about-text"><?php echo esc_html__( 'Newspaper X is now installed and ready to use! Get ready to build something beautiful. We hope you enjoy it! We want to make sure you have the best experience using Newspaper X and that is why we gathered here all the necessary information for you. We hope you will enjoy using Newspaper X, as much as we enjoy creating great products.', 'newspaper-x' ); ?></div>
 
-			<div class="wp-badge epsilon-welcome-logo"></div>
+			<div class="wp-badge newspaper-x-welcome-logo"></div>
 
 
 			<h2 class="nav-tab-wrapper wp-clearfix">
