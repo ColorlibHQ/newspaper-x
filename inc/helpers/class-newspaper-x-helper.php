@@ -203,8 +203,8 @@ class Newspaper_X_Helper
 
         if (is_author()) {
             $return['type'] = 'author';
-            $author = get_user_by('slug', get_query_var('author_name'));
-            $return['id'] = $author->ID;
+            // author_name is only set on a pretty permalink; ?author=1 leaves it empty.
+            $return['id'] = get_queried_object_id();
         }
 
         return $return;
