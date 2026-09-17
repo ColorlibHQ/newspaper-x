@@ -406,17 +406,20 @@ class Newspaper_X_Welcome_Screen {
 	}
 
 	public function check_for_icon( $arr ) {
-		if ( ! empty( $arr['svg'] ) ) {
-			$plugin_icon_url = $arr['svg'];
-		} elseif ( ! empty( $arr['2x'] ) ) {
-			$plugin_icon_url = $arr['2x'];
-		} elseif ( ! empty( $arr['1x'] ) ) {
-			$plugin_icon_url = $arr['1x'];
-		} else {
-			$plugin_icon_url = $arr['default'];
+		/*
+		 * plugins_api() hands back the icons as an array, but the batched
+		 * request in prime_plugin_information() caches the API's JSON, where
+		 * they are an object. Accept both.
+		 */
+		$arr = (array) $arr;
+
+		foreach ( array( 'svg', '2x', '1x', 'default' ) as $size ) {
+			if ( ! empty( $arr[ $size ] ) ) {
+				return $arr[ $size ];
+			}
 		}
 
-		return $plugin_icon_url;
+		return '';
 	}
 
 	public function create_action_link( $state, $slug ) {
