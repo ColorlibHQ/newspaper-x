@@ -1,3 +1,18 @@
+### V1.4.2
+	- Fixed a fatal error on single posts by an author who has a biography.
+	  template-parts/author-info.php called a class removed in 2021, so every
+	  such post stopped with "Class Newspaper_X_Profile_Fields not found". The
+	  author box now lists the contact methods the site already has, and a
+	  site without any shows the box without social links.
+	- Removed KB Support from the recommended plugins. WordPress.org closed it
+	  on 2025-04-03 over a security issue. Any closed plugin is now skipped
+	  rather than shown as a blank card.
+	- The Recommended Plugins tab fetches all plugins in one request instead
+	  of one per plugin, and no longer caches a failed lookup for half an hour.
+	- The Install button sits inside its plugin card, and plugin names are no
+	  longer truncated to a few characters.
+	- Author archives reached by ID (?author=1) no longer log a PHP warning.
+
 ### V1.4.1
 	Fixes found while testing 1.4.0 against the theme's own demo content.
 

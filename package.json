@@ -1,6 +1,6 @@
 {
   "name": "newspaper-x",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Build tooling for the Newspaper X WordPress theme. Nothing here ships with the theme.",
   "license": "GPL-3.0-or-later",
   "private": true,
