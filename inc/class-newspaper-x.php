@@ -182,7 +182,7 @@ class Newspaper_X {
 		/**
 		 * Load Google Fonts
 		 */
-		wp_enqueue_style( 'newspaper-x-fonts', '//fonts.googleapis.com/css?family=Droid+Serif:400,700|Nunito+Sans:300,400,700,900|Source+Sans+Pro:400,700', array(), $theme['Version'], 'all' );
+		wp_enqueue_style( 'newspaper-x-fonts', get_template_directory_uri() . '/assets/css/google-fonts.css', array(), $theme['Version'], 'all' );
 
 		/*
 		 * Font Awesome 7, self-hosted and split by style: the core file carries the
@@ -276,7 +276,7 @@ class Newspaper_X {
 	 * Admin enqueues
 	 */
 	public function admin_enqueues( $hook_suffix = '' ) {
-		wp_enqueue_style( 'newspaper-x-fonts', 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Poppins:400,500,600,700', array(), '', 'all' );
+		wp_enqueue_style( 'newspaper-x-fonts', get_template_directory_uri() . '/assets/css/google-fonts.css', array(), '', 'all' );
 		wp_enqueue_style( 'newspaper-x-admin.stylesheet', get_template_directory_uri() . '/assets/css/admin.style.css', array(), '' );
 
 		// The post widgets' forms carry range sliders with a live readout.
