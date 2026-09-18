@@ -21,3 +21,13 @@ require_once dirname( __FILE__ ) . '/inc/class-newspaper-x-autoloader.php';
 $newspaper_x = new Newspaper_X();
 
 require_once dirname( __FILE__ ) . '/inc/newspaper-x-deprecated.php';
+
+/**
+ * Editor and markup support this theme predates.
+ */
+if ( ! function_exists( 'newspaper_x_modern_supports' ) ) {
+	function newspaper_x_modern_supports() {
+		add_theme_support( 'editor-styles' );
+	}
+	add_action( 'after_setup_theme', 'newspaper_x_modern_supports', 20 );
+}
