@@ -148,14 +148,14 @@ class Newspaper_X_Customizer {
 	 * Dependencies: Customizer Controls script (core)
 	 */
 	public function customizer_enqueue_scripts() {
-		wp_enqueue_script( 'customizer-scripts', get_template_directory_uri() . '/inc/customizer/assets/js/customizer.js', array( 'customize-controls' ) );
+		wp_enqueue_script( 'newspaper-x-customizer-scripts', get_template_directory_uri() . '/inc/customizer/assets/js/customizer.js', array( 'customize-controls' ) );
 	}
 
 	/**
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 */
 	public function customize_preview_js() {
-		wp_enqueue_script( 'newspaper_x_customizer', get_template_directory_uri() . '/inc/customizer/assets/js/previewer.js', array( 'customize-preview' ), '21151215', true );
+		wp_enqueue_script( 'newspaper-x-newspaper_x_customizer', get_template_directory_uri() . '/inc/customizer/assets/js/previewer.js', array( 'customize-preview' ), '21151215', true );
 
 		wp_localize_script( 'newspaper_x_customizer', 'WPUrls', array(
 			'siteurl' => get_option( 'siteurl' ),

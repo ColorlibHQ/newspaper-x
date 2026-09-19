@@ -201,18 +201,18 @@ class Newspaper_X {
 		$fa_uri = get_template_directory_uri() . '/assets/vendors/fontawesome/';
 
 		if ( apply_filters( 'newspaper_x_full_fontawesome', false ) ) {
-			wp_enqueue_style( 'newspaper-x-icons', $fa_uri . 'css/fontawesome.min.css', array(), '7.3.1' );
+			wp_enqueue_style( 'newspaper-x-icons', $fa_uri . 'css/fontawesome.min.css', array(), '7.3.1-1' );
 			wp_enqueue_style( 'newspaper-x-icons-solid', $fa_uri . 'css/solid.min.css', array( 'newspaper-x-icons' ), '7.3.1' );
 			wp_enqueue_style( 'newspaper-x-icons-regular', $fa_uri . 'css/regular.min.css', array( 'newspaper-x-icons' ), '7.3.1' );
 			wp_enqueue_style( 'newspaper-x-icons-brands', $fa_uri . 'css/brands.min.css', array( 'newspaper-x-icons' ), '7.3.1' );
 		} else {
-			wp_enqueue_style( 'newspaper-x-icons', $fa_uri . 'subset/fontawesome-subset.min.css', array(), '7.3.1' );
+			wp_enqueue_style( 'newspaper-x-icons', $fa_uri . 'subset/fontawesome-subset.min.css', array(), '7.3.1-1' );
 		}
 
 		/**
 		 * Load the bootstrap framework
 		 */
-		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.css', array(), '3.4.1' );
+		wp_enqueue_style( 'newspaper-x-bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.css', array(), '5.3.8-4' );
 
 		/**
 		 * Theme styling
@@ -247,12 +247,12 @@ class Newspaper_X {
 		/**
 		 * Adsense loader
 		 */
-		wp_enqueue_script( 'adsense-loader', get_template_directory_uri() . '/assets/vendors/adsenseloader/jquery.adsenseloader.js', array( 'jquery' ), '', true );
+		wp_enqueue_script( 'newspaper-x-adsense-loader', get_template_directory_uri() . '/assets/vendors/adsenseloader/jquery.adsenseloader.js', array( 'jquery' ), '', true );
 
 		/**
 		 *Load the theme's core Javascript
 		 */
-		wp_enqueue_script( 'machothemes-object', get_template_directory_uri() . '/assets/vendors/machothemes/machothemes.min.js', array(), '', true );
+		wp_enqueue_script( 'newspaper-x-machothemes-object', get_template_directory_uri() . '/assets/vendors/machothemes/machothemes.min.js', array(), '', true );
 		wp_enqueue_script( 'newspaper-x-functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery' ), '', true );
 		wp_localize_script( 'newspaper-x-functions', 'WPUrls', array(
 			'siteurl' => esc_url( get_option( 'siteurl' ) ),
@@ -263,9 +263,9 @@ class Newspaper_X {
 		/**
 		 * OwlCarousel Library
 		 */
-		wp_enqueue_script( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
-		wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.css', array(), '2.3.4' );
-		wp_enqueue_style( 'owl.carousel-theme', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.theme.default.css', array( 'owl.carousel' ), '2.3.4' );
+		wp_enqueue_script( 'newspaper-x-owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
+		wp_enqueue_style( 'newspaper-x-owl.carousel', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.carousel.min.css', array(), '2.3.4' );
+		wp_enqueue_style( 'newspaper-x-owl.carousel-theme', get_template_directory_uri() . '/assets/vendors/owl-carousel/owl.theme.default.css', array( 'newspaper-x-owl.carousel' ), '2.3.4' );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );

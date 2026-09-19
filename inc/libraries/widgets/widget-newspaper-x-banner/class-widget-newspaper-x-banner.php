@@ -64,8 +64,8 @@ class Widget_Newspaper_X_Banner extends WP_Widget {
 	 */
 	public function form( $instance ) {
 		wp_enqueue_media();
-		wp_enqueue_style( 'newspaper_x_media_upload_css', get_template_directory_uri() . '/inc/customizer/assets/css/upload-media.css' );
-		wp_enqueue_script( 'newspaper_x_media_upload_js', get_template_directory_uri() . '/inc/customizer/assets/js/upload-media.js', array( 'jquery' ) );
+		wp_enqueue_style( 'newspaper-x-newspaper_x_media_upload_css', get_template_directory_uri() . '/inc/customizer/assets/css/upload-media.css' );
+		wp_enqueue_script( 'newspaper-x-newspaper_x_media_upload_js', get_template_directory_uri() . '/inc/customizer/assets/js/upload-media.js', array( 'jquery' ) );
 		wp_localize_script( 'newspaper_x_media_upload_js', 'newspaperXMedia', array(
 			'nonce' => wp_create_nonce( 'newspaper_x_get_attachment_image' ),
 		) );

@@ -76,10 +76,10 @@ if ( $breadcrumbs_enabled ) {
             $next = str_replace( '&raquo;', '<span class="fa-solid fa-caret-right"></span>', $next );
             ?>
             <div class="newspaper-x-next-prev row">
-                <div class="col-md-6 text-left">
+                <div class="col-md-6 text-start">
                     <?php echo $prev ?>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-6 text-end">
                     <?php echo $next ?>
                 </div>
             </div>
