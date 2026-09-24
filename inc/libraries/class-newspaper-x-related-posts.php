@@ -137,7 +137,7 @@ class Newspaper_X_Related_Posts {
 		/*
 		 * Arrows
 		 */
-		echo '<div class="newspaper-x-carousel-navigation hidden-xs text-end">';
+		echo '<div class="newspaper-x-carousel-navigation hidden-xs text-right">';
 		echo '<ul class="newspaper-x-carousel-arrows clearfix">';
 		echo '<li><a href="#" class="newspaper-x-owl-prev fa-solid fa-angle-left"></a></li>';
 		echo '<li><a href="#" class="newspaper-x-owl-next fa-solid fa-angle-right"></a></li>';

@@ -212,7 +212,7 @@ class Newspaper_X {
 		/**
 		 * Load the bootstrap framework
 		 */
-		wp_enqueue_style( 'newspaper-x-bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.css', array(), '5.3.8-4' );
+		wp_enqueue_style( 'newspaper-x-bootstrap', get_template_directory_uri() . '/assets/vendors/bootstrap/bootstrap.min.css', array(), '3.4.1-1' );
 
 		/**
 		 * Theme styling
